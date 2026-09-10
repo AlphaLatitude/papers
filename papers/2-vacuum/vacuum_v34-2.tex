@@ -1,0 +1,273 @@
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib,showkeys]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{orcidlink}
+\usepackage{microtype}
+
+\begin{document}
+
+\title{The Vacuum Catastrophe and the Granularity of Hilbert Space}
+
+\author{Andrew Korytko\,\orcidlink{0009-0005-4569-2228}}
+\email{andrew@alphalatitude.com}
+\affiliation{AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA}
+
+\date{\today; DOI: \href{https://doi.org/10.5281/zenodo.22683544}{10.5281/zenodo.22683544}}
+
+\begin{abstract}
+Quantum field theory with a Planckian cutoff predicts a vacuum energy density of $4.6\times10^{113}$~J\,m$^{-3}$, $123$ orders of magnitude above what the observed cosmological constant allows. This paper resolves the discrepancy in two steps, within a framework in which every quantum state carries the same finite budget of $L$ bits and gravity follows from that limit. First, the zero-point energy does not gravitate: a stress tensor proportional to the metric has no flux through any null surface, so it never enters the thermodynamic derivation of Einstein's equations, and $\Lambda$ survives there as an integration constant that the horizon fixes. Second, the error in the standard estimate is in the state count. The energy $\Lambda$ carries inside the horizon is the horizon entropy times the horizon temperature, which gives $\rho_\Lambda = 3\pi\rho_{\rm Planck}/2L^2$ with $L = 6.4\times10^{61}$ the number of Planck lengths around the horizon: one factor of $L$ because the count is of a boundary and not of a volume, and one because the energy scale of a pixel is $E_P/L$ and not $E_P$. The acceleration scale of galactic rotation curves, $a_0 = (1.20\pm0.24)\times10^{-10}$~m\,s$^{-2}$, fixes $L$ independently at $(4.6\pm0.9)\times10^{61}$ and gives $\rho_\Lambda = (1.0\pm0.4)\times10^{-9}$~J\,m$^{-3}$, against the observed $5.2\times10^{-10}$; in the measured variable $a_0$ the two agree at $1.4\sigma$. The same $L$ caps a state spread across its Hilbert space at $205$ qubits, a third determination with no astronomy in it.
+\end{abstract}
+
+\keywords{Cosmological constant; vacuum energy; emergent gravity; holographic principle; discrete Hilbert space; rational quantum mechanics}
+
+\maketitle
+
+\section{The problem}
+\label{sec:intro}
+
+Quantum field theory assigns every mode of every field a zero-point energy $\tfrac12\hbar\omega$. Summed to a Planckian cutoff this gives a vacuum energy density of order the Planck density,
+\begin{equation}
+\rho_{\rm vac}\sim\frac{c^7}{\hbar G^2} = 4.6\times10^{113}~{\rm J\,m^{-3}},
+\label{eq:rhovac}
+\end{equation}
+while the observed cosmological constant corresponds to
+\begin{equation}
+\rho_\Lambda = \frac{\Lambda c^4}{8\pi G} = 5.2\times10^{-10}~{\rm J\,m^{-3}},
+\label{eq:rholam}
+\end{equation}
+a ratio of $8.8\times10^{122}$, or in Planck units $\Lambda\ell_P^2 = 2.85\times10^{-122}$~\cite{weinberg1989,martin2012}. Adler, Casey and Jacob named this the vacuum catastrophe~\cite{adler1995}, after the ultraviolet catastrophe it resembles. The cutoff is not the issue. Electroweak symmetry breaking and the QCD condensate contribute at $(200~{\rm GeV})^4$ and $(0.3~{\rm GeV})^4$, some $10^{56}$ and $10^{45}$ times the observed value, and no symmetry protects their sum~\cite{martin2012}. General relativity requires every form of energy to gravitate~\cite{feynman1995}, so either the vacuum energy is canceled to $123$ decimal places or it is not a source of curvature.
+
+This paper takes the second route, within the framework of Ref.~\cite{korytko2026}, in which Hilbert space is granular with a single universal integer $L$ and gravity is derived from that granularity. A uniform vacuum energy is not a source, because a stress tensor proportional to the metric has no flux through a null surface (Sec.~\ref{sec:decoupling}); this removes the $10^{113}$~J\,m$^{-3}$ but leaves $\Lambda$ as an unexplained integration constant. The scale of what remains is set by the number of degrees of freedom a horizon volume contains, which is $L^2/\pi$ and not $(R/\ell_P)^3$, and that factor is the catastrophe (Sec.~\ref{sec:count}). Sections~\ref{sec:galactic} and \ref{sec:test} fix $L$ from galaxies and from the laboratory.
+
+\section{The framework}
+\label{sec:framework}
+
+Palmer's Rational Quantum Mechanics~\cite{palmer2020,palmer2026} keeps the Schr\"odinger equation and the Born rule but admits only those states, and only those measurement bases, for which a qubit $|\psi\rangle=\cos\frac{\theta}{2}|1\rangle+e^{i\phi}\sin\frac{\theta}{2}|{-1}\rangle$ has
+\begin{equation}
+\cos^2\tfrac{\theta}{2} = \frac{m}{L},\qquad \frac{\phi}{2\pi}=\frac{n}{L},
+\label{eq:raqm}
+\end{equation}
+with $m\in\{0,\dots,L\}$, $n\in\{0,\dots,L-1\}$, and $L$ a large integer. Such a state is a string of $L$ bits: the fraction of $+1$ bits is $\cos^2(\theta/2)$, and rotating the string by $n$ places is the phase~\cite{palmer2026}. In Palmer's version $L$ is a property of each qubit and ranges from $10^{64}$ to $10^{109}$~\cite{palmer2026}. Reference~\cite{korytko2026} takes $L$ to be one universal integer for all systems (Axiom~1) and identifies one step of quantum phase, $2\pi/L$, with one Planck length on a great circle of the de Sitter horizon (Axiom~2). That horizon is the sphere of radius $R_\Lambda=\sqrt{3/\Lambda} = 1.66\times10^{26}$~m from beyond which no light will ever reach an observer in a universe whose expansion is driven by $\Lambda$. Axiom~2 reads
+\begin{equation}
+\ell_P = \frac{2\pi R_\Lambda}{L}.
+\label{eq:axiom2}
+\end{equation}
+The de Sitter radius, rather than the present Hubble radius, is the length in Axiom~2 because $L$ is a constant and $R_\Lambda$ is the only cosmological length that does not change with time. From the two axioms, Verlinde's entropic argument~\cite{verlinde2011} returns $G=c^3\ell_P^2/\hbar$ and Jacobson's~\cite{jacobson1995} returns Einstein's equations. The Gibbons--Hawking temperature of the horizon~\cite{gibbons1977} is $k_BT_{\rm dS}=\hbar c/2\pi R_\Lambda = E_P/L$, with $E_P = \hbar c/\ell_P$ the Planck energy. And, up to an order-unity coefficient discussed in Sec.~\ref{sec:galactic}, $a_0=c^2/L\ell_P$ is the acceleration below which galactic rotation curves flatten. References~\cite{korytko2026c,korytko2026d} restate the two axioms as one postulate, a ring of $L$ Planck cells on which every quantum state is a pattern, closing on a great circle of the horizon in Ref.~\cite{korytko2026c} and generalized to the whole sphere in Ref.~\cite{korytko2026d}, from which the three dimensions of space follow. The two quantities used below are the pixel count of the horizon and the energy scale of one pixel.
+
+\section{Why the zero-point energy is not a source}
+\label{sec:decoupling}
+
+The framework derives Einstein's equations by Jacobson's argument~\cite{jacobson1995}. The Clausius relation $\delta Q = T\,dS$ is imposed on every local Rindler horizon, the horizon seen by a uniformly accelerating observer, with $T$ the Unruh temperature that observer measures in the vacuum, $dS$ the change in horizon area in Planck units, and $\delta Q$ the energy flux through the horizon,
+\begin{equation}
+\delta Q \propto \int \lambda\, T_{\mu\nu}\,k^\mu k^\nu\, d\lambda\, dA,
+\label{eq:flux}
+\end{equation}
+where $k^\mu$ is the null generator of the horizon, the light ray that sweeps it out, and $\lambda$ its affine parameter. A stress tensor proportional to the metric has no such flux, since $g_{\mu\nu}k^\mu k^\nu = 0$ for null $k^\mu$. The zero-point energy, $T_{\mu\nu} = -\rho_{\rm vac}\,g_{\mu\nu}$, therefore never enters the derivation, whatever $\rho_{\rm vac}$ may be. Nor do the electroweak and QCD condensates, which are Lorentz-invariant and of the same form. Lorentz invariance is what fixes that form: a cutoff on three-momentum breaks it and gives the zero-point sum a radiation-like pressure, but that pressure is an artifact of the regulator, and any covariant regularization returns $T_{\mu\nu}\propto g_{\mu\nu}$~\cite{martin2012}. What Jacobson's argument returns is
+\begin{equation}
+G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}\,T_{\mu\nu},
+\label{eq:einstein}
+\end{equation}
+with $\Lambda$ an integration constant~\cite{jacobson1995,banks2018}. Nothing in Eq.~(\ref{eq:einstein}) prevents that constant from being set equal to $8\pi G\rho_{\rm vac}/c^4$, which would put the zero-point energy back by hand. What prevents it here is Axiom~2, which fixes $\Lambda$ from the horizon and not from the field content. The same holds at the Newtonian level in Verlinde's derivation~\cite{verlinde2011}: the force comes from the change in screen entropy as a mass is displaced, and a background that is the same on both sides of the screen produces none.
+
+These are the two conditions Padmanabhan~\cite{padmanabhan2014} identifies for an emergent theory to be immune to the zero-point energy: the field equations are unchanged by $L_{\rm matter}\to L_{\rm matter}+{\rm const}$, and $\Lambda$ enters solutions as an integration constant rather than as a parameter in the action. Both hold in unimodular gravity, where the trace-free field equations are blind to a constant shift of $T_{\mu\nu}$~\cite{ellis2011,bonder2018}. Here they are not adopted; they are how gravity was derived.
+
+What drops out is the part of the energy density that is the same at every point. Vacuum \emph{differences} have flux through a null surface and gravitate. The vacuum-loop correction to the electrostatic energy of a nucleus, the same physics as the Lamb shift, is a shift in binding energy relative to the surrounding vacuum, localized and different for aluminum and platinum, and free-fall tests of the equivalence principle show that it weighs, to one part in $10^6$~\cite{polchinski2006,bousso2008}. So does the proton, most of whose mass is QCD binding energy: a localized excitation above the condensate, not the condensate itself.
+
+Equation~(\ref{eq:einstein}) settles half of the problem. The zero-point sum of Eq.~(\ref{eq:rhovac}) is proportional to the metric, has no flux through any null surface, and never enters the field equations. Whatever quantum field theory says the vacuum weighs, gravity does not respond to it.
+
+The other half is $\Lambda$. It survives in Eq.~(\ref{eq:einstein}) as an integration constant: the equation does not fix its value, and something outside the equation must. In the present framework the horizon does. Axiom~2 ties the Planck length to the horizon through $L$, and with $\Lambda = 3/R_\Lambda^2$ this reads
+\begin{equation}
+\Lambda\,\ell_P^2 = \frac{12\pi^2}{L^2} = 2.85\times10^{-122}.
+\label{eq:LamL}
+\end{equation}
+$\Lambda$ is small in Planck units because the horizon is large in Planck lengths, $L = 6.4\times10^{61}$ of them around. The value of $L$ is measured independently in Sec.~\ref{sec:galactic}. What remains to be said here is what the energy of $\Lambda$ physically is, and why it comes to $10^{-9}$~J\,m$^{-3}$ rather than the $10^{113}$ of the zero-point sum. The next section answers by counting the degrees of freedom on the horizon.
+
+\section{The state count}
+\label{sec:count}
+
+The continuum estimates the energy of the vacuum from the bulk. A region of radius $R$ is assigned $(R/\ell_P)^3$ zero-point modes at the Planck energy apiece, and spread over the volume $\sim R^3$ these give $\rho_{\rm Planck}$ for any $R$; that is Eq.~(\ref{eq:rhovac}). Section~\ref{sec:decoupling} showed that none of it gravitates. What does gravitate is the energy of $\Lambda$, and the framework locates it on the horizon. The derivation is five steps.
+
+\textbf{Step 1. Boundary count.} Axiom~2 gives $R_\Lambda = L\ell_P/2\pi$. The horizon is a two-sphere, because space has three dimensions, which Ref.~\cite{korytko2026d} derives from the same $L$. Its budget of degrees of freedom is its pixel count,
+\begin{equation}
+N_{\rm pix} = \frac{4\pi R_\Lambda^2}{\ell_P^2} = \frac{L^2}{\pi} = 1.32\times10^{123},
+\label{eq:npix}
+\end{equation}
+an area rather than a volume. Counted in the register's own cells, which have area $\ell_P^2/\pi$ on the horizon~\cite{korytko2026d}, the sphere has $L^2$ cells instead; the two counts differ by $\pi$ and give the same entropy, $L^2/4\pi$ in units of $k_B$. The Planck pixel is the cell of the Bekenstein--Hawking entropy and is the one used here.
+
+\textbf{Step 2. Energy scale of a pixel.} The Gibbons--Hawking temperature~\cite{gibbons1977} of the horizon, $k_BT_{\rm dS} = \hbar c/2\pi R_\Lambda$, with $2\pi R_\Lambda = L\ell_P$ from Axiom~2, sets the energy scale of one pixel,
+\begin{equation}
+\varepsilon = k_BT_{\rm dS} = \frac{\hbar c}{L\ell_P} = \frac{E_P}{L} = 3.0\times10^{-53}~{\rm J},
+\label{eq:eps}
+\end{equation}
+the Planck energy divided by $L$, rather than the Planck energy.
+
+\textbf{Step 3. Total energy.} The Bekenstein--Hawking entropy of the horizon is $S_{\rm BH} = k_BA/4\ell_P^2 = \tfrac14 N_{\rm pix}k_B$, and its thermal energy is
+\begin{equation}
+E = S_{\rm BH}\,T_{\rm dS} = \tfrac14 N_{\rm pix}\,\varepsilon = 1.00\times10^{70}~{\rm J}.
+\label{eq:ETS}
+\end{equation}
+This is the energy $\Lambda$ carries inside the horizon, $\rho_\Lambda\cdot\tfrac43\pi R_\Lambda^3$, exactly. Equivalently, since for $p=-\rho$ the Komar energy, the mass that sources gravity in general relativity, is $2\rho_\Lambda V$ in magnitude,
+\begin{equation}
+2\rho_\Lambda V = \tfrac12 N_{\rm pix}\,\varepsilon,
+\label{eq:equip}
+\end{equation}
+one half-quantum $\tfrac12 k_BT_{\rm dS}$ per pixel, which is Padmanabhan's holographic equipartition~\cite{padmanabhan2010,padmanabhan2014} applied to the de Sitter horizon.
+
+\textbf{Step 4. Energy density.} Dividing by the volume $V = \tfrac43\pi R_\Lambda^3 = \tfrac43\pi(L\ell_P/2\pi)^3$,
+\begin{equation}
+\rho_\Lambda = \frac{E}{V} = \frac{3\pi}{2}\,\frac{E_P}{L^2\ell_P^3}.
+\label{eq:rhoderived}
+\end{equation}
+
+\textbf{Step 5. In Planck units.} With $\rho_{\rm Planck} = E_P/\ell_P^3 = c^7/\hbar G^2 = 4.63\times10^{113}$~J\,m$^{-3}$,
+\begin{equation}
+\boxed{\;\frac{\rho_\Lambda}{\rho_{\rm Planck}} = \frac{3\pi}{2L^2} = 1.13\times10^{-123}\;}
+\label{eq:suppression}
+\end{equation}
+and $\rho_\Lambda = 5.25\times10^{-10}$~J\,m$^{-3}$. As an energy scale this is $\rho_\Lambda^{1/4} = (3\pi/2)^{1/4}E_P/\sqrt{L} = 2.2$~meV, the millielectronvolt of dark energy written in the framework's constants. One factor of $L$ is lost to the dimensionality of the count, Step~1, and one to the energy scale of a pixel, Step~2.
+
+Steps~3 and 4 are identities of de Sitter thermodynamics and hold in general relativity for any $\Lambda$: the thermal energy of a de Sitter horizon, spread over its interior, is the $\Lambda$ that produces the horizon. Steps~1, 2 and 5 use Axiom~2, and given a value of $L$ from any source they predict the pixel count, the energy scale of a pixel and the vacuum energy density. What Axiom~1 adds is that the integer fixing the number of states inside the horizon, whose logarithm is the entropy $L^2/4\pi$ of Step~3, is the same $L$ that bounds every quantum state~\cite{korytko2026c}. The horizon count is then not merely an area in Planck units but the information capacity of the universe, which is Banks' proposal that a positive $\Lambda$ and a finite Hilbert space go together~\cite{banks2000} with its integer named. With $L$ taken from the horizon, as here, Eq.~(\ref{eq:suppression}) returns the observed density by construction; the test is Sec.~\ref{sec:galactic}, where $L$ comes from galaxies.
+
+The exponent is robust. $L = 6.4\times10^{61}$ is read off a known length: one does not need $\Lambda$ to know that a cosmological horizon is some $10^{26}$~m in radius, and the exponent does not depend on which horizon is meant. The Hubble radius gives $(R/\ell_P)^{-2}=10^{-121.9}$, the de Sitter radius $10^{-122.0}$, the particle horizon $10^{-122.9}$, a spread of one decade across lengths differing by a factor of three, against a problem of $123$ decades. The scaling $\rho_\Lambda\sim\rho_{\rm Planck}(\ell_P/R)^2$ has been reached before, from effective field theory~\cite{ckn1999} and from mode counting~\cite{gurzadyan2003,padmanabhan2005,hpadmanabhan2013}. Here it follows from the two axioms rather than from an assumed relation between cutoffs, and $L$ is fixed by two measurements those derivations do not have: the galactic acceleration scale (Sec.~\ref{sec:galactic}) and the qubit ceiling (Sec.~\ref{sec:test}).
+
+The $123$ orders of magnitude are therefore the square of the number of Planck lengths around the horizon. The continuum's estimate uses $(R_\Lambda/\ell_P)^3 = (L/2\pi)^3$ bulk modes at $E_P$; the energy that gravitates is $L^2/\pi$ boundary pixels at the scale $E_P/L$; and the ratio is $L^2$, up to a numerical factor.
+
+\section{\texorpdfstring{$L$}{L} from galaxies}
+\label{sec:galactic}
+
+Reference~\cite{korytko2026} fixes $L$ a second time, from data with no cosmological content. The acceleration scale of the radial acceleration relation, $a_0=(1.20\pm0.02_{\rm stat}\pm0.24_{\rm sys})\times10^{-10}$~m\,s$^{-2}$, is measured from galactic rotation curves~\cite{mcgaugh2016}, the systematic term coming from the stellar mass-to-light ratio. Then $a_0=c^2/L\ell_P$ inverts to $L_{\rm gal}=c^2/a_0\ell_P=(4.6\pm0.9)\times10^{61}$, and carried through Eqs.~(\ref{eq:axiom2}) and (\ref{eq:suppression}) this gives
+\begin{equation}
+\Lambda_{\rm pred} = \frac{12\pi^2}{\ell_P^2L_{\rm gal}^2} = \frac{12\pi^2a_0^2}{c^4} = (2.1\pm0.8)\times10^{-52}~{\rm m^{-2}},
+\label{eq:Lampred}
+\end{equation}
+or in the units of Eq.~(\ref{eq:rhovac}) a vacuum energy density of $(1.0\pm0.4)\times10^{-9}$~J\,m$^{-3}$. The observed values are $1.09\times10^{-52}$~m$^{-2}$~\cite{planck2018} and $5.2\times10^{-10}$~J\,m$^{-3}$. Prediction and observation agree. In the measured variable, the horizon value of $L$ corresponds to $a_0 = 8.6\times10^{-11}$~m\,s$^{-2}$, $1.4\sigma$ from the measured value, and the $123$ decades of Eq.~(\ref{eq:rhovac}) are closed from rotation curves alone. Rotation curves and cosmological surveys are unrelated measurements.
+
+Milgrom noticed in 1983 that $a_0\sim cH_0$~\cite{milgrom1983}. Equation~(\ref{eq:Lampred}) turns the coincidence into an equation, $\Lambda\propto a_0^2/c^4$, whose coefficient the framework fixes up to one order-unity factor. That factor is the coefficient $\gamma$ in $a_0 = \gamma c^2/L\ell_P$, which Ref.~\cite{korytko2026} does not derive and Refs.~\cite{korytko2026c,korytko2026d} leave open. The coefficient is an open problem in emergent gravity itself: Verlinde's derivation gives $cH_0/6 = 1.1\times10^{-10}$~m\,s$^{-2}$~\cite{verlinde2017}, and fits of rotation curves within emergent gravity prefer a scale about $30\%$ lower~\cite{yoon2023,yoon2025}. The $2\pi$ in Axiom~2 itself is not free; it is the number of Planck cells around a great circle, which Ref.~\cite{korytko2026d} checks against the horizon's independently defined pixels. The measured $a_0$ gives $\gamma = 1.39\pm0.28$. The framework's own scale, $\gamma = 1$, lies at $1.4\sigma$; $\gamma = 1/2$ at $3.2\sigma$; and the bare surface gravity of the horizon, $c^2/R_\Lambda$, at $18\sigma$. The remaining factor of $1.9$ between Eq.~(\ref{eq:Lampred}) and the observed $\Lambda$ is $\gamma^2$.
+
+\section{Test}
+\label{sec:test}
+
+A state of $N$ qubits spread across its Hilbert space has $2^N$ outcomes of nonzero probability. In the framework each probability is a frequency over $L$ trials, hence at least $1/L$, and the probabilities sum to one; so $2^N\le L$, and
+\begin{equation}
+N_{\max} = \lfloor\log_2 L\rfloor = 205,
+\label{eq:nmax}
+\end{equation}
+or $204$ at the galactic value of $L$~\cite{korytko2026c}. This is Palmer's $\log_2 L$~\cite{palmer2026}; his bit count $2^{N+1}-2\le NL$, which gives $212$ and which Ref.~\cite{korytko2026} called exact, is a weaker necessary condition~\cite{korytko2026c}. Beyond $N_{\max}$, algorithms that spread amplitude across the whole of Hilbert space lose their exponential advantage. Operationally, a random circuit on $N$ fault-tolerant logical qubits followed by its inverse returns to its initial state with the gate fidelity in standard quantum mechanics, and here with probability only about $(L/2^N)^2$ once $N$ exceeds $205$~\cite{korytko2026c}. The ceiling is technology-independent, the same for superconducting qubits as for trapped ions, which distinguishes it from every known decoherence mechanism. A measured $N_{\max}$ would fix $L$ from the laboratory to a factor of two, $2^{N_{\max}}\le L<2^{N_{\max}+1}$, and with it the exponent in Eq.~(\ref{eq:suppression}). If devices carry states spread across well over $205$ logical qubits with no such wall, the account given here fails at its premise.
+
+The framework also requires $\Lambda$ to be constant, since $L$ is. Reference~\cite{korytko2026} turns the lunar-laser-ranging bound on $\dot G/G$~\cite{hofmann2018} into $|1+w_0|\lesssim5\times10^{-4}$ for the present dark-energy equation of state. DESI DR2 prefers evolving dark energy over a constant $\Lambda$ at $3.1\sigma$ with the cosmic microwave background, and at $2.8\sigma$ to $4.2\sigma$ with supernovae added, depending on the sample~\cite{desi2025}. A confirmed time variation of the dark-energy density would falsify the identification of $R_\Lambda$ with a fixed length in Axiom~2; the framework predicts that the preference will not survive.
+
+\section{Conclusion}
+
+The vacuum catastrophe has two parts. The zero-point energy never enters the field equations, because in an emergent theory those equations are unchanged by a constant shift of the matter Lagrangian and $\Lambda$ appears as a boundary condition. The scale of that boundary condition is set by the state count. The continuum assigns a horizon volume $(R/\ell_P)^3$ modes at $E_P$ apiece and returns the Planck density for any $R$. A universe of finite information has $L^2/\pi$ pixels on its horizon, each at the energy scale $E_P/L$, and the energy $\Lambda$ carries inside the horizon is $S_{\rm BH}T_{\rm dS}$. Once a quantum state cannot hold unlimited information, $\rho_\Lambda/\rho_{\rm Planck}=3\pi/2L^2$ is the only number the counting can give. $L$ has been determined at the horizon and from galactic rotation curves, and the two agree, at $1.4\sigma$ of the galactic measurement. A third determination, with no astronomy in it, is a ceiling of $205$ usefully entangled qubits.
+
+\appendix
+
+\section{Numerical inputs}
+\label{app:numbers}
+
+$c=2.99792458\times10^8$~m\,s$^{-1}$, $\hbar=1.0546\times10^{-34}$~J\,s, $G=6.6743\times10^{-11}$~m$^3$\,kg$^{-1}$\,s$^{-2}$, $\ell_P=1.6163\times10^{-35}$~m, $E_P = \hbar c/\ell_P = 1.956\times10^{9}$~J; $\Lambda=1.09\times10^{-52}$~m$^{-2}$ from $H_0=67.4$~km\,s$^{-1}$\,Mpc$^{-1}$ and $\Omega_\Lambda=0.685$~\cite{planck2018}; $a_0=(1.20\pm0.02_{\rm stat}\pm0.24_{\rm sys})\times10^{-10}$~m\,s$^{-2}$~\cite{mcgaugh2016}. Uncertainties are propagated linearly from the systematic term of $a_0$.
+
+\begin{table}[htbp]
+\caption{Derived quantities.}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+Quantity & Expression & Value \\
+\colrule
+$\rho_{\rm Planck}$ & $c^7/\hbar G^2$ & $4.63\times10^{113}$~J\,m$^{-3}$ \\
+$\rho_\Lambda$ & $\Lambda c^4/8\pi G$ & $5.25\times10^{-10}$~J\,m$^{-3}$ \\
+$R_\Lambda$ & $\sqrt{3/\Lambda}$ & $1.659\times10^{26}$~m \\
+$L$ & $2\pi R_\Lambda/\ell_P$ & $6.449\times10^{61}$ \\
+$L_{\rm gal}$ & $c^2/a_0\ell_P$ & $(4.6\pm0.9)\times10^{61}$ \\
+$\gamma$ & $a_0L\ell_P/c^2$ & $1.39\pm0.28$ \\
+$N_{\rm pix}$ & $L^2/\pi$ & $1.324\times10^{123}$ \\
+$N_{\rm cell}$ & $L^2$ & $4.159\times10^{123}$ \\
+$S_{\rm BH}/k_B$ & $L^2/4\pi$ & $3.310\times10^{122}$ \\
+Bulk modes & $(R_\Lambda/\ell_P)^3$ & $1.08\times10^{183}$ \\
+$\varepsilon$ & $E_P/L$ & $3.03\times10^{-53}$~J \\
+$\rho_\Lambda/\rho_{\rm Planck}$ & $3\pi/2L^2$ & $1.133\times10^{-123}$ \\
+$\rho_\Lambda V$ & $S_{\rm BH}T_{\rm dS}$ & $1.004\times10^{70}$~J \\
+$\rho_\Lambda^{1/4}$ & $(3\pi/2)^{1/4}E_P/\sqrt{L}$ & $2.24$~meV \\
+$N_{\max}$ & $\lfloor\log_2 L\rfloor$ & $205$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{acknowledgments}
+The author used an AI assistant (Anthropic's Claude) for adversarial review, numerical verification, and editing of the manuscript. The physical proposal and the claims are the author's own.
+\end{acknowledgments}
+
+\section*{Declarations}
+
+\textbf{Funding.} This work received no external funding. \textbf{Competing interests.} The author declares none. \textbf{Data availability.} No new data were generated; all numerical inputs are published values cited in the text. \textbf{Use of AI tools.} As stated in the acknowledgments; the author takes full responsibility for the manuscript.
+
+\begin{thebibliography}{99}
+
+\bibitem{weinberg1989} S. Weinberg, The cosmological constant problem, Rev. Mod. Phys. \textbf{61}, 1 (1989). \url{https://doi.org/10.1103/RevModPhys.61.1}
+
+\bibitem{martin2012} J. Martin, Everything you always wanted to know about the cosmological constant problem (but were afraid to ask), C. R. Physique \textbf{13}, 566 (2012). \url{https://doi.org/10.1016/j.crhy.2012.04.008}
+
+\bibitem{adler1995} R. J. Adler, B. Casey, and O. C. Jacob, Vacuum catastrophe: An elementary exposition of the cosmological constant problem, Am. J. Phys. \textbf{63}, 620 (1995). \url{https://doi.org/10.1119/1.17850}
+
+\bibitem{feynman1995} R. P. Feynman, F. B. Morinigo, and W. G. Wagner, \emph{Feynman Lectures on Gravitation}, edited by B. Hatfield (Addison-Wesley, Reading, MA, 1995).
+
+\bibitem{korytko2026} A. Korytko, Gravitation from Hilbert-space granularity: Pinning the parameter $L$ of rational quantum mechanics across scales (2026). \url{https://doi.org/10.5281/zenodo.22255461}
+
+\bibitem{palmer2020} T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell's theorem, Proc. R. Soc. A \textbf{476}, 20190350 (2020). \url{https://doi.org/10.1098/rspa.2019.0350}
+
+\bibitem{palmer2026} T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA \textbf{123}, e2523350123 (2026). \url{https://doi.org/10.1073/pnas.2523350123}; arXiv:2510.02877.
+
+\bibitem{korytko2026c} A. Korytko, One register: A common origin for the granularity of Hilbert space and of space (2026). \url{https://doi.org/10.5281/zenodo.22669417}
+
+\bibitem{korytko2026d} A. Korytko, The dimension of space from the granularity of Hilbert space (2026). \url{https://doi.org/10.5281/zenodo.22678538}
+
+\bibitem{verlinde2011} E. Verlinde, On the origin of gravity and the laws of Newton, J. High Energy Phys. \textbf{04}, 029 (2011). \url{https://doi.org/10.1007/JHEP04(2011)029}
+
+\bibitem{jacobson1995} T. Jacobson, Thermodynamics of spacetime: The Einstein equation of state, Phys. Rev. Lett. \textbf{75}, 1260 (1995). \url{https://doi.org/10.1103/PhysRevLett.75.1260}
+
+\bibitem{gibbons1977} G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation, Phys. Rev. D \textbf{15}, 2738 (1977). \url{https://doi.org/10.1103/PhysRevD.15.2738}
+
+\bibitem{banks2018} T. Banks and W. Fischler, Why the cosmological constant is a boundary condition, arXiv:1811.00130 (2018).
+
+\bibitem{padmanabhan2014} T. Padmanabhan and H. Padmanabhan, Cosmological constant from the emergent gravity perspective, Int. J. Mod. Phys. D \textbf{23}, 1430011 (2014). \url{https://doi.org/10.1142/S0218271814300110}; arXiv:1404.2284.
+
+\bibitem{ellis2011} G. F. R. Ellis, H. van Elst, J. Murugan, and J.-P. Uzan, On the trace-free Einstein equations as a viable alternative to general relativity, Class. Quantum Grav. \textbf{28}, 225007 (2011). \url{https://doi.org/10.1088/0264-9381/28/22/225007}
+
+\bibitem{bonder2018} Y. Bonder and C. Corral, Unimodular Einstein--Cartan gravity: Dynamics and conservation laws, Phys. Rev. D \textbf{97}, 084001 (2018). \url{https://doi.org/10.1103/PhysRevD.97.084001}
+
+\bibitem{polchinski2006} J. Polchinski, The cosmological constant and the string landscape, arXiv:hep-th/0603249 (2006).
+
+\bibitem{bousso2008} R. Bousso, TASI lectures on the cosmological constant, Gen. Relativ. Gravit. \textbf{40}, 607 (2008). \url{https://doi.org/10.1007/s10714-007-0557-5}; arXiv:0708.4231.
+
+\bibitem{padmanabhan2010} T. Padmanabhan, Equipartition of energy in the horizon degrees of freedom and the emergence of gravity, Mod. Phys. Lett. A \textbf{25}, 1129 (2010). \url{https://doi.org/10.1142/S021773231003313X}; arXiv:0912.3165.
+
+\bibitem{banks2000} T. Banks, Cosmological breaking of supersymmetry, or little Lambda goes back to the future II, arXiv:hep-th/0007146 (2000).
+
+\bibitem{ckn1999} A. G. Cohen, D. B. Kaplan, and A. E. Nelson, Effective field theory, black holes, and the cosmological constant, Phys. Rev. Lett. \textbf{82}, 4971 (1999). \url{https://doi.org/10.1103/PhysRevLett.82.4971}
+
+\bibitem{gurzadyan2003} V. G. Gurzadyan and S.-S. Xue, On the estimation of the current value of the cosmological constant, Mod. Phys. Lett. A \textbf{18}, 561 (2003). arXiv:astro-ph/0105245.
+
+\bibitem{padmanabhan2005} T. Padmanabhan, Vacuum fluctuations of energy density can lead to the observed cosmological constant, Class. Quantum Grav. \textbf{22}, L107 (2005). \url{https://doi.org/10.1088/0264-9381/22/17/L01}; arXiv:hep-th/0406060.
+
+\bibitem{hpadmanabhan2013} H. Padmanabhan and T. Padmanabhan, CosMIn: The solution to the cosmological constant problem, Int. J. Mod. Phys. D \textbf{22}, 1342001 (2013). \url{https://doi.org/10.1142/S0218271813420017}; arXiv:1302.3226.
+
+\bibitem{mcgaugh2016} S. S. McGaugh, F. Lelli, and J. M. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. \textbf{117}, 201101 (2016). \url{https://doi.org/10.1103/PhysRevLett.117.201101}
+
+\bibitem{planck2018} Planck Collaboration, N. Aghanim \emph{et al.}, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. \textbf{641}, A6 (2020). \url{https://doi.org/10.1051/0004-6361/201833910}
+
+\bibitem{milgrom1983} M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, Astrophys. J. \textbf{270}, 365 (1983). \url{https://doi.org/10.1086/161130}
+
+\bibitem{verlinde2017} E. Verlinde, Emergent gravity and the dark universe, SciPost Phys. \textbf{2}, 016 (2017). \url{https://doi.org/10.21468/SciPostPhys.2.3.016}
+
+\bibitem{yoon2023} Y. Yoon, J. C. Park, and H. S. Hwang, Understanding galaxy rotation curves with Verlinde's emergent gravity, Class. Quantum Grav. \textbf{40}, 02LT01 (2023). \url{https://doi.org/10.1088/1361-6382/acaae6}
+
+\bibitem{yoon2025} Y. Yoon and H. S. Hwang, Comment on ``Emergent Gravity and the Dark Universe'' by Erik Verlinde, arXiv:1909.01734v4 (2019; revised 2025).
+
+\bibitem{hofmann2018} F. Hofmann and J. M\"uller, Relativistic tests with lunar laser ranging, Class. Quantum Grav. \textbf{35}, 035015 (2018). \url{https://doi.org/10.1088/1361-6382/aa8f7a}
+
+\bibitem{desi2025} DESI Collaboration, M. Abdul-Karim \emph{et al.}, DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints, Phys. Rev. D \textbf{112}, 083515 (2025). \url{https://doi.org/10.1103/tr6y-kpc6}; arXiv:2503.14738.
+
+\end{thebibliography}
+
+\end{document}

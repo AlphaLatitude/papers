@@ -6,12 +6,21 @@
 <title>Papers &mdash; Andrew Korytko</title>
 <meta name="description" content="Preprints on the granularity of Hilbert space and its consequences for gravity, the cosmological constant, and the dimension of space. The citable versions are on Zenodo; this page mirrors them.">
 <link rel="canonical" href="https://papers.alphalatitude.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <meta name="citation_title" content="Gravitation from Hilbert-Space Granularity: Pinning the Parameter L of Rational Quantum Mechanics Across Scales">
 <meta name="citation_author" content="Korytko, Andrew">
 <meta name="citation_publication_date" content="2026/09/05">
 <meta name="citation_pdf_url" content="https://papers.alphalatitude.com/papers/1-gravitation/paper_v7.pdf">
 <meta name="citation_doi" content="10.5281/zenodo.22337740">
+
+<meta name="citation_title" content="The Vacuum Catastrophe and the Granularity of Hilbert Space">
+<meta name="citation_author" content="Korytko, Andrew">
+<meta name="citation_publication_date" content="2026/09/10">
+<meta name="citation_pdf_url" content="https://papers.alphalatitude.com/papers/2-vacuum/vacuum_v34-2.pdf">
+<meta name="citation_doi" content="10.5281/zenodo.22683544">
 
 <meta name="citation_title" content="One Register: A Common Origin for the Granularity of Hilbert Space and of Space">
 <meta name="citation_author" content="Korytko, Andrew">
@@ -26,62 +35,206 @@
 <meta name="citation_doi" content="10.5281/zenodo.22685575">
 
 <style>
-:root { color-scheme: light dark; }
+/* Design system taken from alphalatitude.com: the chart frame, latitude
+   graticule, course line and fix markers, teal on ink, Archivo for display
+   and IBM Plex Mono for meta. Same palette and rhythm, one static file. */
+:root {
+  --teal: #3A9797;
+  --teal-dark: #2D7575;
+  --ink: #16201F;
+  --muted: #5C6868;
+  --faint: #8A9595;
+  --rule: #E2E8E8;
+  --grat: rgba(58, 151, 151, 0.07);
+  --course: rgba(58, 151, 151, 0.16);
+  --bg: #FCFDFD;
+  --paper: #FFFFFF;
+  --gutter: 64px;
+  --frame: 896px;
+}
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.55; margin: 0 auto; padding: 2rem 1rem 4rem; max-width: 42em;
-  color: #1a1a1a; background: #fff; overflow-wrap: break-word;
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px; line-height: 1.58;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
 }
-h1 { font-size: 1.6rem; margin: 0 0 .4rem; }
-h2 { font-size: 1.15rem; margin: 2.6rem 0 .5rem; }
-p { margin: .6rem 0; }
-.lede { margin-bottom: .3rem; }
-.meta, footer { color: #555; font-size: .92rem; }
-.status { font-size: .92rem; color: #555; margin: .5rem 0 .3rem; }
-.links { font-size: .95rem; margin: .3rem 0 .6rem; }
-.links a { margin-right: .9rem; display: inline-block; }
-a { color: #06603f; }
+.mono {
+  font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-feature-settings: "tnum" 1;
+}
+.display { font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+.chart {
+  position: relative; max-width: var(--frame); margin: 0 auto; background: var(--paper);
+  border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); min-height: 100vh;
+}
+.graticule {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(to bottom,
+    var(--grat) 0, var(--grat) 1px, transparent 1px, transparent 48px);
+}
+.course {
+  position: absolute; top: 0; bottom: 0; left: calc(40px + (var(--gutter) / 2));
+  width: 1.5px; z-index: 1;
+  background: linear-gradient(to bottom, transparent 0, var(--course) 96px,
+    var(--course) calc(100% - 188px), transparent 100%);
+}
+.inner { position: relative; padding: 0 40px 0 calc(40px + var(--gutter)); z-index: 2; }
+
+.hero { position: relative; padding: 84px 0 26px; }
+.hero__meta {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  font-size: 11.5px; letter-spacing: 0.04em; color: var(--faint); margin: 0 0 26px;
+}
+h1 {
+  font-weight: 600; font-size: clamp(2.4rem, 6.4vw, 3.6rem); line-height: 1.0;
+  letter-spacing: 0.005em; margin: 0; color: var(--ink);
+}
+h1 .lat { color: var(--teal-dark); }
+.lede { margin: 22px 0 0; max-width: 63ch; color: var(--ink); }
+.orcid {
+  margin: 14px 0 0; font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--teal-dark);
+}
+
+.leg { position: relative; padding: 40px 0; border-top: 1px solid var(--rule); }
+.fix {
+  position: absolute; left: calc(-1 * (var(--gutter) / 2) - 6px); top: -7px;
+  width: 13px; height: 13px;
+}
+.fix::before {
+  content: ""; position: absolute; inset: 0; border: 2px solid var(--teal);
+  border-radius: 50%; background: var(--paper);
+}
+.fix::after {
+  content: ""; position: absolute; inset: 4.5px; background: var(--teal); border-radius: 50%;
+}
+.leghead { display: flex; align-items: baseline; gap: 14px; margin: 0 0 14px; flex-wrap: wrap; }
+.leghead .num { font-size: 13px; font-weight: 500; color: var(--teal-dark); letter-spacing: 0.02em; }
+.leghead .ttl {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+h2 {
+  font-weight: 600; font-size: 1.3rem; letter-spacing: -0.01em; margin: 0 0 6px; color: var(--ink);
+}
+.status {
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--teal-dark); margin: 0 0 14px;
+}
+.leg p { margin: 0 0 1.05rem; max-width: 63ch; }
+.prep { color: var(--faint); font-size: 0.97rem; }
+.links { font-size: 0.95rem; margin: 0 0 .7rem; }
+.links a {
+  color: var(--teal-dark); text-decoration: none;
+  border-bottom: 1px solid var(--rule); padding-bottom: 1px; margin-right: 1.1rem;
+  display: inline-block;
+}
+.links a:hover { color: var(--ink); border-color: var(--teal); }
+a { color: var(--teal-dark); }
 pre {
-  background: #f4f4f4; padding: .7rem .8rem; border-radius: 4px; font-size: .82rem;
-  white-space: pre-wrap; word-break: break-word; margin: .4rem 0 0;
+  font-size: 12px; line-height: 1.7; color: var(--muted); background: var(--bg);
+  border-left: 1.5px solid var(--teal); padding: 12px 14px; margin: 0;
+  white-space: pre-wrap; word-break: break-word; max-width: 63ch;
 }
-.prep { color: #555; font-style: italic; }
-hr { border: 0; border-top: 1px solid #ddd; margin: 3rem 0 1.2rem; }
-footer { font-size: .88rem; }
+footer {
+  position: relative; padding: 34px 0 56px; border-top: 1.5px solid var(--teal); margin-top: 8px;
+}
+.arrival {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--teal-dark); margin: 0 0 18px; display: flex; align-items: center; gap: 10px;
+}
+.arrival::before {
+  content: ""; width: 9px; height: 9px; background: var(--teal);
+  transform: rotate(45deg); flex: none;
+}
+.footer-block { font-size: 12px; line-height: 1.7; color: var(--faint); margin: 0 0 14px; }
+.footer-block:last-child { margin-bottom: 0; }
+footer a { color: var(--teal-dark); }
+
+@media (max-width: 720px) {
+  :root { --gutter: 38px; }
+  .inner { padding: 0 22px 0 calc(22px + var(--gutter)); }
+  .hero { padding: 56px 0 22px; }
+}
+@media (max-width: 480px) {
+  :root { --gutter: 30px; }
+  .inner { padding: 0 18px 0 calc(18px + var(--gutter)); }
+}
 @media (prefers-color-scheme: dark) {
-  body { color: #e6e6e6; background: #131313; }
-  .meta, footer, .status, .prep { color: #a9a9a9; }
-  a { color: #6fd3a8; }
-  pre { background: #1e1e1e; }
-  hr { border-top-color: #333; }
+  :root {
+    --ink: #E8EDEC; --muted: #9DAAA9; --faint: #7C8A89; --rule: #24312F;
+    --bg: #0F1514; --paper: #131A19; --teal-dark: #6FC5C0;
+    --grat: rgba(111, 197, 192, 0.05); --course: rgba(111, 197, 192, 0.14);
+  }
 }
 </style>
 </head>
 <body>
-<h1>Papers &mdash; Andrew Korytko</h1>
+<div class="chart">
+<div class="graticule"></div>
+<div class="course"></div>
+<div class="inner">
+<header class="hero">
+<p class="hero__meta mono">Preprints &middot; AlphaLatitude Inc. &middot; Sunnyvale, California</p>
+<h1 class="display">Papers &mdash; <span class="lat">Andrew Korytko</span></h1>
 <p class="lede">Preprints on the granularity of Hilbert space and its consequences for gravity, the cosmological constant, and the dimension of space. The citable versions are on <a href="https://doi.org/10.5281/zenodo.22255461">Zenodo</a>; this page mirrors them.</p>
-<p class="meta">ORCID iD: <a href="https://orcid.org/0009-0005-4569-2228">0009-0005-4569-2228</a></p>
-<h2>Gravitation from Hilbert-Space Granularity: Pinning the Parameter L of Rational Quantum Mechanics Across Scales</h2>
+<p class="orcid mono">ORCID <a href="https://orcid.org/0009-0005-4569-2228">0009-0005-4569-2228</a></p>
+</header>
+<section class="leg">
+<div class="fix"></div>
+<div class="leghead mono"><span class="num">01</span><span class="ttl">Gravitation</span></div>
+<h2 class="display">Gravitation from Hilbert-Space Granularity: Pinning the Parameter L of Rational Quantum Mechanics Across Scales</h2>
+<p class="status mono">Version v7 &middot; 5 September 2026</p>
 <p>Ever since general relativity and quantum mechanics were discovered over a century ago, physics has been on the quest for a theory that unites them. We argue that the answer has been staring us in the face: gravitation is a consequence of discrete quantum mechanics. Tim Palmer&#x27;s Rational Quantum Mechanics claims that a quantum state cannot carry infinite information. Hilbert space is granular, with a finite parameter L, and Palmer attributes that granularity to gravity. We reverse the claim. L comes first, and gravity is what a granular Hilbert space looks like at every scale. From one universal integer L and one length, the cosmological horizon radius, we derive the Planck length and Newton&#x27;s constant. Einstein&#x27;s equations follow; with the same L, galactic rotation curves flatten without dark matter, and Newton&#x27;s constant and the cosmological constant cease to be independent: their product is fixed by L. We test the reversal by pinning L on every scale where it appears on its own rather than through the Planck length. The galactic scale gives 4.6×10^61; the cosmological scale gives 6.4×10^61. They agree to within a factor of 1.4 on a sixty-two-digit number. This is the old coincidence between Milgrom&#x27;s acceleration and the Hubble scale, and here it is one L seen on two scales. The third place where L appears on its own is the quantum computer, which will report within the decade. We predict what it will find: a ceiling near 200 entangled qubits, the same for every technology.</p>
-<p>Version 7 (5 Sep 2026): Sec. II now places RaQM&#x27;s mass-dependent L against Palmer&#x27;s earlier discretization of the Bloch sphere (fixed-length bit strings, prime parameter p) and the 2009 Invariant Set Postulate, and notes that the extension of Axiom 1 to continuous variables and the possible unification of Axioms 1 and 2 are deferred to a separate paper; Sec. IV C restates the Verlinde–RAR caveat as Lelli&#x27;s 2017 paper makes it (point-mass deep regime equals deep MOND; departures arise for finite-size systems); US spelling throughout; two references added. No change to results. v6 (3 Sep): Sec. IV C corrected to cite the current version of Yoon &amp; Hwang&#x27;s comment. v1 (2 Sep 2026) remains the priority record.</p>
-<p class="status">Version v7, 5 September 2026.</p>
 <p class="links"><a href="papers/1-gravitation/paper_v7.pdf">PDF</a> <a href="papers/1-gravitation/paper_v7.tex">LaTeX source</a> <a href="https://doi.org/10.5281/zenodo.22337740">Zenodo record</a> <a href="https://doi.org/10.5281/zenodo.22255461">Zenodo latest</a></p>
-<pre>A. Korytko, Gravitation from Hilbert-Space Granularity: Pinning the Parameter L of Rational Quantum Mechanics Across Scales, Zenodo (2026). doi:10.5281/zenodo.22255461</pre>
-<h2>The Vacuum Catastrophe and the Granularity of Hilbert Space</h2>
-<p class="prep">In preparation.</p>
-<h2>One Register: A Common Origin for the Granularity of Hilbert Space and of Space</h2>
+<pre class="mono">A. Korytko, Gravitation from Hilbert-Space Granularity: Pinning the Parameter L of Rational Quantum Mechanics Across Scales, Zenodo (2026). doi:10.5281/zenodo.22255461</pre>
+</section>
+<section class="leg">
+<div class="fix"></div>
+<div class="leghead mono"><span class="num">02</span><span class="ttl">Vacuum</span></div>
+<h2 class="display">The Vacuum Catastrophe and the Granularity of Hilbert Space</h2>
+<p class="status mono">Version v1 &middot; 10 September 2026</p>
+<p>Quantum field theory with a Planckian cutoff predicts a vacuum energy density of 4.6×10¹¹³ J m⁻³, 123 orders of magnitude above what the observed cosmological constant allows. This paper resolves the discrepancy in two steps, within a framework in which every quantum state carries the same finite budget of L bits and gravity follows from that limit. First, the zero-point energy does not gravitate: a stress tensor proportional to the metric has no flux through any null surface, so it never enters the thermodynamic derivation of Einstein&#x27;s equations, and Λ survives there as an integration constant that the horizon fixes. Second, the error in the standard estimate is in the state count. The energy Λ carries inside the horizon is the horizon entropy times the horizon temperature, which gives ρ_Λ = 3πρ_Planck/2L² with L = 6.4×10⁶¹ the number of Planck lengths around the horizon: one factor of L because the count is of a boundary and not of a volume, and one because the energy scale of a pixel is E_P/L and not E_P. The acceleration scale of galactic rotation curves, a₀ = (1.20 ± 0.24)×10⁻¹⁰ m s⁻², fixes L independently at (4.6 ± 0.9)×10⁶¹ and gives ρ_Λ = (1.0 ± 0.4)×10⁻⁹ J m⁻³, against the observed 5.2×10⁻¹⁰; in the measured variable a₀ the two agree at 1.4σ. The same L caps a state spread across its Hilbert space at 205 qubits, a third determination with no astronomy in it.</p>
+<p class="links"><a href="papers/2-vacuum/vacuum_v34-2.pdf">PDF</a> <a href="papers/2-vacuum/vacuum_v34-2.tex">LaTeX source</a> <a href="https://doi.org/10.5281/zenodo.22683544">Zenodo record</a> <a href="https://doi.org/10.5281/zenodo.22683543">Zenodo latest</a></p>
+<pre class="mono">A. Korytko, The Vacuum Catastrophe and the Granularity of Hilbert Space, Zenodo (2026). doi:10.5281/zenodo.22683543</pre>
+</section>
+<section class="leg">
+<div class="fix"></div>
+<div class="leghead mono"><span class="num">03</span><span class="ttl">Register</span></div>
+<h2 class="display">One Register: A Common Origin for the Granularity of Hilbert Space and of Space</h2>
+<p class="status mono">Version v2 &middot; 8 September 2026</p>
 <p>Palmer&#x27;s Rational Quantum Mechanics writes a qubit as L bits: the count m of +1 bits gives the Born probability m/L and a cyclic shift the phase. Previously we made L universal, identified one phase step with one Planck length on the horizon, and derived Newton&#x27;s constant and Einstein&#x27;s equations at L ≈ 6×10⁶¹. The two axioms become one: a dial of L notches on the horizon, each a Planck length; every qubit is a pattern on it; one notch is a Planck-length translation, under which a wave of κ wavelengths gains κ phase steps, Palmer&#x27;s phase step being the slowest wave&#x27;s. From it: light moves one notch per tick; velocity is the excess of right- over left-movers, v/c = 2m/L − 1; in matter a right-mover becomes a left-mover every quarter Compton period, its Compton clock being Palmer&#x27;s hidden global phase; the circumference is the longest wavelength, the previous paper&#x27;s second axiom; and Born&#x27;s rule as a frequency bounds a state spanning its Hilbert space at 2^N ≤ L, N_max = 205, for any physical realization. Free dynamics is exact mode by mode in the plane of any elementary vertex, whose momenta the horizon&#x27;s pixels label; whole-cell position holds along one direction only; several particles in several planes need three dimensions, not constructed here. The predictions are inherited: the qubit ceiling, now a random circuit and its inverse failing to return past 205 logical qubits, and constant Λ; it entails no energy-dependent light speed and no intrinsic matter-wave decoherence, unlike collapse models.</p>
-<p class="status">Version v2, 8 September 2026.</p>
 <p class="links"><a href="papers/3-register/register_v2-5.pdf">PDF</a> <a href="papers/3-register/register_v2.tex">LaTeX source</a> <a href="https://doi.org/10.5281/zenodo.22669417">Zenodo record</a> <a href="https://doi.org/10.5281/zenodo.22669416">Zenodo latest</a></p>
-<pre>A. Korytko, One Register: A Common Origin for the Granularity of Hilbert Space and of Space, Zenodo (2026). doi:10.5281/zenodo.22669416</pre>
-<h2>The Dimension of Space from the Granularity of Hilbert Space</h2>
+<pre class="mono">A. Korytko, One Register: A Common Origin for the Granularity of Hilbert Space and of Space, Zenodo (2026). doi:10.5281/zenodo.22669416</pre>
+</section>
+<section class="leg">
+<div class="fix"></div>
+<div class="leghead mono"><span class="num">04</span><span class="ttl">Dimension</span></div>
+<h2 class="display">The Dimension of Space from the Granularity of Hilbert Space</h2>
+<p class="status mono">Version v8 &middot; 10 September 2026</p>
 <p>Why do we live in a three-dimensional world? It has been asked since antiquity. We now know the answer; it follows from two postulates. The first is that quantum mechanics is granular: every quantum state is a record of L bits, L = 6.4×10⁶¹ a universal constant, on a ring of L Planck cells, and each record&#x27;s phase is hidden. The second is that the momenta an elementary interaction can carry are labeled by the cells of a sphere in n-dimensional space built on such rings, with n left open, integer or not. From the first, identical cells make momentum conserved at a vertex, and the hidden phase, respected cell by cell, makes the ring&#x27;s shift carry a link phase: a gauge field, coupled to the current at a vertex with three legs. A vertex with k legs has momenta spanning k−1 dimensions; Palmer&#x27;s rule that every probability is a multiple of 1/L gives such a momentum L^(k−1) labels and the sphere L^(n−1) cells; equating them gives n = k, so every elementary vertex has the same number of legs, and the three-leg one makes n = 3. Ref. [2]&#x27;s Planck pixels, defined by the horizon entropy, agree to a factor π; as an equation in real n their single root is 3.008, and 2 or 4 would need either count wrong by a factor 3×10³⁰. The sphere is one, so the space is one. An elementary vertex with four legs, or an energy-dependent speed of light, would falsify it.</p>
-<p>v8: The two-body premise is removed. Conservation of momentum at a vertex, the existence of a three-leg vertex, and the rule n = k (space has as many dimensions as an elementary vertex has legs) are derived from the two postulates, the last through the hidden phase of each record, which forces a link phase on the shift and hence a gauge coupling. Added: the register as a reversible automaton; the consistency reason why a vertex plane&#x27;s orientation cannot be data; references to Wilson, Peierls, and &#x27;t Hooft. The title page now carries the concept DOI. v5 (9 Sep) remains the priority record.</p>
-<p class="status">Version v8, 10 September 2026.</p>
 <p class="links"><a href="papers/4-dimension/dimension_v8-2.pdf">PDF</a> <a href="papers/4-dimension/dimension_v8-2.tex">LaTeX source</a> <a href="https://doi.org/10.5281/zenodo.22685575">Zenodo record</a> <a href="https://doi.org/10.5281/zenodo.22678537">Zenodo latest</a></p>
-<pre>A. Korytko, The Dimension of Space from the Granularity of Hilbert Space, Zenodo (2026). doi:10.5281/zenodo.22678537</pre>
-<hr>
-<footer>Mirror of Zenodo records; the DOIs above are the citations of record. Source for this page: <a href="https://github.com/AlphaLatitude/papers">github.com/AlphaLatitude/papers</a>.</footer>
+<pre class="mono">A. Korytko, The Dimension of Space from the Granularity of Hilbert Space, Zenodo (2026). doi:10.5281/zenodo.22678537</pre>
+</section>
+<footer class="mono">
+<p class="arrival">Registered position</p>
+<div class="footer-block">
+AlphaLatitude Inc. &copy; 2026 &middot; Sunnyvale, California &middot; Registered in California (C-corp)<br>
+OptionsAhoy&trade; is a trademark of AlphaLatitude Inc.
+</div>
+<div class="footer-block">
+Mirror of Zenodo records; the DOIs above are the citations of record. Source for this page: <a href="https://github.com/AlphaLatitude/papers">github.com/AlphaLatitude/papers</a>. Updated 10 September 2026.
+</div>
+<div class="footer-block">
+This page sets no cookies, runs no scripts, and collects no personal data.
+</div>
+</footer>
+</div>
+</div>
 </body>
 </html>
