@@ -1,0 +1,1321 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>The Vacuum Catastrophe and the Granularity of Hilbert Space</title>
+<!--Generated on Thu Sep 10 03:59:34 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on September 10, 2026; DOI: .-->
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="en" content="Cosmological constant; vacuum energy; emergent gravity; holographic principle; discrete Hilbert space; rational quantum mechanics">
+<style>/*======================================================================
+ Core CSS for LaTeXML documents converted to (X)HTML */
+/* Generic Page layout */
+.ltx_page_header,
+.ltx_page_footer { font-size:0.8em; }
+.ltx_page_header *[rel~="prev"],
+.ltx_page_footer *[rel~="prev"] { float:left; }
+.ltx_page_header *[rel~="up"],
+.ltx_page_footer *[rel~="up"]   { display:block; text-align:center; }
+.ltx_page_header *[rel~="next"],
+.ltx_page_footer *[rel~="next"] {  float:right; }
+/* What was I trying for here; need more selective rule!
+.ltx_page_header .ltx_ref,
+.ltx_page_footer .ltx_ref {
+    margin:0 1em; }
+*/
+.ltx_page_header li {
+    padding:0.1em 0.2em 0.1em 1em;}
+
+/* Main content */
+.ltx_page_content { clear:both; }
+.ltx_page_header  { border-bottom:1px solid; margin-bottom:5px; }
+.ltx_page_footer  { clear:both; border-top:1px solid; margin-top:5px;  }
+
+.ltx_page_header:after,
+.ltx_page_footer:after,
+.ltx_page_content:after {
+    content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.ltx_page_footer:before {
+    content:"."; display:block; height:0; clear:both; visibility:hidden; }
+
+.ltx_page_logo     { font-size:90%; margin-top: 5px; clear:both; float:right; }
+a.ltx_LaTeXML_logo { text-decoration: none; }
+.ltx_page_logo img { vertical-align:-3px; }
+.ltx_page_navbar .ltx_LaTeXML_logo,
+.ltx_page_logo .ltx_LaTeXML_logo { font-size:110%; }
+/* if shown */
+.ltx_page_navbar li { white-space:nowrap; display:block; overflow:hidden; }
+/* If ref got turned into span, it's "this section"*/
+.ltx_page_navbar li span.ltx_ref { white-space:normal; overflow:visible; }
+
+/* Ought to be easily removable/overridable? */
+.ltx_pagination.ltx_role_newpage { height:2em; }
+/*======================================================================
+  Document Structure; Titles & Frontmatter */
+
+/* undo bold here to remove the browser's native h# styling,
+   at let all other styles override it (with more specific rules)*/
+.ltx_title { font-size:100%; font-weight:normal; }
+
+/* Hack to simulate run-in! put class="ltx_runin" on a title or tag
+   for it to run-into the following text. */
+.ltx_runin { display:inline; }
+.ltx_runin:after { content:" "; }
+.ltx_runin + .ltx_para,
+.ltx_runin + .ltx_para p:first-child,
+.ltx_runin + p:first-child {
+    display:inline; }
+
+.ltx_outdent { margin-left: -2em; }
+
+/* .ltx_chapter_title, etc should be in ltx-article.css etc. */
+.ltx_page_main { margin:0px auto;
+    padding:1em 3em 1em 2em;
+    padding:min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(2em, 3%); }
+.ltx_tocentry  { list-style-type:none; }
+
+/* support for common author block layouts.*/
+/* add class ltx_authors_1line to get authors in single line
+   with pop-up affiliation, etc. */
+.ltx_authors_1line .ltx_creator,
+.ltx_authors_1line .ltx_author_before,
+.ltx_authors_1line .ltx_author_after { display:inline;}
+.ltx_authors_1line .ltx_author_notes { display:inline-block; }
+.ltx_authors_1line .ltx_author_notes:before { content:"*"; color:blue;}
+.ltx_authors_1line .ltx_author_notes span { display:none; }
+.ltx_authors_1line .ltx_author_notes:hover span {
+    display:block; position:absolute; z-index:10;
+    background:white; text-align:left;
+    border: 1px solid black; border-radius: 0 5px 5px 5px; box-shadow: 5px 5px 10px gray; }
+
+/* add class=ltx_authors_multiline to get authors & affliations on separate lines*/
+.ltx_authors_multiline .ltx_creator,
+.ltx_authors_multiline .ltx_author_before,
+.ltx_authors_multiline .ltx_author_after,
+.ltx_authors_multiline .ltx_author_notes,
+.ltx_authors_multiline .ltx_author_notes .ltx_contact {
+    display:block; }
+
+/*======================================================================
+  Para level */
+.ltx_float {
+    margin: 1ex clamp(1em, 4.5%, 3em) 1ex clamp(1em, 4.5%, 3em); }
+
+/* Multiple subfigures via flexbox */
+.ltx_flex_figure {
+  display: flex;
+  flex-flow: row wrap;
+  width: auto;
+  max-width: 60rem;
+  position: relative;
+  justify-content: center;
+  align-items: baseline;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.ltx_flex_size_1,
+.ltx_flex_size_1 .ltx_tabular,
+.ltx_flex_size_1 .ltx_graphics {
+  max-width:60rem;
+}
+.ltx_flex_size_2,
+.ltx_flex_size_2 .ltx_tabular,
+.ltx_flex_size_2 .ltx_graphics {
+  max-width: calc(0.44*60rem);
+}
+.ltx_flex_size_3,
+.ltx_flex_size_3 .ltx_tabular,
+.ltx_flex_size_3 .ltx_graphics {
+  max-width: calc(0.30*60rem);
+}
+.ltx_flex_size_4,
+.ltx_flex_size_4 .ltx_tabular,
+.ltx_flex_size_4 .ltx_graphics {
+  max-width: calc(0.24*60rem);
+}
+/*Default: More than 4 items, tricky.
+  quite often intended to auto-reflow... */
+.ltx_flex_size_many,
+.ltx_flex_size_many .ltx_tabular,
+.ltx_flex_size_many .ltx_graphics {
+  max-width: calc(0.24*60rem);
+}
+
+/* flex row breaks */
+.ltx_flex_figure .ltx_flex_break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* layout preference */
+.ltx_flex_figure .ltx_subgraphics,
+.ltx_flex_figure .ltx_subfigure,
+.ltx_flex_figure .ltx_subfloat,
+.ltx_flex_figure .ltx_subtable {
+  flex: 1 1 0px;
+  margin: 0.1rem;
+}
+.ltx_subgraphics, .ltx_subfigure, .ltx_subtable, .ltx_subfloat {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.ltx_subgraphics > .ltx_figure,
+.ltx_subfigure > .ltx_figure,
+.ltx_subtable > .ltx_figure,
+.ltx_subfloat > .ltx_figure {
+  margin:0em;
+}
+
+/* theorems, figure, tables, floats captions.. */
+/*======================================================================
+ Blocks, Lists, Floats */
+.ltx_p,
+.ltx_quote,
+.ltx_block,
+.ltx_logical-block,
+.ltx_para {
+    display: block; }
+
+/* alignment within blocks */
+.ltx_align_left     { text-align:left; }
+.ltx_align_right    { text-align:right; }
+.ltx_align_center   { text-align:center; }
+.ltx_align_justify  { text-align:justify; }
+.ltx_align_top      { vertical-align:top; }
+.ltx_align_bottom   { vertical-align:bottom; }
+.ltx_align_middle   { vertical-align:middle; }
+.ltx_align_baseline { vertical-align:baseline; }
+
+.ltx_align_floatleft  { float:left; }
+.ltx_align_floatright { float:right; }
+
+.ltx_td.ltx_align_left,   .ltx_th.ltx_align_left,
+.ltx_td.ltx_align_right,  .ltx_th.ltx_align_right,
+.ltx_td.ltx_align_center, .ltx_th.ltx_align_center { white-space:nowrap; }
+.ltx_td.ltx_align_left.ltx_wrap,   .ltx_th.ltx_align_left.ltx_wrap,
+.ltx_td.ltx_align_right.ltx_wrap,  .ltx_th.ltx_align_right.ltx_wrap,
+.ltx_td.ltx_align_center.ltx_wrap, .ltx_th.ltx_align_center.ltx_wrap,
+.ltx_td.ltx_align_justify,  .ltx_th.ltx_align_justify { white-space:normal; }
+
+.ltx_tabular .ltx_tabular { width:100%; }
+.ltx_inline-block,
+.ltx_inline-logical-block { display:inline-block; }
+
+/* tabbing is always a standalone paragraph-level construct */
+.ltx_tabular.ltx_tabbing { 
+  display: table; }
+
+/* avoid padding when aligning adjacent columns, e.g. for split decimals */
+.ltx_norightpad { padding-right:0!important; }
+.ltx_noleftpad  { padding-left:0!important; }
+.ltx_nopad      { padding:0!important; }
+
+/* equations in non-aligned mode (not normally used) */
+.ltx_eqn_div { display:block; width:95%; text-align:center; }
+
+/* equations in aligned mode (aligning tags, etc as well as equations) */
+.ltx_eqn_table { display:table; width:100%; border-collapse:collapse; }
+.ltx_eqn_row   { display:table-row; }
+.ltx_eqn_cell  { display:table-cell; width:auto; }
+
+/* Padding between column pairs in ams align */
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_left + td.ltx_align_right,
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_left + td.ltx_align_center,
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_center + td.ltx_align_right,
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_center + td.ltx_align_center  { padding-left:3em; }
+table.ltx_eqn_eqnarray tr.ltx_eqn_lefteqn + tr td.ltx_align_right { min-width:2em; }
+
+.ltx_eqn_eqno { max-width:0em; overflow:visible; white-space: nowrap; }
+.ltx_eqn_eqno.ltx_align_right .ltx_tag { float:right; }
+
+.ltx_eqn_center_padleft,
+.ltx_eqn_center_padright { width:50%; min-width:2em;}
+.ltx_eqn_left_padleft,
+.ltx_eqn_right_padright { min-width:2em; }
+.ltx_eqn_left_padright,
+.ltx_eqn_right_padleft  { width:100%; }
+
+/* Various lists */
+.ltx_itemize,
+.ltx_enumerate,
+.ltx_description {
+    display:block; }
+.ltx_itemize .ltx_item,
+.ltx_enumerate .ltx_item {
+    display: list-item; white-space:nowrap; }
+
+/* Position the tag to look like a normal item bullet. */
+li.ltx_item > .ltx_tag {
+    display:inline-block; margin-left:-1.5em; min-width:1.5em;
+    text-align:right; }
+.ltx_item .ltx_tag + .ltx_para {
+    display:inline-block; vertical-align:top;}
+.ltx_item .ltx_tag + .ltx_para .ltx_p  {
+    display:inline; }
+.ltx_item > .ltx_para > .ltx_p:first-child {
+    text-indent:0em; }
+
+.ltx_item > .ltx_para > .ltx_p { margin-top:0em; margin-bottom:0em; }
+dd.ltx_item { margin-bottom:0.5em; }
+
+/* NOTE: Need to try harder to get runin appearance? */
+dl.ltx_description dt { margin-right:0.5em; float:left;
+                        font-weight:bold; font-size:95%; }
+dl.ltx_description dd { margin-left:5em; }
+dl.ltx_description dl.ltx_description dd { margin-left:3em; }
+
+/* Theorems */
+.ltx_theorem  {margin:1em 0em 1em 0em; }
+.ltx_title_theorem { font-size:100%; }
+
+/* Bibliographies */
+.ltx_bibliography dt { margin-right:0.5em; float:left; }
+.ltx_bibliography dd { margin-left: clamp(1em, 4.5%, 3em); }
+/*.ltx_biblist { list-style-type:none; }*/
+.ltx_bibitem { list-style-type:none; }
+.ltx_bibitem .ltx_tag { font-weight:bold; margin-left:-2em; width:3em; }
+/*.bibitem-tag + div { display:inline; }*/
+.ltx_bib_title { font-style:italic; }
+.ltx_bib_article .bib-title { font-style:normal !important; }
+.ltx_bib_journal  { font-style:italic; }
+.ltx_bib_volume { font-weight:bold; }
+
+/* Indices */
+.ltx_indexlist li { list-style-type:none;  }
+.ltx_indexlist { margin-left:1em; padding-left:1em;}
+
+/* Listings */
+.ltx_listing {
+    display:block;
+    margin: 1ex 3em 1ex 0em;
+    overflow-x:auto;
+    text-align: left; }
+.ltx_float .ltx_listing {
+    margin: 0; }
+.ltx_listingline { white-space:nowrap; min-height:1em; }
+.ltx_lst_space { white-space: pre; }
+.ltx_lst_numbers_left .ltx_listingline .ltx_tag {
+    background-color:transparent;
+    margin-left:-3em; width:2.5em;
+    position:absolute;
+    text-align:right; }
+.ltx_lst_numbers_right .ltx_listingline .ltx_tag {
+    background-color:transparent;
+    width:2.5em;
+    position:absolute; right:3em;
+    text-align:right; }
+/*
+    position:absolute; left:0em;
+    max-width:0em; text-align:right; }
+*/
+.ltx_parbox {
+    text-indent:0em;
+    display: inline-block; }
+
+/* NOTE that it is CRITICAL to put position:relative outside & absolute inside!!
+   I wish I understood why!
+   Outer box establishes resulting size, neutralizes any outer positioning, etc;
+   inner establishes position of stuff to be rotated */
+.ltx_transformed_outer {
+    position:relative; bottom:0pt;left:0pt;
+    overflow:visible; }
+.ltx_transformed_inner {
+    display:block;
+    position:absolute;bottom:0pt;left:0pt; }
+.ltx_transformed_inner > .ltx_p {text-indent:0em; margin:0; padding:0; }
+
+/* If simulating a table (html5), try to get rowspan to work...sorta? */
+span.ltx_tabular { position:relative; }
+span.ltx_rowspan { position:absolute; top:0; bottom:0; }
+
+/* by default, p doesn't indent */
+.ltx_p { text-indent:0em; white-space:normal; }
+/* explicit control of indentation (on ltx_para) */
+.ltx_indent > .ltx_p:first-child { text-indent:2em!important; }
+.ltx_noindent > .ltx_p:first-child { text-indent:0em!important; }
+
+/*======================================================================
+  Columns */
+.ltx_page_columns {
+    display: flex; }
+.ltx_page_column1,
+.ltx_page_column2 {
+    flex:100%;
+    margin: 0 20px;
+ }
+@media screen and (max-width: 60em){
+  .ltx_page_columns {
+     flex-direction: column; }
+  .ltx_page_column1 > ul,
+  .ltx_page_column1 > ol,
+  .ltx_page_column1 > dl {
+     margin-bottom: 0; }
+  .ltx_page_column2 > ul,
+  .ltx_page_column2 > ol,
+  .ltx_page_column2 > dl {
+     margin-top: 0; }
+}
+
+/*======================================================================
+ Borders and such */
+.ltx_tabular { display:inline-table; border-collapse:collapse; }
+.ltx_tabular.ltx_centering { display:table; }
+.ltx_thead,
+.ltx_tfoot,
+.ltx_tbody   { display:table-row-group; }
+.ltx_tr      { display:table-row; }
+.ltx_td,
+.ltx_th      { display:table-cell; }
+
+.ltx_tabular .ltx_td,
+.ltx_tabular .ltx_th { padding:0.1em 0.5em; }
+.ltx_tabular .ltx_td.ltx_nopad_l,
+.ltx_tabular .ltx_th.ltx_nopad_l { padding-left:0; }
+.ltx_tabular .ltx_td.ltx_nopad_r,
+.ltx_tabular .ltx_th.ltx_nopad_r { padding-right:0; }
+
+/* min-height does NOT apply to tr! */
+.ltx_tabular .ltx_tr td:first-child::after,
+.ltx_tabular .ltx_tr th:first-child::after {
+   content: "";
+   display: inline-block;
+   vertical-align: top;
+   min-height: 1em;
+}
+
+
+/* regular lines */
+.ltx_border_t  { border-top:1px solid black; }
+.ltx_border_r  { border-right:1px solid black; }
+.ltx_border_b  { border-bottom:1px solid black; }
+.ltx_border_l  { border-left:1px solid black; }
+/* double lines */
+.ltx_border_tt { border-top:3px double black; }
+.ltx_border_rr { border-right:3px double black; }
+.ltx_border_bb { border-bottom:3px double black; }
+.ltx_border_ll { border-left:3px double black; }
+/* Light lines */
+.ltx_border_T  { border-top:1px solid gray; }
+.ltx_border_R  { border-right:1px solid gray; }
+.ltx_border_B  { border-bottom:1px solid gray; }
+.ltx_border_L  { border-left:1px solid gray; }
+/* Framing */
+.ltx_framed    { padding:3pt; }
+span.ltx_framed       { display:inline-block; text-indent:0; } /* avoid padding/margin collapse */
+.ltx_framed_rectangle { border-style:solid; border-width:1px; }
+.ltx_framed_top       { border-top-style:solid; border-top-width:1px; }
+.ltx_framed_left      { border-left-style:solid; border-left-width:1px; }
+.ltx_framed_right     { border-right-style:solid; border-right-width:1px; }
+.ltx_framed_bottom,
+.ltx_framed_underline { border-bottom-style:solid; border-bottom-width:1px; }
+.ltx_framed_topbottom { border-top-style:solid; border-top-width:1px;
+                        border-bottom-style:solid; border-bottom-width:1px; }
+.ltx_framed_leftright { border-left-style:solid; border-left-width:1px;
+                        border-right-style:solid; border-right-width:1px; }
+
+.ltx_rule { vertical-align: bottom; height: 0.4pt; width: 0.4pt; }
+
+/*======================================================================
+ Misc */
+/* .ltx_verbatim*/
+.ltx_verbatim { text-align:left; }
+/*======================================================================
+ Meta stuff, footnotes */
+.ltx_note_content { display:none; }
+/*right:5%;  */
+.ltx_note_content {
+     max-width: 70%; font-size:90%; left:15%;
+     text-align:left;
+     background-color: white;
+     padding: 0.5em 1em 0.5em 1.5em;
+     border: 1px solid black; border-radius: 0 5px 5px 5px; box-shadow: 5px 5px 10px gray; }
+.ltx_note_mark    { color:blue; }
+.ltx_note_type    { font-weight: bold; }
+.ltx_note { display:inline-block; text-indent:0; } /* So we establish containing block */
+.ltx_note_content .ltx_note_mark { position:absolute; left:0.2em; top:-0.1em; }
+.ltx_note:hover .ltx_note_content,
+.ltx_note .ltx_note_content:hover {
+   display:block; position:absolute; z-index:10; }
+.ltx_note.ltx_marginpar_left { display:none; }
+
+.ltx_ERROR        { color:red; }
+.ltx_rdf          { display:none; }
+.ltx_missing      { color:red;}
+.ltx_nounicode    { color:red; }
+.ltx_nodisplay    { display:none; }
+/*======================================================================
+ SVG (pgf/tikz ?) basics */
+
+/* Stuff appearing in svg:foreignObject */
+.ltx_svg_fog foreignObject  { margin:0; padding:0; overflow:visible; }
+.ltx_svg_fog foreignObject > p { margin:0; padding:0; display:block; }
+/*.ltx_svg_fog foreignObject > p { margin:0; padding:0; display:block; white-space:nowrap; }*/
+
+/*======================================================================
+ Low-level Basics */
+/* Note that LaTeX(ML)'s font model doesn't map quite exactly to CSS's */
+/* Font Families => font-family */
+.ltx_font_serif      { font-family: serif; }
+.ltx_font_sansserif  { font-family: sans-serif; }
+.ltx_font_typewriter { font-family: monospace; }
+/* dingbats should be converted to unicode? */
+/* Math font families handled within math: script, symbol, fraktur, blackboard ? */
+/* Font Series => font-weight */
+.ltx_font_bold       { font-weight: bold; }
+.ltx_font_medium     { font-weight: normal; }
+/* Font Shapes => font-style or font-variant */
+.ltx_font_italic     { font-style: italic; font-variant:normal; }
+.ltx_font_upright    { font-style: normal; font-variant:normal; }
+.ltx_font_slanted    { font-style: oblique; font-variant:normal; }
+.ltx_font_smallcaps  { font-variant: small-caps; font-style:normal; }
+.ltx_font_oldstyle   { font-variant-numeric: oldstyle-nums; }
+.ltx_font_mathcaligraphic { font-family: "Lucida Calligraphy", "Zapf Chancery","URW Chancery L"; }
+/* Fallbacks for when content+mathvariant cannot be mapped to Unicode */
+.ltx_mathvariant_italic        { font-style: italic; }
+.ltx_mathvariant_bold          { font-weight: bold; }
+.ltx_mathvariant_bold-italic   { font-style: italic; font-weight: bold; }
+.ltx_mathvariant_sans-serif             { font-family: sans-serif; }
+.ltx_mathvariant-bold-sans-serif        { font-family: sans-serif; font-weight: bold; }
+.ltx_mathvariant-sans-serif-italic      { font-family: sans-serif; font-style: italic; }
+.ltx_mathvariant-bold-sans-serif-italic { font-family: sans-serif; font-style: italic; font-weight: bold; }
+.ltx_mathvariant_monospace     { font-family: monospace; }
+/* Can we say anything generic about double-struck, script or fraktur ? */
+.ltx_mathvariant_double-struck { font-weight: bold; }
+.ltx_mathvariant_script        { font-family: "Lucida Calligraphy", "Zapf Chancery","URW Chancery L", cursive; }
+.ltx_mathvariant_bold-script   { font-family: "Lucida Calligraphy", "Zapf Chancery","URW Chancery L", cursive; font-weight: bold; }
+.ltx_mathvariant-fraktur       { }/* ??? */
+.ltx_mathvariant_bold-fraktur  { font-weight: bold; }
+
+/*
+
+.ltx_font_mathscript { ? }
+*/
+cite                 { font-style: normal; }
+
+.ltx_red        { color:red; }
+/*.ltx_centering  { text-align:center; margin:auto; }*/
+/*.ltx_inline-block.ltx_centering,*/
+/* Hmm.... is this right in general? */
+.ltx_centering  { display:block; margin:auto; text-align:center; }
+
+/* Dubious stuff */
+.ltx_hflipped {
+    display:inline-block;
+    transform: scaleX(-1); }
+.ltx_vflipped {
+    display:inline-block;
+    transform: scaleY(-1); }
+
+/* .ltx_phantom handled in xslt */
+
+.ltx_minipage {
+  align-self: normal;
+  display: inline-block;
+}
+.ltx_minipage > .ltx_graphics {
+  max-width:100%;
+}
+
+
+.ltx_title_document      { font-size:170%; text-align:center; margin:0.5em 0 0.5em 0; }
+.ltx_dates,
+.ltx_authors,
+.ltx_role_author         { text-align:center; margin:0.5em 0 0.5em 0; }
+.ltx_role_author .ltx_personname  { font-size: 120%; }
+.ltx_date        { text-align:center; font-size: 120%; margin:0.5em 0 0.5em 0; }
+.ltx_subtitle    { text-align:center; font-size: 120%; padding-left:0.2em; margin-left:-0.5em; }
+
+.ltx_title_abstract      { text-align:center; font-size: 100%; font-weight:bold; }
+.ltx_abstract {
+   margin-left:clamp(1em, 6%, 4em);
+   margin-right:clamp(1em, 6%, 4em); }
+.ltx_title_acknowledgements,
+.ltx_title_keywords,
+.ltx_title_classification {
+   text-align:left; font-size: 100%; font-weight:bold; margin:0.5em 0 0 0; }
+
+.ltx_appendix,
+.ltx_part,
+.ltx_section,
+.ltx_subsection,
+.ltx_subsubsection { margin-top:1.5em; }
+.ltx_paragraph,
+.ltx_subparagraph   { margin-top:1.0em; }
+
+.ltx_title_part          { font-size:250%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_appendix,
+.ltx_title_section,
+.ltx_title_index,
+.ltx_title_glossary,
+.ltx_title_bibliography  { font-size:140%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_subsection    { font-size:120%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_subsubsection { font-size:100%; font-weight:bold; margin-bottom:1em; }
+
+/* Paragraph & Subparagraph titles should be runin! */
+.ltx_title_paragraph   { font-size:100%; font-weight:bold; display:inline; 
+                         margin-right:1em; }
+.ltx_paragraph .ltx_title,
+.ltx_paragraph .ltx_title + .ltx_para,
+.ltx_paragraph .ltx_title + .ltx_para > .ltx_p { display:inline; }
+
+.ltx_title_subparagraph  { font-size:100%; font-weight:bold; display:inline; 
+                           margin-left:2em; margin-right:1em; }
+.ltx_subparagraph .ltx_title,
+.ltx_subparagraph .ltx_title + .ltx_para,
+.ltx_subparagraph .ltx_title + .ltx_para > .ltx_p { display:inline; }
+
+.ltx_figure  { text-align:center; margin:auto; margin:0.5em; }
+.ltx_table   { text-align:center; margin:auto; margin:0.5em; }
+
+/* experimental: flex model, to center short captions, justify long ones */
+.ltx_table,
+.ltx_figure { display:flex; flex-direction:column; align-items:center; }
+.ltx_table .ltx_caption,
+.ltx_figure .ltx_caption { text-align:justify; }
+
+/* first p in para gets indented; , even 1st in section if marked "no" first child */
+.ltx_para > .ltx_p:first-child,
+section.ltx_pruned_first > .ltx_title + .ltx_para > .ltx_p,
+section.ltx_indent_first > .ltx_title + .ltx_para > .ltx_p { text-indent:2em; }
+/* except the initial in a section */
+section > .ltx_title +.ltx_para > .ltx_p,
+section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
+
+.ltx_title_abstract + .ltx_p {text-indent:2em; }
+
+.ltx_itemize,
+.ltx_enumerate { margin-left:1em; }
+
+.ltx_theorem { margin-top:0.5em; margin-bottom:0.5em; }
+.ltx_theorem .ltx_title { margin-bottom:0.1em; }
+.ltx_theorem .ltx_title + .ltx_para,
+.ltx_theorem .ltx_title + .ltx_para .ltx_p,
+.ltx_theorem .ltx_title + .ltx_p  { margin-top:0em; }
+
+
+:root { --teal: #3A9797; --teal-dark: #2D7575; --ink: #16201F; --muted: #5C6868;
+        --rule: #E2E8E8; --bg: #FCFDFD; --paper: #FFFFFF; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px; line-height: 1.62; color: var(--ink); background: var(--paper);
+  max-width: 42em; margin: 0 auto; padding: 0 18px 64px;
+}
+.ltx_page_main, .ltx_page_content { padding: 0; }
+h1, h2, h3, h4, .ltx_title { line-height: 1.25; }
+.ltx_title_document { font-size: 1.5rem; margin: 1.2rem 0 .4rem; }
+.ltx_title_section { font-size: 1.15rem; margin-top: 2.2rem; }
+.ltx_title_subsection { font-size: 1rem; }
+.ltx_abstract { font-size: .97rem; }
+.ltx_abstract .ltx_title { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+a, .ltx_ref, .ltx_cite a { color: var(--teal-dark); }
+.ltx_page_footer, .ltx_authors_multiline .ltx_contact { color: var(--muted); font-size: .85rem; }
+.ltx_bibliography { font-size: .9rem; }
+.ltx_bibitem { margin-bottom: .5rem; }
+
+/* Wide equations and tables scroll inside their own box rather than dragging
+   the page sideways. A display:table element is not a scroll container, and
+   forcing display:block onto it breaks the row layout without containing the
+   overflow either - so each one is wrapped in a real div at build time and
+   the div does the scrolling. */
+.scrollbox { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.scrollbox > table { margin-left: 0; margin-right: 0; }
+
+/* LaTeXML centres a display equation with padding cells of width:50%, which
+   forces the equation table to about twice the equation's own width - 452px
+   here, on any screen size. That, not long content, was what made every page
+   scroll sideways on a phone. Collapse the padding cells and let equations
+   sit left, which reads better in one column anyway. */
+td.ltx_eqn_center_padleft, td.ltx_eqn_center_padright,
+td.ltx_eqn_left_padleft, td.ltx_eqn_right_padright,
+td.ltx_eqn_lefteqn_padright { width: 0; min-width: 0; padding: 0; }
+table.ltx_equation, table.ltx_eqn_table { width: auto; margin: 1.1em 0; }
+td.ltx_eqn_cell { text-align: left; }
+td.ltx_eqn_eqno { padding-left: .8em; }
+/* Bibliography DOIs and arXiv links are long unbreakable strings in a
+   monospace face; they were the last thing forcing the page sideways. */
+.ltx_bibblock, a.ltx_url, .ltx_ref.ltx_url, .ltx_font_typewriter {
+  overflow-wrap: anywhere; word-break: break-word;
+}
+
+/* The bibliography's negative-margin numbering can poke off the left edge. */
+.ltx_bibitem .ltx_tag { margin-left: 0; width: auto; margin-right: .4em; }
+.ltx_biblist { padding-left: 0; list-style: none; }
+.ltx_tabular { font-size: .9rem; }
+/* MathML does not line-break inline formulas, so an over-long one pushes the
+   page sideways on the smallest phones. Let such a formula scroll within the
+   text column instead; inline-block is required for overflow to apply at all. */
+math { max-width: 100%; }
+math[display="inline"] {
+  display: inline-block; max-width: 100%; overflow-x: auto; vertical-align: middle;
+}
+
+/* Chrome dropped <menclose> from MathML Core, so \boxed loses its box - and
+   in these papers the boxed line is the result. Draw it in CSS instead;
+   harmless where the browser already draws one. */
+menclose[notation="box"] {
+  border: 1px solid currentColor; border-radius: 2px;
+  padding: .28em .55em; margin: .1em;
+}
+
+/* The banner: this page is a rendering, the PDF is the paper. */
+.mirror-note {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px; line-height: 1.65; color: var(--muted);
+  border-left: 2px solid var(--teal); background: var(--bg);
+  padding: 10px 14px; margin: 20px 0 8px; border-radius: 2px;
+}
+.mirror-note strong { color: var(--ink); font-weight: 600; }
+.mirror-note a { color: var(--teal-dark); }
+.mirror-note .sep { color: var(--rule); }
+
+@media (max-width: 480px) { body { font-size: 17px; padding: 0 14px 48px; } }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #E8EDEC; --muted: #9DAAA9; --rule: #24312F;
+          --bg: #0F1514; --paper: #131A19; --teal-dark: #6FC5C0; }
+  html, body { background: var(--paper); color: var(--ink); }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+</head>
+<body>
+<div class="mirror-note"><strong>HTML rendering; the PDF is authoritative.</strong><br>Generated from the LaTeX source of version v1 for reading on a phone. Equations are converted automatically and may differ in presentation from the paper. <a href="vacuum_v34-2.pdf">Read the PDF</a> <span class="sep">&middot;</span> <a href="https://doi.org/10.5281/zenodo.22683544">Zenodo record</a> <span class="sep">&middot;</span> <a href="../../">All papers</a></div>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">The Vacuum Catastrophe and the Granularity of Hilbert Space</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Andrew Korytko <a href="https://orcid.org/0009-0005-4569-2228">0009-0005-4569-2228</a>
+</span><span class="ltx_author_notes">
+<span class="ltx_contact ltx_role_email"><a href="mailto:andrew@alphalatitude.com">andrew@alphalatitude.com</a>
+</span>
+<span class="ltx_contact ltx_role_affiliation">AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA
+</span></span></span>
+</div>
+<div class="ltx_dates">(September 10, 2026; DOI: <a href="https://doi.org/10.5281/zenodo.22683544" title="" class="ltx_ref ltx_href">10.5281/zenodo.22683544</a>)</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+    
+<p class="ltx_p">Quantum field theory with a Planckian cutoff predicts a vacuum energy density of <math id="m1" class="ltx_Math" alttext="4.6\times 10^{113}" display="inline"><mrow><mn>4.6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>113</mn></msup></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>, <math id="m3" class="ltx_Math" alttext="123" display="inline"><mn>123</mn></math> orders of magnitude above what the observed cosmological constant allows. This paper resolves the discrepancy in two steps, within a framework in which every quantum state carries the same finite budget of <math id="m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> bits and gravity follows from that limit. First, the zero-point energy does not gravitate: a stress tensor proportional to the metric has no flux through any null surface, so it never enters the thermodynamic derivation of Einstein’s equations, and <math id="m5" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> survives there as an integration constant that the horizon fixes. Second, the error in the standard estimate is in the state count. The energy <math id="m6" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> carries inside the horizon is the horizon entropy times the horizon temperature, which gives <math id="m7" class="ltx_Math" alttext="\rho_{\Lambda}=3\pi\rho_{\rm Planck}/2L^{2}" display="inline"><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ρ</mi><mi>Planck</mi></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mrow></math> with <math id="m8" class="ltx_Math" alttext="L=6.4\times 10^{61}" display="inline"><mrow><mi>L</mi><mo>=</mo><mrow><mn>6.4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math> the number of Planck lengths around the horizon: one factor of <math id="m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> because the count is of a boundary and not of a volume, and one because the energy scale of a pixel is <math id="m10" class="ltx_Math" alttext="E_{P}/L" display="inline"><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>/</mo><mi>L</mi></mrow></math> and not <math id="m11" class="ltx_Math" alttext="E_{P}" display="inline"><msub><mi>E</mi><mi>P</mi></msub></math>. The acceleration scale of galactic rotation curves, <math id="m12" class="ltx_Math" alttext="a_{0}=(1.20\pm 0.24)\times 10^{-10}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1.20</mn><mo>±</mo><mn>0.24</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></mrow></math> m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup>, fixes <math id="m14" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> independently at <math id="m15" class="ltx_Math" alttext="(4.6\pm 0.9)\times 10^{61}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>4.6</mn><mo>±</mo><mn>0.9</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></math> and gives <math id="m16" class="ltx_Math" alttext="\rho_{\Lambda}=(1.0\pm 0.4)\times 10^{-9}" display="inline"><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1.0</mn><mo>±</mo><mn>0.4</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>9</mn></mrow></msup></mrow></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>, against the observed <math id="m18" class="ltx_Math" alttext="5.2\times 10^{-10}" display="inline"><mrow><mn>5.2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></math>; in the measured variable <math id="m19" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> the two agree at <math id="m20" class="ltx_Math" alttext="1.4\sigma" display="inline"><mrow><mn>1.4</mn><mo>⁢</mo><mi>σ</mi></mrow></math>. The same <math id="m21" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> caps a state spread across its Hilbert space at <math id="m22" class="ltx_Math" alttext="205" display="inline"><mn>205</mn></math> qubits, a third determination with no astronomy in it.</p>
+  
+</div>
+<div class="ltx_keywords">Cosmological constant; vacuum energy; emergent gravity; holographic principle; discrete Hilbert space; rational quantum mechanics
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">I </span>The problem</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Quantum field theory assigns every mode of every field a zero-point energy <math id="S1.p1.m1" class="ltx_Math" alttext="\tfrac{1}{2}\hbar\omega" display="inline"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></math>. Summed to a Planckian cutoff this gives a vacuum energy density of order the Planck density,</p>
+<div class="scrollbox"><table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="\rho_{\rm vac}\sim\frac{c^{7}}{\hbar G^{2}}=4.6\times 10^{113}~{}{\rm J\,m^{-3%
+}}," display="block"><mrow><mrow><msub><mi>ρ</mi><mi>vac</mi></msub><mo>∼</mo><mfrac><msup><mi>c</mi><mn>7</mn></msup><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mi>G</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mrow><mn>4.6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>113</mn></msup></mrow><mo>⁢</mo><mi mathvariant="normal">J</mi><mo lspace="0.170em">⁢</mo><msup><mi mathvariant="normal">m</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">while the observed cosmological constant corresponds to</p>
+<div class="scrollbox"><table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="\rho_{\Lambda}=\frac{\Lambda c^{4}}{8\pi G}=5.2\times 10^{-10}~{}{\rm J\,m^{-3%
+}}," display="block"><mrow><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><msup><mi>c</mi><mn>4</mn></msup></mrow><mrow><mn>8</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mn>5.2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow><mo>⁢</mo><mi mathvariant="normal">J</mi><mo lspace="0.170em">⁢</mo><msup><mi mathvariant="normal">m</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">a ratio of <math id="S1.p1.m2" class="ltx_Math" alttext="8.8\times 10^{122}" display="inline"><mrow><mn>8.8</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>122</mn></msup></mrow></math>, or in Planck units <math id="S1.p1.m3" class="ltx_Math" alttext="\Lambda\ell_{P}^{2}=2.85\times 10^{-122}" display="inline"><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow><mo>=</mo><mrow><mn>2.85</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>122</mn></mrow></msup></mrow></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, <a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. Adler, Casey and Jacob named this the vacuum catastrophe <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>, after the ultraviolet catastrophe it resembles. The cutoff is not the issue. Electroweak symmetry breaking and the QCD condensate contribute at <math id="S1.p1.m4" class="ltx_Math" alttext="(200~{}{\rm GeV})^{4}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>200</mn><mo lspace="0.330em">⁢</mo><mi>GeV</mi></mrow><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></math> and <math id="S1.p1.m5" class="ltx_Math" alttext="(0.3~{}{\rm GeV})^{4}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>0.3</mn><mo lspace="0.330em">⁢</mo><mi>GeV</mi></mrow><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></math>, some <math id="S1.p1.m6" class="ltx_Math" alttext="10^{56}" display="inline"><msup><mn>10</mn><mn>56</mn></msup></math> and <math id="S1.p1.m7" class="ltx_Math" alttext="10^{45}" display="inline"><msup><mn>10</mn><mn>45</mn></msup></math> times the observed value, and no symmetry protects their sum <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. General relativity requires every form of energy to gravitate <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite>, so either the vacuum energy is canceled to <math id="S1.p1.m8" class="ltx_Math" alttext="123" display="inline"><mn>123</mn></math> decimal places or it is not a source of curvature.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">This paper takes the second route, within the framework of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>, in which Hilbert space is granular with a single universal integer <math id="S1.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> and gravity is derived from that granularity. A uniform vacuum energy is not a source, because a stress tensor proportional to the metric has no flux through a null surface (Sec. <a href="#S3" title="III Why the zero-point energy is not a source ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III</span></a>); this removes the <math id="S1.p2.m2" class="ltx_Math" alttext="10^{113}" display="inline"><msup><mn>10</mn><mn>113</mn></msup></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup> but leaves <math id="S1.p2.m4" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> as an unexplained integration constant. The scale of what remains is set by the number of degrees of freedom a horizon volume contains, which is <math id="S1.p2.m5" class="ltx_Math" alttext="L^{2}/\pi" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mi>π</mi></mrow></math> and not <math id="S1.p2.m6" class="ltx_Math" alttext="(R/\ell_{P})^{3}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></math>, and that factor is the catastrophe (Sec. <a href="#S4" title="IV The state count ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">IV</span></a>). Sections <a href="#S5" title="V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a> and <a href="#S6" title="VI Test ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">VI</span></a> fix <math id="S1.p2.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> from galaxies and from the laboratory.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">II </span>The framework</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Palmer’s Rational Quantum Mechanics <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>, <a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite> keeps the Schrödinger equation and the Born rule but admits only those states, and only those measurement bases, for which a qubit <math id="S2.p1.m1" class="ltx_Math" alttext="|\psi\rangle=\cos\frac{\theta}{2}|1\rangle+e^{i\phi}\sin\frac{\theta}{2}|{-1}\rangle" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mfrac><mi>θ</mi><mn>2</mn></mfrac></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mn>1</mn><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mfrac><mi>θ</mi><mn>2</mn></mfrac></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">⟩</mo></mrow></mrow></mrow></mrow></math> has</p>
+<div class="scrollbox"><table id="S2.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E3.m1" class="ltx_Math" alttext="\cos^{2}\tfrac{\theta}{2}=\frac{m}{L},\qquad\frac{\phi}{2\pi}=\frac{n}{L}," display="block"><mrow><mrow><mrow><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mstyle displaystyle="false"><mfrac><mi>θ</mi><mn>2</mn></mfrac></mstyle></mrow><mo>=</mo><mfrac><mi>m</mi><mi>L</mi></mfrac></mrow><mo rspace="2.167em">,</mo><mrow><mfrac><mi>ϕ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mi>n</mi><mi>L</mi></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">with <math id="S2.p1.m2" class="ltx_Math" alttext="m\in\{0,\dots,L\}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>L</mi><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S2.p1.m3" class="ltx_Math" alttext="n\in\{0,\dots,L-1\}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>L</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="S2.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> a large integer. Such a state is a string of <math id="S2.p1.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> bits: the fraction of <math id="S2.p1.m6" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> bits is <math id="S2.p1.m7" class="ltx_Math" alttext="\cos^{2}(\theta/2)" display="inline"><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and rotating the string by <math id="S2.p1.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> places is the phase <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite>. In Palmer’s version <math id="S2.p1.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a property of each qubit and ranges from <math id="S2.p1.m10" class="ltx_Math" alttext="10^{64}" display="inline"><msup><mn>10</mn><mn>64</mn></msup></math> to <math id="S2.p1.m11" class="ltx_Math" alttext="10^{109}" display="inline"><msup><mn>10</mn><mn>109</mn></msup></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite>. Reference <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> takes <math id="S2.p1.m12" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> to be one universal integer for all systems (Axiom 1) and identifies one step of quantum phase, <math id="S2.p1.m13" class="ltx_Math" alttext="2\pi/L" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>L</mi></mrow></math>, with one Planck length on a great circle of the de Sitter horizon (Axiom 2). That horizon is the sphere of radius <math id="S2.p1.m14" class="ltx_Math" alttext="R_{\Lambda}=\sqrt{3/\Lambda}=1.66\times 10^{26}" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><msqrt><mrow><mn>3</mn><mo>/</mo><mi mathvariant="normal">Λ</mi></mrow></msqrt><mo>=</mo><mrow><mn>1.66</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>26</mn></msup></mrow></mrow></math> m from beyond which no light will ever reach an observer in a universe whose expansion is driven by <math id="S2.p1.m15" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>. Axiom 2 reads</p>
+<div class="scrollbox"><table id="S2.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E4.m1" class="ltx_Math" alttext="\ell_{P}=\frac{2\pi R_{\Lambda}}{L}." display="block"><mrow><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mi>L</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">The de Sitter radius, rather than the present Hubble radius, is the length in Axiom 2 because <math id="S2.p1.m16" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a constant and <math id="S2.p1.m17" class="ltx_Math" alttext="R_{\Lambda}" display="inline"><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></math> is the only cosmological length that does not change with time. From the two axioms, Verlinde’s entropic argument <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite> returns <math id="S2.p1.m18" class="ltx_Math" alttext="G=c^{3}\ell_{P}^{2}/\hbar" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>3</mn></msup><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></math> and Jacobson’s <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite> returns Einstein’s equations. The Gibbons–Hawking temperature of the horizon <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite> is <math id="S2.p1.m19" class="ltx_Math" alttext="k_{B}T_{\rm dS}=\hbar c/2\pi R_{\Lambda}=E_{P}/L" display="inline"><mrow><mrow><msub><mi>k</mi><mi>B</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow><mo>=</mo><mrow><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>c</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>=</mo><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>/</mo><mi>L</mi></mrow></mrow></math>, with <math id="S2.p1.m20" class="ltx_Math" alttext="E_{P}=\hbar c/\ell_{P}" display="inline"><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>c</mi></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math> the Planck energy. And, up to an order-unity coefficient discussed in Sec. <a href="#S5" title="V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a>, <math id="S2.p1.m21" class="ltx_Math" alttext="a_{0}=c^{2}/L\ell_{P}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math> is the acceleration below which galactic rotation curves flatten. References <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite> restate the two axioms as one postulate, a ring of <math id="S2.p1.m22" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> Planck cells on which every quantum state is a pattern, closing on a great circle of the horizon in Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite> and generalized to the whole sphere in Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite>, from which the three dimensions of space follow. The two quantities used below are the pixel count of the horizon and the energy scale of one pixel.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">III </span>Why the zero-point energy is not a source</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The framework derives Einstein’s equations by Jacobson’s argument <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite>. The Clausius relation <math id="S3.p1.m1" class="ltx_Math" alttext="\delta Q=T\,dS" display="inline"><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>T</mi><mo lspace="0.170em">⁢</mo><mi>d</mi><mo>⁢</mo><mi>S</mi></mrow></mrow></math> is imposed on every local Rindler horizon, the horizon seen by a uniformly accelerating observer, with <math id="S3.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> the Unruh temperature that observer measures in the vacuum, <math id="S3.p1.m3" class="ltx_Math" alttext="dS" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>S</mi></mrow></math> the change in horizon area in Planck units, and <math id="S3.p1.m4" class="ltx_Math" alttext="\delta Q" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>Q</mi></mrow></math> the energy flux through the horizon,</p>
+<div class="scrollbox"><table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E5.m1" class="ltx_Math" alttext="\delta Q\propto\int\lambda\,T_{\mu\nu}\,k^{\mu}k^{\nu}\,d\lambda\,dA," display="block"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>Q</mi></mrow><mo rspace="0.111em">∝</mo><mrow><mo>∫</mo><mrow><mi>λ</mi><mo lspace="0.170em">⁢</mo><msub><mi>T</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub><mo>⁢</mo><msup><mi>k</mi><mi>μ</mi></msup><mo>⁢</mo><msup><mi>k</mi><mi>ν</mi></msup><mo lspace="0em">⁢</mo><mrow><mo rspace="0em">𝑑</mo><mi>λ</mi></mrow><mo lspace="0.170em">⁢</mo><mrow><mo rspace="0em">𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">where <math id="S3.p1.m5" class="ltx_Math" alttext="k^{\mu}" display="inline"><msup><mi>k</mi><mi>μ</mi></msup></math> is the null generator of the horizon, the light ray that sweeps it out, and <math id="S3.p1.m6" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> its affine parameter. A stress tensor proportional to the metric has no such flux, since <math id="S3.p1.m7" class="ltx_Math" alttext="g_{\mu\nu}k^{\mu}k^{\nu}=0" display="inline"><mrow><mrow><msub><mi>g</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub><mo>⁢</mo><msup><mi>k</mi><mi>μ</mi></msup><mo>⁢</mo><msup><mi>k</mi><mi>ν</mi></msup></mrow><mo>=</mo><mn>0</mn></mrow></math> for null <math id="S3.p1.m8" class="ltx_Math" alttext="k^{\mu}" display="inline"><msup><mi>k</mi><mi>μ</mi></msup></math>. The zero-point energy, <math id="S3.p1.m9" class="ltx_Math" alttext="T_{\mu\nu}=-\rho_{\rm vac}\,g_{\mu\nu}" display="inline"><mrow><msub><mi>T</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub><mo>=</mo><mrow><mo>−</mo><mrow><msub><mi>ρ</mi><mi>vac</mi></msub><mo>⁢</mo><msub><mi>g</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub></mrow></mrow></mrow></math>, therefore never enters the derivation, whatever <math id="S3.p1.m10" class="ltx_Math" alttext="\rho_{\rm vac}" display="inline"><msub><mi>ρ</mi><mi>vac</mi></msub></math> may be. Nor do the electroweak and QCD condensates, which are Lorentz-invariant and of the same form. Lorentz invariance is what fixes that form: a cutoff on three-momentum breaks it and gives the zero-point sum a radiation-like pressure, but that pressure is an artifact of the regulator, and any covariant regularization returns <math id="S3.p1.m11" class="ltx_Math" alttext="T_{\mu\nu}\propto g_{\mu\nu}" display="inline"><mrow><msub><mi>T</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub><mo>∝</mo><msub><mi>g</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. What Jacobson’s argument returns is</p>
+<div class="scrollbox"><table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E6.m1" class="ltx_Math" alttext="G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^{4}}\,T_{\mu\nu}," display="block"><mrow><mrow><mrow><msub><mi>G</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub><mo>+</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><msub><mi>g</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>8</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi></mrow><msup><mi>c</mi><mn>4</mn></msup></mfrac><mo lspace="0.170em">⁢</mo><msub><mi>T</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">with <math id="S3.p1.m12" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> an integration constant <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>, <a href="#bib.bib13" title="" class="ltx_ref">13</a>]</cite>. Nothing in Eq. (<a href="#S3.E6" title="In III Why the zero-point energy is not a source ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) prevents that constant from being set equal to <math id="S3.p1.m13" class="ltx_Math" alttext="8\pi G\rho_{\rm vac}/c^{4}" display="inline"><mrow><mrow><mn>8</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><msub><mi>ρ</mi><mi>vac</mi></msub></mrow><mo>/</mo><msup><mi>c</mi><mn>4</mn></msup></mrow></math>, which would put the zero-point energy back by hand. What prevents it here is Axiom 2, which fixes <math id="S3.p1.m14" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> from the horizon and not from the field content. The same holds at the Newtonian level in Verlinde’s derivation <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>: the force comes from the change in screen entropy as a mass is displaced, and a background that is the same on both sides of the screen produces none.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">These are the two conditions Padmanabhan <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="" class="ltx_ref">14</a>]</cite> identifies for an emergent theory to be immune to the zero-point energy: the field equations are unchanged by <math id="S3.p2.m1" class="ltx_Math" alttext="L_{\rm matter}\to L_{\rm matter}+{\rm const}" display="inline"><mrow><msub><mi>L</mi><mi>matter</mi></msub><mo stretchy="false">→</mo><mrow><msub><mi>L</mi><mi>matter</mi></msub><mo>+</mo><mi>const</mi></mrow></mrow></math>, and <math id="S3.p2.m2" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> enters solutions as an integration constant rather than as a parameter in the action. Both hold in unimodular gravity, where the trace-free field equations are blind to a constant shift of <math id="S3.p2.m3" class="ltx_Math" alttext="T_{\mu\nu}" display="inline"><msub><mi>T</mi><mrow><mi>μ</mi><mo>⁢</mo><mi>ν</mi></mrow></msub></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="" class="ltx_ref">15</a>, <a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite>. Here they are not adopted; they are how gravity was derived.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">What drops out is the part of the energy density that is the same at every point. Vacuum <em class="ltx_emph ltx_font_italic">differences</em> have flux through a null surface and gravitate. The vacuum-loop correction to the electrostatic energy of a nucleus, the same physics as the Lamb shift, is a shift in binding energy relative to the surrounding vacuum, localized and different for aluminum and platinum, and free-fall tests of the equivalence principle show that it weighs, to one part in <math id="S3.p3.m1" class="ltx_Math" alttext="10^{6}" display="inline"><msup><mn>10</mn><mn>6</mn></msup></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="" class="ltx_ref">17</a>, <a href="#bib.bib18" title="" class="ltx_ref">18</a>]</cite>. So does the proton, most of whose mass is QCD binding energy: a localized excitation above the condensate, not the condensate itself.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S3.E6" title="In III Why the zero-point energy is not a source ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) settles half of the problem. The zero-point sum of Eq. (<a href="#S1.E1" title="In I The problem ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is proportional to the metric, has no flux through any null surface, and never enters the field equations. Whatever quantum field theory says the vacuum weighs, gravity does not respond to it.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">The other half is <math id="S3.p5.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>. It survives in Eq. (<a href="#S3.E6" title="In III Why the zero-point energy is not a source ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) as an integration constant: the equation does not fix its value, and something outside the equation must. In the present framework the horizon does. Axiom 2 ties the Planck length to the horizon through <math id="S3.p5.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, and with <math id="S3.p5.m3" class="ltx_Math" alttext="\Lambda=3/R_{\Lambda}^{2}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mrow><mn>3</mn><mo>/</mo><msubsup><mi>R</mi><mi mathvariant="normal">Λ</mi><mn>2</mn></msubsup></mrow></mrow></math> this reads</p>
+<div class="scrollbox"><table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E7.m1" class="ltx_Math" alttext="\Lambda\,\ell_{P}^{2}=\frac{12\pi^{2}}{L^{2}}=2.85\times 10^{-122}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi><mo lspace="0.170em">⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow><mo>=</mo><mfrac><mrow><mn>12</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup></mrow><msup><mi>L</mi><mn>2</mn></msup></mfrac><mo>=</mo><mrow><mn>2.85</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>122</mn></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p"><math id="S3.p5.m4" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is small in Planck units because the horizon is large in Planck lengths, <math id="S3.p5.m5" class="ltx_Math" alttext="L=6.4\times 10^{61}" display="inline"><mrow><mi>L</mi><mo>=</mo><mrow><mn>6.4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math> of them around. The value of <math id="S3.p5.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is measured independently in Sec. <a href="#S5" title="V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a>. What remains to be said here is what the energy of <math id="S3.p5.m7" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> physically is, and why it comes to <math id="S3.p5.m8" class="ltx_Math" alttext="10^{-9}" display="inline"><msup><mn>10</mn><mrow><mo>−</mo><mn>9</mn></mrow></msup></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup> rather than the <math id="S3.p5.m10" class="ltx_Math" alttext="10^{113}" display="inline"><msup><mn>10</mn><mn>113</mn></msup></math> of the zero-point sum. The next section answers by counting the degrees of freedom on the horizon.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">IV </span>The state count</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">The continuum estimates the energy of the vacuum from the bulk. A region of radius <math id="S4.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is assigned <math id="S4.p1.m2" class="ltx_Math" alttext="(R/\ell_{P})^{3}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></math> zero-point modes at the Planck energy apiece, and spread over the volume <math id="S4.p1.m3" class="ltx_Math" alttext="\sim R^{3}" display="inline"><mrow><mi></mi><mo>∼</mo><msup><mi>R</mi><mn>3</mn></msup></mrow></math> these give <math id="S4.p1.m4" class="ltx_Math" alttext="\rho_{\rm Planck}" display="inline"><msub><mi>ρ</mi><mi>Planck</mi></msub></math> for any <math id="S4.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>; that is Eq. (<a href="#S1.E1" title="In I The problem ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>). Section <a href="#S3" title="III Why the zero-point energy is not a source ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III</span></a> showed that none of it gravitates. What does gravitate is the energy of <math id="S4.p1.m6" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>, and the framework locates it on the horizon. The derivation is five steps.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 1. Boundary count.</span> Axiom 2 gives <math id="S4.p2.m1" class="ltx_Math" alttext="R_{\Lambda}=L\ell_{P}/2\pi" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></mrow></math>. The horizon is a two-sphere, because space has three dimensions, which Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite> derives from the same <math id="S4.p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. Its budget of degrees of freedom is its pixel count,</p>
+<div class="scrollbox"><table id="S4.E8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E8.m1" class="ltx_Math" alttext="N_{\rm pix}=\frac{4\pi R_{\Lambda}^{2}}{\ell_{P}^{2}}=\frac{L^{2}}{\pi}=1.32%
+\times 10^{123}," display="block"><mrow><mrow><msub><mi>N</mi><mi>pix</mi></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msubsup><mi>R</mi><mi mathvariant="normal">Λ</mi><mn>2</mn></msubsup></mrow><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mfrac><mo>=</mo><mfrac><msup><mi>L</mi><mn>2</mn></msup><mi>π</mi></mfrac><mo>=</mo><mrow><mn>1.32</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>123</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">an area rather than a volume. Counted in the register’s own cells, which have area <math id="S4.p2.m3" class="ltx_Math" alttext="\ell_{P}^{2}/\pi" display="inline"><mrow><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup><mo>/</mo><mi>π</mi></mrow></math> on the horizon <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite>, the sphere has <math id="S4.p2.m4" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> cells instead; the two counts differ by <math id="S4.p2.m5" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and give the same entropy, <math id="S4.p2.m6" class="ltx_Math" alttext="L^{2}/4\pi" display="inline"><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math> in units of <math id="S4.p2.m7" class="ltx_Math" alttext="k_{B}" display="inline"><msub><mi>k</mi><mi>B</mi></msub></math>. The Planck pixel is the cell of the Bekenstein–Hawking entropy and is the one used here.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 2. Energy scale of a pixel.</span> The Gibbons–Hawking temperature <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite> of the horizon, <math id="S4.p3.m1" class="ltx_Math" alttext="k_{B}T_{\rm dS}=\hbar c/2\pi R_{\Lambda}" display="inline"><mrow><mrow><msub><mi>k</mi><mi>B</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow><mo>=</mo><mrow><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>c</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow></mrow></math>, with <math id="S4.p3.m2" class="ltx_Math" alttext="2\pi R_{\Lambda}=L\ell_{P}" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math> from Axiom 2, sets the energy scale of one pixel,</p>
+<div class="scrollbox"><table id="S4.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E9.m1" class="ltx_Math" alttext="\varepsilon=k_{B}T_{\rm dS}=\frac{\hbar c}{L\ell_{P}}=\frac{E_{P}}{L}=3.0%
+\times 10^{-53}~{}{\rm J}," display="block"><mrow><mrow><mi>ε</mi><mo>=</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow><mo>=</mo><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>c</mi></mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mfrac><mo>=</mo><mfrac><msub><mi>E</mi><mi>P</mi></msub><mi>L</mi></mfrac><mo>=</mo><mrow><mrow><mn>3.0</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>53</mn></mrow></msup></mrow><mo>⁢</mo><mi mathvariant="normal">J</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">the Planck energy divided by <math id="S4.p3.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, rather than the Planck energy.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 3. Total energy.</span> The Bekenstein–Hawking entropy of the horizon is <math id="S4.p4.m1" class="ltx_Math" alttext="S_{\rm BH}=k_{B}A/4\ell_{P}^{2}=\tfrac{1}{4}N_{\rm pix}k_{B}" display="inline"><mrow><msub><mi>S</mi><mi>BH</mi></msub><mo>=</mo><mrow><mrow><mrow><msub><mi>k</mi><mi>B</mi></msub><mo>⁢</mo><mi>A</mi></mrow><mo>/</mo><mn>4</mn></mrow><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><msub><mi>N</mi><mi>pix</mi></msub><mo>⁢</mo><msub><mi>k</mi><mi>B</mi></msub></mrow></mrow></math>, and its thermal energy is</p>
+<div class="scrollbox"><table id="S4.E10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E10.m1" class="ltx_Math" alttext="E=S_{\rm BH}\,T_{\rm dS}=\tfrac{1}{4}N_{\rm pix}\,\varepsilon=1.00\times 10^{7%
+0}~{}{\rm J}." display="block"><mrow><mrow><mi>E</mi><mo>=</mo><mrow><msub><mi>S</mi><mi>BH</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow><mo>=</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>N</mi><mi>pix</mi></msub><mo>⁢</mo><mi>ε</mi></mrow><mo>=</mo><mrow><mrow><mn>1.00</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>70</mn></msup></mrow><mo>⁢</mo><mi mathvariant="normal">J</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">This is the energy <math id="S4.p4.m2" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> carries inside the horizon, <math id="S4.p4.m3" class="ltx_Math" alttext="\rho_{\Lambda}\cdot\tfrac{4}{3}\pi R_{\Lambda}^{3}" display="inline"><mrow><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><mfrac><mn>4</mn><mn>3</mn></mfrac></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msubsup><mi>R</mi><mi mathvariant="normal">Λ</mi><mn>3</mn></msubsup></mrow></math>, exactly. Equivalently, since for <math id="S4.p4.m4" class="ltx_Math" alttext="p=-\rho" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mo>−</mo><mi>ρ</mi></mrow></mrow></math> the Komar energy, the mass that sources gravity in general relativity, is <math id="S4.p4.m5" class="ltx_Math" alttext="2\rho_{\Lambda}V" display="inline"><mrow><mn>2</mn><mo>⁢</mo><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>⁢</mo><mi>V</mi></mrow></math> in magnitude,</p>
+<div class="scrollbox"><table id="S4.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E11.m1" class="ltx_Math" alttext="2\rho_{\Lambda}V=\tfrac{1}{2}N_{\rm pix}\,\varepsilon," display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>⁢</mo><mi>V</mi></mrow><mo>=</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>N</mi><mi>pix</mi></msub><mo>⁢</mo><mi>ε</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">one half-quantum <math id="S4.p4.m6" class="ltx_Math" alttext="\tfrac{1}{2}k_{B}T_{\rm dS}" display="inline"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>k</mi><mi>B</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow></math> per pixel, which is Padmanabhan’s holographic equipartition <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib19" title="" class="ltx_ref">19</a>, <a href="#bib.bib14" title="" class="ltx_ref">14</a>]</cite> applied to the de Sitter horizon.</p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 4. Energy density.</span> Dividing by the volume <math id="S4.p5.m1" class="ltx_Math" alttext="V=\tfrac{4}{3}\pi R_{\Lambda}^{3}=\tfrac{4}{3}\pi(L\ell_{P}/2\pi)^{3}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msubsup><mi>R</mi><mi mathvariant="normal">Λ</mi><mn>3</mn></msubsup></mrow><mo>=</mo><mrow><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mrow></math>,</p>
+<div class="scrollbox"><table id="S4.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E12.m1" class="ltx_Math" alttext="\rho_{\Lambda}=\frac{E}{V}=\frac{3\pi}{2}\,\frac{E_{P}}{L^{2}\ell_{P}^{3}}." display="block"><mrow><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mfrac><mi>E</mi><mi>V</mi></mfrac><mo>=</mo><mrow><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mn>2</mn></mfrac><mo lspace="0.170em">⁢</mo><mfrac><msub><mi>E</mi><mi>P</mi></msub><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>3</mn></msubsup></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Step 5. In Planck units.</span> With <math id="S4.p6.m1" class="ltx_Math" alttext="\rho_{\rm Planck}=E_{P}/\ell_{P}^{3}=c^{7}/\hbar G^{2}=4.63\times 10^{113}" display="inline"><mrow><msub><mi>ρ</mi><mi>Planck</mi></msub><mo>=</mo><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>/</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>3</mn></msubsup></mrow><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>7</mn></msup><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>⁢</mo><msup><mi>G</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mn>4.63</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>113</mn></msup></mrow></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>,</p>
+<div class="scrollbox"><table id="S4.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E13.m1" class="ltx_Math" alttext="\boxed{\;\frac{\rho_{\Lambda}}{\rho_{\rm Planck}}=\frac{3\pi}{2L^{2}}=1.13%
+\times 10^{-123}\;}" display="block"><menclose notation="box"><mrow><mfrac><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><msub><mi>ρ</mi><mi>Planck</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mn>1.13</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>123</mn></mrow></msup></mrow></mrow></menclose></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">and <math id="S4.p6.m3" class="ltx_Math" alttext="\rho_{\Lambda}=5.25\times 10^{-10}" display="inline"><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mrow><mn>5.25</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>. As an energy scale this is <math id="S4.p6.m5" class="ltx_Math" alttext="\rho_{\Lambda}^{1/4}=(3\pi/2)^{1/4}E_{P}/\sqrt{L}=2.2" display="inline"><mrow><msubsup><mi>ρ</mi><mi mathvariant="normal">Λ</mi><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msubsup><mo>=</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup><mo>⁢</mo><msub><mi>E</mi><mi>P</mi></msub></mrow><mo>/</mo><msqrt><mi>L</mi></msqrt></mrow><mo>=</mo><mn>2.2</mn></mrow></math> meV, the millielectronvolt of dark energy written in the framework’s constants. One factor of <math id="S4.p6.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is lost to the dimensionality of the count, Step 1, and one to the energy scale of a pixel, Step 2.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Steps 3 and 4 are identities of de Sitter thermodynamics and hold in general relativity for any <math id="S4.p7.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>: the thermal energy of a de Sitter horizon, spread over its interior, is the <math id="S4.p7.m2" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> that produces the horizon. Steps 1, 2 and 5 use Axiom 2, and given a value of <math id="S4.p7.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> from any source they predict the pixel count, the energy scale of a pixel and the vacuum energy density. What Axiom 1 adds is that the integer fixing the number of states inside the horizon, whose logarithm is the entropy <math id="S4.p7.m4" class="ltx_Math" alttext="L^{2}/4\pi" display="inline"><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math> of Step 3, is the same <math id="S4.p7.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> that bounds every quantum state <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>. The horizon count is then not merely an area in Planck units but the information capacity of the universe, which is Banks’ proposal that a positive <math id="S4.p7.m6" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> and a finite Hilbert space go together <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>]</cite> with its integer named. With <math id="S4.p7.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> taken from the horizon, as here, Eq. (<a href="#S4.E13" title="In IV The state count ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>) returns the observed density by construction; the test is Sec. <a href="#S5" title="V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a>, where <math id="S4.p7.m8" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> comes from galaxies.</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">The exponent is robust. <math id="S4.p8.m1" class="ltx_Math" alttext="L=6.4\times 10^{61}" display="inline"><mrow><mi>L</mi><mo>=</mo><mrow><mn>6.4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math> is read off a known length: one does not need <math id="S4.p8.m2" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> to know that a cosmological horizon is some <math id="S4.p8.m3" class="ltx_Math" alttext="10^{26}" display="inline"><msup><mn>10</mn><mn>26</mn></msup></math> m in radius, and the exponent does not depend on which horizon is meant. The Hubble radius gives <math id="S4.p8.m4" class="ltx_Math" alttext="(R/\ell_{P})^{-2}=10^{-121.9}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup><mo>=</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>121.9</mn></mrow></msup></mrow></math>, the de Sitter radius <math id="S4.p8.m5" class="ltx_Math" alttext="10^{-122.0}" display="inline"><msup><mn>10</mn><mrow><mo>−</mo><mn>122.0</mn></mrow></msup></math>, the particle horizon <math id="S4.p8.m6" class="ltx_Math" alttext="10^{-122.9}" display="inline"><msup><mn>10</mn><mrow><mo>−</mo><mn>122.9</mn></mrow></msup></math>, a spread of one decade across lengths differing by a factor of three, against a problem of <math id="S4.p8.m7" class="ltx_Math" alttext="123" display="inline"><mn>123</mn></math> decades. The scaling <math id="S4.p8.m8" class="ltx_Math" alttext="\rho_{\Lambda}\sim\rho_{\rm Planck}(\ell_{P}/R)^{2}" display="inline"><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>∼</mo><mrow><msub><mi>ρ</mi><mi>Planck</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>/</mo><mi>R</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math> has been reached before, from effective field theory <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="" class="ltx_ref">21</a>]</cite> and from mode counting <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="" class="ltx_ref">22</a>, <a href="#bib.bib23" title="" class="ltx_ref">23</a>, <a href="#bib.bib24" title="" class="ltx_ref">24</a>]</cite>. Here it follows from the two axioms rather than from an assumed relation between cutoffs, and <math id="S4.p8.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is fixed by two measurements those derivations do not have: the galactic acceleration scale (Sec. <a href="#S5" title="V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a>) and the qubit ceiling (Sec. <a href="#S6" title="VI Test ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">VI</span></a>).</p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">The <math id="S4.p9.m1" class="ltx_Math" alttext="123" display="inline"><mn>123</mn></math> orders of magnitude are therefore the square of the number of Planck lengths around the horizon. The continuum’s estimate uses <math id="S4.p9.m2" class="ltx_Math" alttext="(R_{\Lambda}/\ell_{P})^{3}=(L/2\pi)^{3}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>L</mi><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></math> bulk modes at <math id="S4.p9.m3" class="ltx_Math" alttext="E_{P}" display="inline"><msub><mi>E</mi><mi>P</mi></msub></math>; the energy that gravitates is <math id="S4.p9.m4" class="ltx_Math" alttext="L^{2}/\pi" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mi>π</mi></mrow></math> boundary pixels at the scale <math id="S4.p9.m5" class="ltx_Math" alttext="E_{P}/L" display="inline"><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>/</mo><mi>L</mi></mrow></math>; and the ratio is <math id="S4.p9.m6" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math>, up to a numerical factor.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">V </span><math id="S5.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> from galaxies</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Reference <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> fixes <math id="S5.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> a second time, from data with no cosmological content. The acceleration scale of the radial acceleration relation, <math id="S5.p1.m2" class="ltx_Math" alttext="a_{0}=(1.20\pm 0.02_{\rm stat}\pm 0.24_{\rm sys})\times 10^{-10}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1.20</mn><mo>±</mo><msub><mn>0.02</mn><mi>stat</mi></msub><mo>±</mo><msub><mn>0.24</mn><mi>sys</mi></msub></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></mrow></math> m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup>, is measured from galactic rotation curves <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite>, the systematic term coming from the stellar mass-to-light ratio. Then <math id="S5.p1.m4" class="ltx_Math" alttext="a_{0}=c^{2}/L\ell_{P}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math> inverts to <math id="S5.p1.m5" class="ltx_Math" alttext="L_{\rm gal}=c^{2}/a_{0}\ell_{P}=(4.6\pm 0.9)\times 10^{61}" display="inline"><mrow><msub><mi>L</mi><mi>gal</mi></msub><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>4.6</mn><mo>±</mo><mn>0.9</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math>, and carried through Eqs. (<a href="#S2.E4" title="In II The framework ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) and (<a href="#S4.E13" title="In IV The state count ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>) this gives</p>
+<div class="scrollbox"><table id="S5.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E14.m1" class="ltx_Math" alttext="\Lambda_{\rm pred}=\frac{12\pi^{2}}{\ell_{P}^{2}L_{\rm gal}^{2}}=\frac{12\pi^{%
+2}a_{0}^{2}}{c^{4}}=(2.1\pm 0.8)\times 10^{-52}~{}{\rm m^{-2}}," display="block"><mrow><mrow><msub><mi mathvariant="normal">Λ</mi><mi>pred</mi></msub><mo>=</mo><mfrac><mrow><mn>12</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup></mrow><mrow><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup><mo>⁢</mo><msubsup><mi>L</mi><mi>gal</mi><mn>2</mn></msubsup></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>12</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>a</mi><mn>0</mn><mn>2</mn></msubsup></mrow><msup><mi>c</mi><mn>4</mn></msup></mfrac><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2.1</mn><mo>±</mo><mn>0.8</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>52</mn></mrow></msup></mrow><mo>⁢</mo><msup><mi mathvariant="normal">m</mi><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">or in the units of Eq. (<a href="#S1.E1" title="In I The problem ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) a vacuum energy density of <math id="S5.p1.m6" class="ltx_Math" alttext="(1.0\pm 0.4)\times 10^{-9}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1.0</mn><mo>±</mo><mn>0.4</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>9</mn></mrow></msup></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>. The observed values are <math id="S5.p1.m8" class="ltx_Math" alttext="1.09\times 10^{-52}" display="inline"><mrow><mn>1.09</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>52</mn></mrow></msup></mrow></math> m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="" class="ltx_ref">26</a>]</cite> and <math id="S5.p1.m10" class="ltx_Math" alttext="5.2\times 10^{-10}" display="inline"><mrow><mn>5.2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>. Prediction and observation agree. In the measured variable, the horizon value of <math id="S5.p1.m12" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> corresponds to <math id="S5.p1.m13" class="ltx_Math" alttext="a_{0}=8.6\times 10^{-11}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mn>8.6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>11</mn></mrow></msup></mrow></mrow></math> m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup>, <math id="S5.p1.m15" class="ltx_Math" alttext="1.4\sigma" display="inline"><mrow><mn>1.4</mn><mo>⁢</mo><mi>σ</mi></mrow></math> from the measured value, and the <math id="S5.p1.m16" class="ltx_Math" alttext="123" display="inline"><mn>123</mn></math> decades of Eq. (<a href="#S1.E1" title="In I The problem ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) are closed from rotation curves alone. Rotation curves and cosmological surveys are unrelated measurements.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Milgrom noticed in 1983 that <math id="S5.p2.m1" class="ltx_Math" alttext="a_{0}\sim cH_{0}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>∼</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>H</mi><mn>0</mn></msub></mrow></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib27" title="" class="ltx_ref">27</a>]</cite>. Equation (<a href="#S5.E14" title="In V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>) turns the coincidence into an equation, <math id="S5.p2.m2" class="ltx_Math" alttext="\Lambda\propto a_{0}^{2}/c^{4}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∝</mo><mrow><msubsup><mi>a</mi><mn>0</mn><mn>2</mn></msubsup><mo>/</mo><msup><mi>c</mi><mn>4</mn></msup></mrow></mrow></math>, whose coefficient the framework fixes up to one order-unity factor. That factor is the coefficient <math id="S5.p2.m3" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> in <math id="S5.p2.m4" class="ltx_Math" alttext="a_{0}=\gamma c^{2}/L\ell_{P}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math>, which Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> does not derive and Refs. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite> leave open. The coefficient is an open problem in emergent gravity itself: Verlinde’s derivation gives <math id="S5.p2.m5" class="ltx_Math" alttext="cH_{0}/6=1.1\times 10^{-10}" display="inline"><mrow><mrow><mrow><mi>c</mi><mo>⁢</mo><msub><mi>H</mi><mn>0</mn></msub></mrow><mo>/</mo><mn>6</mn></mrow><mo>=</mo><mrow><mn>1.1</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></mrow></math> m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib28" title="" class="ltx_ref">28</a>]</cite>, and fits of rotation curves within emergent gravity prefer a scale about <math id="S5.p2.m7" class="ltx_Math" alttext="30\%" display="inline"><mrow><mn>30</mn><mo>%</mo></mrow></math> lower <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib29" title="" class="ltx_ref">29</a>, <a href="#bib.bib30" title="" class="ltx_ref">30</a>]</cite>. The <math id="S5.p2.m8" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math> in Axiom 2 itself is not free; it is the number of Planck cells around a great circle, which Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite> checks against the horizon’s independently defined pixels. The measured <math id="S5.p2.m9" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> gives <math id="S5.p2.m10" class="ltx_Math" alttext="\gamma=1.39\pm 0.28" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>1.39</mn><mo>±</mo><mn>0.28</mn></mrow></mrow></math>. The framework’s own scale, <math id="S5.p2.m11" class="ltx_Math" alttext="\gamma=1" display="inline"><mrow><mi>γ</mi><mo>=</mo><mn>1</mn></mrow></math>, lies at <math id="S5.p2.m12" class="ltx_Math" alttext="1.4\sigma" display="inline"><mrow><mn>1.4</mn><mo>⁢</mo><mi>σ</mi></mrow></math>; <math id="S5.p2.m13" class="ltx_Math" alttext="\gamma=1/2" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></math> at <math id="S5.p2.m14" class="ltx_Math" alttext="3.2\sigma" display="inline"><mrow><mn>3.2</mn><mo>⁢</mo><mi>σ</mi></mrow></math>; and the bare surface gravity of the horizon, <math id="S5.p2.m15" class="ltx_Math" alttext="c^{2}/R_{\Lambda}" display="inline"><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow></math>, at <math id="S5.p2.m16" class="ltx_Math" alttext="18\sigma" display="inline"><mrow><mn>18</mn><mo>⁢</mo><mi>σ</mi></mrow></math>. The remaining factor of <math id="S5.p2.m17" class="ltx_Math" alttext="1.9" display="inline"><mn>1.9</mn></math> between Eq. (<a href="#S5.E14" title="In V 𝐿 from galaxies ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>) and the observed <math id="S5.p2.m18" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is <math id="S5.p2.m19" class="ltx_Math" alttext="\gamma^{2}" display="inline"><msup><mi>γ</mi><mn>2</mn></msup></math>.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">VI </span>Test</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">A state of <math id="S6.p1.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> qubits spread across its Hilbert space has <math id="S6.p1.m2" class="ltx_Math" alttext="2^{N}" display="inline"><msup><mn>2</mn><mi>N</mi></msup></math> outcomes of nonzero probability. In the framework each probability is a frequency over <math id="S6.p1.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> trials, hence at least <math id="S6.p1.m4" class="ltx_Math" alttext="1/L" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>L</mi></mrow></math>, and the probabilities sum to one; so <math id="S6.p1.m5" class="ltx_Math" alttext="2^{N}\leq L" display="inline"><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>≤</mo><mi>L</mi></mrow></math>, and</p>
+<div class="scrollbox"><table id="S6.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E15.m1" class="ltx_Math" alttext="N_{\max}=\lfloor\log_{2}L\rfloor=205," display="block"><mrow><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>=</mo><mrow><mo stretchy="false">⌊</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo stretchy="false">⌋</mo></mrow><mo>=</mo><mn>205</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">or <math id="S6.p1.m6" class="ltx_Math" alttext="204" display="inline"><mn>204</mn></math> at the galactic value of <math id="S6.p1.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>. This is Palmer’s <math id="S6.p1.m8" class="ltx_Math" alttext="\log_{2}L" display="inline"><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite>; his bit count <math id="S6.p1.m9" class="ltx_Math" alttext="2^{N+1}-2\leq NL" display="inline"><mrow><mrow><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>2</mn></mrow><mo>≤</mo><mrow><mi>N</mi><mo>⁢</mo><mi>L</mi></mrow></mrow></math>, which gives <math id="S6.p1.m10" class="ltx_Math" alttext="212" display="inline"><mn>212</mn></math> and which Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> called exact, is a weaker necessary condition <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>. Beyond <math id="S6.p1.m11" class="ltx_Math" alttext="N_{\max}" display="inline"><msub><mi>N</mi><mi>max</mi></msub></math>, algorithms that spread amplitude across the whole of Hilbert space lose their exponential advantage. Operationally, a random circuit on <math id="S6.p1.m12" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> fault-tolerant logical qubits followed by its inverse returns to its initial state with the gate fidelity in standard quantum mechanics, and here with probability only about <math id="S6.p1.m13" class="ltx_Math" alttext="(L/2^{N})^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>/</mo><msup><mn>2</mn><mi>N</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math> once <math id="S6.p1.m14" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> exceeds <math id="S6.p1.m15" class="ltx_Math" alttext="205" display="inline"><mn>205</mn></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>. The ceiling is technology-independent, the same for superconducting qubits as for trapped ions, which distinguishes it from every known decoherence mechanism. A measured <math id="S6.p1.m16" class="ltx_Math" alttext="N_{\max}" display="inline"><msub><mi>N</mi><mi>max</mi></msub></math> would fix <math id="S6.p1.m17" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> from the laboratory to a factor of two, <math id="S6.p1.m18" class="ltx_Math" alttext="2^{N_{\max}}\leq L&lt;2^{N_{\max}+1}" display="inline"><mrow><msup><mn>2</mn><msub><mi>N</mi><mi>max</mi></msub></msup><mo>≤</mo><mi>L</mi><mo>&lt;</mo><msup><mn>2</mn><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>, and with it the exponent in Eq. (<a href="#S4.E13" title="In IV The state count ‣ The Vacuum Catastrophe and the Granularity of Hilbert Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>). If devices carry states spread across well over <math id="S6.p1.m19" class="ltx_Math" alttext="205" display="inline"><mn>205</mn></math> logical qubits with no such wall, the account given here fails at its premise.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">The framework also requires <math id="S6.p2.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> to be constant, since <math id="S6.p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is. Reference <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> turns the lunar-laser-ranging bound on <math id="S6.p2.m3" class="ltx_Math" alttext="\dot{G}/G" display="inline"><mrow><mover accent="true"><mi>G</mi><mo>˙</mo></mover><mo>/</mo><mi>G</mi></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib31" title="" class="ltx_ref">31</a>]</cite> into <math id="S6.p2.m4" class="ltx_Math" alttext="|1+w_{0}|\lesssim 5\times 10^{-4}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mn>1</mn><mo>+</mo><msub><mi>w</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>≲</mo><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></mrow></math> for the present dark-energy equation of state. DESI DR2 prefers evolving dark energy over a constant <math id="S6.p2.m5" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> at <math id="S6.p2.m6" class="ltx_Math" alttext="3.1\sigma" display="inline"><mrow><mn>3.1</mn><mo>⁢</mo><mi>σ</mi></mrow></math> with the cosmic microwave background, and at <math id="S6.p2.m7" class="ltx_Math" alttext="2.8\sigma" display="inline"><mrow><mn>2.8</mn><mo>⁢</mo><mi>σ</mi></mrow></math> to <math id="S6.p2.m8" class="ltx_Math" alttext="4.2\sigma" display="inline"><mrow><mn>4.2</mn><mo>⁢</mo><mi>σ</mi></mrow></math> with supernovae added, depending on the sample <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib32" title="" class="ltx_ref">32</a>]</cite>. A confirmed time variation of the dark-energy density would falsify the identification of <math id="S6.p2.m9" class="ltx_Math" alttext="R_{\Lambda}" display="inline"><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></math> with a fixed length in Axiom 2; the framework predicts that the preference will not survive.</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">VII </span>Conclusion</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">The vacuum catastrophe has two parts. The zero-point energy never enters the field equations, because in an emergent theory those equations are unchanged by a constant shift of the matter Lagrangian and <math id="S7.p1.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> appears as a boundary condition. The scale of that boundary condition is set by the state count. The continuum assigns a horizon volume <math id="S7.p1.m2" class="ltx_Math" alttext="(R/\ell_{P})^{3}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></math> modes at <math id="S7.p1.m3" class="ltx_Math" alttext="E_{P}" display="inline"><msub><mi>E</mi><mi>P</mi></msub></math> apiece and returns the Planck density for any <math id="S7.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. A universe of finite information has <math id="S7.p1.m5" class="ltx_Math" alttext="L^{2}/\pi" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mi>π</mi></mrow></math> pixels on its horizon, each at the energy scale <math id="S7.p1.m6" class="ltx_Math" alttext="E_{P}/L" display="inline"><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>/</mo><mi>L</mi></mrow></math>, and the energy <math id="S7.p1.m7" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> carries inside the horizon is <math id="S7.p1.m8" class="ltx_Math" alttext="S_{\rm BH}T_{\rm dS}" display="inline"><mrow><msub><mi>S</mi><mi>BH</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow></math>. Once a quantum state cannot hold unlimited information, <math id="S7.p1.m9" class="ltx_Math" alttext="\rho_{\Lambda}/\rho_{\rm Planck}=3\pi/2L^{2}" display="inline"><mrow><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>/</mo><msub><mi>ρ</mi><mi>Planck</mi></msub></mrow><mo>=</mo><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mrow></math> is the only number the counting can give. <math id="S7.p1.m10" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> has been determined at the horizon and from galactic rotation curves, and the two agree, at <math id="S7.p1.m11" class="ltx_Math" alttext="1.4\sigma" display="inline"><mrow><mn>1.4</mn><mo>⁢</mo><mi>σ</mi></mrow></math> of the galactic measurement. A third determination, with no astronomy in it, is a ceiling of <math id="S7.p1.m12" class="ltx_Math" alttext="205" display="inline"><mn>205</mn></math> usefully entangled qubits.</p>
+</div>
+</section>
+<section id="A1" class="ltx_appendix">
+<h2 class="ltx_title ltx_title_appendix">
+<span class="ltx_tag ltx_tag_appendix">Appendix A </span>Numerical inputs</h2>
+
+<div id="A1.p1" class="ltx_para">
+<p class="ltx_p"><math id="A1.p1.m1" class="ltx_Math" alttext="c=2.99792458\times 10^{8}" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mn>2.99792458</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></mrow></math> m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-1</span></sup>, <math id="A1.p1.m3" class="ltx_Math" alttext="\hbar=1.0546\times 10^{-34}" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>=</mo><mrow><mn>1.0546</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>34</mn></mrow></msup></mrow></mrow></math> J s, <math id="A1.p1.m4" class="ltx_Math" alttext="G=6.6743\times 10^{-11}" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mn>6.6743</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>11</mn></mrow></msup></mrow></mrow></math> m<sup class="ltx_sup">3</sup> kg<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-1</span></sup> s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup>, <math id="A1.p1.m8" class="ltx_Math" alttext="\ell_{P}=1.6163\times 10^{-35}" display="inline"><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>=</mo><mrow><mn>1.6163</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>35</mn></mrow></msup></mrow></mrow></math> m, <math id="A1.p1.m9" class="ltx_Math" alttext="E_{P}=\hbar c/\ell_{P}=1.956\times 10^{9}" display="inline"><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>c</mi></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>=</mo><mrow><mn>1.956</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>9</mn></msup></mrow></mrow></math> J; <math id="A1.p1.m10" class="ltx_Math" alttext="\Lambda=1.09\times 10^{-52}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mrow><mn>1.09</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>52</mn></mrow></msup></mrow></mrow></math> m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup> from <math id="A1.p1.m12" class="ltx_Math" alttext="H_{0}=67.4" display="inline"><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>=</mo><mn>67.4</mn></mrow></math> km s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-1</span></sup> Mpc<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-1</span></sup> and <math id="A1.p1.m15" class="ltx_Math" alttext="\Omega_{\Lambda}=0.685" display="inline"><mrow><msub><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mn>0.685</mn></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="" class="ltx_ref">26</a>]</cite>; <math id="A1.p1.m16" class="ltx_Math" alttext="a_{0}=(1.20\pm 0.02_{\rm stat}\pm 0.24_{\rm sys})\times 10^{-10}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1.20</mn><mo>±</mo><msub><mn>0.02</mn><mi>stat</mi></msub><mo>±</mo><msub><mn>0.24</mn><mi>sys</mi></msub></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></mrow></math> m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-2</span></sup> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite>. Uncertainties are propagated linearly from the systematic term of <math id="A1.p1.m18" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>.</p>
+</div>
+<figure id="A1.T1" class="ltx_table">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 1: </span>Derived quantities.</figcaption>
+<div class="scrollbox"><table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column">Quantity</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column">Expression</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column">Value</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_t"><math id="A1.T1.m1" class="ltx_Math" alttext="\rho_{\rm Planck}" display="inline"><msub><mi>ρ</mi><mi>Planck</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_border_t"><math id="A1.T1.m2" class="ltx_Math" alttext="c^{7}/\hbar G^{2}" display="inline"><mrow><mrow><msup><mi>c</mi><mn>7</mn></msup><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>⁢</mo><msup><mi>G</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_t">
+<math id="A1.T1.m3" class="ltx_Math" alttext="4.63\times 10^{113}" display="inline"><mrow><mn>4.63</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>113</mn></msup></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m5" class="ltx_Math" alttext="\rho_{\Lambda}" display="inline"><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m6" class="ltx_Math" alttext="\Lambda c^{4}/8\pi G" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><msup><mi>c</mi><mn>4</mn></msup></mrow><mo>/</mo><mn>8</mn></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left">
+<math id="A1.T1.m7" class="ltx_Math" alttext="5.25\times 10^{-10}" display="inline"><mrow><mn>5.25</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></math> J m<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-3</span></sup>
+</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m9" class="ltx_Math" alttext="R_{\Lambda}" display="inline"><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m10" class="ltx_Math" alttext="\sqrt{3/\Lambda}" display="inline"><msqrt><mrow><mn>3</mn><mo>/</mo><mi mathvariant="normal">Λ</mi></mrow></msqrt></math></td>
+<td class="ltx_td ltx_align_left">
+<math id="A1.T1.m11" class="ltx_Math" alttext="1.659\times 10^{26}" display="inline"><mrow><mn>1.659</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>26</mn></msup></mrow></math> m</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m12" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m13" class="ltx_Math" alttext="2\pi R_{\Lambda}/\ell_{P}" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m14" class="ltx_Math" alttext="6.449\times 10^{61}" display="inline"><mrow><mn>6.449</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m15" class="ltx_Math" alttext="L_{\rm gal}" display="inline"><msub><mi>L</mi><mi>gal</mi></msub></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m16" class="ltx_Math" alttext="c^{2}/a_{0}\ell_{P}" display="inline"><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m17" class="ltx_Math" alttext="(4.6\pm 0.9)\times 10^{61}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>4.6</mn><mo>±</mo><mn>0.9</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m18" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m19" class="ltx_Math" alttext="a_{0}L\ell_{P}/c^{2}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m20" class="ltx_Math" alttext="1.39\pm 0.28" display="inline"><mrow><mn>1.39</mn><mo>±</mo><mn>0.28</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m21" class="ltx_Math" alttext="N_{\rm pix}" display="inline"><msub><mi>N</mi><mi>pix</mi></msub></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m22" class="ltx_Math" alttext="L^{2}/\pi" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mi>π</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m23" class="ltx_Math" alttext="1.324\times 10^{123}" display="inline"><mrow><mn>1.324</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>123</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m24" class="ltx_Math" alttext="N_{\rm cell}" display="inline"><msub><mi>N</mi><mi>cell</mi></msub></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m25" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m26" class="ltx_Math" alttext="4.159\times 10^{123}" display="inline"><mrow><mn>4.159</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>123</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m27" class="ltx_Math" alttext="S_{\rm BH}/k_{B}" display="inline"><mrow><msub><mi>S</mi><mi>BH</mi></msub><mo>/</mo><msub><mi>k</mi><mi>B</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m28" class="ltx_Math" alttext="L^{2}/4\pi" display="inline"><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m29" class="ltx_Math" alttext="3.310\times 10^{122}" display="inline"><mrow><mn>3.310</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>122</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Bulk modes</td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m30" class="ltx_Math" alttext="(R_{\Lambda}/\ell_{P})^{3}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m31" class="ltx_Math" alttext="1.08\times 10^{183}" display="inline"><mrow><mn>1.08</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>183</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m32" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m33" class="ltx_Math" alttext="E_{P}/L" display="inline"><mrow><msub><mi>E</mi><mi>P</mi></msub><mo>/</mo><mi>L</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left">
+<math id="A1.T1.m34" class="ltx_Math" alttext="3.03\times 10^{-53}" display="inline"><mrow><mn>3.03</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>53</mn></mrow></msup></mrow></math> J</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m35" class="ltx_Math" alttext="\rho_{\Lambda}/\rho_{\rm Planck}" display="inline"><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>/</mo><msub><mi>ρ</mi><mi>Planck</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m36" class="ltx_Math" alttext="3\pi/2L^{2}" display="inline"><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m37" class="ltx_Math" alttext="1.133\times 10^{-123}" display="inline"><mrow><mn>1.133</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>123</mn></mrow></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m38" class="ltx_Math" alttext="\rho_{\Lambda}V" display="inline"><mrow><msub><mi>ρ</mi><mi mathvariant="normal">Λ</mi></msub><mo>⁢</mo><mi>V</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m39" class="ltx_Math" alttext="S_{\rm BH}T_{\rm dS}" display="inline"><mrow><msub><mi>S</mi><mi>BH</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>dS</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left">
+<math id="A1.T1.m40" class="ltx_Math" alttext="1.004\times 10^{70}" display="inline"><mrow><mn>1.004</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>70</mn></msup></mrow></math> J</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m41" class="ltx_Math" alttext="\rho_{\Lambda}^{1/4}" display="inline"><msubsup><mi>ρ</mi><mi mathvariant="normal">Λ</mi><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msubsup></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m42" class="ltx_Math" alttext="(3\pi/2)^{1/4}E_{P}/\sqrt{L}" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup><mo>⁢</mo><msub><mi>E</mi><mi>P</mi></msub></mrow><mo>/</mo><msqrt><mi>L</mi></msqrt></mrow></math></td>
+<td class="ltx_td ltx_align_left">
+<math id="A1.T1.m43" class="ltx_Math" alttext="2.24" display="inline"><mn>2.24</mn></math> meV</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m44" class="ltx_Math" alttext="N_{\max}" display="inline"><msub><mi>N</mi><mi>max</mi></msub></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m45" class="ltx_Math" alttext="\lfloor\log_{2}L\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo stretchy="false">⌋</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left"><math id="A1.T1.m46" class="ltx_Math" alttext="205" display="inline"><mn>205</mn></math></td>
+</tr>
+</tbody>
+</table></div>
+</figure>
+</section>
+<div class="ltx_acknowledgements">
+<h6 class="ltx_title ltx_title_acknowledgements">Acknowledgements.</h6>
+The author used an AI assistant (Anthropic’s Claude) for adversarial review, numerical verification, and editing of the manuscript. The physical proposal and the claims are the author’s own.
+
+</div>
+<section id="Ax1" class="ltx_appendix">
+<h2 class="ltx_title ltx_title_appendix">Declarations</h2>
+
+<div id="Ax1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Funding.</span> This work received no external funding. <span class="ltx_text ltx_font_bold">Competing interests.</span> The author declares none. <span class="ltx_text ltx_font_bold">Data availability.</span> No new data were generated; all numerical inputs are published values cited in the text. <span class="ltx_text ltx_font_bold">Use of AI tools.</span> As stated in the acknowledgments; the author takes full responsibility for the manuscript.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"> S. Weinberg, The cosmological constant problem, Rev. Mod. Phys. <span class="ltx_text ltx_font_bold">61</span>, 1 (1989). <a href="https://doi.org/10.1103/RevModPhys.61.1" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/RevModPhys.61.1</a>
+
+</span>
+</li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"> J. Martin, Everything you always wanted to know about the cosmological constant problem (but were afraid to ask), C. R. Physique <span class="ltx_text ltx_font_bold">13</span>, 566 (2012). <a href="https://doi.org/10.1016/j.crhy.2012.04.008" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1016/j.crhy.2012.04.008</a>
+
+</span>
+</li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"> R. J. Adler, B. Casey, and O. C. Jacob, Vacuum catastrophe: An elementary exposition of the cosmological constant problem, Am. J. Phys. <span class="ltx_text ltx_font_bold">63</span>, 620 (1995). <a href="https://doi.org/10.1119/1.17850" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1119/1.17850</a>
+
+</span>
+</li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"> R. P. Feynman, F. B. Morinigo, and W. G. Wagner, <em class="ltx_emph ltx_font_italic">Feynman Lectures on Gravitation</em>, edited by B. Hatfield (Addison-Wesley, Reading, MA, 1995).
+
+</span>
+</li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"> A. Korytko, Gravitation from Hilbert-space granularity: Pinning the parameter <math id="bib.bib5.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> of rational quantum mechanics across scales (2026). <a href="https://doi.org/10.5281/zenodo.22255461" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.5281/zenodo.22255461</a>
+
+</span>
+</li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell’s theorem, Proc. R. Soc. A <span class="ltx_text ltx_font_bold">476</span>, 20190350 (2020). <a href="https://doi.org/10.1098/rspa.2019.0350" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1098/rspa.2019.0350</a>
+
+</span>
+</li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA <span class="ltx_text ltx_font_bold">123</span>, e2523350123 (2026). <a href="https://doi.org/10.1073/pnas.2523350123" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1073/pnas.2523350123</a>; arXiv:2510.02877.
+
+</span>
+</li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"> A. Korytko, One register: A common origin for the granularity of Hilbert space and of space (2026). <a href="https://doi.org/10.5281/zenodo.22669417" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.5281/zenodo.22669417</a>
+
+</span>
+</li>
+      
+<li id="bib.bib9" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"> A. Korytko, The dimension of space from the granularity of Hilbert space (2026). <a href="https://doi.org/10.5281/zenodo.22678538" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.5281/zenodo.22678538</a>
+
+</span>
+</li>
+      
+<li id="bib.bib10" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"> E. Verlinde, On the origin of gravity and the laws of Newton, J. High Energy Phys. <span class="ltx_text ltx_font_bold">04</span>, 029 (2011). <a href="https://doi.org/10.1007/JHEP04(2011)029" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1007/JHEP04(2011)029</a>
+
+</span>
+</li>
+      
+<li id="bib.bib11" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"> T. Jacobson, Thermodynamics of spacetime: The Einstein equation of state, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">75</span>, 1260 (1995). <a href="https://doi.org/10.1103/PhysRevLett.75.1260" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.75.1260</a>
+
+</span>
+</li>
+      
+<li id="bib.bib12" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"> G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation, Phys. Rev. D <span class="ltx_text ltx_font_bold">15</span>, 2738 (1977). <a href="https://doi.org/10.1103/PhysRevD.15.2738" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.15.2738</a>
+
+</span>
+</li>
+      
+<li id="bib.bib13" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"> T. Banks and W. Fischler, Why the cosmological constant is a boundary condition, arXiv:1811.00130 (2018).
+
+</span>
+</li>
+      
+<li id="bib.bib14" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"> T. Padmanabhan and H. Padmanabhan, Cosmological constant from the emergent gravity perspective, Int. J. Mod. Phys. D <span class="ltx_text ltx_font_bold">23</span>, 1430011 (2014). <a href="https://doi.org/10.1142/S0218271814300110" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1142/S0218271814300110</a>; arXiv:1404.2284.
+
+</span>
+</li>
+      
+<li id="bib.bib15" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"> G. F. R. Ellis, H. van Elst, J. Murugan, and J.-P. Uzan, On the trace-free Einstein equations as a viable alternative to general relativity, Class. Quantum Grav. <span class="ltx_text ltx_font_bold">28</span>, 225007 (2011). <a href="https://doi.org/10.1088/0264-9381/28/22/225007" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/0264-9381/28/22/225007</a>
+
+</span>
+</li>
+      
+<li id="bib.bib16" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"> Y. Bonder and C. Corral, Unimodular Einstein–Cartan gravity: Dynamics and conservation laws, Phys. Rev. D <span class="ltx_text ltx_font_bold">97</span>, 084001 (2018). <a href="https://doi.org/10.1103/PhysRevD.97.084001" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.97.084001</a>
+
+</span>
+</li>
+      
+<li id="bib.bib17" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"> J. Polchinski, The cosmological constant and the string landscape, arXiv:hep-th/0603249 (2006).
+
+</span>
+</li>
+      
+<li id="bib.bib18" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"> R. Bousso, TASI lectures on the cosmological constant, Gen. Relativ. Gravit. <span class="ltx_text ltx_font_bold">40</span>, 607 (2008). <a href="https://doi.org/10.1007/s10714-007-0557-5" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1007/s10714-007-0557-5</a>; arXiv:0708.4231.
+
+</span>
+</li>
+      
+<li id="bib.bib19" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"> T. Padmanabhan, Equipartition of energy in the horizon degrees of freedom and the emergence of gravity, Mod. Phys. Lett. A <span class="ltx_text ltx_font_bold">25</span>, 1129 (2010). <a href="https://doi.org/10.1142/S021773231003313X" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1142/S021773231003313X</a>; arXiv:0912.3165.
+
+</span>
+</li>
+      
+<li id="bib.bib20" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock"> T. Banks, Cosmological breaking of supersymmetry, or little Lambda goes back to the future II, arXiv:hep-th/0007146 (2000).
+
+</span>
+</li>
+      
+<li id="bib.bib21" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"> A. G. Cohen, D. B. Kaplan, and A. E. Nelson, Effective field theory, black holes, and the cosmological constant, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">82</span>, 4971 (1999). <a href="https://doi.org/10.1103/PhysRevLett.82.4971" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.82.4971</a>
+
+</span>
+</li>
+      
+<li id="bib.bib22" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"> V. G. Gurzadyan and S.-S. Xue, On the estimation of the current value of the cosmological constant, Mod. Phys. Lett. A <span class="ltx_text ltx_font_bold">18</span>, 561 (2003). arXiv:astro-ph/0105245.
+
+</span>
+</li>
+      
+<li id="bib.bib23" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"> T. Padmanabhan, Vacuum fluctuations of energy density can lead to the observed cosmological constant, Class. Quantum Grav. <span class="ltx_text ltx_font_bold">22</span>, L107 (2005). <a href="https://doi.org/10.1088/0264-9381/22/17/L01" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/0264-9381/22/17/L01</a>; arXiv:hep-th/0406060.
+
+</span>
+</li>
+      
+<li id="bib.bib24" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock"> H. Padmanabhan and T. Padmanabhan, CosMIn: The solution to the cosmological constant problem, Int. J. Mod. Phys. D <span class="ltx_text ltx_font_bold">22</span>, 1342001 (2013). <a href="https://doi.org/10.1142/S0218271813420017" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1142/S0218271813420017</a>; arXiv:1302.3226.
+
+</span>
+</li>
+      
+<li id="bib.bib25" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"> S. S. McGaugh, F. Lelli, and J. M. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">117</span>, 201101 (2016). <a href="https://doi.org/10.1103/PhysRevLett.117.201101" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.117.201101</a>
+
+</span>
+</li>
+      
+<li id="bib.bib26" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[26]</span>
+<span class="ltx_bibblock"> Planck Collaboration, N. Aghanim <em class="ltx_emph ltx_font_italic">et al.</em>, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. <span class="ltx_text ltx_font_bold">641</span>, A6 (2020). <a href="https://doi.org/10.1051/0004-6361/201833910" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1051/0004-6361/201833910</a>
+
+</span>
+</li>
+      
+<li id="bib.bib27" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[27]</span>
+<span class="ltx_bibblock"> M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, Astrophys. J. <span class="ltx_text ltx_font_bold">270</span>, 365 (1983). <a href="https://doi.org/10.1086/161130" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1086/161130</a>
+
+</span>
+</li>
+      
+<li id="bib.bib28" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[28]</span>
+<span class="ltx_bibblock"> E. Verlinde, Emergent gravity and the dark universe, SciPost Phys. <span class="ltx_text ltx_font_bold">2</span>, 016 (2017). <a href="https://doi.org/10.21468/SciPostPhys.2.3.016" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.21468/SciPostPhys.2.3.016</a>
+
+</span>
+</li>
+      
+<li id="bib.bib29" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[29]</span>
+<span class="ltx_bibblock"> Y. Yoon, J. C. Park, and H. S. Hwang, Understanding galaxy rotation curves with Verlinde’s emergent gravity, Class. Quantum Grav. <span class="ltx_text ltx_font_bold">40</span>, 02LT01 (2023). <a href="https://doi.org/10.1088/1361-6382/acaae6" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1361-6382/acaae6</a>
+
+</span>
+</li>
+      
+<li id="bib.bib30" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[30]</span>
+<span class="ltx_bibblock"> Y. Yoon and H. S. Hwang, Comment on “Emergent Gravity and the Dark Universe” by Erik Verlinde, arXiv:1909.01734v4 (2019; revised 2025).
+
+</span>
+</li>
+      
+<li id="bib.bib31" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[31]</span>
+<span class="ltx_bibblock"> F. Hofmann and J. Müller, Relativistic tests with lunar laser ranging, Class. Quantum Grav. <span class="ltx_text ltx_font_bold">35</span>, 035015 (2018). <a href="https://doi.org/10.1088/1361-6382/aa8f7a" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1361-6382/aa8f7a</a>
+
+</span>
+</li>
+      
+<li id="bib.bib32" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[32]</span>
+<span class="ltx_bibblock"> DESI Collaboration, M. Abdul-Karim <em class="ltx_emph ltx_font_italic">et al.</em>, DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints, Phys. Rev. D <span class="ltx_text ltx_font_bold">112</span>, 083515 (2025). <a href="https://doi.org/10.1103/tr6y-kpc6" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/tr6y-kpc6</a>; arXiv:2503.14738.
+
+</span>
+</li>
+    
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Sep 10 03:59:34 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
