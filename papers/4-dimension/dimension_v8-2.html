@@ -613,6 +613,15 @@ h1, h2, h3, h4, .ltx_title { line-height: 1.25; }
 .ltx_abstract .ltx_title { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 a, .ltx_ref, .ltx_cite a { color: var(--teal-dark); }
 .ltx_page_footer, .ltx_authors_multiline .ltx_contact { color: var(--muted); font-size: .85rem; }
+/* LaTeXML reproduces LaTeX's print convention: indent every paragraph except
+   the first after a heading. Faithful to the PDF, but on a screen the
+   paragraphs already have a blank line between them, so the indent is
+   redundant - and it makes the first item under a heading look misaligned
+   against the ones below it (Postulate 1 vs Postulate 2). One convention at
+   a time: keep the vertical gap, drop the indent. */
+p.ltx_p { text-indent: 0 !important; }
+div.ltx_para + div.ltx_para { margin-top: .95em; }
+
 .ltx_bibliography { font-size: .9rem; }
 .ltx_bibitem { margin-bottom: .5rem; }
 
