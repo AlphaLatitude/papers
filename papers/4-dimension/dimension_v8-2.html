@@ -632,9 +632,16 @@ a, .ltx_ref, .ltx_cite a { color: var(--teal-dark); }
 td.ltx_eqn_center_padleft, td.ltx_eqn_center_padright,
 td.ltx_eqn_left_padleft, td.ltx_eqn_right_padright,
 td.ltx_eqn_lefteqn_padright { width: 0; min-width: 0; padding: 0; }
-table.ltx_equation, table.ltx_eqn_table { width: auto; margin: 1.1em 0; }
+/* Equation left, number hard right against the margin, as in print. The
+   table spans the column so the number is pushed away from the formula
+   rather than sitting on top of it; a formula wider than the column still
+   scrolls inside its box. */
+table.ltx_equation, table.ltx_eqn_table { width: 100%; margin: 1.2em 0; }
 td.ltx_eqn_cell { text-align: left; }
-td.ltx_eqn_eqno { padding-left: .8em; }
+td.ltx_eqn_eqno {
+  width: 1%; white-space: nowrap; text-align: right;
+  padding-left: 2em; vertical-align: middle; color: var(--muted);
+}
 /* Bibliography DOIs and arXiv links are long unbreakable strings in a
    monospace face; they were the last thing forcing the page sideways. */
 .ltx_bibblock, a.ltx_url, .ltx_ref.ltx_url, .ltx_font_typewriter {
