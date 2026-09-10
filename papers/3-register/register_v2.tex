@@ -1,0 +1,267 @@
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{orcidlink}
+
+\begin{document}
+
+\title{One Register:\\ A Common Origin for the Granularity of Hilbert Space and of Space}
+
+\author{Andrew Korytko\,\orcidlink{0009-0005-4569-2228}}
+\email{andrew@alphalatitude.com}
+\affiliation{AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA}
+
+\date{\today; DOI: \href{https://doi.org/10.5281/zenodo.22669417}{10.5281/zenodo.22669417}}
+
+\begin{abstract}
+Palmer's Rational Quantum Mechanics writes a qubit as $L$ bits: the count $m$ of $+1$ bits gives the Born probability $m/L$ and a cyclic shift the phase. Previously we made $L$ universal, identified one phase step with one Planck length on the horizon, and derived Newton's constant and Einstein's equations at $L \approx 6\times10^{61}$. The two axioms become one: a dial of $L$ notches on the horizon, each a Planck length; every qubit is a pattern on it; one notch is a Planck-length translation, under which a wave of $\kappa$ wavelengths gains $\kappa$ phase steps, Palmer's phase step being the slowest wave's. From it: light moves one notch per tick; velocity is the excess of right- over left-movers, $v/c = 2m/L - 1$; in matter a right-mover becomes a left-mover every quarter Compton period, its Compton clock being Palmer's hidden global phase; the circumference is the longest wavelength, the previous paper's second axiom; and Born's rule as a frequency bounds a state spanning its Hilbert space at $2^N \le L$, $N_{\max} = 205$, for any physical realization. Free dynamics is exact mode by mode in the plane of any elementary vertex, whose momenta the horizon's pixels label; whole-cell position holds along one direction only; several particles in several planes need three dimensions, not constructed here. The predictions are inherited: the qubit ceiling, now a random circuit and its inverse failing to return past 205 logical qubits, and constant $\Lambda$; it entails no energy-dependent light speed and no intrinsic matter-wave decoherence, unlike collapse models.
+\end{abstract}
+
+\keywords{Rational quantum mechanics; discrete Hilbert space; finite quantum mechanics; de Sitter horizon; Bell's theorem}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+A qubit is a point on the Bloch sphere,
+\begin{equation}
+|\psi\rangle = \cos\tfrac{\theta}{2}\,|1\rangle + e^{i\phi}\sin\tfrac{\theta}{2}\,|{-1}\rangle ,
+\label{eq:qubit}
+\end{equation}
+and in standard quantum mechanics every point is a state. Rational Quantum Mechanics (RaQM)~\cite{palmer2020,palmer2026,palmer2026b,palmer2026c} keeps the Schr\"odinger equation and the Born rule but admits only those points, and only those measurement bases, for which
+\begin{equation}
+\cos^2\tfrac{\theta}{2} = \frac{m}{L},\qquad \frac{\phi}{2\pi} = \frac{n}{L},
+\label{eq:raqm}
+\end{equation}
+with $m\in\{0,\dots,L\}$, $n\in\{0,\dots,L-1\}$, and $L$ a large integer. A quantum state is then not a point on a continuum but a mark on a very fine grid, and $L$ is how fine the grid is. Palmer represents such a state as a string of $L$ bits: the fraction of $+1$ bits is $\cos^2(\theta/2)$, and rotating the string by $n$ places is the phase~\cite{palmer2026}. Niven's theorem~\cite{niven1956} says that $\cos\alpha$ and $\alpha/2\pi$ are simultaneously rational only for a handful of angles, so Eq.~(\ref{eq:raqm}) forbids the pair of counterfactual settings a Bell inequality needs, which is Palmer's Impossible Triangle Corollary, and Bell's theorem no longer implies nonlocality~\cite{palmer2020,palmer2026b}. A state of $N$ qubits spread across its Hilbert space has $2^N$ outcomes, and with probabilities read as frequencies over $L$ trials there is a largest $N$ for which such a state can be written at all, $N_{\max}\approx\log_2L$~\cite{palmer2026}; the bit count $2^{N+1}-2 \le NL$, Eq.~(10) of Ref.~\cite{palmer2026}, is a weaker condition. In Palmer's version $L$ is a property of each qubit, set by its mass and energy, and ranges from $10^{64}$ to $10^{109}$.
+
+In a previous paper~\cite{korytko2026} we made two changes and called them axioms: $L$ is a single constant of nature, and one step of quantum phase, $2\pi/L$, is one Planck length $\ell_P = \sqrt{\hbar G/c^3}$ on a great circle of the cosmological horizon at $R_\Lambda = \sqrt{3/\Lambda} = 1.66\times10^{26}$~m~\cite{planck2018},
+\begin{equation}
+\ell_P = \frac{2\pi R_\Lambda}{L} .
+\label{eq:ident}
+\end{equation}
+From the two, Newton's constant follows by Verlinde's argument~\cite{verlinde2011} with the pixel fixed, Einstein's equations by Jacobson's~\cite{jacobson1995}, rotation curves flatten at $a_0 = c^2/L\ell_P$, and $G\Lambda = 12\pi^2c^3/\hbar L^2$. Milgrom's $a_0$~\cite{milgrom1983,mcgaugh2016} gives $L = 4.6\times10^{61}$ and the observed $\Lambda$ gives $6.4\times10^{61}$, agreeing to a factor 1.4; both lie below every per-qubit value in Palmer's range.
+
+Equation~(\ref{eq:ident}) equates the granularity of two things introduced as separate, Hilbert space and space. This paper shows they are two descriptions of a single process: a string on a dial of $L$ notches, turning at the rate its energy dictates, where one notch is a translation by one Planck length and Palmer's phase step is what that translation does to the slowest wave the dial can hold. Read for a qubit, the rotation is a phase; read for a particle, a translation; for light the two are one thing at every Planck tick. Section~\ref{sec:register} states the postulate and recovers Eq.~(\ref{eq:raqm}). Section~\ref{sec:motion} sets the ring in motion; the free dynamics is exact mode by mode in the plane, position in whole cells holds along one direction only, and Sec.~\ref{sec:capacity} says which states need a three-dimensional space; the paper does not construct it, and its dimension is derived in a following paper~\cite{korytko2026d}. Section~\ref{sec:horizon} places the ring on the horizon and gives Eq.~(\ref{eq:ident}) a physical content. Section~\ref{sec:pred} states what is predicted and what would falsify it. Section~\ref{sec:cost} states what the placement assumes.
+
+\section{The Register}
+\label{sec:register}
+
+\textbf{Postulate.} \emph{There is a dial of $L$ notches, with $L\in\mathbb{N}$ universal and each notch one Planck length long, which light crosses in one Planck time, closing on any great circle of the cosmological horizon. Every qubit is a pattern of marks on it. Turning the dial one notch is a translation by one Planck length; a wave with $\kappa$ wavelengths around the dial thereby gains $\kappa$ steps of phase, and Palmer's phase step, $2\pi/L$, is the step of the slowest wave, whose wavelength is the circumference.}
+
+The picture is a clock face with $L$ marks. A qubit is a pattern on the face, which can be counted and turned; a wave is a pattern repeating $\kappa$ times around it. Advancing the face by one mark moves every wave one Planck length; a pattern with $\kappa$ repeats thereby turns through $\kappa$ marks of phase, the slowest wave through exactly one, which is Palmer's unit. Time passing is a different operation: in one Planck tick each component of light moves one mark in its own direction, Sec.~\ref{sec:light}. We call the notches cells, and the dial with its patterns the register. It is a ring of $L$ equal cells with no first cell, and two things can be done with a pattern on it: it can be counted, and it can be shifted by turning the dial. The count is unchanged by a shift and a shift does not depend on the count. Palmer's bit string is such a pattern, written relative to a measurement basis; one string is one qubit. A free particle needs no clause of its own: quantum mechanics already gives it two-level structure, the right- and left-moving components at each momentum, so its chirality and its modes are patterns on the dial, its position is a distribution over cells, sharp when the pattern occupies one, and its orbital Hilbert space has dimension $L$, worth $\log_2L\approx205$ qubits, to which the chirality of Sec.~\ref{sec:matter} adds one, a general state being a superposition over $L$ modes with each mode a Palmer string. The integer $L$ therefore plays three roles: the length of Palmer's string; the number of Planck lengths around a great circle of the horizon, equivalently the number of Planck times light takes to go once around it; and the dimension of a free particle's orbital Hilbert space on the ring. The postulate is that all three are one number, and one symbol is used for that reason. Taken from RaQM are the Schr\"odinger equation and the reading of the Born probability as the frequency of marks~\cite{palmer2026}; assumed are $\hbar$, $c$, and the numerical value of $\ell_P$, from which $G = \ell_P^2c^3/\hbar$ is derived in Ref.~\cite{korytko2026} rather than the reverse.
+
+Read for a qubit, the count is the Born probability. A qubit's latitude cuts the Bloch sphere into two caps whose fractional areas are $\cos^2(\theta/2)$ and $\sin^2(\theta/2)$; partition the sphere into $L$ equal-area bands and a state $m$ bands from the $|{-1}\rangle$ pole has
+\begin{equation}
+\cos^2\tfrac{\theta}{2} = \frac{m}{L}, \qquad \cos\theta = \frac{2m}{L} - 1 \in \mathbb{Q},
+\label{eq:count}
+\end{equation}
+since equal areas are equal steps in $\cos\theta$ by Archimedes' theorem. The shift is the phase: laid around the equator, one cell is
+\begin{equation}
+\frac{\phi}{2\pi} = \frac{1}{L},
+\label{eq:shift}
+\end{equation}
+and Palmer's operator $\zeta$, which advances the phase by one step, is the rotation of the string by one place~\cite{palmer2026}; read on the ring, Sec.~\ref{sec:motion}, it is what one notch of translation does to the slowest wave, and faster waves gain more. Together these are Eq.~(\ref{eq:raqm}). They do not collide: Niven's theorem~\cite{niven1956,jahnel2010} allows $\cos\alpha$ and $\alpha/2\pi$ to be simultaneously rational at only eight angles, but the count is a fraction of area and the shift a fraction of arc, and area and arc are incommensurate on a sphere, so the permitted set has of order $L^2$ points. The universal $L$ is the first axiom of Ref.~\cite{korytko2026}, and everything Palmer derives from Eq.~(\ref{eq:raqm}) carries over: the string, Born's rule as a frequency, the Impossible Triangle Corollary, and the capacity $N_{\max}$.
+
+\section{The Ring in Motion}
+\label{sec:motion}
+
+\subsection{Evolution and translation}
+
+Under the Schr\"odinger equation the phase of a mode of energy $E$ advances by $E\,dt/\hbar$. Palmer's $\zeta$ advances it by $2\pi/L$. Schr\"odinger evolution, in Palmer's representation, is therefore the string of a mode of energy $E$ rotating at
+\begin{equation}
+\dot n = \frac{E\,L}{2\pi\hbar}\ \text{steps per second} ,
+\label{eq:rate}
+\end{equation}
+and in a superposition each mode's string turns at its own rate. 
+
+A cell is one Planck length and one Planck time, $\ell_P = c\,t_P$; the dial has one unit and $c$ converts it. Because a notch is a Planck length, counting notches is measuring position: the state at cell $j$ is at $x_j = j\ell_P$, $j\in\mathbb{Z}_L$, and turning the dial one notch is the translation
+\begin{equation}
+X|j\rangle = |j+1\rangle = e^{-i\hat p\,\ell_P/\hbar}|j\rangle ,
+\label{eq:X}
+\end{equation}
+which defines momentum on the ring with no continuum limit: momentum is what generates translation. The eigenstates of $X$ are the plane waves
+\begin{equation}
+|\tilde\kappa\rangle = \frac{1}{\sqrt L}\sum_j e^{2\pi i j\kappa/L}|j\rangle, \qquad p_\kappa = \frac{h\,\kappa}{L\ell_P},
+\label{eq:pk}
+\end{equation}
+with $-L/2 < \kappa \le L/2$, whose phase advances by $2\pi\kappa/L$ per cell, a permitted phase with $n = j\kappa \pmod L$. A wave that fits $\kappa$ times around the ring carries $\kappa$ units of momentum, and the mode $\kappa = 1$, with wavelength $L\ell_P$, is the slowest wave the ring can hold: the smallest momentum in the universe is one wavelength around it. The states whose phase advances by a permitted amount per cell are the momentum eigenstates; the phase step is the momentum quantum $h/L\ell_P$; both position and momentum take exactly $L$ values; momentum is bounded at the zone edge $\pi\hbar/\ell_P$; and the phase-space cell is $L\ell_P\cdot(2\pi\hbar/\ell_P)/L = h$.
+
+\subsection{Light}
+\label{sec:light}
+
+For a massless mode $E = |p|c$, so by Eq.~(\ref{eq:pk})
+\begin{equation}
+E_\kappa = |\kappa|\,\varepsilon_0, \qquad \varepsilon_0 = \frac{hc}{L\ell_P} = \frac{2\pi\hbar}{L\,t_P},
+\label{eq:eps0}
+\end{equation}
+and the phase advance per tick, $E_\kappa t_P/\hbar = 2\pi|\kappa|/L$, equals in magnitude the phase change across one cell, so the wave moves one cell per tick in the direction of its momentum. The wave $e^{i(kx-\omega t)}$ is invariant under one cell and one tick together. In operator form, $U(t_P) = e^{-iHt_P/\hbar}$ with $H = |\hat p|c$ acts as $X$ on every right-moving mode and $X^{-1}$ on every left-moving one: each tick, each component of light advances one cell in its own direction, and a mode with $\kappa$ wavelengths around the ring gains $\kappa$ phase steps in doing so. A massless mode is a permitted state at every tick: its clock and its ruler are the same rotation, and the two axioms are one statement. A superposition of massless modes, a standing wave of light for instance, is also permitted at every tick, because every mode's phase advances by a permitted amount per tick. A massless mode never reverses direction. The term that reverses direction is the mass term of Sec.~\ref{sec:matter}, and on the register it is the only difference between light and matter.
+
+\subsection{Matter}
+\label{sec:matter}
+
+Let $|\mathrm{R}\rangle$ and $|\mathrm{L}\rangle$ be the right- and left-moving light-like components, the two chiralities of a particle in one dimension, and write the state (\ref{eq:qubit}) in that basis. The velocity operator is $c\sigma_z$, and its expectation is
+\begin{equation}
+\langle v\rangle = c\,(P_{\mathrm R} - P_{\mathrm L}) = c\Big(\frac{2m}{L} - 1\Big) = c\cos\theta .
+\label{eq:velocity}
+\end{equation}
+Palmer's count sets the velocity: in the string, the $m$ bits marked $+1$ are the right-movers and the $L-m$ marked $-1$ are the left-movers, the count is the probability of moving right, and the velocity is the excess of right-movers over left-movers in units of $c/L$. This right--left doublet is one qubit per particle, its chirality, the factor of two in a Dirac particle's Hilbert space that multiplies the $L$-dimensional orbital space of Sec.~\ref{sec:capacity}; the components at each momentum are that one qubit resolved momentum by momentum. The poles are light moving right and left. The equator, with $|\mathrm{R}\rangle$ and $|\mathrm{L}\rangle$ carrying momenta $\pm\kappa$, is a standing wave at rest, the interference pattern of the two components, with maxima every half wavelength; the shift $\phi$ is where those maxima sit, and one shift moves the pattern by one part in $L$ of its period.
+
+Mass $M$ couples the two chiralities,
+\begin{equation}
+H = c\,\hat p\,\sigma_z + Mc^2\,\sigma_x, \qquad E = \pm\sqrt{p^2c^2 + M^2c^4},
+\label{eq:dirac}
+\end{equation}
+the Dirac equation in one dimension, in which the mass term mixes the two chiralities at each momentum and the eigenstate has $\cos\theta = pc/E = v/c$. The $\sigma_x$ term reverses a quantum's direction, with angle per tick
+\begin{equation}
+\frac{Mc^2\,t_P}{\hbar} = \frac{M}{m_P} ,
+\label{eq:flip}
+\end{equation}
+$4\times10^{-23}$ for an electron, one radian per Compton time $\hbar/Mc^2$. A massive particle at rest is light of Compton wavelength running right and left in equal measure, a right-mover becoming a left-mover in a quarter Compton period and back in the next; its rest energy is that of the trapped light. The lattice form of this construction, a particle moving at $c$ on a spacetime lattice and reversing with amplitude proportional to $M$ per step, is Feynman's checkerboard~\cite{feynman1965,jacobson1984,bialynicki1994}, whose continuum limit is the Dirac equation; the register is the checkerboard with the spacing set to $\ell_P$. In operator form the tick with mass is
+\begin{equation}
+U(t_P) = e^{-i(M/m_P)\sigma_x}\,X^{\sigma_z},
+\label{eq:tick}
+\end{equation}
+the massless tick of Sec.~\ref{sec:light} followed by the reversal of Eq.~(\ref{eq:flip}). For $p\ell_P \ll \hbar$ and $M \ll m_P$ it is $1 - (it_P/\hbar)(c\hat p\sigma_z + Mc^2\sigma_x)$, which is Eq.~(\ref{eq:dirac}); its exact eigenphases obey
+\begin{equation}
+\cos\!\Big(\frac{E\,t_P}{\hbar}\Big) = \cos\!\Big(\frac{Mc^2\,t_P}{\hbar}\Big)\cos\!\Big(\frac{p\,\ell_P}{\hbar}\Big),
+\label{eq:walk}
+\end{equation}
+which is $E = |p|c$ for $M = 0$ at every momentum, and Sec.~\ref{sec:pred} gives its expansion for matter.
+
+Two consequences follow. First, matter is a permitted state only at intervals. Under Eq.~(\ref{eq:dirac}) the right--left qubit of a state of definite momentum turns about the axis $\hat n = (Mc^2, 0, pc)/E$ of the Bloch sphere, the $x$ axis at rest, at the rate $2E/\hbar$. The grid of Eq.~(\ref{eq:raqm}), rational $\cos\theta$ and rational $\phi/2\pi$, is invariant under rotations about $z$ by permitted angles and under rotations by $\pi$ about equatorial axes at permitted azimuths, which send $(\theta,\phi)$ to $(\pi-\theta, 2\alpha-\phi)$, and not under a rotation about $\hat n$ by a general angle. One tick of the mass term therefore takes a permitted right--left superposition off the grid. At rest $\hat n$ is equatorial and the state is permitted again once the Bloch vector has turned by $\pi$, after $\pi\hbar/2Mc^2$, a quarter Compton period, which is the time for a right-mover to become a left-mover; the register catches matter the way a stroboscope catches a wheel, only at the instants a spoke is at the mark. In motion $\hat n$ tilts out of the equator, the half-turn lands off the grid, and the return waits for the full turn, $\pi\hbar/E$. A superposition of momenta is permitted again as a whole only if its spectrum is commensurate, which the register's own dispersion, Eq.~(\ref{eq:walk}), is not, apart from exceptional momenta: a wave packet of matter never returns to the grid as a whole, each component returning at its own time. In the nonrelativistic limit, $\hat p^2/2M$ on the ring, the spectrum is commensurate and every phase is again a permitted step after $ML\ell_P^2/\pi\hbar$, $4.6\times10^{-5}$~s for an electron; a nearest-neighbor hopping dispersion never returns at all, by Niven's theorem. The zone-edge speed of Sec.~\ref{sec:pred} uses the continuum dispersion, from which Eq.~(\ref{eq:walk}) differs by a term of relative order $(Mc^2/E_P)^2$.
+
+Second, the global phase of a massive mode runs at $Mc^2/\hbar$, which is $McL\ell_P/2\pi\hbar\approx4\times10^{38}$ steps per tick for an electron. That rate is not what keeps the global phase from being motion; a photon of Compton momentum has the same phase rate and moves one cell per tick. What keeps it from being motion is that a global phase has no gradient: it advances by the same amount at every cell, so it displaces nothing. In Palmer's construction the global phase is $\xi$, a permutation fixed at creation and hidden~\cite{palmer2026c}. The register says why it must be: $\xi$ is the part of the rotation that is not motion, the particle's internal clock, and a uniform phase is invisible to every relational observable.
+
+None of this touches $L$: the momentum quantum, the zone edge, and $\varepsilon_0$ are kinematic statements about the ring; the capacity follows from Born's rule; all are the same for every dispersion; and $L$ itself is frame-independent because every observer's horizon has the same radius. What the register does not settle is the Lorentz invariance of the lattice: a lattice of cells picks out a frame, the checkerboard recovers Lorentz invariance only in its continuum limit, and Palmer defers the question to future work~\cite{palmer2026c}.
+
+\subsection{Uncertainty and capacity}
+\label{sec:capacity}
+
+Let $Z|j\rangle = e^{2\pi ij/L}|j\rangle$. Then $ZX = e^{2\pi i/L}XZ$, the finite Weyl relation, and Eqs.~(\ref{eq:X})--(\ref{eq:pk}) are Schwinger's finite quantum mechanics on $\mathbb{Z}_L$~\cite{weyl1931,schwinger1960,vourdas2004}. A state on $N_x$ cells occupies at least $L/N_x$ momenta~\cite{donoho1989}, so $\Delta x\,\Delta p \ge (N_x\ell_P)\cdot(L/N_x)(2\pi\hbar/L\ell_P) = h$, and in variance form it is $\hbar/2$ for $\ell_P\ll\sigma\ll L\ell_P$~\cite{massar2008}. Palmer reaches the same bound by averaging the spin relation over points uniform in $\cos\theta$~\cite{palmer2026c}; that measure is the count, this bound comes from the shift, and the two derivations are the register's two operations applied to one relation.
+
+The ring's orbital Hilbert space has dimension $L$. The capacity of the register follows from Born's rule as a frequency. A state of $N$ qubits that spans its Hilbert space has $2^N$ joint outcomes with nonzero probability; each probability is a frequency over the $L$ trials, hence at least $1/L$; and they sum to one. A poll of $L$ respondents cannot register more than $L$ answers. Therefore
+\begin{equation}
+2^N \le L, \qquad N_{\max} = \lfloor \log_2 L \rfloor ,
+\label{eq:nmax}
+\end{equation}
+205 at $L_{\rm cos}$ and 204 at $L_{\rm gal}$. This is Palmer's $\log_2 L$~\cite{palmer2026}, and it is exact: no encoding evades it while probabilities are frequencies over $L$ trials, because it bounds the number of independent probabilities the trials can resolve rather than the number of bits. What the $L$ trials must resolve is the joint distribution's information beyond its marginals. A product state factorizes: its strings are independent patterns, its $2^N$ joint probabilities are fixed by $N$ marginals, and nothing beyond the marginals has to be resolved; it is unconstrained at any $N$, as $|{+}\rangle^{\otimes N}$ had better be. The bound is on the number of independently specified joint probabilities, which is $2^N - 1$ for a Haar-random state and far below $L$ for a product state, a stabilizer state, a Slater determinant, a condensate, a nucleus, or a crystal, which is why the register limits neither how much matter exists nor the size of a fault-tolerant code; and Poulin, Qarry, Somma, and Verstraete have shown that the states reachable from a product state in polynomial time under any local Hamiltonian occupy an exponentially small volume of Hilbert space~\cite{poulin2011}, so no natural process approaches the bound. Only a state deliberately spread across its Hilbert space meets it.
+
+Palmer's bit count, $2^{N+1}-2 \le NL$, counts real parameters against bits and gives 212 at $L_{\rm cos}$; it is a weaker necessary condition, the point at which the representation has one bit per parameter, and it never binds for a spanning state. Ref.~\cite{korytko2026} gave $N_{\max}\approx205$ from $\log_2 L$ and quoted the prediction as about 200; it also called the bit count Palmer's exact criterion, evaluated it to 212, and inverted a measured $N_{\max}$ into $G$ through it. The exact criterion is Eq.~(\ref{eq:nmax}): the 205 stands, the 212 does not, and the inversion keeps its form, since $2^N \le L$ brackets $L$ within a factor two, so the observed $G$ corresponds to $N_{\max} = 205$ and a count of 204 or 206 would return $G$ four times off.
+
+The threshold is soft in the way Palmer describes~\cite{palmer2026}: in his nested construction the last of $N$ strings holds $2^{N-1}$ segments of length $s = L/2^{N-1}$, each conditional parameter is resolved to one part in $s$, and when one mover elsewhere advances every segment boundary moves, so a fraction $1/s$ of that string must be rewritten per tick to keep the other qubits' reduced states fixed.
+
+Equation~(\ref{eq:nmax}) makes the identification of Sec.~\ref{sec:register} exact to a factor $2^{0.32} = 1.25$ at $L_{\rm cos}$: the state space of one free particle on the ring, dimension $L$, and the largest Hilbert space a spanning state can occupy, $2^{N_{\max}}$, are one number counted two ways, and since the count is of outcomes and not of the physical systems that produce them, the ceiling applies to bosonic modes as to qubits.
+
+The two-mode results hold in any number of dimensions, since a superposition of $\mathbf{k}_1$ and $\mathbf{k}_2$ depends on position only through $\Delta\mathbf{k}\cdot\mathbf{x}$, and the translation reading holds as written for collinear modes. Beyond that the free dynamics is planar and exact in the mode basis: a planar mode, labeled by its magnitude $\kappa$ and its direction, advances $|\kappa|$ phase steps per tick whatever its direction, so a wave moves one Planck length along its own $\hat{\mathbf{k}}$ per tick, and a massive mode along $\hat{\mathbf{k}}$ carries its right--left doublet along $\hat{\mathbf{k}}$ and obeys Sec.~\ref{sec:matter} in that direction. The two-mode dictionary of Sec.~\ref{sec:matter} holds for any pair of modes in any dimension: the count is the probability of one mode, and one shift moves their interference pattern by one part in $L$ of its period along $\hat{\Delta\mathbf{k}}$. What is one-dimensional is only the whole-cell version of that reading: one shift is one cell when $|\Delta\mathbf{k}|$ is a multiple of $2\pi/L\ell_P$, which it always is along the ring and is not for non-collinear modes, apart from Pythagorean pairs whose $|\Delta\mathbf{k}|$ happens to be a whole number of quanta. Every elementary vertex is planar: two colliding momenta span a plane, a vertex's three momenta are linearly dependent and lie in one, and a boost within the plane keeps them there. A planar momentum is a ring mode for its magnitude and a point on one great circle for its direction, $L^2$ labels, and the horizon has $L^2/\pi$ pixels; to within $\pi$ the horizon as it stands labels the momenta of every elementary vertex, which Ref.~\cite{korytko2026d} takes as a postulate and shows fixes the dimension of space. A state of several particles in several planes needs of order $L^3$ labels, and its Hilbert space is bounded by the horizon's log-dimension $L^2/4\pi$; how such a bulk state is written on the horizon is the open problem of de Sitter holography~\cite{bousso1999,banksfischler2001,parikh2003}, which this paper does not address; interactions are constructed in no dimension. Gravity is untouched: the Jacobson and Verlinde routes of Ref.~\cite{korytko2026} need only the pixel on every screen, never a state.
+
+\section{The Horizon}
+\label{sec:horizon}
+
+The ring has circumference $L\ell_P$ and radius $L\ell_P/2\pi$, and the postulate places it on a great circle of the cosmological horizon,
+\begin{equation}
+R_\Lambda = \frac{L\ell_P}{2\pi}, \qquad \Lambda = \frac{3}{R_\Lambda^2} = \frac{12\pi^2}{L^2\ell_P^2},
+\label{eq:closure}
+\end{equation}
+which is Eq.~(\ref{eq:ident}) rearranged and the second axiom of Ref.~\cite{korytko2026}. It is not derived here, and the identification is one of structure, the same $\mathbb{Z}_L$ under a qubit's phase and a horizon great circle; we do not claim a laboratory spin's azimuth is a place on the sky. What the ring adds is the axiom's content. Section~\ref{sec:motion} showed the circumference to be the longest wavelength a free particle can carry, so the second axiom reads: the longest wavelength available to a free particle is the circumference of the cosmological horizon. The momentum quantum is $\hbar/R_\Lambda = 6.4\times10^{-61}$~kg\,m\,s$^{-1}$ and the energy quantum $\varepsilon_0 = \hbar c/R_\Lambda = 1.2\times10^{-33}$~eV, which is $h$ divided by the lap time $Lt_P = 2\pi R_\Lambda/c = 3.5\times10^{18}$~s and $2\pi k_B$ times the Gibbons--Hawking temperature~\cite{gibbons1977}.
+
+The two determinations of $L$ are the two scales on which this ring appears: from the horizon, $2\pi R_\Lambda/\ell_P = 6.4\times10^{61}$; from galaxies, $c^2/a_0\ell_P = 4.6\times10^{61}$ using $a_0 = c^2/L\ell_P$ of Ref.~\cite{korytko2026}. Only the product $L\ell_P$ enters $a_0$, so their agreement to 1.4 is Milgrom's $a_0 \approx c^2/2\pi R_\Lambda$ restated; a derivation of $a_0$ from the ring alone would make the placement a prediction, and we do not have one.
+
+The horizon has $A/\ell_P^2 = L^2/\pi$ pixels, of which a register is the $L$ along one great circle, and its Bekenstein--Hawking entropy~\cite{bekenstein1973} is
+\begin{equation}
+\frac{S}{k_B} = \frac{A}{4\ell_P^2} = \frac{L^2}{4\pi} = 3.3\times10^{122},
+\label{eq:S}
+\end{equation}
+the value of Bousso's $N$-bound~\cite{bousso2000,bousso1999b}, which is the empty de Sitter horizon entropy written as $\pi R_\Lambda^2/\ell_P^2$. Equation~(\ref{eq:S}) is that number with $R_\Lambda = L\ell_P/2\pi$: an identity, not a derivation. What the register adds is that the integer fixing the log-dimension of a static patch is the $L$ that governs the qubit, which is Banks' proposal that positive $\Lambda$ and a finite Hilbert space go together~\cite{banks2000} with its integer named.
+
+\section{Predictions and Falsifiers}
+\label{sec:pred}
+
+The register inherits the predictions of Ref.~\cite{korytko2026}, corrects one criterion, and adds no test.
+
+\textit{Inherited.} The two predictions of Ref.~\cite{korytko2026} stand, since this paper rests on the same $L$. First, no physical state has more than $L$ independently specified outcome probabilities, Eq.~(\ref{eq:nmax}), a ceiling of about 200 usefully entangled qubits, which Sec.~\ref{sec:capacity} fixes at $N_{\max} = 205$ at $L_{\rm cos}$, the $\log_2 L$ of Ref.~\cite{korytko2026}, in place of the 212 it called exact, and extends from qubits to any physical realization, $M$ bosonic modes with photon-number cutoff $n$ reaching it at $n^M \approx L$. Operationally: a random circuit on $N$ fault-tolerant logical qubits followed by its inverse returns to the initial state, in standard quantum mechanics, with the gate fidelity; on the register the return probability falls to about $(L/2^N)^2$ for $N$ beyond $\lfloor\log_2 L\rfloor$, because the intermediate state has $2^N$ independent amplitudes and the register holds $L$, while the same circuit built from Clifford gates, whose intermediate states have polynomially many, returns at any $N$. The test needs no classical simulation, only the check of a return; no such machine exists. Second, $\Lambda$ is constant, so the dark-energy equation of state is $w = -1$ exactly, against the DESI DR2 preference for evolving dark energy~\cite{desi2025}, which the framework predicts will not survive.
+
+\textit{Definite, but not discriminating.} Momentum is quantized in units of $\hbar/R_\Lambda$ and bounded at $\pi\hbar/\ell_P$; light is permitted at every Planck tick and matter of definite momentum, at rest, only every quarter Compton period; a Bell test on any two-mode subspace of a free particle is subject to Palmer's Impossible Triangle Corollary; and the maximum speed of a particle of mass $M$ is $c/\sqrt{1 + (M/\pi m_P)^2}$, below $c$ by $10^{-47}$ for an electron. The lattice also fixes what Lorentz violation the register entails. The tick's exact dispersion, Eq.~(\ref{eq:walk}), is $E = |p|c$ for light at every momentum and, for matter,
+\begin{equation}
+E^2 = p^2c^2 + M^2c^4 - \tfrac{1}{3}\,M^2c^4\Big(\frac{p\,\ell_P}{\hbar}\Big)^2 + \dots ,
+\label{eq:lattice}
+\end{equation}
+a fractional correction of order $(Mc^2/E_P)^2 \approx 10^{-39}$ for a proton that does not grow with energy. The register therefore predicts no energy-dependent speed of light at any order, in one dimension, and would be falsified by one; the correction for matter is beyond any measurement. The lattice likewise deforms the commutator: with the lattice momentum $\hat p_{\rm lat} = (\hbar/\ell_P)\sin(\hat p\ell_P/\hbar)$, $[\hat x,\hat p_{\rm lat}] = i\hbar\cos(\hat p\ell_P/\hbar) \approx i\hbar\,[1 - \tfrac12(\hat p\ell_P/\hbar)^2]$, a generalized uncertainty principle of the maximal-momentum type with coefficient $-1/2$, six to eleven orders of magnitude below the present optomechanical bounds on that coefficient~\cite{pikovski2012}. Because a two-path superposition of a composite's center of mass is one qubit whatever the mass, and the register contains no collapse mechanism, it predicts no intrinsic, mass-dependent loss of matter-wave interference contrast, in agreement with experiment to $2.5\times10^4$ atomic mass units~\cite{fein2019} and in contrast to collapse models. None of these can distinguish the register from standard quantum mechanics.
+
+The register's intrinsic scales are $m_P(2\pi/L)^{1/n}$: $1.2\times10^{-33}$ eV, $3.8$ meV, $56$ MeV, $6.8$ TeV. The second is, to a factor 1.7, the dark-energy scale $\rho_\Lambda^{1/4}$, which follows from Eq.~(\ref{eq:closure}) as $(3\pi/2)^{1/4}E_P/\sqrt L = 2.2$ meV, the fourth root of the $L^2$ suppression of the Planck density counted in Ref.~\cite{korytko2026b}; the third is Weinberg's $(\hbar^2H_0/Gc)^{1/3}$~\cite{weinberg1972}. That the neutrino and the pion sit near the second and third rungs is the set of large-number coincidences known since Dirac, written in one integer; the register offers no mechanism for them.
+
+\section{What the Placement Costs}
+\label{sec:cost}
+
+Placing every register on the horizon can mean two things. The first, that the cells have a definite orientation in space, costs nothing. A cyclic register has no pole and no first cell; both are coordinates on the Bloch sphere, and every quantity in Eq.~(\ref{eq:raqm}) is relational: an overlap of two states, and a phase relative to a reference, which Sec.~\ref{sec:matter} shows to be a position relative to a reference. Palmer's Bell conditions are on angles between settings~\cite{palmer2026b}, which are rotation-invariant; he fixes the gauge by placing the pole at his middle setting~\cite{palmer2026c}, and his distinction between a nominal setting and the exact one within it~\cite{palmer2024} says the gauge cannot be probed.
+
+The second, that different observers' horizons are the same cells, is de Sitter complementarity~\cite{susskind1993,bousso1999,dyson2002,banksfischler2001,parikh2003}: distinct static patches describe one finite set of degrees of freedom, not independent copies. The shared reading follows from unitarity within a patch by the no-cloning argument used for black holes~\cite{susskind1994,wootters1982}, taken over without proof; whether that unitarity is consistent with a smooth horizon is the firewall question~\cite{amps2013}, open in de Sitter and not addressed here. Nothing in Secs.~\ref{sec:register} to \ref{sec:pred} depends on it. A finite Hilbert space of log-dimension $L^2/4\pi$ entails recurrences and a low-entropy past requiring explanation~\cite{dyson2002}, to which Palmer's nonergodic Invariant Set Postulate~\cite{palmer2009} is RaQM's response, positive $\Lambda$~\cite{banks2000}, and no exact asymptotic observables~\cite{witten2001}; finite-dimensional Hilbert spaces for quantum gravity have been advocated independently~\cite{buniy2005,bao2017,carroll2023}.
+
+\section{Discussion}
+\label{sec:discussion}
+
+The two axioms of Ref.~\cite{korytko2026} are two descriptions of one rotation. A string of $L$ cells turns at the rate its energy sets. Counted, the pattern is a Born probability; for the right- and left-moving components that probability sets the velocity. Shifted, it is a phase; on the ring read as space, one notch is a translation by one Planck length, Palmer's phase step is what that translation does to the slowest wave, and for light the phase and the translation are the same thing at every tick. Mass is the amplitude per tick for a right-mover to become a left-mover, a particle at rest is a standing wave of trapped light, and the Compton clock is the global phase that Palmer hides and that, having no gradient, displaces nothing. The circumference is the longest wavelength a particle can have, and placing it on the horizon is the second axiom with that content attached.
+
+Nothing is postulated beyond the two axioms of Ref.~\cite{korytko2026}, restated as one. The gains are structural: RaQM's phase grid is momentum quantization on a closed ring; its qubit is the right--left doublet of a Dirac particle; its hidden global phase is the Compton clock; and its capacity bound, read off Born's rule as a frequency, is the Hilbert-space dimension of one particle on the ring, so the ceiling of about 200 qubits is $\lfloor\log_2 L\rfloor$ exactly and holds whatever the qubits are made of. What remains open is what was open before: the coefficient in $a_0$, the three-dimensional bulk, and complementarity. Ref.~\cite{korytko2026} remains the load-bearing statement of the framework, its exact capacity criterion corrected here. Palmer has left the discretization of space and time to a future paper and announced work on why vacuum energy does not gravitate~\cite{palmer2026c}; this paper and Ref.~\cite{korytko2026b} attempt those questions with a universal $L$.
+
+We record one coincidence without a mechanism. The heaviest observationally stable nucleus is $^{208}$Pb; $^{209}$Bi decays with a half-life of $2\times10^{19}$ years~\cite{demarcillac2003,nubase2020}; and $\lfloor\log_2 L\rfloor = 205$. For the capacity bound to bear on where the table ends, four things would be needed, and the framework supplies none: a representation in which a state spanning more than $\log_2 L$ two-level systems can be written, which the frequency reading of Born's rule forbids; a two-level degree of freedom per nucleon that the framework selects, which it does not, a particle's chirality being fixed by its momentum through Eq.~(\ref{eq:dirac}) and nuclear interactions acting on positions, spins, and isospins; a statement within RaQM's dynamics about a composite whose spanning states exceed capacity, which the Invariant Set Postulate does not provide, since the dynamics never leaves the permitted set; and a rate, since no nucleus above $A\approx150$ is absolutely stable ($^{208}$Pb has $Q_\alpha = +0.52$ MeV) and only half-lives are observable.
+
+\begin{acknowledgments}
+The author used an AI assistant (Anthropic's Claude) for literature checking, numerical verification, and editing of the manuscript. The physical proposal, the postulate, and the claims are the author's own.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{palmer2020} T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell's theorem, Proc. R. Soc. A \textbf{476}, 20190350 (2020). \url{https://doi.org/10.1098/rspa.2019.0350}
+\bibitem{palmer2026} T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA \textbf{123}, e2523350123 (2026). \url{https://doi.org/10.1073/pnas.2523350123}; arXiv:2510.02877.
+\bibitem{palmer2026b} T. N. Palmer, Impossible counterfactuals, discrete Hilbert space and Bell's theorem, J. Phys.: Conf. Ser. \textbf{3189}, 012006 (2026). \url{https://doi.org/10.1088/1742-6596/3189/1/012006}; arXiv:2601.14941.
+\bibitem{palmer2024} T. N. Palmer, Superdeterminism without conspiracy, Universe \textbf{10}, 47 (2024).
+\bibitem{palmer2026c} T. N. Palmer, Solving the mysteries of quantum mechanics: why nature abhors a continuum, arXiv:2602.16382v1 (2026).
+\bibitem{korytko2026} A. Korytko, Gravitation from Hilbert-space granularity: pinning the parameter $L$ of rational quantum mechanics across scales (2026). \url{https://doi.org/10.5281/zenodo.22255462}
+\bibitem{weyl1931} H. Weyl, \emph{The Theory of Groups and Quantum Mechanics} (Methuen, London, 1931; Dover reprint, New York, 1950), Ch.~IV, Sec.~14.
+\bibitem{schwinger1960} J. Schwinger, Unitary operator bases, Proc. Natl. Acad. Sci. USA \textbf{46}, 570 (1960).
+\bibitem{massar2008} S. Massar and P. Spindel, Uncertainty relation for the discrete Fourier transform, Phys. Rev. Lett. \textbf{100}, 190401 (2008).
+\bibitem{vourdas2004} A. Vourdas, Quantum systems with finite Hilbert space, Rep. Prog. Phys. \textbf{67}, 267 (2004).
+\bibitem{donoho1989} D. L. Donoho and P. B. Stark, Uncertainty principles and signal recovery, SIAM J. Appl. Math. \textbf{49}, 906 (1989).
+\bibitem{feynman1965} R. P. Feynman and A. R. Hibbs, \emph{Quantum Mechanics and Path Integrals} (McGraw-Hill, New York, 1965), pp.~34--36, Problem 2-6.
+\bibitem{jacobson1984} T. Jacobson and L. S. Schulman, Quantum stochastics: the passage from a relativistic to a non-relativistic path integral, J. Phys. A: Math. Gen. \textbf{17}, 375 (1984).
+\bibitem{bialynicki1994} I. Bialynicki-Birula, Weyl, Dirac, and Maxwell equations on a lattice as unitary cellular automata, Phys. Rev. D \textbf{49}, 6920 (1994).
+\bibitem{weinberg1972} S. Weinberg, \emph{Gravitation and Cosmology} (Wiley, New York, 1972), pp.~619--620.
+\bibitem{korytko2026b} A. Korytko, The vacuum catastrophe and the granularity of Hilbert space (2026). \url{https://doi.org/10.5281/zenodo.22281711}
+\bibitem{korytko2026d} A. Korytko, The dimension of space from the granularity of Hilbert space, in preparation (2026).
+\bibitem{nubase2020} F. G. Kondev, M. Wang, W. J. Huang, S. Naimi, and G. Audi, The NUBASE2020 evaluation of nuclear physics properties, Chin. Phys. C \textbf{45}, 030001 (2021).
+\bibitem{demarcillac2003} P. de Marcillac, N. Coron, G. Dambier, J. Leblanc, and J.-P. Moalic, Experimental detection of $\alpha$-particles from the radioactive decay of natural bismuth, Nature \textbf{422}, 876 (2003).
+\bibitem{pikovski2012} I. Pikovski, M. R. Vanner, M. Aspelmeyer, M. S. Kim, and \v{C}. Brukner, Probing Planck-scale physics with quantum optics, Nat. Phys. \textbf{8}, 393 (2012).
+\bibitem{fein2019} Y. Y. Fein, P. Geyer, P. Zwick, F. Kia\l{}ka, S. Pedalino, M. Mayor, S. Gerlich, and M. Arndt, Quantum superposition of molecules beyond 25 kDa, Nat. Phys. \textbf{15}, 1242 (2019).
+\bibitem{poulin2011} D. Poulin, A. Qarry, R. Somma, and F. Verstraete, Quantum simulation of time-dependent Hamiltonians and the convenient illusion of Hilbert space, Phys. Rev. Lett. \textbf{106}, 170501 (2011).
+\bibitem{niven1956} I. Niven, \emph{Irrational Numbers} (Mathematical Association of America, Washington, DC, 1956).
+\bibitem{jahnel2010} J. Jahnel, When is the (co)sine of a rational angle equal to a rational number?, arXiv:1006.2938 (2010).
+\bibitem{bousso2000} R. Bousso, Positive vacuum energy and the $N$-bound, J. High Energy Phys. \textbf{11}, 038 (2000); hep-th/0010252.
+\bibitem{bousso1999} R. Bousso, Quantum global structure of de Sitter space, Phys. Rev. D \textbf{60}, 063503 (1999).
+\bibitem{bousso1999b} R. Bousso, A covariant entropy conjecture, J. High Energy Phys. \textbf{07}, 004 (1999).
+\bibitem{jacobson1995} T. Jacobson, Thermodynamics of spacetime: the Einstein equation of state, Phys. Rev. Lett. \textbf{75}, 1260 (1995).
+\bibitem{susskind1993} L. Susskind, L. Thorlacius, and J. Uglum, The stretched horizon and black hole complementarity, Phys. Rev. D \textbf{48}, 3743 (1993).
+\bibitem{susskind1994} L. Susskind and L. Thorlacius, Gedanken experiments involving black holes, Phys. Rev. D \textbf{49}, 966 (1994).
+\bibitem{banks2000} T. Banks, Cosmological breaking of supersymmetry, or little Lambda goes back to the future II, arXiv:hep-th/0007146 (2000).
+\bibitem{witten2001} E. Witten, Quantum gravity in de Sitter space, arXiv:hep-th/0106109 (2001).
+\bibitem{palmer2009} T. N. Palmer, The Invariant Set Postulate: a new geometric framework for the foundations of quantum theory and the role played by gravity, Proc. R. Soc. A \textbf{465}, 3165 (2009).
+\bibitem{desi2025} DESI Collaboration, M. Abdul-Karim \emph{et al.}, DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints, Phys. Rev. D \textbf{112}, 083515 (2025); arXiv:2503.14738.
+\bibitem{amps2013} A. Almheiri, D. Marolf, J. Polchinski, and J. Sully, Black holes: complementarity or firewalls?, J. High Energy Phys. \textbf{02}, 062 (2013); arXiv:1207.3123.
+\bibitem{wootters1982} W. K. Wootters and W. H. Zurek, A single quantum cannot be cloned, Nature \textbf{299}, 802 (1982).
+\bibitem{dyson2002} L. Dyson, M. Kleban, and L. Susskind, Disturbing implications of a cosmological constant, J. High Energy Phys. \textbf{10}, 011 (2002); hep-th/0208013.
+\bibitem{banksfischler2001} T. Banks and W. Fischler, M-theory observables for cosmological space-times, arXiv:hep-th/0102077 (2001).
+\bibitem{parikh2003} M. K. Parikh, I. Savonije, and E. Verlinde, Elliptic de Sitter space: dS/$\mathbb{Z}_2$, Phys. Rev. D \textbf{67}, 064005 (2003).
+\bibitem{buniy2005} R. V. Buniy, S. D. H. Hsu, and A. Zee, Is Hilbert space discrete?, Phys. Lett. B \textbf{630}, 68 (2005); arXiv:hep-th/0508039.
+\bibitem{bao2017} N. Bao, S. M. Carroll, and A. Singh, The Hilbert space of quantum gravity is locally finite-dimensional, Int. J. Mod. Phys. D \textbf{26}, 1743013 (2017); arXiv:1704.00066.
+\bibitem{carroll2023} S. M. Carroll, Completely discretized, finite quantum mechanics, Found. Phys. \textbf{53}, 90 (2023).
+\bibitem{bekenstein1973} J. D. Bekenstein, Black holes and entropy, Phys. Rev. D \textbf{7}, 2333 (1973).
+\bibitem{gibbons1977} G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation, Phys. Rev. D \textbf{15}, 2738 (1977).
+\bibitem{verlinde2011} E. Verlinde, On the origin of gravity and the laws of Newton, J. High Energy Phys. \textbf{04}, 029 (2011).
+\bibitem{milgrom1983} M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, Astrophys. J. \textbf{270}, 365 (1983).
+\bibitem{mcgaugh2016} S. S. McGaugh, F. Lelli, and J. M. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. \textbf{117}, 201101 (2016).
+\bibitem{planck2018} Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. \textbf{641}, A6 (2020).
+\end{thebibliography}
+
+\end{document}

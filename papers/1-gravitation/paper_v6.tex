@@ -1,0 +1,295 @@
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib,showkeys]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{orcidlink}
+
+\begin{document}
+
+\title{Gravitation from Hilbert-Space Granularity:\\ Pinning the Parameter $L$ of Rational Quantum Mechanics Across Scales}
+
+\author{Andrew Korytko\,\orcidlink{0009-0005-4569-2228}}
+\email{andrew@alphalatitude.com}
+\affiliation{AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA}
+
+\date{September 3, 2026}
+
+\begin{abstract}
+Ever since general relativity and quantum mechanics were discovered over a century ago, physics has been on the quest for a theory that unites them. We argue that the answer has been staring us in the face: gravitation is a consequence of discrete quantum mechanics. Tim Palmer's Rational Quantum Mechanics claims that a quantum state cannot carry infinite information. Hilbert space is granular, with a finite parameter $L$, and Palmer attributes that granularity to gravity. We reverse the claim. $L$ comes first, and gravity is what a granular Hilbert space looks like at every scale. From one universal integer $L$ and one length, the cosmological horizon radius, we derive the Planck length and Newton's constant. Einstein's equations follow; with the same $L$, galactic rotation curves flatten without dark matter, and Newton's constant and the cosmological constant cease to be independent: their product is fixed by $L$. We test the reversal by pinning $L$ on every scale where it appears on its own rather than through the Planck length. The galactic scale gives $4.6\times10^{61}$; the cosmological scale gives $6.4\times10^{61}$. They agree to within a factor of $1.4$ on a sixty-two-digit number. This is the old coincidence between Milgrom's acceleration and the Hubble scale, and here it is one $L$ seen on two scales. The third place where $L$ appears on its own is the quantum computer, which will report within the decade. We predict what it will find: a ceiling near $200$ entangled qubits, the same for every technology.
+\end{abstract}
+
+\keywords{Rational quantum mechanics; discrete Hilbert space; emergent gravity; entropic gravity; cosmological constant; galactic rotation curves; quantum computing}
+
+\maketitle
+
+\section{Introduction}
+
+Rational Quantum Mechanics (RaQM)~\cite{palmer2020,palmer2026,palmer2026b,palmer2026c} leaves the Schr\"odinger equation untouched and instead restricts the bases in which a quantum state is defined: a qubit
+\begin{equation}
+|\psi\rangle = \cos\tfrac{\theta}{2}\,|1\rangle + e^{i\phi}\sin\tfrac{\theta}{2}\,|{-1}\rangle
+\label{eq:qubit}
+\end{equation}
+with $\theta$ and $\phi$ the colatitude and azimuth of the state on the Bloch sphere, exists only in bases with
+\begin{equation}
+\cos^2\tfrac{\theta}{2} = \frac{m}{L},\qquad \frac{\phi}{2\pi} = \frac{n}{L},\qquad m,n\in\{0,\dots,L\}.
+\label{eq:raqm}
+\end{equation}
+The state is then a length-$L$ bit string whose fraction of $+1$ entries is $\cos^2(\theta/2)$ and whose cyclic shift by $n$ places is the phase~\cite{palmer2026}. Born's rule becomes a matter of counting. Bell's inequality is evaded because, by Niven's theorem~\cite{niven1956,jahnel2010}, the counterfactual measurement settings its derivation requires are not permitted bases~\cite{palmer2024,palmer2026b}. And because $N$ entangled qubits carry $NL$ bits against $2^{N+1}-2$ continuum degrees of freedom, there is a qubit information capacity
+\begin{equation}
+N_{\max}\approx\log_2 L ,
+\label{eq:nmax}
+\end{equation}
+beyond which quantum algorithms that spread their state across all of Hilbert space lose their exponential advantage~\cite{palmer2026}.
+
+Palmer fixes $L$ from gravity. State reduction is a chaotic shift map that lowers $L$ by one each Planck time $t_P$ (in Palmer's ordering, $t_P = \sqrt{\hbar G/c^5}$), so the reduction time is $\tau^* = (L-1)t_P$; equating this to the Di\'osi--Penrose collapse time $\hbar/E_G$~\cite{diosi1989,penrose1996} gives
+\begin{equation}
+L = \left\lceil\frac{E_P}{E_G}\right\rceil ,
+\label{eq:palmerL}
+\end{equation}
+where $E_P = \hbar/t_P$ is the Planck energy, $E_G$ is the gravitational self-energy of the qubit's superposition, and $\lceil x\rceil$ is the smallest integer not less than $x$. Both $E_P$ and $E_G$ contain $G$. Gravity is the input and $L$ the output, and $L$ varies with the qubit, from $10^{64}$ for a quantum-dot electron to $10^{109}$ for a hyperfine ion-trap qubit~\cite{palmer2026}. Palmer closes by noting that his $N_{\max}$ lands beside Davies' cosmological information bound~\cite{davies2007,lloyd2002} and that this is unlikely to be a coincidence.
+
+We take that remark literally and reverse the causality. $L$ does not exist because of gravitation. Gravitation exists thanks to $L$, which is a single universal constant of nature. Such a claim is tested first of all by consistency, and then by prediction. Known gravitational phenomena on every scale, each used on its own to pin $L$, must return the same number. Section~\ref{sec:axioms} states the two axioms and shows how Eq.~(\ref{eq:palmerL}) inverts. Section~\ref{sec:pixel} shows how Newton's constant follows from the pixel size $\ell_P = 2\pi R_\Lambda/L$, i.e., from the ratio of the horizon radius to $L$. Section~\ref{sec:scales} works through the scales in turn, from quantum to cosmological, deriving the familiar phenomena from $L$ on each and recording the value of $L$ each one pins. Section~\ref{sec:hold} asks whether $L$ holds. Section~\ref{sec:predictions} lists what would falsify the picture.
+
+\section{Axioms and the Reversal}
+\label{sec:axioms}
+
+\textbf{Axiom 1.} \emph{Quantum states are defined only in bases satisfying Eq.~(\ref{eq:raqm}), with a single universal $L\in\mathbb{N}$ for all systems.}
+
+This is Palmer's discretisation ansatz with one change: $L$ is not a function of the system's mass or energy. Everything Palmer derives from Eq.~(\ref{eq:raqm}) at fixed $L$ carries over unchanged: the bit-string representation, Born's rule, the Impossible Triangle Corollary, and the capacity bound (\ref{eq:nmax}).
+
+\textbf{Axiom 2.} \emph{The granularity of state space and the granularity of space are the same discreteness: one step of quantum phase, $2\pi/L$, is one pixel on a great circle of the cosmological horizon of radius $R_\Lambda$. The pixel is therefore}
+\begin{equation}
+\ell_P = \frac{2\pi R_\Lambda}{L} .
+\label{eq:ident}
+\end{equation}
+
+Axiom~2 says that a phase rotation through a full turn counts $L$ pixels, which is the natural reading of Palmer's construction: his phase operator $\zeta$ is a cyclic permutation of the $L$-bit string, and each application is a rotation by exactly $2\pi/L$ about the polar axis~\cite{palmer2026}. The axiom refers to the cosmological horizon without saying which one. Nothing in it fixes the radius in time; but $L$ is a constant, so $\ell_P$ and hence $G$ scale with the radius, and the observed constancy of $G$ then requires the radius to be constant too (Sec.~\ref{sec:scales}). In an expanding universe the only constant horizon is the de Sitter one, whose radius is set by the cosmological constant. Whether the value of $L$ this gives agrees with the value from galactic dynamics is the consistency check of Sec.~\ref{sec:scales}, and the alternative, a horizon that grows with the Hubble radius, is excluded there on observational grounds. Because every observer's de Sitter horizon has the same radius, $L$ is observer-independent, as a constant of nature must be.
+
+In this form the constants of the theory are $\hbar$, $c$, the integer $L$, and one length, $R_\Lambda$. The pixel $\ell_P$ is derived, and so are the other Planck units, $t_P \equiv \ell_P/c$ and $E_P \equiv \hbar c/\ell_P$, none of which involves $G$; Sec.~\ref{sec:pixel} shows that $G$ is derived too. Because $L$ has not yet been measured, we run the chain backwards throughout this paper: we take $\ell_P$ at its accepted value, $1.616\times10^{-35}$~m, and use Eq.~(\ref{eq:ident}) to predict $L$. The values of $L$ obtained this way scale linearly with $\ell_P$; the quantum prediction $N_{\max}$ depends on it only logarithmically.
+
+\textbf{The reversal.} Keep Palmer's picture of state reduction as a shift map at one step per Planck time, so that $\tau^* = L\,t_P$, but with $L$ universal. Then, using Eq.~(\ref{eq:ident}) and $\ell_P = c\,t_P$,
+\begin{equation}
+\tau^* = L\,t_P = \frac{2\pi R_\Lambda}{c} .
+\label{eq:clock}
+\end{equation}
+The state-reduction clock is the de Sitter period $2\pi/H_\infty$, where $H_\infty = c/R_\Lambda$ is the asymptotic Hubble rate. It is the time for one full turn of the horizon at the speed of light. The universal energy that replaces $E_G$ is then
+\begin{equation}
+\frac{E_P}{L} = \frac{\hbar}{\tau^*} = \frac{\hbar c}{2\pi R_\Lambda} = k_B T_{\rm dS},
+\label{eq:energy}
+\end{equation}
+the Gibbons--Hawking temperature of the horizon~\cite{gibbons1977}. Palmer's Eq.~(\ref{eq:palmerL}), read backwards, says that gravity's characteristic energy in the reduction process is the thermal energy of the cosmological horizon, and that every qubit shares it. Three consequences of the reversal are worth stating at once. First, $\tau^*\sim10^{11}$~yr, so an isolated qubit never completes reduction. Palmer makes the same observation: collapse is irrelevant as a practical constraint. Second, $L$ no longer depends on the qubit, so $N_{\max}$ is the same for every technology. That is the sharpest experimental difference between the two causal orderings. Third, the reversal discards mass-dependent gravitational collapse. In Palmer's ordering a heavy superposition has small $L$ and reduces in milliseconds; here every system shares the $10^{11}$-yr clock, so the definiteness of macroscopic bodies is not supplied by gravity and must come, as in standard quantum theory, from environmental decoherence. The reversed theory therefore predicts \emph{no} mass-dependent collapse signal of Di\'osi--Penrose type, consistent with the null result of the underground search of Ref.~\cite{donadi2021}. Palmer's shift map, however, is non-dissipative by construction and is equally consistent with that null result, so the null result does not discriminate between the two orderings. $N_{\max}$ does.
+
+\section{Newton's Constant from the Pixel}
+\label{sec:pixel}
+
+Before testing the hypothesis at widely separated scales, we derive the relation between $G$ and $\ell_P$ by assuming that gravity arises from a pixelated holographic screen: a two-dimensional surface enclosing a region of space, on which all the information about that region is stored one bit per pixel. Space itself is not pixelated in this picture; only its boundaries are, and that is what makes the count an area law rather than a volume law. The argument is Verlinde's~\cite{verlinde2011}; we repeat it here with the pixel size written out, so that it is clear that $G$ is derived from $\ell_P$. Entropic gravity in this form is not uncontested~\cite{visser2011,kobakhidze2011}. We use it only as the existing route from a pixelated screen to an inverse-square law, and rely on nothing beyond the scaling $G\propto\ell_P^2$ that it shares with every holographic account. Consider a spatial sphere of radius $r$ enclosing mass-energy $M = E/c^2$.
+
+\subsection{Information capacity of the bounding screen}
+Let $\ell_0$ be the spatial pixel. The number of bits the two-dimensional bounding screen of area $A$ can hold is
+\begin{equation}
+N_{\rm bits} = \frac{A}{\ell_0^2} = \frac{4\pi r^2}{\ell_0^2}.
+\label{eq:nbits}
+\end{equation}
+
+\subsection{Equipartition}
+Distributing the enclosed energy over the bits at temperature $T$,
+\begin{equation}
+Mc^2 = \tfrac12 N_{\rm bits}\,k_BT = \frac{2\pi r^2}{\ell_0^2}\,k_BT .
+\label{eq:equip}
+\end{equation}
+
+\subsection{Unruh temperature}
+A test particle accelerating at $a$ near the screen sees the vacuum at the Unruh temperature $T = \hbar a/(2\pi c k_B)$~\cite{unruh1976}. Substituting into Eq.~(\ref{eq:equip}),
+\begin{equation}
+Mc^2 = \frac{2\pi r^2}{\ell_0^2}\cdot\frac{\hbar a}{2\pi c} = \frac{\hbar a\,r^2}{c\,\ell_0^2}
+\quad\Longrightarrow\quad
+a = \frac{c^3\ell_0^2}{\hbar}\,\frac{M}{r^2}.
+\label{eq:aemerge}
+\end{equation}
+An inverse-square attraction has emerged from bit counting and thermodynamics alone.
+
+\subsection{Identification of the pixel}
+Matching Eq.~(\ref{eq:aemerge}) to Newton's $a = GM/r^2$ forces
+\begin{equation}
+G = \frac{c^3\ell_0^2}{\hbar}
+\quad\Longleftrightarrow\quad
+\ell_0 = \sqrt{\frac{\hbar G}{c^3}} \equiv \ell_P .
+\label{eq:G}
+\end{equation}
+The spatial pixel is the Planck length, and Newton's constant is revealed as the conversion factor between spatial bit density and kinematic acceleration. Two remarks. The bit count (\ref{eq:nbits}) is normalised as in Ref.~\cite{verlinde2011}, four times the Bekenstein--Hawking entropy in units of $k_B$~\cite{bekenstein1973}; that normalisation is what makes the coefficient in (\ref{eq:G}) equal to $G$ exactly. And until $L$ is measured, Eq.~(\ref{eq:G}) is a relation rather than a derivation of $G$ from first principles: it expresses $G$ through the pixel, and it is Newton's law, observed, that tells us the pixel is Planckian. Substituting Eq.~(\ref{eq:ident}), $G = 4\pi^2c^3R_\Lambda^2/(\hbar L^2)$: Newton's constant is set by the number of pixels around the cosmological horizon.
+
+\section{Gravitational Phenomena Scale by Scale}
+\label{sec:scales}
+
+On each scale we derive the known phenomena from $L$ and $R_\Lambda$ using the existing mathematics of horizon thermodynamics (Verlinde's for Newton~\cite{verlinde2011}, Jacobson's for Einstein~\cite{jacobson1995}, and Verlinde's later work for the galactic regime~\cite{verlinde2017}), and we record what each scale pins.
+
+\subsection{Quantum scale: qubits and quantum computers}
+
+Here $L$ acts directly through Eq.~(\ref{eq:nmax}). The capacity bound bites only for states spread across Hilbert space, so entanglement demonstrations of the Greenberger--Horne--Zeilinger type, which occupy two amplitudes, do not test it. Random-circuit sampling does, and the $53$-, $70$- and $83$-qubit experiments of Refs.~\cite{arute2019,morvan2024,gao2025} imply $L\gtrsim2^{77}$. That is far below $\log_2L\sim200$, so this scale does not yet pin $L$. Physical qubit counts are much larger, more than a thousand superconducting qubits on IBM's Condor processor and $6{,}100$ atoms in a single tweezer array~\cite{manetsch2025}, but a count of physical qubits is not a count of qubits entangled in a state that fills Hilbert space, and the bound says nothing about it. The same holds for logical qubits, of which $48$ have been demonstrated on $280$ atoms~\cite{bluvstein2024}: each is encoded in many physical qubits confined to a small, highly structured subspace, the situation Palmer already exempts when he discusses macroscopic quantum states~\cite{palmer2026}. What this scale will do, on the timescale Palmer gives for factoring tests~\cite{palmer2026,gidney2025}, is measure $L$ directly, as the qubit count at which an algorithm that spreads its state across Hilbert space, such as the quantum Fourier transform, loses its exponential advantage. The reversed theory's prediction on this scale is $N_{\max}\approx200$, the same for every technology.
+
+State reduction on this scale is Palmer's shift map with the universal clock (\ref{eq:clock}). Nothing observable changes for laboratory qubits, exactly as in RaQM.
+
+\subsection{Terrestrial and solar scales: Newton and Einstein}
+
+Section~\ref{sec:pixel} gave Newton's law with $G = c^3\ell_P^2/\hbar$, Eq.~(\ref{eq:G}). Given an entropy proportional to horizon area in the same units, $S = k_B A/(4\ell_P^2)$, Jacobson's argument delivers Einstein's field equations with the same $G$~\cite{jacobson1995}. Gravitational redshift~\cite{pound1960}, the perihelion advance of Mercury, light deflection, and gravitational-wave propagation then follow as they do in general relativity. With $G$ from Eq.~(\ref{eq:G}), Mercury's anomalous advance $6\pi GM_\odot/(p\,c^2)$, with $p = a_{\rm orb}(1-e^2)$ the semi-latus rectum of the orbit, is $42.98''$ per century and the deflection of starlight at the solar limb $4GM_\odot/(c^2R_\odot)$ is $1.75''$, both as observed. They depend on $L$ and $R_\Lambda$ only through $G$, i.e., only through the ratio $\ell_P = 2\pi R_\Lambda/L$.
+
+What this scale pins is therefore $\ell_P$, the combination $2\pi R_\Lambda/L$, and not $L$ on its own. The screen bit count involves $\ell_P$ alone; the horizon radius, which is what would separate $L$ from $\ell_P$, is irrelevant at solar radii. This is as it should be, since solar-system gravity is described by general relativity to exquisite precision, and a theory in which $L$ showed up there separately from $R_\Lambda$ would be wrong. The situation is the exact gravitational analogue of Palmer's observation that RaQM and QM are indistinguishable for small numbers of qubits: the granularity shows itself only at the extremes, at large $N$ in the quantum case and at small acceleration in the gravitational case. To forestall a natural misreading: the direct kinematic effect of a $2\pi/L$ phase grid on an orbit is $\sim10^{-61}$~rad per revolution, fifty-four orders of magnitude below Mercury's $5\times10^{-7}$~rad; angular discreteness does nothing to orbits. The only route by which the horizon, and with it $L$ on its own, could enter solar-system dynamics is through the galactic acceleration $a_0 = c^2/2\pi R_\Lambda$ of Sec.~\ref{sec:galactic}, whose corrections are of order $a_0\sim10^{-10}$~m\,s$^{-2}$, eight orders of magnitude below solar gravity at Earth's orbit; planetary ephemerides are only now reaching that sensitivity~\cite{hees2014}.
+
+\subsection{Galactic scale: rotation curves without dark matter}\label{sec:galactic}
+
+At the scales above, $L$ and $R_\Lambda$ entered gravity only through their ratio. This is where the horizon radius becomes visible on its own, and with it $L$ separately from $\ell_P$. The horizon radius of Axiom~2 comes with an acceleration. The surface gravity of a de Sitter horizon is $c^2/R_\Lambda = cH_\infty$, and it is this acceleration whose Unruh temperature equals the horizon temperature (\ref{eq:energy}). The framework's own acceleration, carrying the $2\pi$ of Axiom~2, is
+\begin{equation}
+a_0 = \frac{c^2}{2\pi R_\Lambda} = \frac{c^2}{L\,\ell_P} .
+\label{eq:a0}
+\end{equation}
+We do not derive the order-unity coefficient; the observed galactic acceleration, $1.2\times10^{-10}$~m\,s$^{-2}$, lies between Eq.~(\ref{eq:a0}), $0.86\times10^{-10}$, and the bare surface gravity $cH_\infty = 5.4\times10^{-10}$. The coefficient is an open problem in emergent gravity itself: Verlinde's derivation gives an acceleration scale $cH_0/6 = 1.1\times10^{-10}$~m\,s$^{-2}$~\cite{verlinde2017}, $H_0$ being the present Hubble rate, while fits of galaxy rotation curves within emergent gravity prefer a scale about $30\%$ lower, $0.76\times10^{-10}$~m\,s$^{-2}$, with a systematic uncertainty of order $20\%$ inherited from the baryonic mass-to-light ratios~\cite{yoon2025,yoon2023}. Equation~(\ref{eq:a0}) lies within that uncertainty of the fitted value.
+
+Verlinde has shown that below this acceleration scale a screen's entropy budget acquires a volume-law contribution from de Sitter entanglement, which produces an additional gravitational acceleration. That contribution dominates in the deep regime, where the total becomes
+\begin{equation}
+g = \sqrt{a_0\,g_N},\qquad g_N = \frac{GM}{r^2},
+\label{eq:deepmond}
+\end{equation}
+with the acceleration scale discussed above~\cite{verlinde2017}. Setting $v_c^2/r = g$ gives flat rotation curves with
+\begin{equation}
+v_c^4 = a_0\,G\,M ,
+\label{eq:btfr}
+\end{equation}
+the baryonic Tully--Fisher relation, with $M$ the baryonic mass alone. This is Milgrom's phenomenology~\cite{milgrom1983}, confirmed as a tight empirical law across galaxy types by the radial acceleration relation~\cite{mcgaugh2016}, and it is obtained here without dark matter: the flattening is the horizon making itself felt once local gravity drops to the order of the horizon's own acceleration. Verlinde's specific interpolation between the Newtonian and deep regimes has been confronted with the radial acceleration relation and shows tension in the transition region~\cite{lelli2017}; what pins $L$ here is the deep-regime scaling (\ref{eq:btfr}), which survives that test; the transition function remains an open problem for this framework, as it does for Verlinde's.
+
+To be explicit: in this framework there is no dark-matter halo. Galactic rotation is set by the baryons, $G$, and the horizon radius. The known difficulties of any such account, galaxy clusters~\cite{clowe2006} and the acoustic peaks of the microwave background~\cite{planck2018}, are not addressed here and remain open.
+
+This scale pins $L$. The measured $a_0 = (1.20\pm0.02\pm0.24)\times10^{-10}$~m\,s$^{-2}$~\cite{mcgaugh2016} in Eq.~(\ref{eq:a0}) gives
+\begin{equation}
+L_{\rm gal} = \frac{c^2}{a_0\,\ell_P} = 4.6\times10^{61}.
+\label{eq:Lgal}
+\end{equation}
+
+\subsection{Cosmological scale: the horizon}
+
+Axiom~2 introduced a horizon radius $R_\Lambda$; the universe supplies one. The observed cosmological constant $\Lambda = 1.09\times10^{-52}$~m$^{-2}$~\cite{planck2018} corresponds to a de Sitter radius $R_\Lambda = \sqrt{3/\Lambda} = 1.66\times10^{26}$~m~\cite{gibbons1977}, and Eq.~(\ref{eq:ident}) then gives
+\begin{equation}
+L_{\rm cos} = \frac{2\pi R_\Lambda}{\ell_P} = 6.4\times10^{61}.
+\label{eq:Lcos}
+\end{equation}
+Read together with Eq.~(\ref{eq:G}), this says that Newton's constant and the cosmological constant are not independent of each other:
+\begin{equation}
+G\,\Lambda = \frac{12\pi^2c^3}{\hbar\,L^2},
+\label{eq:Lambda}
+\end{equation}
+using $\Lambda = 3/R_\Lambda^2$. The strength of gravity and the acceleration of the universe are a single constant, with $L$ as the exchange rate between them. Whether one calls $\ell_P$ or $R_\Lambda$ the fundamental length is a matter of convention; the physics is Eq.~(\ref{eq:Lambda}). Combining Eq.~(\ref{eq:a0}) with $\Lambda = 3/R_\Lambda^2$ eliminates $L$ and turns the long-noted coincidence $a_0\sim cH_0$ into a fixed relation, $\Lambda \propto a_0^2/c^4$, with an order-unity coefficient we do not derive.
+
+The choice of the de Sitter radius rather than the present Hubble radius $c/H_0$ in Axiom~2 was anticipated in Sec.~\ref{sec:axioms}; here is the observation that forces it. Were the horizon in Eq.~(\ref{eq:ident}) the Hubble radius with $L$ fixed, then $G\propto R_H^2$ would drift at $\dot G/G = 2H(1+q)\approx6\times10^{-11}$~yr$^{-1}$, with $H$ the Hubble rate and $q\approx-0.53$ the present deceleration parameter. That is six hundred times the lunar-laser-ranging bound~\cite{hofmann2018}. With $R_\Lambda$ constant, $G$, $a_0$ and $\Lambda$ are all constant, as Eq.~(\ref{eq:Lambda}) requires.
+
+\section{Does $L$ Hold?}
+\label{sec:hold}
+
+Table~\ref{tab:pins} collects the results. Two scales pin $L$ independently. The galactic scale, through the acceleration at which rotation curves flatten, gives $4.6\times10^{61}$. The cosmological scale, through the size of the de Sitter horizon, gives $6.4\times10^{61}$. They agree to a factor of $1.4$, which is half a bit in $\log_2 L$, the scale the quantum prediction lives on: $204.9$ against $205.3$. The two measurements come from scales five orders of magnitude apart and use entirely different methods, yet they give the same order of magnitude for a $62$-digit number.
+
+We do not pretend this agreement is new. It is the coincidence $a_0\sim cH_0$ that Milgrom noted in 1983~\cite{milgrom1983}, and one may fairly object that the two pins are one old observation in new clothes. What the framework adds is twofold. It turns the coincidence into a fixed relation, Eq.~(\ref{eq:Lambda}) combined with Eq.~(\ref{eq:a0}), so that it is a coincidence no longer. And it ties the same $L$ to a third quantity that has nothing to do with either galaxies or cosmology: the number of qubits a quantum computer can usefully entangle. That third pin is where the theory is falsifiable.
+
+\begin{table}[t]
+\caption{What each scale derives from $L$ and $R_\Lambda$, and what it pins. Since $\ell_P = 2\pi R_\Lambda/L$, pinning $\ell_P$ pins only the ratio of $R_\Lambda$ to $L$. The chain is run with $\ell_P$ as input and $L$ as output until $N_{\max}$ is measured.}
+\label{tab:pins}
+\begin{ruledtabular}
+\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{llll}
+Scale & Phenomenon & Relation & Pins \\
+\colrule
+Quantum & qubit ceiling & $N_{\max}\approx\log_2L$ & $L$ (to come) \\
+Earth & Newton's law & $G=c^3\ell_P^2/\hbar$ & $\ell_P$ \\
+Solar & GR tests & same $G$ & $\ell_P$ \\
+Galactic & rotation curves & $a_0=c^2/L\ell_P$ & $L=4.6\!\times\!10^{61}$ \\
+Cosmic & horizon radius & $\ell_P=2\pi R_\Lambda/L$ & $L=6.4\!\times\!10^{61}$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The terrestrial and solar scales do not pin $L$, and we have said why. They pin $\ell_P$, the combination $2\pi R_\Lambda/L$. For the reversed theory they establish that gravity exists at all: a pixelated screen with a Planck pixel produces Newton's law and Einstein's equations with the observed strength. This checks that the pixel is Planckian (Sec.~\ref{sec:pixel}); it is not a check on $L$, and it is passed by construction once $\ell_P$ is the Planck length. We do not count it as evidence for $L$.
+
+The quantum scale will pin $L$ directly. Inserting either galactic or cosmological value into Eq.~(\ref{eq:nmax}) gives $N_{\max}\approx205$, and the residual disagreement between the two pins shifts this by half a unit. We quote the prediction as $N_{\max}\approx200$, since the leading approximation $\log_2L$ and Palmer's exact criterion $2^{N+1}-2\le NL$ differ by several units. That ambiguity does not touch the point that matters, which is that the ceiling is universal. A measurement of $N_{\max}$ near $200$ for one technology and near $400$ for another would restore Palmer's causal order; the same value for all would confirm ours.
+
+That measurement also closes the loop in the direction the title promises. With $L$ known, Eq.~(\ref{eq:ident}) gives the Planck length from the size of the universe, and Eq.~(\ref{eq:G}) gives Newton's constant:
+\begin{equation}
+G = \frac{4\pi^2 c^3 R_\Lambda^2}{\hbar\,L^2}.
+\label{eq:Gchain}
+\end{equation}
+Gravity's strength is then a derived quantity: the number of bits that fit around the horizon. Converting a measured $N_{\max}$ into $L$ requires the exact capacity condition rather than its logarithmic approximation: $N_{\max}$ is the largest $N$ with $2^{N+1}-2\le NL$, which brackets $L$ between $2^{N_{\max}+1}/N_{\max}$ and $2^{N_{\max}+2}/(N_{\max}+1)$, a factor of two. Hence $\ell_P$ follows to a factor two and $G$ to a factor four. The observed $G$ corresponds to $N_{\max}=212$ under this criterion (Appendix~\ref{app:numbers}); a count of $211$ or $213$ would return $G$ four times too large or too small. Nothing else in the theory can do this: in $a_0 = c^2/L\ell_P$ only the product $L\ell_P = 2\pi R_\Lambda$ appears, so galactic and cosmological data fix each other and leave $\ell_P$ untouched. Only the quantum computer separates $L$ from $\ell_P$.
+
+Two further remarks. The universal $L$ found here, $\sim6\times10^{61}$, lies below every per-qubit value Palmer obtains from Eq.~(\ref{eq:palmerL}), so if both mechanisms were at work, the cosmological one would be the binding constraint. And Davies' bound~\cite{davies2007}, which Palmer flagged as suspiciously close to his own numbers, is explained rather than merely matched. Since $L$ counts pixels around the horizon's circumference, the horizon's area holds $4\pi R_\Lambda^2/\ell_P^2 = L^2/\pi = 1.3\times10^{123}$ of them, which is Lloyd's estimate of $10^{122}$ bits for the observable universe~\cite{lloyd2002}. Davies' $N = \log_2 10^{122}\approx405$ is the logarithm of that pixel count, i.e. $2\log_2L$. Palmer's capacity bound counts the bit-string length $L$, not the number of pixels, so $N_{\max} = \log_2 L\approx205$, half Davies' exponent, and the factor of two now has a definite origin.
+
+\section{Predictions and Falsification}
+\label{sec:predictions}
+
+\begin{enumerate}
+\item \textbf{A universal entanglement ceiling near 200 qubits}, the same for photonic, trapped-ion, superconducting and semiconductor qubits, insensitive to isolation and to logical error correction. Technology dependence falsifies the reversal and restores Eq.~(\ref{eq:palmerL}).
+\item \textbf{Flat rotation curves from baryons alone}, with $v_c^4 = a_0 G M_{\rm baryon}$, Eq.~(\ref{eq:btfr}), and $a_0 = c^2/2\pi R_\Lambda$, Eq.~(\ref{eq:a0}). Robust detection of a dark-matter particle, or a galaxy whose rotation curve requires one, falsifies the galactic sector.
+\item {\boldmath\textbf{No redshift evolution of $a_0$.}} The acceleration scale, Eq.~(\ref{eq:a0}), is tied to the constant $R_\Lambda$ of Axiom~2, not to $H(z)$; proposals with $a_0\propto cH(z)$ predict a scale $1.8$ times larger at redshift $z=1$, and this framework predicts none.
+\item {\boldmath\textbf{Constancy of $\Lambda$.}} With $L$ fixed, Eq.~(\ref{eq:Gchain}) gives $G\propto R_\Lambda^2$, so the lunar-laser-ranging bound on $\dot G/G$~\cite{hofmann2018} requires the horizon radius, and with it $\Lambda$, to be constant to one part in $10^{13}$ per year, and their product $G\Lambda = 12\pi^2c^3/\hbar L^2$, Eq.~(\ref{eq:Lambda}), is fixed by $L$ alone. Since a dark-energy component with equation of state $w$ evolves as $\dot\rho/\rho = -3H(1+w)$, this is a bound on the present-day equation of state, $|1+w_0| \lesssim 5\times10^{-4}$ (Appendix~\ref{app:numbers}). It applies to the present epoch, the only one lunar laser ranging probes. A dark-energy density that is still evolving on the Hubble timescale today, as some current data prefer~\cite{desi2025}, is incompatible with the framework as stated.
+\end{enumerate}
+
+\section{Conclusion}
+
+Palmer built a discrete quantum mechanics and used gravity to set its granularity. We have argued that the granularity comes first. One universal integer $L$, one length $R_\Lambda$, and the identification of a full turn of quantum phase with the circumference of the cosmological horizon are enough to make the Planck length and Newton's constant derived quantities, to obtain general relativity through Jacobson's argument, to produce flat galactic rotation curves with no dark matter, and to bind Newton's constant and the cosmological constant into one. Palmer's collapse formula inverts into a universal reduction clock equal to the de Sitter period, with the horizon temperature as the energy scale, and mass-dependent gravitational collapse drops out of the theory. None of these successes tests the framework on its own, since most are inherited from horizon thermodynamics once the pixel is Planckian. The real test is whether the two scales on which $L$ appears on its own in gravity agree. They do, to a factor of $1.4$ on a number of $62$ digits, and that agreement is Milgrom's coincidence explained. The third scale on which $L$ appears on its own, the quantum computer, will report within the decade.
+
+\begin{acknowledgments}
+The author used an AI assistant (Anthropic's Claude) for literature checking, numerical verification, and editing of the manuscript. The physical proposal, the axioms, and the claims are the author's own.
+\end{acknowledgments}
+
+\section*{Declarations}
+\noindent\textbf{Funding.} No funding was received for this work.\\
+\textbf{Competing interests.} The author declares no competing interests.\\
+\textbf{Data availability.} No new data were generated. All numerical inputs are published values cited in the text and tabulated in Appendix~\ref{app:numbers}.\\
+\textbf{Preprint.} A preprint of this manuscript was first deposited at Zenodo on 2 September 2026, \url{https://doi.org/10.5281/zenodo.22255462}.\\
+\textbf{Use of AI tools.} As stated in the Acknowledgments, an AI assistant was used for literature checking, numerical verification, and editing. It was not used to generate the scientific content, and the author takes full responsibility for the manuscript.
+
+\appendix
+
+\section{Numerical Values}
+\label{app:numbers}
+
+Inputs. As explained in Sec.~\ref{sec:axioms}, the chain is run backwards until $N_{\max}$ is measured, so the Planck length is taken at its accepted value and $L$ is derived from it, rather than the other way round. $c = 2.998\times10^8$~m\,s$^{-1}$, $\hbar = 1.055\times10^{-34}$~J\,s, $\ell_P = 1.616\times10^{-35}$~m (hence $t_P = \ell_P/c = 5.39\times10^{-44}$~s and $E_P = \hbar c/\ell_P = 1.956\times10^9$~J); $a_0 = 1.20\times10^{-10}$~m\,s$^{-2}$~\cite{mcgaugh2016}; present Hubble rate $H_0 = 67.4$~km\,s$^{-1}$\,Mpc$^{-1}$ and dark-energy density parameter $\Omega_\Lambda = 0.685$~\cite{planck2018}, giving $H_\infty = H_0\sqrt{\Omega_\Lambda} = 1.81\times10^{-18}$~s$^{-1}$, $\Lambda = 3H_\infty^2/c^2 = 1.09\times10^{-52}$~m$^{-2}$, $R_\Lambda = c/H_\infty = 1.66\times10^{26}$~m; lunar laser ranging $\dot G/G = (7.1\pm7.6)\times10^{-14}$~yr$^{-1}$~\cite{hofmann2018}, taken as $|\dot G/G|\lesssim10^{-13}$~yr$^{-1}$.
+
+Derived: $L_{\rm gal} = c^2/(a_0\ell_P) = 4.63\times10^{61}$, $\log_2 = 204.9$. $L_{\rm cos} = 2\pi R_\Lambda/\ell_P = 6.45\times10^{61}$, $\log_2 = 205.3$. Ratio $1.39$. Reduction clock $\tau^* = L_{\rm cos}t_P = 3.5\times10^{18}$~s $= 1.1\times10^{11}$~yr. Energy $E_P/L_{\rm cos} = 3.03\times10^{-53}$~J $= \hbar H_\infty/2\pi$. $G = c^3\ell_P^2/\hbar = 6.67\times10^{-11}$~m$^3$\,kg$^{-1}$\,s$^{-2}$. $a_0$ from $\Lambda$: $c^2/(L_{\rm cos}\ell_P) = 8.6\times10^{-11}$~m\,s$^{-2}$. With $N_{\max} = 205$, $a_0 = c^2/(\ell_P 2^{205}) = 1.08\times10^{-10}$~m\,s$^{-2}$. Exact capacity condition: for $L_{\rm cos} = 6.45\times10^{61}$, $N=212$ gives $2^{213} = 1.32\times10^{64}\le 212L = 1.37\times10^{64}$ while $N=213$ gives $2^{214} = 2.63\times10^{64} > 213L$, so $N_{\max}=212$; $\log_2 L = 205.3$. $G\Lambda = 6.67\times10^{-11}\times1.09\times10^{-52} = 7.3\times10^{-63}$~m\,kg$^{-1}$\,s$^{-2}$, against $12\pi^2c^3/(\hbar L_{\rm cos}^2) = 7.3\times10^{-63}$. Equation of state: $G\propto R_\Lambda^2$ and $\Lambda\propto R_\Lambda^{-2}$ give $|\dot\Lambda/\Lambda| = |\dot G/G|\lesssim10^{-13}$~yr$^{-1}$; with $H_0 = 6.89\times10^{-11}$~yr$^{-1}$, $|1+w_0| \lesssim 10^{-13}/3H_0 = 4.8\times10^{-4}$.
+
+\begin{thebibliography}{99}
+\bibitem{palmer2020} T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell's theorem, Proc. R. Soc. A \textbf{476}, 20190350 (2020). \url{https://doi.org/10.1098/rspa.2019.0350}
+\bibitem{palmer2026} T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA \textbf{123}, e2523350123 (2026). \url{https://doi.org/10.1073/pnas.2523350123}; arXiv:2510.02877.
+\bibitem{palmer2026b} T. N. Palmer, Impossible counterfactuals, discrete Hilbert space and Bell's theorem, J. Phys.: Conf. Ser. \textbf{3189}, 012006 (2026). \url{https://doi.org/10.1088/1742-6596/3189/1/012006}; arXiv:2601.14941.
+\bibitem{palmer2026c} T. N. Palmer, Solving the mysteries of quantum mechanics: why nature abhors a continuum, arXiv:2602.16382 (2026).
+\bibitem{palmer2024} T. N. Palmer, Superdeterminism without conspiracy, Universe \textbf{10}, 47 (2024). \url{https://doi.org/10.3390/universe10010047}
+\bibitem{niven1956} I. Niven, \emph{Irrational Numbers} (Mathematical Association of America, Washington, DC, 1956).
+\bibitem{jahnel2010} J. Jahnel, When is the (co)sine of a rational angle equal to a rational number?, arXiv:1006.2938 (2010).
+\bibitem{diosi1989} L. Di\'osi, Models for universal reduction of macroscopic quantum fluctuations, Phys. Rev. A \textbf{40}, 1165 (1989). \url{https://doi.org/10.1103/PhysRevA.40.1165}
+\bibitem{penrose1996} R. Penrose, On gravity's role in quantum state reduction, Gen. Relativ. Gravit. \textbf{28}, 581 (1996). \url{https://doi.org/10.1007/BF02105068}
+\bibitem{davies2007} P. C. W. Davies, The implications of a cosmological information bound for complexity, quantum information and the nature of physical law, Fluct. Noise Lett. \textbf{7}, C37 (2007). \url{https://doi.org/10.1142/S0219477507004021}
+\bibitem{lloyd2002} S. Lloyd, Computational capacity of the universe, Phys. Rev. Lett. \textbf{88}, 237901 (2002). \url{https://doi.org/10.1103/PhysRevLett.88.237901}
+\bibitem{donadi2021} S. Donadi \emph{et al.}, Underground test of gravity-related wave function collapse, Nat. Phys. \textbf{17}, 74 (2021). \url{https://doi.org/10.1038/s41567-020-1008-4}
+\bibitem{verlinde2011} E. Verlinde, On the origin of gravity and the laws of Newton, J. High Energy Phys. \textbf{04}, 029 (2011). \url{https://doi.org/10.1007/JHEP04(2011)029}
+\bibitem{visser2011} M. Visser, Conservative entropic forces, J. High Energy Phys. \textbf{10}, 140 (2011). \url{https://doi.org/10.1007/JHEP10(2011)140}
+\bibitem{kobakhidze2011} A. Kobakhidze, Gravity is not an entropic force, Phys. Rev. D \textbf{83}, 021502 (2011). \url{https://doi.org/10.1103/PhysRevD.83.021502}
+\bibitem{jacobson1995} T. Jacobson, Thermodynamics of spacetime: The Einstein equation of state, Phys. Rev. Lett. \textbf{75}, 1260 (1995). \url{https://doi.org/10.1103/PhysRevLett.75.1260}
+\bibitem{verlinde2017} E. Verlinde, Emergent gravity and the dark universe, SciPost Phys. \textbf{2}, 016 (2017). \url{https://doi.org/10.21468/SciPostPhys.2.3.016}
+\bibitem{yoon2023} Y. Yoon, J. C. Park, and H. S. Hwang, Understanding galaxy rotation curves with Verlinde's emergent gravity, Class. Quantum Grav. \textbf{40}, 02LT01 (2023). \url{https://doi.org/10.1088/1361-6382/acaae6}
+\bibitem{yoon2025} Y. Yoon and H. S. Hwang, Comment on ``Emergent Gravity and the Dark Universe'' by Erik Verlinde, arXiv:1909.01734v4 (2019; revised 2025).
+\bibitem{arute2019} F. Arute \emph{et al.}, Quantum supremacy using a programmable superconducting processor, Nature \textbf{574}, 505 (2019). \url{https://doi.org/10.1038/s41586-019-1666-5}
+\bibitem{morvan2024} A. Morvan \emph{et al.}, Phase transitions in random circuit sampling, Nature \textbf{634}, 328 (2024). \url{https://doi.org/10.1038/s41586-024-07998-6}
+\bibitem{gao2025} D. Gao \emph{et al.}, Establishing a new benchmark in quantum computational advantage with 105-qubit Zuchongzhi 3.0 processor, Phys. Rev. Lett. \textbf{134}, 090601 (2025). \url{https://doi.org/10.1103/PhysRevLett.134.090601}
+\bibitem{manetsch2025} H. J. Manetsch, G. Nomura, E. Bataille, X. Lv, K. H. Leung, and M. Endres, A tweezer array with 6,100 highly coherent atomic qubits, Nature \textbf{647}, 60 (2025). \url{https://doi.org/10.1038/s41586-025-09641-4}
+\bibitem{bluvstein2024} D. Bluvstein \emph{et al.}, Logical quantum processor based on reconfigurable atom arrays, Nature \textbf{626}, 58 (2024). \url{https://doi.org/10.1038/s41586-023-06927-3}
+\bibitem{lelli2017} F. Lelli, S. S. McGaugh, and J. M. Schombert, Testing Verlinde's emergent gravity with the radial acceleration relation, Mon. Not. R. Astron. Soc. \textbf{468}, L68 (2017). \url{https://doi.org/10.1093/mnrasl/slx031}
+\bibitem{gidney2025} C. Gidney, How to factor 2048 bit RSA integers with less than a million noisy qubits, arXiv:2505.15917 (2025).
+\bibitem{unruh1976} W. G. Unruh, Notes on black-hole evaporation, Phys. Rev. D \textbf{14}, 870 (1976). \url{https://doi.org/10.1103/PhysRevD.14.870}
+\bibitem{gibbons1977} G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation, Phys. Rev. D \textbf{15}, 2738 (1977). \url{https://doi.org/10.1103/PhysRevD.15.2738}
+\bibitem{bekenstein1973} J. D. Bekenstein, Black holes and entropy, Phys. Rev. D \textbf{7}, 2333 (1973). \url{https://doi.org/10.1103/PhysRevD.7.2333}
+\bibitem{pound1960} R. V. Pound and G. A. Rebka, Apparent weight of photons, Phys. Rev. Lett. \textbf{4}, 337 (1960). \url{https://doi.org/10.1103/PhysRevLett.4.337}
+\bibitem{milgrom1983} M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, Astrophys. J. \textbf{270}, 365 (1983). \url{https://doi.org/10.1086/161130}
+\bibitem{mcgaugh2016} S. S. McGaugh, F. Lelli, and J. M. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. \textbf{117}, 201101 (2016). \url{https://doi.org/10.1103/PhysRevLett.117.201101}
+\bibitem{clowe2006} D. Clowe \emph{et al.}, A direct empirical proof of the existence of dark matter, Astrophys. J. \textbf{648}, L109 (2006). \url{https://doi.org/10.1086/508162}
+\bibitem{desi2025} DESI Collaboration, M. Abdul-Karim \emph{et al.}, DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints, Phys. Rev. D \textbf{112}, 083515 (2025). \url{https://doi.org/10.1103/tr6y-kpc6}; arXiv:2503.14738.
+\bibitem{planck2018} Planck Collaboration, N. Aghanim \emph{et al.}, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. \textbf{641}, A6 (2020). \url{https://doi.org/10.1051/0004-6361/201833910}
+\bibitem{hees2014} A. Hees, W. M. Folkner, R. A. Jacobson, and R. S. Park, Constraints on modified Newtonian dynamics theories from radio tracking data of the Cassini spacecraft, Phys. Rev. D \textbf{89}, 102002 (2014). \url{https://doi.org/10.1103/PhysRevD.89.102002}
+\bibitem{hofmann2018} F. Hofmann and J. M\"uller, Relativistic tests with lunar laser ranging, Class. Quantum Grav. \textbf{35}, 035015 (2018). \url{https://doi.org/10.1088/1361-6382/aa8f7a}
+\end{thebibliography}
+
+\end{document}

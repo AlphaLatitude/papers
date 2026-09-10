@@ -1,0 +1,5 @@
+# License
+
+The papers mirrored here are distributed under the Creative Commons Attribution 4.0 International license (CC BY 4.0), matching their Zenodo records: https://creativecommons.org/licenses/by/4.0/
+
+Copyright Andrew Korytko.
