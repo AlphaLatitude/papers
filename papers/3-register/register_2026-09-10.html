@@ -1,0 +1,1404 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>One Register: A Common Origin for the Granularity of Hilbert Space and of Space</title>
+<!--Generated on Sat Sep 12 06:19:26 2026 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on September 12, 2026.-->
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="en" content="Rational quantum mechanics; discrete Hilbert space; finite quantum mechanics; de Sitter horizon; Bell’s theorem">
+<style>/*======================================================================
+ Core CSS for LaTeXML documents converted to (X)HTML */
+/* Generic Page layout */
+.ltx_page_header,
+.ltx_page_footer { font-size:0.8em; }
+.ltx_page_header *[rel~="prev"],
+.ltx_page_footer *[rel~="prev"] { float:left; }
+.ltx_page_header *[rel~="up"],
+.ltx_page_footer *[rel~="up"]   { display:block; text-align:center; }
+.ltx_page_header *[rel~="next"],
+.ltx_page_footer *[rel~="next"] {  float:right; }
+/* What was I trying for here; need more selective rule!
+.ltx_page_header .ltx_ref,
+.ltx_page_footer .ltx_ref {
+    margin:0 1em; }
+*/
+.ltx_page_header li {
+    padding:0.1em 0.2em 0.1em 1em;}
+
+/* Main content */
+.ltx_page_content { clear:both; }
+.ltx_page_header  { border-bottom:1px solid; margin-bottom:5px; }
+.ltx_page_footer  { clear:both; border-top:1px solid; margin-top:5px;  }
+
+.ltx_page_header:after,
+.ltx_page_footer:after,
+.ltx_page_content:after {
+    content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.ltx_page_footer:before {
+    content:"."; display:block; height:0; clear:both; visibility:hidden; }
+
+.ltx_page_logo     { font-size:90%; margin-top: 5px; clear:both; float:right; }
+a.ltx_LaTeXML_logo { text-decoration: none; }
+.ltx_page_logo img { vertical-align:-3px; }
+.ltx_page_navbar .ltx_LaTeXML_logo,
+.ltx_page_logo .ltx_LaTeXML_logo { font-size:110%; }
+/* if shown */
+.ltx_page_navbar li { white-space:nowrap; display:block; overflow:hidden; }
+/* If ref got turned into span, it's "this section"*/
+.ltx_page_navbar li span.ltx_ref { white-space:normal; overflow:visible; }
+
+/* Ought to be easily removable/overridable? */
+.ltx_pagination.ltx_role_newpage { height:2em; }
+/*======================================================================
+  Document Structure; Titles & Frontmatter */
+
+/* undo bold here to remove the browser's native h# styling,
+   at let all other styles override it (with more specific rules)*/
+.ltx_title { font-size:100%; font-weight:normal; }
+
+/* Hack to simulate run-in! put class="ltx_runin" on a title or tag
+   for it to run-into the following text. */
+.ltx_runin { display:inline; }
+.ltx_runin:after { content:" "; }
+.ltx_runin + .ltx_para,
+.ltx_runin + .ltx_para p:first-child,
+.ltx_runin + p:first-child {
+    display:inline; }
+
+.ltx_outdent { margin-left: -2em; }
+
+/* .ltx_chapter_title, etc should be in ltx-article.css etc. */
+.ltx_page_main { margin:0px auto;
+    padding:1em 3em 1em 2em;
+    padding:min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(2em, 3%); }
+.ltx_tocentry  { list-style-type:none; }
+
+/* support for common author block layouts.*/
+/* add class ltx_authors_1line to get authors in single line
+   with pop-up affiliation, etc. */
+.ltx_authors_1line .ltx_creator,
+.ltx_authors_1line .ltx_author_before,
+.ltx_authors_1line .ltx_author_after { display:inline;}
+.ltx_authors_1line .ltx_author_notes { display:inline-block; }
+.ltx_authors_1line .ltx_author_notes:before { content:"*"; color:blue;}
+.ltx_authors_1line .ltx_author_notes span { display:none; }
+.ltx_authors_1line .ltx_author_notes:hover span {
+    display:block; position:absolute; z-index:10;
+    background:white; text-align:left;
+    border: 1px solid black; border-radius: 0 5px 5px 5px; box-shadow: 5px 5px 10px gray; }
+
+/* add class=ltx_authors_multiline to get authors & affliations on separate lines*/
+.ltx_authors_multiline .ltx_creator,
+.ltx_authors_multiline .ltx_author_before,
+.ltx_authors_multiline .ltx_author_after,
+.ltx_authors_multiline .ltx_author_notes,
+.ltx_authors_multiline .ltx_author_notes .ltx_contact {
+    display:block; }
+
+/*======================================================================
+  Para level */
+.ltx_float {
+    margin: 1ex clamp(1em, 4.5%, 3em) 1ex clamp(1em, 4.5%, 3em); }
+
+/* Multiple subfigures via flexbox */
+.ltx_flex_figure {
+  display: flex;
+  flex-flow: row wrap;
+  width: auto;
+  max-width: 60rem;
+  position: relative;
+  justify-content: center;
+  align-items: baseline;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.ltx_flex_size_1,
+.ltx_flex_size_1 .ltx_tabular,
+.ltx_flex_size_1 .ltx_graphics {
+  max-width:60rem;
+}
+.ltx_flex_size_2,
+.ltx_flex_size_2 .ltx_tabular,
+.ltx_flex_size_2 .ltx_graphics {
+  max-width: calc(0.44*60rem);
+}
+.ltx_flex_size_3,
+.ltx_flex_size_3 .ltx_tabular,
+.ltx_flex_size_3 .ltx_graphics {
+  max-width: calc(0.30*60rem);
+}
+.ltx_flex_size_4,
+.ltx_flex_size_4 .ltx_tabular,
+.ltx_flex_size_4 .ltx_graphics {
+  max-width: calc(0.24*60rem);
+}
+/*Default: More than 4 items, tricky.
+  quite often intended to auto-reflow... */
+.ltx_flex_size_many,
+.ltx_flex_size_many .ltx_tabular,
+.ltx_flex_size_many .ltx_graphics {
+  max-width: calc(0.24*60rem);
+}
+
+/* flex row breaks */
+.ltx_flex_figure .ltx_flex_break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* layout preference */
+.ltx_flex_figure .ltx_subgraphics,
+.ltx_flex_figure .ltx_subfigure,
+.ltx_flex_figure .ltx_subfloat,
+.ltx_flex_figure .ltx_subtable {
+  flex: 1 1 0px;
+  margin: 0.1rem;
+}
+.ltx_subgraphics, .ltx_subfigure, .ltx_subtable, .ltx_subfloat {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.ltx_subgraphics > .ltx_figure,
+.ltx_subfigure > .ltx_figure,
+.ltx_subtable > .ltx_figure,
+.ltx_subfloat > .ltx_figure {
+  margin:0em;
+}
+
+/* theorems, figure, tables, floats captions.. */
+/*======================================================================
+ Blocks, Lists, Floats */
+.ltx_p,
+.ltx_quote,
+.ltx_block,
+.ltx_logical-block,
+.ltx_para {
+    display: block; }
+
+/* alignment within blocks */
+.ltx_align_left     { text-align:left; }
+.ltx_align_right    { text-align:right; }
+.ltx_align_center   { text-align:center; }
+.ltx_align_justify  { text-align:justify; }
+.ltx_align_top      { vertical-align:top; }
+.ltx_align_bottom   { vertical-align:bottom; }
+.ltx_align_middle   { vertical-align:middle; }
+.ltx_align_baseline { vertical-align:baseline; }
+
+.ltx_align_floatleft  { float:left; }
+.ltx_align_floatright { float:right; }
+
+.ltx_td.ltx_align_left,   .ltx_th.ltx_align_left,
+.ltx_td.ltx_align_right,  .ltx_th.ltx_align_right,
+.ltx_td.ltx_align_center, .ltx_th.ltx_align_center { white-space:nowrap; }
+.ltx_td.ltx_align_left.ltx_wrap,   .ltx_th.ltx_align_left.ltx_wrap,
+.ltx_td.ltx_align_right.ltx_wrap,  .ltx_th.ltx_align_right.ltx_wrap,
+.ltx_td.ltx_align_center.ltx_wrap, .ltx_th.ltx_align_center.ltx_wrap,
+.ltx_td.ltx_align_justify,  .ltx_th.ltx_align_justify { white-space:normal; }
+
+.ltx_tabular .ltx_tabular { width:100%; }
+.ltx_inline-block,
+.ltx_inline-logical-block { display:inline-block; }
+
+/* tabbing is always a standalone paragraph-level construct */
+.ltx_tabular.ltx_tabbing { 
+  display: table; }
+
+/* avoid padding when aligning adjacent columns, e.g. for split decimals */
+.ltx_norightpad { padding-right:0!important; }
+.ltx_noleftpad  { padding-left:0!important; }
+.ltx_nopad      { padding:0!important; }
+
+/* equations in non-aligned mode (not normally used) */
+.ltx_eqn_div { display:block; width:95%; text-align:center; }
+
+/* equations in aligned mode (aligning tags, etc as well as equations) */
+.ltx_eqn_table { display:table; width:100%; border-collapse:collapse; }
+.ltx_eqn_row   { display:table-row; }
+.ltx_eqn_cell  { display:table-cell; width:auto; }
+
+/* Padding between column pairs in ams align */
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_left + td.ltx_align_right,
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_left + td.ltx_align_center,
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_center + td.ltx_align_right,
+table.ltx_eqn_align tr.ltx_equation td.ltx_align_center + td.ltx_align_center  { padding-left:3em; }
+table.ltx_eqn_eqnarray tr.ltx_eqn_lefteqn + tr td.ltx_align_right { min-width:2em; }
+
+.ltx_eqn_eqno { max-width:0em; overflow:visible; white-space: nowrap; }
+.ltx_eqn_eqno.ltx_align_right .ltx_tag { float:right; }
+
+.ltx_eqn_center_padleft,
+.ltx_eqn_center_padright { width:50%; min-width:2em;}
+.ltx_eqn_left_padleft,
+.ltx_eqn_right_padright { min-width:2em; }
+.ltx_eqn_left_padright,
+.ltx_eqn_right_padleft  { width:100%; }
+
+/* Various lists */
+.ltx_itemize,
+.ltx_enumerate,
+.ltx_description {
+    display:block; }
+.ltx_itemize .ltx_item,
+.ltx_enumerate .ltx_item {
+    display: list-item; white-space:nowrap; }
+
+/* Position the tag to look like a normal item bullet. */
+li.ltx_item > .ltx_tag {
+    display:inline-block; margin-left:-1.5em; min-width:1.5em;
+    text-align:right; }
+.ltx_item .ltx_tag + .ltx_para {
+    display:inline-block; vertical-align:top;}
+.ltx_item .ltx_tag + .ltx_para .ltx_p  {
+    display:inline; }
+.ltx_item > .ltx_para > .ltx_p:first-child {
+    text-indent:0em; }
+
+.ltx_item > .ltx_para > .ltx_p { margin-top:0em; margin-bottom:0em; }
+dd.ltx_item { margin-bottom:0.5em; }
+
+/* NOTE: Need to try harder to get runin appearance? */
+dl.ltx_description dt { margin-right:0.5em; float:left;
+                        font-weight:bold; font-size:95%; }
+dl.ltx_description dd { margin-left:5em; }
+dl.ltx_description dl.ltx_description dd { margin-left:3em; }
+
+/* Theorems */
+.ltx_theorem  {margin:1em 0em 1em 0em; }
+.ltx_title_theorem { font-size:100%; }
+
+/* Bibliographies */
+.ltx_bibliography dt { margin-right:0.5em; float:left; }
+.ltx_bibliography dd { margin-left: clamp(1em, 4.5%, 3em); }
+/*.ltx_biblist { list-style-type:none; }*/
+.ltx_bibitem { list-style-type:none; }
+.ltx_bibitem .ltx_tag { font-weight:bold; margin-left:-2em; width:3em; }
+/*.bibitem-tag + div { display:inline; }*/
+.ltx_bib_title { font-style:italic; }
+.ltx_bib_article .bib-title { font-style:normal !important; }
+.ltx_bib_journal  { font-style:italic; }
+.ltx_bib_volume { font-weight:bold; }
+
+/* Indices */
+.ltx_indexlist li { list-style-type:none;  }
+.ltx_indexlist { margin-left:1em; padding-left:1em;}
+
+/* Listings */
+.ltx_listing {
+    display:block;
+    margin: 1ex 3em 1ex 0em;
+    overflow-x:auto;
+    text-align: left; }
+.ltx_float .ltx_listing {
+    margin: 0; }
+.ltx_listingline { white-space:nowrap; min-height:1em; }
+.ltx_lst_space { white-space: pre; }
+.ltx_lst_numbers_left .ltx_listingline .ltx_tag {
+    background-color:transparent;
+    margin-left:-3em; width:2.5em;
+    position:absolute;
+    text-align:right; }
+.ltx_lst_numbers_right .ltx_listingline .ltx_tag {
+    background-color:transparent;
+    width:2.5em;
+    position:absolute; right:3em;
+    text-align:right; }
+/*
+    position:absolute; left:0em;
+    max-width:0em; text-align:right; }
+*/
+.ltx_parbox {
+    text-indent:0em;
+    display: inline-block; }
+
+/* NOTE that it is CRITICAL to put position:relative outside & absolute inside!!
+   I wish I understood why!
+   Outer box establishes resulting size, neutralizes any outer positioning, etc;
+   inner establishes position of stuff to be rotated */
+.ltx_transformed_outer {
+    position:relative; bottom:0pt;left:0pt;
+    overflow:visible; }
+.ltx_transformed_inner {
+    display:block;
+    position:absolute;bottom:0pt;left:0pt; }
+.ltx_transformed_inner > .ltx_p {text-indent:0em; margin:0; padding:0; }
+
+/* If simulating a table (html5), try to get rowspan to work...sorta? */
+span.ltx_tabular { position:relative; }
+span.ltx_rowspan { position:absolute; top:0; bottom:0; }
+
+/* by default, p doesn't indent */
+.ltx_p { text-indent:0em; white-space:normal; }
+/* explicit control of indentation (on ltx_para) */
+.ltx_indent > .ltx_p:first-child { text-indent:2em!important; }
+.ltx_noindent > .ltx_p:first-child { text-indent:0em!important; }
+
+/*======================================================================
+  Columns */
+.ltx_page_columns {
+    display: flex; }
+.ltx_page_column1,
+.ltx_page_column2 {
+    flex:100%;
+    margin: 0 20px;
+ }
+@media screen and (max-width: 60em){
+  .ltx_page_columns {
+     flex-direction: column; }
+  .ltx_page_column1 > ul,
+  .ltx_page_column1 > ol,
+  .ltx_page_column1 > dl {
+     margin-bottom: 0; }
+  .ltx_page_column2 > ul,
+  .ltx_page_column2 > ol,
+  .ltx_page_column2 > dl {
+     margin-top: 0; }
+}
+
+/*======================================================================
+ Borders and such */
+.ltx_tabular { display:inline-table; border-collapse:collapse; }
+.ltx_tabular.ltx_centering { display:table; }
+.ltx_thead,
+.ltx_tfoot,
+.ltx_tbody   { display:table-row-group; }
+.ltx_tr      { display:table-row; }
+.ltx_td,
+.ltx_th      { display:table-cell; }
+
+.ltx_tabular .ltx_td,
+.ltx_tabular .ltx_th { padding:0.1em 0.5em; }
+.ltx_tabular .ltx_td.ltx_nopad_l,
+.ltx_tabular .ltx_th.ltx_nopad_l { padding-left:0; }
+.ltx_tabular .ltx_td.ltx_nopad_r,
+.ltx_tabular .ltx_th.ltx_nopad_r { padding-right:0; }
+
+/* min-height does NOT apply to tr! */
+.ltx_tabular .ltx_tr td:first-child::after,
+.ltx_tabular .ltx_tr th:first-child::after {
+   content: "";
+   display: inline-block;
+   vertical-align: top;
+   min-height: 1em;
+}
+
+
+/* regular lines */
+.ltx_border_t  { border-top:1px solid black; }
+.ltx_border_r  { border-right:1px solid black; }
+.ltx_border_b  { border-bottom:1px solid black; }
+.ltx_border_l  { border-left:1px solid black; }
+/* double lines */
+.ltx_border_tt { border-top:3px double black; }
+.ltx_border_rr { border-right:3px double black; }
+.ltx_border_bb { border-bottom:3px double black; }
+.ltx_border_ll { border-left:3px double black; }
+/* Light lines */
+.ltx_border_T  { border-top:1px solid gray; }
+.ltx_border_R  { border-right:1px solid gray; }
+.ltx_border_B  { border-bottom:1px solid gray; }
+.ltx_border_L  { border-left:1px solid gray; }
+/* Framing */
+.ltx_framed    { padding:3pt; }
+span.ltx_framed       { display:inline-block; text-indent:0; } /* avoid padding/margin collapse */
+.ltx_framed_rectangle { border-style:solid; border-width:1px; }
+.ltx_framed_top       { border-top-style:solid; border-top-width:1px; }
+.ltx_framed_left      { border-left-style:solid; border-left-width:1px; }
+.ltx_framed_right     { border-right-style:solid; border-right-width:1px; }
+.ltx_framed_bottom,
+.ltx_framed_underline { border-bottom-style:solid; border-bottom-width:1px; }
+.ltx_framed_topbottom { border-top-style:solid; border-top-width:1px;
+                        border-bottom-style:solid; border-bottom-width:1px; }
+.ltx_framed_leftright { border-left-style:solid; border-left-width:1px;
+                        border-right-style:solid; border-right-width:1px; }
+
+.ltx_rule { vertical-align: bottom; height: 0.4pt; width: 0.4pt; }
+
+/*======================================================================
+ Misc */
+/* .ltx_verbatim*/
+.ltx_verbatim { text-align:left; }
+/*======================================================================
+ Meta stuff, footnotes */
+.ltx_note_content { display:none; }
+/*right:5%;  */
+.ltx_note_content {
+     max-width: 70%; font-size:90%; left:15%;
+     text-align:left;
+     background-color: white;
+     padding: 0.5em 1em 0.5em 1.5em;
+     border: 1px solid black; border-radius: 0 5px 5px 5px; box-shadow: 5px 5px 10px gray; }
+.ltx_note_mark    { color:blue; }
+.ltx_note_type    { font-weight: bold; }
+.ltx_note { display:inline-block; text-indent:0; } /* So we establish containing block */
+.ltx_note_content .ltx_note_mark { position:absolute; left:0.2em; top:-0.1em; }
+.ltx_note:hover .ltx_note_content,
+.ltx_note .ltx_note_content:hover {
+   display:block; position:absolute; z-index:10; }
+.ltx_note.ltx_marginpar_left { display:none; }
+
+.ltx_ERROR        { color:red; }
+.ltx_rdf          { display:none; }
+.ltx_missing      { color:red;}
+.ltx_nounicode    { color:red; }
+.ltx_nodisplay    { display:none; }
+/*======================================================================
+ SVG (pgf/tikz ?) basics */
+
+/* Stuff appearing in svg:foreignObject */
+.ltx_svg_fog foreignObject  { margin:0; padding:0; overflow:visible; }
+.ltx_svg_fog foreignObject > p { margin:0; padding:0; display:block; }
+/*.ltx_svg_fog foreignObject > p { margin:0; padding:0; display:block; white-space:nowrap; }*/
+
+/*======================================================================
+ Low-level Basics */
+/* Note that LaTeX(ML)'s font model doesn't map quite exactly to CSS's */
+/* Font Families => font-family */
+.ltx_font_serif      { font-family: serif; }
+.ltx_font_sansserif  { font-family: sans-serif; }
+.ltx_font_typewriter { font-family: monospace; }
+/* dingbats should be converted to unicode? */
+/* Math font families handled within math: script, symbol, fraktur, blackboard ? */
+/* Font Series => font-weight */
+.ltx_font_bold       { font-weight: bold; }
+.ltx_font_medium     { font-weight: normal; }
+/* Font Shapes => font-style or font-variant */
+.ltx_font_italic     { font-style: italic; font-variant:normal; }
+.ltx_font_upright    { font-style: normal; font-variant:normal; }
+.ltx_font_slanted    { font-style: oblique; font-variant:normal; }
+.ltx_font_smallcaps  { font-variant: small-caps; font-style:normal; }
+.ltx_font_oldstyle   { font-variant-numeric: oldstyle-nums; }
+.ltx_font_mathcaligraphic { font-family: "Lucida Calligraphy", "Zapf Chancery","URW Chancery L"; }
+/* Fallbacks for when content+mathvariant cannot be mapped to Unicode */
+.ltx_mathvariant_italic        { font-style: italic; }
+.ltx_mathvariant_bold          { font-weight: bold; }
+.ltx_mathvariant_bold-italic   { font-style: italic; font-weight: bold; }
+.ltx_mathvariant_sans-serif             { font-family: sans-serif; }
+.ltx_mathvariant-bold-sans-serif        { font-family: sans-serif; font-weight: bold; }
+.ltx_mathvariant-sans-serif-italic      { font-family: sans-serif; font-style: italic; }
+.ltx_mathvariant-bold-sans-serif-italic { font-family: sans-serif; font-style: italic; font-weight: bold; }
+.ltx_mathvariant_monospace     { font-family: monospace; }
+/* Can we say anything generic about double-struck, script or fraktur ? */
+.ltx_mathvariant_double-struck { font-weight: bold; }
+.ltx_mathvariant_script        { font-family: "Lucida Calligraphy", "Zapf Chancery","URW Chancery L", cursive; }
+.ltx_mathvariant_bold-script   { font-family: "Lucida Calligraphy", "Zapf Chancery","URW Chancery L", cursive; font-weight: bold; }
+.ltx_mathvariant-fraktur       { }/* ??? */
+.ltx_mathvariant_bold-fraktur  { font-weight: bold; }
+
+/*
+
+.ltx_font_mathscript { ? }
+*/
+cite                 { font-style: normal; }
+
+.ltx_red        { color:red; }
+/*.ltx_centering  { text-align:center; margin:auto; }*/
+/*.ltx_inline-block.ltx_centering,*/
+/* Hmm.... is this right in general? */
+.ltx_centering  { display:block; margin:auto; text-align:center; }
+
+/* Dubious stuff */
+.ltx_hflipped {
+    display:inline-block;
+    transform: scaleX(-1); }
+.ltx_vflipped {
+    display:inline-block;
+    transform: scaleY(-1); }
+
+/* .ltx_phantom handled in xslt */
+
+.ltx_minipage {
+  align-self: normal;
+  display: inline-block;
+}
+.ltx_minipage > .ltx_graphics {
+  max-width:100%;
+}
+
+
+.ltx_title_document      { font-size:170%; text-align:center; margin:0.5em 0 0.5em 0; }
+.ltx_dates,
+.ltx_authors,
+.ltx_role_author         { text-align:center; margin:0.5em 0 0.5em 0; }
+.ltx_role_author .ltx_personname  { font-size: 120%; }
+.ltx_date        { text-align:center; font-size: 120%; margin:0.5em 0 0.5em 0; }
+.ltx_subtitle    { text-align:center; font-size: 120%; padding-left:0.2em; margin-left:-0.5em; }
+
+.ltx_title_abstract      { text-align:center; font-size: 100%; font-weight:bold; }
+.ltx_abstract {
+   margin-left:clamp(1em, 6%, 4em);
+   margin-right:clamp(1em, 6%, 4em); }
+.ltx_title_acknowledgements,
+.ltx_title_keywords,
+.ltx_title_classification {
+   text-align:left; font-size: 100%; font-weight:bold; margin:0.5em 0 0 0; }
+
+.ltx_appendix,
+.ltx_part,
+.ltx_section,
+.ltx_subsection,
+.ltx_subsubsection { margin-top:1.5em; }
+.ltx_paragraph,
+.ltx_subparagraph   { margin-top:1.0em; }
+
+.ltx_title_part          { font-size:250%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_appendix,
+.ltx_title_section,
+.ltx_title_index,
+.ltx_title_glossary,
+.ltx_title_bibliography  { font-size:140%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_subsection    { font-size:120%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_subsubsection { font-size:100%; font-weight:bold; margin-bottom:1em; }
+
+/* Paragraph & Subparagraph titles should be runin! */
+.ltx_title_paragraph   { font-size:100%; font-weight:bold; display:inline; 
+                         margin-right:1em; }
+.ltx_paragraph .ltx_title,
+.ltx_paragraph .ltx_title + .ltx_para,
+.ltx_paragraph .ltx_title + .ltx_para > .ltx_p { display:inline; }
+
+.ltx_title_subparagraph  { font-size:100%; font-weight:bold; display:inline; 
+                           margin-left:2em; margin-right:1em; }
+.ltx_subparagraph .ltx_title,
+.ltx_subparagraph .ltx_title + .ltx_para,
+.ltx_subparagraph .ltx_title + .ltx_para > .ltx_p { display:inline; }
+
+.ltx_figure  { text-align:center; margin:auto; margin:0.5em; }
+.ltx_table   { text-align:center; margin:auto; margin:0.5em; }
+
+/* experimental: flex model, to center short captions, justify long ones */
+.ltx_table,
+.ltx_figure { display:flex; flex-direction:column; align-items:center; }
+.ltx_table .ltx_caption,
+.ltx_figure .ltx_caption { text-align:justify; }
+
+/* first p in para gets indented; , even 1st in section if marked "no" first child */
+.ltx_para > .ltx_p:first-child,
+section.ltx_pruned_first > .ltx_title + .ltx_para > .ltx_p,
+section.ltx_indent_first > .ltx_title + .ltx_para > .ltx_p { text-indent:2em; }
+/* except the initial in a section */
+section > .ltx_title +.ltx_para > .ltx_p,
+section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
+
+.ltx_title_abstract + .ltx_p {text-indent:2em; }
+
+.ltx_itemize,
+.ltx_enumerate { margin-left:1em; }
+
+.ltx_theorem { margin-top:0.5em; margin-bottom:0.5em; }
+.ltx_theorem .ltx_title { margin-bottom:0.1em; }
+.ltx_theorem .ltx_title + .ltx_para,
+.ltx_theorem .ltx_title + .ltx_para .ltx_p,
+.ltx_theorem .ltx_title + .ltx_p  { margin-top:0em; }
+
+
+:root { --teal: #3A9797; --teal-dark: #2D7575; --ink: #16201F; --muted: #5C6868;
+        --rule: #E2E8E8; --bg: #FCFDFD; --paper: #FFFFFF; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px; line-height: 1.62; color: var(--ink); background: var(--paper);
+  max-width: 42em; margin: 0 auto; padding: 0 18px 64px;
+}
+.ltx_page_main, .ltx_page_content { padding: 0; }
+h1, h2, h3, h4, .ltx_title { line-height: 1.25; }
+.ltx_title_document { font-size: 1.5rem; margin: 1.2rem 0 .4rem; }
+.ltx_title_section { font-size: 1.15rem; margin-top: 2.2rem; }
+.ltx_title_subsection { font-size: 1rem; }
+.ltx_abstract { font-size: .97rem; }
+.ltx_abstract .ltx_title { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+a, .ltx_ref, .ltx_cite a { color: var(--teal-dark); }
+.ltx_page_footer, .ltx_authors_multiline .ltx_contact { color: var(--muted); font-size: .85rem; }
+/* LaTeXML reproduces LaTeX's print convention: indent every paragraph except
+   the first after a heading. Faithful to the PDF, but on a screen the
+   paragraphs already have a blank line between them, so the indent is
+   redundant - and it makes the first item under a heading look misaligned
+   against the ones below it (Postulate 1 vs Postulate 2). One convention at
+   a time: keep the vertical gap, drop the indent. */
+p.ltx_p { text-indent: 0 !important; }
+div.ltx_para + div.ltx_para { margin-top: .95em; }
+
+.ltx_bibliography { font-size: .9rem; }
+.ltx_bibitem { margin-bottom: .5rem; }
+
+/* Wide equations and tables scroll inside their own box rather than dragging
+   the page sideways. A display:table element is not a scroll container, and
+   forcing display:block onto it breaks the row layout without containing the
+   overflow either - so each one is wrapped in a real div at build time and
+   the div does the scrolling. */
+.scrollbox { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.scrollbox > table { margin-left: 0; margin-right: 0; }
+
+/* LaTeXML centres a display equation with padding cells of width:50%, which
+   forces the equation table to about twice the equation's own width - 452px
+   here, on any screen size. That, not long content, was what made every page
+   scroll sideways on a phone. Collapse the padding cells and let equations
+   sit left, which reads better in one column anyway. */
+td.ltx_eqn_center_padleft, td.ltx_eqn_center_padright,
+td.ltx_eqn_left_padleft, td.ltx_eqn_right_padright,
+td.ltx_eqn_lefteqn_padright { width: 0; min-width: 0; padding: 0; }
+/* Equation left, number hard right against the margin, as in print. The
+   table spans the column so the number is pushed away from the formula
+   rather than sitting on top of it; a formula wider than the column still
+   scrolls inside its box. */
+table.ltx_equation, table.ltx_eqn_table { width: 100%; margin: 1.2em 0; }
+td.ltx_eqn_cell { text-align: left; }
+td.ltx_eqn_eqno {
+  width: 1%; white-space: nowrap; text-align: right;
+  padding-left: 2em; vertical-align: middle; color: var(--muted);
+}
+/* Bibliography DOIs and arXiv links are long unbreakable strings in a
+   monospace face; they were the last thing forcing the page sideways. */
+.ltx_bibblock, a.ltx_url, .ltx_ref.ltx_url, .ltx_font_typewriter {
+  overflow-wrap: anywhere; word-break: break-word;
+}
+
+/* The bibliography's negative-margin numbering can poke off the left edge. */
+.ltx_bibitem .ltx_tag { margin-left: 0; width: auto; margin-right: .4em; }
+.ltx_biblist { padding-left: 0; list-style: none; }
+.ltx_tabular { font-size: .9rem; }
+/* MathML does not line-break inline formulas, so an over-long one pushes the
+   page sideways on the smallest phones. Let such a formula scroll within the
+   text column instead; inline-block is required for overflow to apply at all. */
+math { max-width: 100%; }
+math[display="inline"] {
+  display: inline-block; max-width: 100%; overflow-x: auto; vertical-align: middle;
+}
+
+/* Chrome dropped <menclose> from MathML Core, so \boxed loses its box - and
+   in these papers the boxed line is the result. Draw it in CSS instead;
+   harmless where the browser already draws one. */
+menclose[notation="box"] {
+  border: 1px solid currentColor; border-radius: 2px;
+  padding: .28em .55em; margin: .1em;
+}
+
+/* The banner: this page is a rendering, the PDF is the paper. */
+.mirror-note {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px; line-height: 1.65; color: var(--muted);
+  border-left: 2px solid var(--teal); background: var(--bg);
+  padding: 10px 14px; margin: 20px 0 8px; border-radius: 2px;
+}
+.mirror-note strong { color: var(--ink); font-weight: 600; }
+.mirror-note a { color: var(--teal-dark); }
+.mirror-note .sep { color: var(--rule); }
+.mirror-foot { margin: 34px 0 28px; }
+
+@media (max-width: 480px) { body { font-size: 17px; padding: 0 14px 48px; } }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #E8EDEC; --muted: #9DAAA9; --rule: #24312F;
+          --bg: #0F1514; --paper: #131A19; --teal-dark: #6FC5C0; }
+  html, body { background: var(--paper); color: var(--ink); }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+</head>
+<body>
+<div class="mirror-note"><strong>HTML rendering; the PDF is authoritative.</strong><br>Generated from the LaTeX source of version v3 for reading on a phone. Equations are converted automatically and may differ in presentation from the paper. <a href="register_2026-09-10.pdf">Read the PDF</a> <span class="sep">&middot;</span> <a href="https://doi.org/10.5281/zenodo.22699787">Zenodo record</a> <span class="sep">&middot;</span> <a href="../../">All papers</a> <span class="sep">&middot;</span> <a href="https://alphalatitude.com">AlphaLatitude Inc.</a></div>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">One Register:
+<br class="ltx_break">A Common Origin for the Granularity of Hilbert Space and of Space</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Andrew Korytko <a href="https://orcid.org/0009-0005-4569-2228">0009-0005-4569-2228</a>
+</span><span class="ltx_author_notes">
+<span class="ltx_contact ltx_role_email"><a href="mailto:andrew@alphalatitude.com">andrew@alphalatitude.com</a>
+</span>
+<span class="ltx_contact ltx_role_affiliation">AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA
+</span></span></span>
+</div>
+<div class="ltx_dates">(September 12, 2026)</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+    
+<p class="ltx_p">Palmer’s Rational Quantum Mechanics writes a qubit as <math id="m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> bits: the count <math id="m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> of <math id="m3" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> bits is the Born probability <math id="m4" class="ltx_Math" alttext="m/L" display="inline"><mrow><mi>m</mi><mo>/</mo><mi>L</mi></mrow></math>, a cyclic shift the phase. Previously we made <math id="m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> universal, identified one phase step with one Planck length on a horizon great circle, and derived Newton’s constant and Einstein’s equations at <math id="m6" class="ltx_Math" alttext="L\approx 6\times 10^{61}" display="inline"><mrow><mi>L</mi><mo>≈</mo><mrow><mn>6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math>. Those two axioms become one: a dial of <math id="m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> notches, each a Planck length and a Planck time, on the horizon; every qubit is a pattern on it; one notch is a translation by one Planck length, under which a wave of <math id="m8" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> wavelengths gains <math id="m9" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> phase steps, Palmer’s step the slowest wave’s. From it: light moves one notch per tick; velocity is the excess of right- over left-movers, <math id="m10" class="ltx_Math" alttext="v/c=2m/L-1" display="inline"><mrow><mrow><mi>v</mi><mo>/</mo><mi>c</mi></mrow><mo>=</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>/</mo><mi>L</mi></mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>; matter reverses every quarter Compton period, its Compton clock Palmer’s hidden global phase; the circumference is the longest wavelength, the second axiom; and Born’s rule as a frequency bounds a spanning state at <math id="m11" class="ltx_Math" alttext="2^{N}\leq L" display="inline"><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>≤</mo><mi>L</mi></mrow></math>, <math id="m12" class="ltx_Math" alttext="N_{\max}=205" display="inline"><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>=</mo><mn>205</mn></mrow></math>, whatever physical system realizes it. Free dynamics is exact mode by mode in the plane of any elementary process, whose momenta the horizon’s pixels label; position in cells is one-dimensional; several particles in several planes need a three-dimensional space, not constructed here. The predictions are the previous paper’s: the qubit ceiling, now a random circuit and its inverse failing to return past 205 logical qubits, and constant <math id="m13" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>; it entails no energy-dependent light speed and no intrinsic matter-wave decoherence, unlike collapse models.</p>
+  
+</div>
+<div class="ltx_keywords">Rational quantum mechanics; discrete Hilbert space; finite quantum mechanics; de Sitter horizon; Bell’s theorem
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">I </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A qubit is a point on the Bloch sphere,</p>
+<div class="scrollbox"><table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="|\psi\rangle=\cos\tfrac{\theta}{2}\,|1\rangle+e^{i\phi}\sin\tfrac{\theta}{2}\,%
+|{-1}\rangle," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mstyle displaystyle="false"><mfrac><mi>θ</mi><mn>2</mn></mfrac></mstyle></mrow><mo lspace="0.170em">⁢</mo><mrow><mo stretchy="false">|</mo><mn>1</mn><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mstyle displaystyle="false"><mfrac><mi>θ</mi><mn>2</mn></mfrac></mstyle></mrow><mo lspace="0.170em">⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">⟩</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">and in standard quantum mechanics every point is a state. Rational Quantum Mechanics (RaQM) <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, <a href="#bib.bib2" title="" class="ltx_ref">2</a>, <a href="#bib.bib3" title="" class="ltx_ref">3</a>, <a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> keeps the Schrödinger equation and the Born rule but admits only those points, and only those measurement bases, for which</p>
+<div class="scrollbox"><table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="\cos^{2}\tfrac{\theta}{2}=\frac{m}{L},\qquad\frac{\phi}{2\pi}=\frac{n}{L}," display="block"><mrow><mrow><mrow><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mstyle displaystyle="false"><mfrac><mi>θ</mi><mn>2</mn></mfrac></mstyle></mrow><mo>=</mo><mfrac><mi>m</mi><mi>L</mi></mfrac></mrow><mo rspace="2.167em">,</mo><mrow><mfrac><mi>ϕ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mi>n</mi><mi>L</mi></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">with <math id="S1.p1.m1" class="ltx_Math" alttext="m\in\{0,\dots,L\}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>L</mi><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="S1.p1.m2" class="ltx_Math" alttext="n\in\{0,\dots,L-1\}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>L</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and <math id="S1.p1.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> a large integer. A quantum state is then not a point on a continuum but a mark on a very fine grid, and <math id="S1.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is how fine the grid is. Palmer represents such a state as a string of <math id="S1.p1.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> bits: the fraction of <math id="S1.p1.m6" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> bits is <math id="S1.p1.m7" class="ltx_Math" alttext="\cos^{2}(\theta/2)" display="inline"><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and rotating the string by <math id="S1.p1.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> places is the phase <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. Niven’s theorem <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="" class="ltx_ref">22</a>]</cite> says that <math id="S1.p1.m9" class="ltx_Math" alttext="\cos\alpha" display="inline"><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>α</mi></mrow></math> and <math id="S1.p1.m10" class="ltx_Math" alttext="\alpha/2\pi" display="inline"><mrow><mrow><mi>α</mi><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math> are simultaneously rational only for a handful of angles, so Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) forbids the pair of counterfactual settings a Bell inequality needs, which is Palmer’s Impossible Triangle Corollary, and Bell’s theorem no longer implies nonlocality <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, <a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>. A state of <math id="S1.p1.m11" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> qubits spread across its Hilbert space has <math id="S1.p1.m12" class="ltx_Math" alttext="2^{N}" display="inline"><msup><mn>2</mn><mi>N</mi></msup></math> outcomes, and with probabilities read as frequencies over <math id="S1.p1.m13" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> trials there is a largest <math id="S1.p1.m14" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> for which such a state can be written at all, <math id="S1.p1.m15" class="ltx_Math" alttext="N_{\max}\approx\log_{2}L" display="inline"><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>≈</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>; the bit count <math id="S1.p1.m16" class="ltx_Math" alttext="2^{N+1}-2\leq NL" display="inline"><mrow><mrow><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>2</mn></mrow><mo>≤</mo><mrow><mi>N</mi><mo>⁢</mo><mi>L</mi></mrow></mrow></math>, Eq. (10) of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>, is a weaker condition. In Palmer’s version <math id="S1.p1.m17" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a property of each qubit, set by its mass and energy, and ranges from <math id="S1.p1.m18" class="ltx_Math" alttext="10^{64}" display="inline"><msup><mn>10</mn><mn>64</mn></msup></math> to <math id="S1.p1.m19" class="ltx_Math" alttext="10^{109}" display="inline"><msup><mn>10</mn><mn>109</mn></msup></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">In a previous paper <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> we made two changes and called them axioms: <math id="S1.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a single constant of nature, and one step of quantum phase, <math id="S1.p2.m2" class="ltx_Math" alttext="2\pi/L" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>L</mi></mrow></math>, is one Planck length <math id="S1.p2.m3" class="ltx_Math" alttext="\ell_{P}=\sqrt{\hbar G/c^{3}}" display="inline"><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>=</mo><msqrt><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>/</mo><msup><mi>c</mi><mn>3</mn></msup></mrow></msqrt></mrow></math> on a great circle of the cosmological horizon at <math id="S1.p2.m4" class="ltx_Math" alttext="R_{\Lambda}=\sqrt{3/\Lambda}=1.66\times 10^{26}" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><msqrt><mrow><mn>3</mn><mo>/</mo><mi mathvariant="normal">Λ</mi></mrow></msqrt><mo>=</mo><mrow><mn>1.66</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>26</mn></msup></mrow></mrow></math> m <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib47" title="" class="ltx_ref">47</a>]</cite>,</p>
+<div class="scrollbox"><table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E3.m1" class="ltx_Math" alttext="\ell_{P}=\frac{2\pi R_{\Lambda}}{L}." display="block"><mrow><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mi>L</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">From the two, Newton’s constant follows by Verlinde’s argument <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib44" title="" class="ltx_ref">44</a>]</cite> with the pixel fixed, Einstein’s equations by Jacobson’s <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib27" title="" class="ltx_ref">27</a>]</cite>, rotation curves flatten at <math id="S1.p2.m5" class="ltx_Math" alttext="a_{0}=c^{2}/L\ell_{P}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math>, and <math id="S1.p2.m6" class="ltx_Math" alttext="G\Lambda=12\pi^{2}c^{3}/\hbar L^{2}" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo>=</mo><mrow><mrow><mrow><mn>12</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>3</mn></msup></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mrow></math>. Milgrom’s <math id="S1.p2.m7" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib45" title="" class="ltx_ref">45</a>, <a href="#bib.bib46" title="" class="ltx_ref">46</a>]</cite> gives <math id="S1.p2.m8" class="ltx_Math" alttext="L=4.6\times 10^{61}" display="inline"><mrow><mi>L</mi><mo>=</mo><mrow><mn>4.6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math> and the observed <math id="S1.p2.m9" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> gives <math id="S1.p2.m10" class="ltx_Math" alttext="6.4\times 10^{61}" display="inline"><mrow><mn>6.4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></math>, agreeing to a factor 1.4; both lie below every per-qubit value in Palmer’s range.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S1.E3" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) equates the granularity of two things introduced as separate, Hilbert space and space. This paper shows they are two descriptions of a single process: a string on a dial of <math id="S1.p3.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> notches, turning at the rate its energy dictates, where one notch is a translation by one Planck length and Palmer’s phase step is what that translation does to the slowest wave the dial can hold. Read for a qubit, the rotation is a phase; read for a particle, a translation; for light the two are one thing at every Planck tick. Section <a href="#S2" title="II The Register ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">II</span></a> states the postulate and recovers Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). Section <a href="#S3" title="III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III</span></a> sets the ring in motion; the free dynamics is exact mode by mode in the plane, position in whole cells is one-dimensional, and Sec. <a href="#S3.SS4" title="III.4 Uncertainty and capacity ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.4</span></a> says which states need a three-dimensional space the paper does not construct. Section <a href="#S4" title="IV The Horizon ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">IV</span></a> places the ring on the horizon; Sec. <a href="#S5" title="V Predictions and Falsifiers ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a> states what is predicted and what would falsify it; Sec. <a href="#S6" title="VI What the Placement Costs ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">VI</span></a> states what the placement assumes.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">II </span>The Register</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Postulate.</span> <em class="ltx_emph ltx_font_italic">There is a dial of <math id="S2.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> notches, with <math id="S2.p1.m2" class="ltx_Math" alttext="L\in\mathbb{N}" display="inline"><mrow><mi>L</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> universal and each notch one Planck length long and one Planck time, closing on a great circle of the cosmological horizon. Every qubit is a pattern of marks on it. Turning the dial one notch is a translation by one Planck length; a wave with <math id="S2.p1.m3" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> wavelengths around the dial thereby gains <math id="S2.p1.m4" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> steps of phase, and Palmer’s phase step, <math id="S2.p1.m5" class="ltx_Math" alttext="2\pi/L" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>L</mi></mrow></math>, is the step of the slowest wave, whose wavelength is the circumference.</em></p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">The picture is a clock face with <math id="S2.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> marks. A qubit is a pattern on the face, which can be counted and turned; a wave is a pattern repeating <math id="S2.p2.m2" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> times around it. Advancing the face by one mark moves every wave one Planck length; a pattern with <math id="S2.p2.m3" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> repeats thereby turns through <math id="S2.p2.m4" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> marks of phase, the slowest wave through exactly one, which is Palmer’s unit. Time passing is a different operation: in one Planck tick each component of light moves one mark in its own direction, Sec. <a href="#S3.SS2" title="III.2 Light ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.2</span></a>. We call the notches cells, and the dial with its patterns the register. It is a ring of <math id="S2.p2.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> equal cells with no first cell, and two things can be done with a pattern on it: it can be counted, and it can be shifted by turning the dial; the count is unchanged by a shift and a shift does not depend on the count. Palmer’s bit string is such a pattern, written relative to a measurement basis: one string, one qubit. A free particle needs no clause of its own: quantum mechanics already gives it two-level structure, the right- and left-moving components at each momentum, so its chirality and its modes are patterns on the dial, its position is a distribution over cells, sharp when the pattern occupies one, and its orbital Hilbert space has dimension <math id="S2.p2.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, worth <math id="S2.p2.m7" class="ltx_Math" alttext="\log_{2}L\approx 205" display="inline"><mrow><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo>≈</mo><mn>205</mn></mrow></math> qubits, times two for the chirality of Sec. <a href="#S3.SS3" title="III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.3</span></a>, a general state being a superposition over <math id="S2.p2.m8" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> modes with each mode a Palmer string. The integer <math id="S2.p2.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> therefore plays three roles: the length of Palmer’s string; the number of Planck lengths around a great circle of the horizon, equivalently the number of Planck times light takes to go once around it; and the dimension of a free particle’s orbital Hilbert space. The postulate is that all three are one number, and one symbol is used for that reason. Taken from RaQM are the rationality condition, Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), and the reading of the Born probability as the frequency of marks <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. Taken from quantum mechanics are the Hilbert space and, for matter, the Dirac mass term, Eq. (<a href="#S3.E11" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>); the dynamics of light is the postulate’s own, since a notch is a Planck length and a Planck time and light crosses one per tick, Sec. <a href="#S3.SS2" title="III.2 Light ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.2</span></a>. Assumed are <math id="S2.p2.m10" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math>, <math id="S2.p2.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, and the numerical value of <math id="S2.p2.m12" class="ltx_Math" alttext="\ell_{P}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></math>, from which <math id="S2.p2.m13" class="ltx_Math" alttext="G=\ell_{P}^{2}c^{3}/\hbar" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mrow><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>c</mi><mn>3</mn></msup></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></math> is derived in Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> rather than the reverse.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Read for a qubit, the count is the Born probability. A qubit’s latitude cuts the Bloch sphere into two caps whose fractional areas are <math id="S2.p3.m1" class="ltx_Math" alttext="\cos^{2}(\theta/2)" display="inline"><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S2.p3.m2" class="ltx_Math" alttext="\sin^{2}(\theta/2)" display="inline"><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>; partition the sphere into <math id="S2.p3.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> equal-area bands and a state <math id="S2.p3.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> bands from the <math id="S2.p3.m5" class="ltx_Math" alttext="|{-1}\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">⟩</mo></mrow></math> pole has</p>
+<div class="scrollbox"><table id="S2.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E4.m1" class="ltx_Math" alttext="\cos^{2}\tfrac{\theta}{2}=\frac{m}{L},\qquad\cos\theta=\frac{2m}{L}-1\in%
+\mathbb{Q}," display="block"><mrow><mrow><mrow><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mstyle displaystyle="false"><mfrac><mi>θ</mi><mn>2</mn></mfrac></mstyle></mrow><mo>=</mo><mfrac><mi>m</mi><mi>L</mi></mfrac></mrow><mo rspace="2.167em">,</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mi>L</mi></mfrac><mo>−</mo><mn>1</mn></mrow><mo>∈</mo><mi>ℚ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">since equal areas are equal steps in <math id="S2.p3.m6" class="ltx_Math" alttext="\cos\theta" display="inline"><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></math> by Archimedes’ theorem. The shift is the phase: laid around the equator, one cell is</p>
+<div class="scrollbox"><table id="S2.E5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E5.m1" class="ltx_Math" alttext="\frac{\phi}{2\pi}=\frac{1}{L}," display="block"><mrow><mrow><mfrac><mi>ϕ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>L</mi></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">and Palmer’s operator <math id="S2.p3.m7" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math>, which advances the phase by one step, is the rotation of the string by one place <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>; read on the ring, Sec. <a href="#S3" title="III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III</span></a>, it is what one notch of translation does to the slowest wave, and faster waves gain more. Together these are Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). They do not collide: Niven’s theorem <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="" class="ltx_ref">22</a>, <a href="#bib.bib23" title="" class="ltx_ref">23</a>]</cite> allows <math id="S2.p3.m8" class="ltx_Math" alttext="\cos\alpha" display="inline"><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>α</mi></mrow></math> and <math id="S2.p3.m9" class="ltx_Math" alttext="\alpha/2\pi" display="inline"><mrow><mrow><mi>α</mi><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math> to be simultaneously rational at only eight angles, but the count is a fraction of area and the shift a fraction of arc, and area and arc are incommensurate on a sphere, so the permitted set has of order <math id="S2.p3.m10" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> points. The universal <math id="S2.p3.m11" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is the first axiom of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>, and everything Palmer derives from Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) carries over: the string, Born’s rule as a frequency, the Impossible Triangle Corollary, and the capacity <math id="S2.p3.m12" class="ltx_Math" alttext="N_{\max}" display="inline"><msub><mi>N</mi><mi>max</mi></msub></math>.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">III </span>The Ring in Motion</h2>
+
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">III.1 </span>Evolution and translation</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p">Under the Schrödinger equation the phase of a mode of energy <math id="S3.SS1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> advances by <math id="S3.SS1.p1.m2" class="ltx_Math" alttext="E\,dt/\hbar" display="inline"><mrow><mrow><mi>E</mi><mo lspace="0.170em">⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></math>. Palmer’s <math id="S3.SS1.p1.m3" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> advances it by <math id="S3.SS1.p1.m4" class="ltx_Math" alttext="2\pi/L" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>L</mi></mrow></math>. Schrödinger evolution, in Palmer’s representation, is therefore the string of a mode of energy <math id="S3.SS1.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> rotating at</p>
+<div class="scrollbox"><table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E6.m1" class="ltx_Math" alttext="\dot{n}=\frac{E\,L}{2\pi\hbar}\ \text{steps per second}," display="block"><mrow><mrow><mover accent="true"><mi>n</mi><mo>˙</mo></mover><mo>=</mo><mrow><mfrac><mrow><mi>E</mi><mo lspace="0.170em">⁢</mo><mi>L</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo lspace="0.500em">⁢</mo><mtext>steps per second</mtext></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">and in a superposition each mode’s string turns at its own rate.</p>
+</div>
+<div id="S3.SS1.p2" class="ltx_para">
+<p class="ltx_p">A cell is one Planck length and one Planck time, <math id="S3.SS1.p2.m1" class="ltx_Math" alttext="\ell_{P}=c\,t_{P}" display="inline"><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>=</mo><mrow><mi>c</mi><mo lspace="0.170em">⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow></mrow></math>; the dial has one unit and <math id="S3.SS1.p2.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> converts it. Because a notch is a Planck length, counting notches is measuring position: the state at cell <math id="S3.SS1.p2.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> is at <math id="S3.SS1.p2.m4" class="ltx_Math" alttext="x_{j}=j\ell_{P}" display="inline"><mrow><msub><mi>x</mi><mi>j</mi></msub><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math>, <math id="S3.SS1.p2.m5" class="ltx_Math" alttext="j\in\mathbb{Z}_{L}" display="inline"><mrow><mi>j</mi><mo>∈</mo><msub><mi>ℤ</mi><mi>L</mi></msub></mrow></math>, and turning the dial one notch is the translation</p>
+<div class="scrollbox"><table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E7.m1" class="ltx_Math" alttext="X|j\rangle=|j+1\rangle=e^{-i\hat{p}\,\ell_{P}/\hbar}|j\rangle," display="block"><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>j</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mo>−</mo><mrow><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>j</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">which defines momentum on the ring with no continuum limit: momentum is what generates translation. The eigenstates of <math id="S3.SS1.p2.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> are the plane waves</p>
+<div class="scrollbox"><table id="S3.E8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E8.m1" class="ltx_Math" alttext="|\tilde{\kappa}\rangle=\frac{1}{\sqrt{L}}\sum_{j}e^{2\pi ij\kappa/L}|j\rangle,%
+\qquad p_{\kappa}=\frac{h\,\kappa}{L\ell_{P}}," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>κ</mi><mo>~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mi>L</mi></msqrt></mfrac><mo>⁢</mo><mrow><munder><mo movablelimits="false">∑</mo><mi>j</mi></munder><mrow><msup><mi>e</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>κ</mi></mrow><mo>/</mo><mi>L</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>j</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></mrow></mrow><mo rspace="2.167em">,</mo><mrow><msub><mi>p</mi><mi>κ</mi></msub><mo>=</mo><mfrac><mrow><mi>h</mi><mo lspace="0.170em">⁢</mo><mi>κ</mi></mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">with <math id="S3.SS1.p2.m7" class="ltx_Math" alttext="-L/2&lt;\kappa\leq L/2" display="inline"><mrow><mrow><mo>−</mo><mrow><mi>L</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo>&lt;</mo><mi>κ</mi><mo>≤</mo><mrow><mi>L</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>, whose phase advances by <math id="S3.SS1.p2.m8" class="ltx_Math" alttext="2\pi\kappa/L" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>κ</mi></mrow><mo>/</mo><mi>L</mi></mrow></math> per cell, a permitted phase with <math id="S3.SS1.p2.m9" class="ltx_Math" alttext="n=j\kappa\pmod{L}" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><mi>κ</mi></mrow><mspace width="0.949em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mo lspace="0em" rspace="0.167em">mod</mo><mi>L</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. A wave that fits <math id="S3.SS1.p2.m10" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> times around the ring carries <math id="S3.SS1.p2.m11" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> units of momentum, and the mode <math id="S3.SS1.p2.m12" class="ltx_Math" alttext="\kappa=1" display="inline"><mrow><mi>κ</mi><mo>=</mo><mn>1</mn></mrow></math>, with wavelength <math id="S3.SS1.p2.m13" class="ltx_Math" alttext="L\ell_{P}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math>, is the slowest wave the ring can hold: the smallest momentum in the universe is one wavelength around it. The states whose phase advances by a permitted amount per cell are the momentum eigenstates; the phase step is the momentum quantum <math id="S3.SS1.p2.m14" class="ltx_Math" alttext="h/L\ell_{P}" display="inline"><mrow><mrow><mi>h</mi><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math>; both position and momentum take exactly <math id="S3.SS1.p2.m15" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> values; momentum is bounded at the zone edge <math id="S3.SS1.p2.m16" class="ltx_Math" alttext="\pi\hbar/\ell_{P}" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math>; and the phase-space cell is <math id="S3.SS1.p2.m17" class="ltx_Math" alttext="L\ell_{P}\cdot(2\pi\hbar/\ell_{P})/L=h" display="inline"><mrow><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>L</mi></mrow><mo>=</mo><mi>h</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">III.2 </span>Light</h3>
+
+<div id="S3.SS2.p1" class="ltx_para">
+<p class="ltx_p">For a massless mode <math id="S3.SS2.p1.m1" class="ltx_Math" alttext="E=|p|c" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>p</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow></math>, so by Eq. (<a href="#S3.E8" title="In III.1 Evolution and translation ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>)</p>
+<div class="scrollbox"><table id="S3.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E9.m1" class="ltx_Math" alttext="E_{\kappa}=|\kappa|\,\varepsilon_{0},\qquad\varepsilon_{0}=\frac{hc}{L\ell_{P}%
+}=\frac{2\pi\hbar}{L\,t_{P}}," display="block"><mrow><mrow><mrow><msub><mi>E</mi><mi>κ</mi></msub><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>κ</mi><mo stretchy="false">|</mo></mrow><mo lspace="0.170em">⁢</mo><msub><mi>ε</mi><mn>0</mn></msub></mrow></mrow><mo rspace="2.167em">,</mo><mrow><msub><mi>ε</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mi>h</mi><mo>⁢</mo><mi>c</mi></mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mi>L</mi><mo lspace="0.170em">⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">and the phase advance per tick, <math id="S3.SS2.p1.m2" class="ltx_Math" alttext="E_{\kappa}t_{P}/\hbar=2\pi|\kappa|/L" display="inline"><mrow><mrow><mrow><msub><mi>E</mi><mi>κ</mi></msub><mo>⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>κ</mi><mo stretchy="false">|</mo></mrow></mrow><mo>/</mo><mi>L</mi></mrow></mrow></math>, equals in magnitude the phase change across one cell, so the wave moves one cell per tick in the direction of its momentum. The wave <math id="S3.SS2.p1.m3" class="ltx_Math" alttext="e^{i(kx-\omega t)}" display="inline"><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></math> is invariant under one cell and one tick together. In operator form, <math id="S3.SS2.p1.m4" class="ltx_Math" alttext="U(t_{P})=e^{-iHt_{P}/\hbar}" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>P</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>H</mi><mo>⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></msup></mrow></math> with <math id="S3.SS2.p1.m5" class="ltx_Math" alttext="H=|\hat{p}|c" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow></math> acts as <math id="S3.SS2.p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> on every right-moving mode and <math id="S3.SS2.p1.m7" class="ltx_Math" alttext="X^{-1}" display="inline"><msup><mi>X</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> on every left-moving one: each tick, each component of light advances one cell in its own direction, and a mode with <math id="S3.SS2.p1.m8" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> wavelengths around the ring gains <math id="S3.SS2.p1.m9" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> phase steps in doing so. A massless mode is a permitted state at every tick: its clock and its ruler are the same rotation, and the two axioms are one statement. A superposition of massless modes, a standing wave of light for instance, is also permitted at every tick, because every mode’s phase advances by a permitted amount per tick. A massless mode never reverses direction; the term that reverses direction is the mass term of Sec. <a href="#S3.SS3" title="III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.3</span></a>, and on the register it is the only difference between light and matter.</p>
+</div>
+</section>
+<section id="S3.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">III.3 </span>Matter</h3>
+
+<div id="S3.SS3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.SS3.p1.m1" class="ltx_Math" alttext="|R\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>R</mi><mo stretchy="false">⟩</mo></mrow></math> and <math id="S3.SS3.p1.m2" class="ltx_Math" alttext="|L\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>L</mi><mo stretchy="false">⟩</mo></mrow></math> be the right- and left-moving light-like components, the two chiralities of a particle in one dimension, and write the state (<a href="#S1.E1" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in that basis. The velocity operator is <math id="S3.SS3.p1.m3" class="ltx_Math" alttext="c\sigma_{z}" display="inline"><mrow><mi>c</mi><mo>⁢</mo><msub><mi>σ</mi><mi>z</mi></msub></mrow></math>, and its expectation is</p>
+<div class="scrollbox"><table id="S3.E10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E10.m1" class="ltx_Math" alttext="\langle v\rangle=c\,(P_{R}-P_{L})=c\Big{(}\frac{2m}{L}-1\Big{)}=c\cos\theta." display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mi>c</mi><mo lspace="0.170em">⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>P</mi><mi>R</mi></msub><mo>−</mo><msub><mi>P</mi><mi>L</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mi>L</mi></mfrac><mo>−</mo><mn>1</mn></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>=</mo><mrow><mi>c</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">Palmer’s count sets the velocity: in the string, the <math id="S3.SS3.p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> bits marked <math id="S3.SS3.p1.m5" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> are the right-movers and the <math id="S3.SS3.p1.m6" class="ltx_Math" alttext="L-m" display="inline"><mrow><mi>L</mi><mo>−</mo><mi>m</mi></mrow></math> marked <math id="S3.SS3.p1.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> are the left-movers, the count is the probability of moving right, and the velocity is the excess of right-movers over left-movers in units of <math id="S3.SS3.p1.m8" class="ltx_Math" alttext="c/L" display="inline"><mrow><mi>c</mi><mo>/</mo><mi>L</mi></mrow></math>. This right–left doublet is one qubit per particle, its chirality, the factor of two in a Dirac particle’s Hilbert space that multiplies the <math id="S3.SS3.p1.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>-dimensional orbital space of Sec. <a href="#S3.SS4" title="III.4 Uncertainty and capacity ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.4</span></a>; the components at each momentum are that one qubit resolved momentum by momentum. The poles are light moving right and left. The equator, with <math id="S3.SS3.p1.m10" class="ltx_Math" alttext="|R\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>R</mi><mo stretchy="false">⟩</mo></mrow></math> and <math id="S3.SS3.p1.m11" class="ltx_Math" alttext="|L\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>L</mi><mo stretchy="false">⟩</mo></mrow></math> carrying momenta <math id="S3.SS3.p1.m12" class="ltx_Math" alttext="\pm\kappa" display="inline"><mrow><mo>±</mo><mi>κ</mi></mrow></math>, is a standing wave at rest, the interference pattern of the two components, with maxima every half wavelength; the shift <math id="S3.SS3.p1.m13" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is where those maxima sit, and one shift moves the pattern by one part in <math id="S3.SS3.p1.m14" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> of its period.</p>
+</div>
+<div id="S3.SS3.p2" class="ltx_para">
+<p class="ltx_p">Mass <math id="S3.SS3.p2.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> couples the two chiralities,</p>
+<div class="scrollbox"><table id="S3.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E11.m1" class="ltx_Math" alttext="H=c\,\hat{p}\,\sigma_{z}+Mc^{2}\,\sigma_{x},\qquad E=\pm\sqrt{p^{2}c^{2}+M^{2}%
+c^{4}}," display="block"><mrow><mrow><mrow><mi>H</mi><mo>=</mo><mrow><mrow><mi>c</mi><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi>σ</mi><mi>z</mi></msub></mrow><mo>+</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>σ</mi><mi>x</mi></msub></mrow></mrow></mrow><mo rspace="2.167em">,</mo><mrow><mi>E</mi><mo>=</mo><mrow><mo>±</mo><msqrt><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msup><mi>M</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>4</mn></msup></mrow></mrow></msqrt></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">the Dirac equation in one dimension, in which the mass term mixes the two chiralities at each momentum and the eigenstate has <math id="S3.SS3.p2.m2" class="ltx_Math" alttext="\cos\theta=pc/E=v/c" display="inline"><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>=</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>c</mi></mrow><mo>/</mo><mi>E</mi></mrow><mo>=</mo><mrow><mi>v</mi><mo>/</mo><mi>c</mi></mrow></mrow></math>. The <math id="S3.SS3.p2.m3" class="ltx_Math" alttext="\sigma_{x}" display="inline"><msub><mi>σ</mi><mi>x</mi></msub></math> term reverses a quantum’s direction, with angle per tick</p>
+<div class="scrollbox"><table id="S3.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E12.m1" class="ltx_Math" alttext="\frac{Mc^{2}\,t_{P}}{\hbar}=\frac{M}{m_{P}}," display="block"><mrow><mrow><mfrac><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>=</mo><mfrac><mi>M</mi><msub><mi>m</mi><mi>P</mi></msub></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p"><math id="S3.SS3.p2.m4" class="ltx_Math" alttext="4\times 10^{-23}" display="inline"><mrow><mn>4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup></mrow></math> for an electron, one radian per Compton time <math id="S3.SS3.p2.m5" class="ltx_Math" alttext="\hbar/Mc^{2}" display="inline"><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>/</mo><mi>M</mi></mrow><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>. A massive particle at rest is light of Compton wavelength running right and left in equal measure, a right-mover becoming a left-mover in a quarter Compton period and back in the next; its rest energy is that of the trapped light. The lattice form of this construction, a particle moving at <math id="S3.SS3.p2.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> on a spacetime lattice and reversing with amplitude proportional to <math id="S3.SS3.p2.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> per step, is Feynman’s checkerboard <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>, <a href="#bib.bib13" title="" class="ltx_ref">13</a>, <a href="#bib.bib14" title="" class="ltx_ref">14</a>]</cite>, whose continuum limit is the Dirac equation; the register is the checkerboard with the spacing set to <math id="S3.SS3.p2.m8" class="ltx_Math" alttext="\ell_{P}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></math>. In operator form the tick with mass is</p>
+<div class="scrollbox"><table id="S3.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E13.m1" class="ltx_Math" alttext="U(t_{P})=e^{-i(M/m_{P})\sigma_{x}}\,X^{\sigma_{z}}," display="block"><mrow><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>P</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>M</mi><mo>/</mo><msub><mi>m</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>σ</mi><mi>x</mi></msub></mrow></mrow></msup><mo>⁢</mo><msup><mi>X</mi><msub><mi>σ</mi><mi>z</mi></msub></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">the massless tick of Sec. <a href="#S3.SS2" title="III.2 Light ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.2</span></a> followed by the reversal of Eq. (<a href="#S3.E12" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12</span></a>). For <math id="S3.SS3.p2.m9" class="ltx_Math" alttext="p\ell_{P}\ll\hbar" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>≪</mo><mi mathvariant="normal">ℏ</mi></mrow></math> and <math id="S3.SS3.p2.m10" class="ltx_Math" alttext="M\ll m_{P}" display="inline"><mrow><mi>M</mi><mo>≪</mo><msub><mi>m</mi><mi>P</mi></msub></mrow></math> it is <math id="S3.SS3.p2.m11" class="ltx_Math" alttext="1-(it_{P}/\hbar)(c\hat{p}\sigma_{z}+Mc^{2}\sigma_{x})" display="inline"><mrow><mn>1</mn><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi>σ</mi><mi>z</mi></msub></mrow><mo>+</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>σ</mi><mi>x</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which is Eq. (<a href="#S3.E11" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>); its exact eigenphases obey</p>
+<div class="scrollbox"><table id="S3.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E14.m1" class="ltx_Math" alttext="\cos\!\Big{(}\frac{E\,t_{P}}{\hbar}\Big{)}=\cos\!\Big{(}\frac{Mc^{2}\,t_{P}}{%
+\hbar}\Big{)}\cos\!\Big{(}\frac{p\,\ell_{P}}{\hbar}\Big{)}," display="block"><mrow><mrow><mrow><mpadded width="1.216em"><mi>cos</mi></mpadded><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>E</mi><mo lspace="0.170em">⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mpadded width="1.216em"><mi>cos</mi></mpadded><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mpadded width="1.216em"><mi>cos</mi></mpadded><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>p</mi><mo lspace="0.170em">⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">which is <math id="S3.SS3.p2.m12" class="ltx_Math" alttext="E=|p|c" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>p</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow></math> for <math id="S3.SS3.p2.m13" class="ltx_Math" alttext="M=0" display="inline"><mrow><mi>M</mi><mo>=</mo><mn>0</mn></mrow></math> at every momentum, and Sec. <a href="#S5" title="V Predictions and Falsifiers ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a> gives its expansion for matter.</p>
+</div>
+<div id="S3.SS3.p3" class="ltx_para">
+<p class="ltx_p">Two consequences follow. First, matter is a permitted state only at intervals. Under Eq. (<a href="#S3.E11" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>) the right–left qubit of a state of definite momentum turns about the axis <math id="S3.SS3.p3.m1" class="ltx_Math" alttext="\hat{n}=(Mc^{2},0,pc)/E" display="inline"><mrow><mover accent="true"><mi>n</mi><mo>^</mo></mover><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mrow><mi>p</mi><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mi>E</mi></mrow></mrow></math> of the Bloch sphere, the <math id="S3.SS3.p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis at rest, at the rate <math id="S3.SS3.p3.m3" class="ltx_Math" alttext="2E/\hbar" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></math>. The grid of Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), rational <math id="S3.SS3.p3.m4" class="ltx_Math" alttext="\cos\theta" display="inline"><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></math> and rational <math id="S3.SS3.p3.m5" class="ltx_Math" alttext="\phi/2\pi" display="inline"><mrow><mrow><mi>ϕ</mi><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math>, is invariant under rotations about <math id="S3.SS3.p3.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> by permitted angles and under rotations by <math id="S3.SS3.p3.m7" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> about equatorial axes at permitted azimuths, which send <math id="S3.SS3.p3.m8" class="ltx_Math" alttext="(\theta,\phi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></math> to <math id="S3.SS3.p3.m9" class="ltx_Math" alttext="(\pi-\theta,2\alpha-\phi)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>π</mi><mo>−</mo><mi>θ</mi></mrow><mo>,</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>α</mi></mrow><mo>−</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></math>, and not under a rotation about <math id="S3.SS3.p3.m10" class="ltx_Math" alttext="\hat{n}" display="inline"><mover accent="true"><mi>n</mi><mo>^</mo></mover></math> by a general angle. One tick of the mass term therefore takes a permitted right–left superposition off the grid. At rest <math id="S3.SS3.p3.m11" class="ltx_Math" alttext="\hat{n}" display="inline"><mover accent="true"><mi>n</mi><mo>^</mo></mover></math> is equatorial and the state is permitted again once the Bloch vector has turned by <math id="S3.SS3.p3.m12" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, after <math id="S3.SS3.p3.m13" class="ltx_Math" alttext="\pi\hbar/2Mc^{2}" display="inline"><mrow><mrow><mrow><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></math>, a quarter Compton period, which is the time for a right-mover to become a left-mover; the register catches matter the way a stroboscope catches a wheel, only at the instants a spoke is at the mark. In motion <math id="S3.SS3.p3.m14" class="ltx_Math" alttext="\hat{n}" display="inline"><mover accent="true"><mi>n</mi><mo>^</mo></mover></math> tilts out of the equator, the half-turn lands off the grid, and the return waits for the full turn, <math id="S3.SS3.p3.m15" class="ltx_Math" alttext="\pi\hbar/E" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>/</mo><mi>E</mi></mrow></math>. A superposition of momenta is permitted again as a whole only if its spectrum is commensurate, which the register’s own dispersion, Eq. (<a href="#S3.E14" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>), is not, apart from exceptional momenta: a wave packet of matter never returns to the grid as a whole, each component returning at its own time. In the nonrelativistic limit, <math id="S3.SS3.p3.m16" class="ltx_Math" alttext="\hat{p}^{2}/2M" display="inline"><mrow><mrow><msup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mn>2</mn></msup><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>M</mi></mrow></math> on the ring, the spectrum is commensurate and every phase is again a permitted step after <math id="S3.SS3.p3.m17" class="ltx_Math" alttext="ML\ell_{P}^{2}/\pi\hbar" display="inline"><mrow><mrow><mrow><mi>M</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow><mo>/</mo><mi>π</mi></mrow><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></math>, <math id="S3.SS3.p3.m18" class="ltx_Math" alttext="4.6\times 10^{-5}" display="inline"><mrow><mn>4.6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow></math> s for an electron; a nearest-neighbor hopping dispersion never returns at all, by Niven’s theorem. The zone-edge speed of Sec. <a href="#S5" title="V Predictions and Falsifiers ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a> uses the continuum dispersion, from which Eq. (<a href="#S3.E14" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>) differs by a term of relative order <math id="S3.SS3.p3.m19" class="ltx_Math" alttext="(Mc^{2}/E_{P})^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>/</mo><msub><mi>E</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>.</p>
+</div>
+<div id="S3.SS3.p4" class="ltx_para">
+<p class="ltx_p">None of this touches <math id="S3.SS3.p4.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>: the momentum quantum, the zone edge, and <math id="S3.SS3.p4.m2" class="ltx_Math" alttext="\varepsilon_{0}" display="inline"><msub><mi>ε</mi><mn>0</mn></msub></math> are kinematic statements about the ring; the capacity follows from Born’s rule; all are the same for every dispersion; and <math id="S3.SS3.p4.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> itself is frame-independent because every observer’s horizon has the same radius. What the register does not settle is the Lorentz invariance of the lattice: a lattice of cells picks out a frame, the checkerboard recovers Lorentz invariance only in its continuum limit, and Palmer defers the question to future work <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>. Second, the global phase of a massive mode runs at <math id="S3.SS3.p4.m4" class="ltx_Math" alttext="Mc^{2}/\hbar" display="inline"><mrow><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow></math>, which is <math id="S3.SS3.p4.m5" class="ltx_Math" alttext="McL\ell_{P}/2\pi\hbar\approx 4\times 10^{38}" display="inline"><mrow><mrow><mrow><mrow><mi>M</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>≈</mo><mrow><mn>4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>38</mn></msup></mrow></mrow></math> steps per tick for an electron. That rate is not itself the obstacle; a photon of Compton momentum has the same phase rate and moves one cell per tick. The obstacle is that a global phase has no gradient: it advances by the same amount at every cell, so it displaces nothing. In Palmer’s construction the global phase is <math id="S3.SS3.p4.m6" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math>, a permutation fixed at creation and hidden <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>. The register says why it must be: <math id="S3.SS3.p4.m7" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> is the part of the rotation that is not motion, the particle’s internal clock, and a uniform phase is invisible to every relational observable.</p>
+</div>
+</section>
+<section id="S3.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">III.4 </span>Uncertainty and capacity</h3>
+
+<div id="S3.SS4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.SS4.p1.m1" class="ltx_Math" alttext="Z|j\rangle=e^{2\pi ij/L}|j\rangle" display="inline"><mrow><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>j</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>/</mo><mi>L</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>j</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></math>. Then <math id="S3.SS4.p1.m2" class="ltx_Math" alttext="ZX=e^{2\pi i/L}XZ" display="inline"><mrow><mrow><mi>Z</mi><mo>⁢</mo><mi>X</mi></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow><mo>/</mo><mi>L</mi></mrow></msup><mo>⁢</mo><mi>X</mi><mo>⁢</mo><mi>Z</mi></mrow></mrow></math>, the finite Weyl relation, and Eqs. (<a href="#S3.E7" title="In III.1 Evolution and translation ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>)–(<a href="#S3.E8" title="In III.1 Evolution and translation ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>) are Schwinger’s finite quantum mechanics on <math id="S3.SS4.p1.m3" class="ltx_Math" alttext="\mathbb{Z}_{L}" display="inline"><msub><mi>ℤ</mi><mi>L</mi></msub></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>, <a href="#bib.bib8" title="" class="ltx_ref">8</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>]</cite>. A state on <math id="S3.SS4.p1.m4" class="ltx_Math" alttext="N_{x}" display="inline"><msub><mi>N</mi><mi>x</mi></msub></math> cells occupies at least <math id="S3.SS4.p1.m5" class="ltx_Math" alttext="L/N_{x}" display="inline"><mrow><mi>L</mi><mo>/</mo><msub><mi>N</mi><mi>x</mi></msub></mrow></math> momenta <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite>, so <math id="S3.SS4.p1.m6" class="ltx_Math" alttext="\Delta x\,\Delta p\geq(N_{x}\ell_{P})\cdot(L/N_{x})(2\pi\hbar/L\ell_{P})=h" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi><mo lspace="0.170em">⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow><mo>≥</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>N</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>/</mo><msub><mi>N</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>h</mi></mrow></math>, and in variance form it is <math id="S3.SS4.p1.m7" class="ltx_Math" alttext="\hbar/2" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>/</mo><mn>2</mn></mrow></math> for <math id="S3.SS4.p1.m8" class="ltx_Math" alttext="\ell_{P}\ll\sigma\ll L\ell_{P}" display="inline"><mrow><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub><mo>≪</mo><mi>σ</mi><mo>≪</mo><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>. Palmer reaches the same bound by averaging the spin relation over points uniform in <math id="S3.SS4.p1.m9" class="ltx_Math" alttext="\cos\theta" display="inline"><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>; that measure is the count, this bound comes from the shift, and the two derivations are the register’s two operations applied to one relation.</p>
+</div>
+<div id="S3.SS4.p2" class="ltx_para">
+<p class="ltx_p">The ring’s orbital Hilbert space has dimension <math id="S3.SS4.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. The capacity of the register follows from Born’s rule as a frequency. A state of <math id="S3.SS4.p2.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> qubits that spans its Hilbert space has <math id="S3.SS4.p2.m3" class="ltx_Math" alttext="2^{N}" display="inline"><msup><mn>2</mn><mi>N</mi></msup></math> joint outcomes with nonzero probability; each probability is a frequency over the <math id="S3.SS4.p2.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> trials, hence at least <math id="S3.SS4.p2.m5" class="ltx_Math" alttext="1/L" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>L</mi></mrow></math>; and they sum to one. A poll of <math id="S3.SS4.p2.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> respondents cannot register more than <math id="S3.SS4.p2.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> answers. Therefore</p>
+<div class="scrollbox"><table id="S3.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E15.m1" class="ltx_Math" alttext="2^{N}\leq L,\qquad N_{\max}=\lfloor\log_{2}L\rfloor," display="block"><mrow><mrow><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>≤</mo><mi>L</mi></mrow><mo rspace="2.167em">,</mo><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>=</mo><mrow><mo stretchy="false">⌊</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo stretchy="false">⌋</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">205 at <math id="S3.SS4.p2.m8" class="ltx_Math" alttext="L_{\rm cos}" display="inline"><msub><mi>L</mi><mi>cos</mi></msub></math> and 204 at <math id="S3.SS4.p2.m9" class="ltx_Math" alttext="L_{\rm gal}" display="inline"><msub><mi>L</mi><mi>gal</mi></msub></math>. This is Palmer’s <math id="S3.SS4.p2.m10" class="ltx_Math" alttext="\log_{2}L" display="inline"><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>, and it is exact: no encoding evades it while probabilities are frequencies over <math id="S3.SS4.p2.m11" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> trials, because it bounds the number of independent probabilities the trials can resolve rather than the number of bits. What the <math id="S3.SS4.p2.m12" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> trials must resolve is the joint distribution’s information beyond its marginals. A product state factorizes: its strings are independent patterns, its <math id="S3.SS4.p2.m13" class="ltx_Math" alttext="2^{N}" display="inline"><msup><mn>2</mn><mi>N</mi></msup></math> joint probabilities are fixed by <math id="S3.SS4.p2.m14" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> marginals, and nothing beyond the marginals has to be resolved; it is unconstrained at any <math id="S3.SS4.p2.m15" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>, as <math id="S3.SS4.p2.m16" class="ltx_Math" alttext="|{+}\rangle^{\otimes N}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mo lspace="0em" rspace="0em">+</mo><mo stretchy="false">⟩</mo></mrow><mrow><mi></mi><mo lspace="0.222em" rspace="0.222em">⊗</mo><mi>N</mi></mrow></msup></math> had better be. The bound is on the number of independently specified joint probabilities, which is <math id="S3.SS4.p2.m17" class="ltx_Math" alttext="2^{N}-1" display="inline"><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>−</mo><mn>1</mn></mrow></math> for a Haar-random state and far below <math id="S3.SS4.p2.m18" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> for a product state, a stabilizer state, a Slater determinant, a condensate, a nucleus, or a crystal, which is why the register limits neither how much matter exists nor the size of a fault-tolerant code; and Poulin, Qarry, Somma, and Verstraete have shown that the states reachable from a product state in polynomial time under any local Hamiltonian occupy an exponentially small volume of Hilbert space <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="" class="ltx_ref">21</a>]</cite>, so no natural process approaches the bound. Only a state deliberately spread across its Hilbert space meets it. Palmer’s bit count, <math id="S3.SS4.p2.m19" class="ltx_Math" alttext="2^{N+1}-2\leq NL" display="inline"><mrow><mrow><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>2</mn></mrow><mo>≤</mo><mrow><mi>N</mi><mo>⁢</mo><mi>L</mi></mrow></mrow></math>, counts real parameters against bits and gives 212 at <math id="S3.SS4.p2.m20" class="ltx_Math" alttext="L_{\rm cos}" display="inline"><msub><mi>L</mi><mi>cos</mi></msub></math>; it is a weaker necessary condition, the point at which the representation has one bit per parameter, and it never binds for a spanning state. Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> gave <math id="S3.SS4.p2.m21" class="ltx_Math" alttext="N_{\max}\approx 205" display="inline"><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>≈</mo><mn>205</mn></mrow></math> from <math id="S3.SS4.p2.m22" class="ltx_Math" alttext="\log_{2}L" display="inline"><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow></math> and quoted the prediction as about 200; it also called the bit count Palmer’s exact criterion, evaluated it to 212, and inverted a measured <math id="S3.SS4.p2.m23" class="ltx_Math" alttext="N_{\max}" display="inline"><msub><mi>N</mi><mi>max</mi></msub></math> into <math id="S3.SS4.p2.m24" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> through it. The exact criterion is Eq. (<a href="#S3.E15" title="In III.4 Uncertainty and capacity ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">15</span></a>): the 205 stands, the 212 does not, and the inversion keeps its form, since <math id="S3.SS4.p2.m25" class="ltx_Math" alttext="2^{N}\leq L" display="inline"><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>≤</mo><mi>L</mi></mrow></math> brackets <math id="S3.SS4.p2.m26" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> within a factor two, so the observed <math id="S3.SS4.p2.m27" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> corresponds to <math id="S3.SS4.p2.m28" class="ltx_Math" alttext="N_{\max}=205" display="inline"><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>=</mo><mn>205</mn></mrow></math> and a count of 204 or 206 would return <math id="S3.SS4.p2.m29" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> four times off. The threshold is soft in the way Palmer describes <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>: in his nested construction the last of <math id="S3.SS4.p2.m30" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> strings holds <math id="S3.SS4.p2.m31" class="ltx_Math" alttext="2^{N-1}" display="inline"><msup><mn>2</mn><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msup></math> segments of length <math id="S3.SS4.p2.m32" class="ltx_Math" alttext="s=L/2^{N-1}" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mi>L</mi><mo>/</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, each conditional parameter is resolved to one part in <math id="S3.SS4.p2.m33" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>, and when one mover elsewhere advances every segment boundary moves, so a fraction <math id="S3.SS4.p2.m34" class="ltx_Math" alttext="1/s" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>s</mi></mrow></math> of that string must be rewritten per tick to keep the other qubits’ reduced states fixed. Equation (<a href="#S3.E15" title="In III.4 Uncertainty and capacity ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">15</span></a>) makes the identification of Sec. <a href="#S2" title="II The Register ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">II</span></a> exact to a factor <math id="S3.SS4.p2.m35" class="ltx_Math" alttext="2^{0.27}=1.2" display="inline"><mrow><msup><mn>2</mn><mn>0.27</mn></msup><mo>=</mo><mn>1.2</mn></mrow></math> at <math id="S3.SS4.p2.m36" class="ltx_Math" alttext="L_{\rm cos}" display="inline"><msub><mi>L</mi><mi>cos</mi></msub></math>: the state space of one free particle on the ring, dimension <math id="S3.SS4.p2.m37" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, and the largest Hilbert space a spanning state can occupy, <math id="S3.SS4.p2.m38" class="ltx_Math" alttext="2^{N_{\max}}" display="inline"><msup><mn>2</mn><msub><mi>N</mi><mi>max</mi></msub></msup></math>, are one number counted two ways, and since the count is of outcomes and not of the physical systems that produce them, the ceiling applies to bosonic modes as to qubits.</p>
+</div>
+<div id="S3.SS4.p3" class="ltx_para">
+<p class="ltx_p">The two-mode results hold in any number of dimensions, since a superposition of <math id="S3.SS4.p3.m1" class="ltx_Math" alttext="\mathbf{k}_{1}" display="inline"><msub><mi>𝐤</mi><mn>1</mn></msub></math> and <math id="S3.SS4.p3.m2" class="ltx_Math" alttext="\mathbf{k}_{2}" display="inline"><msub><mi>𝐤</mi><mn>2</mn></msub></math> depends on position only through <math id="S3.SS4.p3.m3" class="ltx_Math" alttext="\Delta\mathbf{k}\cdot\mathbf{x}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝐱</mi></mrow></math>, and the translation reading holds as written for collinear modes. Beyond that the free dynamics is planar and exact in the mode basis: a planar mode, labeled by its magnitude <math id="S3.SS4.p3.m4" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> and its direction, advances <math id="S3.SS4.p3.m5" class="ltx_Math" alttext="|\kappa|" display="inline"><mrow><mo stretchy="false">|</mo><mi>κ</mi><mo stretchy="false">|</mo></mrow></math> phase steps per tick whatever its direction, so a wave moves one Planck length along its own <math id="S3.SS4.p3.m6" class="ltx_Math" alttext="\hat{\mathbf{k}}" display="inline"><mover accent="true"><mi>𝐤</mi><mo>^</mo></mover></math> per tick, and a massive mode along <math id="S3.SS4.p3.m7" class="ltx_Math" alttext="\hat{\mathbf{k}}" display="inline"><mover accent="true"><mi>𝐤</mi><mo>^</mo></mover></math> carries its right–left doublet along <math id="S3.SS4.p3.m8" class="ltx_Math" alttext="\hat{\mathbf{k}}" display="inline"><mover accent="true"><mi>𝐤</mi><mo>^</mo></mover></math> and obeys Sec. <a href="#S3.SS3" title="III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.3</span></a> in that direction. The two-mode dictionary of Sec. <a href="#S3.SS3" title="III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.3</span></a> holds for any pair of modes in any dimension: the count is the probability of one mode, and one shift moves their interference pattern by one part in <math id="S3.SS4.p3.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> of its period along <math id="S3.SS4.p3.m10" class="ltx_Math" alttext="\hat{\Delta\mathbf{k}}" display="inline"><mover accent="true"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo>^</mo></mover></math>. What is one-dimensional is only the whole-cell version of that reading: one shift is one cell when <math id="S3.SS4.p3.m11" class="ltx_Math" alttext="|\Delta\mathbf{k}|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>𝐤</mi></mrow><mo stretchy="false">|</mo></mrow></math> is a multiple of <math id="S3.SS4.p3.m12" class="ltx_Math" alttext="2\pi/L\ell_{P}" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math>, which it always is along the ring and, Pythagorean pairs aside, is not for non-collinear modes. Every elementary process is planar: two colliding momenta span a plane, a vertex’s three momenta sum to zero in the center-of-mass frame and lie in one, and a boost within the plane keeps them there. A planar momentum is a ring mode for its magnitude and a point on one great circle for its direction, <math id="S3.SS4.p3.m13" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> labels, and the horizon has <math id="S3.SS4.p3.m14" class="ltx_Math" alttext="L^{2}/\pi" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mi>π</mi></mrow></math> pixels; to within <math id="S3.SS4.p3.m15" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> the horizon as it stands labels the momenta of every elementary process. A state of several particles in several planes needs of order <math id="S3.SS4.p3.m16" class="ltx_Math" alttext="L^{3}" display="inline"><msup><mi>L</mi><mn>3</mn></msup></math> labels, and its Hilbert space is bounded by the horizon’s log-dimension <math id="S3.SS4.p3.m17" class="ltx_Math" alttext="L^{2}/4\pi" display="inline"><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math>; how such a bulk state is written on the horizon is the open problem of de Sitter holography <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="" class="ltx_ref">25</a>, <a href="#bib.bib40" title="" class="ltx_ref">40</a>, <a href="#bib.bib41" title="" class="ltx_ref">41</a>]</cite>, which this paper does not address; interactions are constructed in no dimension. Gravity is untouched: the Jacobson and Verlinde routes of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> need only the pixel on every screen, never a state.</p>
+</div>
+</section>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">IV </span>The Horizon</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">The ring has circumference <math id="S4.p1.m1" class="ltx_Math" alttext="L\ell_{P}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math> and radius <math id="S4.p1.m2" class="ltx_Math" alttext="L\ell_{P}/2\pi" display="inline"><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math>, and the postulate places it on a great circle of the cosmological horizon,</p>
+<div class="scrollbox"><table id="S4.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E16.m1" class="ltx_Math" alttext="R_{\Lambda}=\frac{L\ell_{P}}{2\pi},\qquad\Lambda=\frac{3}{R_{\Lambda}^{2}}=%
+\frac{12\pi^{2}}{L^{2}\ell_{P}^{2}}," display="block"><mrow><mrow><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mfrac><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mrow><mo rspace="2.167em">,</mo><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mfrac><mn>3</mn><msubsup><mi>R</mi><mi mathvariant="normal">Λ</mi><mn>2</mn></msubsup></mfrac><mo>=</mo><mfrac><mrow><mn>12</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup></mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">which is Eq. (<a href="#S1.E3" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) rearranged and the second axiom of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>. It is not derived here, and the identification is one of structure, the same <math id="S4.p1.m3" class="ltx_Math" alttext="\mathbb{Z}_{L}" display="inline"><msub><mi>ℤ</mi><mi>L</mi></msub></math> under a qubit’s phase and a horizon great circle; we do not claim a laboratory spin’s azimuth is a place on the sky. What the ring adds is the axiom’s content: Sec. <a href="#S3" title="III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III</span></a> showed the circumference to be the longest wavelength a free particle can carry, so the second axiom reads, the longest wavelength available to a free particle is the circumference of the cosmological horizon. The momentum quantum is <math id="S4.p1.m4" class="ltx_Math" alttext="\hbar/R_{\Lambda}=6.4\times 10^{-61}" display="inline"><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>/</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>=</mo><mrow><mn>6.4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>61</mn></mrow></msup></mrow></mrow></math> kg m s<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">-1</span></sup> and the energy quantum <math id="S4.p1.m6" class="ltx_Math" alttext="\varepsilon_{0}=\hbar c/R_{\Lambda}=1.2\times 10^{-33}" display="inline"><mrow><msub><mi>ε</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>c</mi></mrow><mo>/</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>=</mo><mrow><mn>1.2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>33</mn></mrow></msup></mrow></mrow></math> eV, which is <math id="S4.p1.m7" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> divided by the lap time <math id="S4.p1.m8" class="ltx_Math" alttext="Lt_{P}=2\pi R_{\Lambda}/c=3.5\times 10^{18}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi>t</mi><mi>P</mi></msub></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>/</mo><mi>c</mi></mrow><mo>=</mo><mrow><mn>3.5</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>18</mn></msup></mrow></mrow></math> s and <math id="S4.p1.m9" class="ltx_Math" alttext="2\pi k_{B}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>k</mi><mi>B</mi></msub></mrow></math> times the Gibbons–Hawking temperature <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib43" title="" class="ltx_ref">43</a>]</cite>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">The two determinations of <math id="S4.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> are the two scales on which this ring appears: from the horizon, <math id="S4.p2.m2" class="ltx_Math" alttext="2\pi R_{\Lambda}/\ell_{P}=6.4\times 10^{61}" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>=</mo><mrow><mn>6.4</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math>; from galaxies, <math id="S4.p2.m3" class="ltx_Math" alttext="c^{2}/a_{0}\ell_{P}=4.6\times 10^{61}" display="inline"><mrow><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>=</mo><mrow><mn>4.6</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>61</mn></msup></mrow></mrow></math> using <math id="S4.p2.m4" class="ltx_Math" alttext="a_{0}=c^{2}/L\ell_{P}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><mi>L</mi></mrow><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></mrow></math> of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>. Only the product <math id="S4.p2.m5" class="ltx_Math" alttext="L\ell_{P}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math> enters <math id="S4.p2.m6" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>, so their agreement to 1.4 is Milgrom’s <math id="S4.p2.m7" class="ltx_Math" alttext="a_{0}\approx c^{2}/2\pi R_{\Lambda}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>≈</mo><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow></mrow></math> restated; a derivation of <math id="S4.p2.m8" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> from the ring alone would make the placement a prediction, and we do not have one.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">The horizon has <math id="S4.p3.m1" class="ltx_Math" alttext="A/\ell_{P}^{2}=L^{2}/\pi" display="inline"><mrow><mrow><mi>A</mi><mo>/</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow><mo>=</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mi>π</mi></mrow></mrow></math> pixels, a register being the <math id="S4.p3.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> along one great circle, and its Bekenstein–Hawking entropy <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib42" title="" class="ltx_ref">42</a>]</cite> is</p>
+<div class="scrollbox"><table id="S4.E17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E17.m1" class="ltx_Math" alttext="\frac{S}{k_{B}}=\frac{A}{4\ell_{P}^{2}}=\frac{L^{2}}{4\pi}=3.3\times 10^{122}," display="block"><mrow><mrow><mfrac><mi>S</mi><msub><mi>k</mi><mi>B</mi></msub></mfrac><mo>=</mo><mfrac><mi>A</mi><mrow><mn>4</mn><mo>⁢</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow></mfrac><mo>=</mo><mfrac><msup><mi>L</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo>=</mo><mrow><mn>3.3</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>122</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">the value of Bousso’s <math id="S4.p3.m3" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>-bound <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="" class="ltx_ref">24</a>, <a href="#bib.bib26" title="" class="ltx_ref">26</a>]</cite>, which is the empty de Sitter horizon entropy written as <math id="S4.p3.m4" class="ltx_Math" alttext="\pi R_{\Lambda}^{2}/\ell_{P}^{2}" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><msubsup><mi>R</mi><mi mathvariant="normal">Λ</mi><mn>2</mn></msubsup></mrow><mo>/</mo><msubsup><mi mathvariant="normal">ℓ</mi><mi>P</mi><mn>2</mn></msubsup></mrow></math>. Equation (<a href="#S4.E17" title="In IV The Horizon ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">17</span></a>) is that number with <math id="S4.p3.m5" class="ltx_Math" alttext="R_{\Lambda}=L\ell_{P}/2\pi" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></mrow></math>, an identity and not a derivation; what the register adds is that the integer fixing the log-dimension of a static patch is the <math id="S4.p3.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> that governs the qubit, Banks’ proposal that positive <math id="S4.p3.m7" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> and a finite Hilbert space go together <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="" class="ltx_ref">30</a>]</cite> with its integer named.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">V </span>Predictions and Falsifiers</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">The register inherits the predictions of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>, corrects one criterion, and adds no test.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Inherited.</span> The two predictions of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> stand, since this paper rests on the same <math id="S5.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. First, no physical state has more than <math id="S5.p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> independently specified outcome probabilities, Eq. (<a href="#S3.E15" title="In III.4 Uncertainty and capacity ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">15</span></a>), a ceiling of about 200 usefully entangled qubits, which Sec. <a href="#S3.SS4" title="III.4 Uncertainty and capacity ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.4</span></a> fixes at <math id="S5.p2.m3" class="ltx_Math" alttext="N_{\max}=205" display="inline"><mrow><msub><mi>N</mi><mi>max</mi></msub><mo>=</mo><mn>205</mn></mrow></math> at <math id="S5.p2.m4" class="ltx_Math" alttext="L_{\rm cos}" display="inline"><msub><mi>L</mi><mi>cos</mi></msub></math>, the <math id="S5.p2.m5" class="ltx_Math" alttext="\log_{2}L" display="inline"><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow></math> of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>, in place of the 212 it called exact, and extends from qubits to any physical realization, <math id="S5.p2.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> bosonic modes with photon-number cutoff <math id="S5.p2.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> reaching it at <math id="S5.p2.m8" class="ltx_Math" alttext="n^{M}\approx L" display="inline"><mrow><msup><mi>n</mi><mi>M</mi></msup><mo>≈</mo><mi>L</mi></mrow></math>. Operationally: a random circuit on <math id="S5.p2.m9" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> fault-tolerant logical qubits followed by its inverse returns to the initial state, in standard quantum mechanics, with the gate fidelity; on the register the return probability falls to about <math id="S5.p2.m10" class="ltx_Math" alttext="(L/2^{N})^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>/</mo><msup><mn>2</mn><mi>N</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math> for <math id="S5.p2.m11" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> beyond <math id="S5.p2.m12" class="ltx_Math" alttext="\lfloor\log_{2}L\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo stretchy="false">⌋</mo></mrow></math>, since the intermediate state has <math id="S5.p2.m13" class="ltx_Math" alttext="2^{N}" display="inline"><msup><mn>2</mn><mi>N</mi></msup></math> independent amplitudes and the register holds <math id="S5.p2.m14" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, while the same circuit built from Clifford gates, whose intermediate states have polynomially many, returns at any <math id="S5.p2.m15" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>. The test needs no classical simulation, only the check of a return; no such machine exists. Second, <math id="S5.p2.m16" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is constant, so the dark-energy equation of state is <math id="S5.p2.m17" class="ltx_Math" alttext="w=-1" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math> exactly, against the DESI DR2 preference for evolving dark energy <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib36" title="" class="ltx_ref">36</a>]</cite>, which the framework predicts will not survive.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Definite, but not discriminating.</span> Momentum is quantized in units of <math id="S5.p3.m1" class="ltx_Math" alttext="\hbar/R_{\Lambda}" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>/</mo><msub><mi>R</mi><mi mathvariant="normal">Λ</mi></msub></mrow></math> and bounded at <math id="S5.p3.m2" class="ltx_Math" alttext="\pi\hbar/\ell_{P}" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow></math>; light is permitted at every Planck tick and matter of definite momentum every quarter Compton period at rest; a Bell test on any two-mode subspace of a free particle is subject to Palmer’s Impossible Triangle Corollary; and the maximum speed of a particle of mass <math id="S5.p3.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is <math id="S5.p3.m4" class="ltx_Math" alttext="c/\sqrt{1+(M/\pi m_{P})^{2}}" display="inline"><mrow><mi>c</mi><mo>/</mo><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>M</mi><mo>/</mo><mi>π</mi></mrow><mo>⁢</mo><msub><mi>m</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>, below <math id="S5.p3.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> by <math id="S5.p3.m6" class="ltx_Math" alttext="10^{-47}" display="inline"><msup><mn>10</mn><mrow><mo>−</mo><mn>47</mn></mrow></msup></math> for an electron. The lattice fixes what Lorentz violation the register entails: the tick’s exact dispersion, Eq. (<a href="#S3.E14" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>), is <math id="S5.p3.m7" class="ltx_Math" alttext="E=|p|c" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>p</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow></math> for light at every momentum and, for matter,</p>
+<div class="scrollbox"><table id="S5.E18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E18.m1" class="ltx_Math" alttext="E^{2}=p^{2}c^{2}+M^{2}c^{4}-\tfrac{1}{3}\,M^{2}c^{4}\Big{(}\frac{p\,\ell_{P}}{%
+\hbar}\Big{)}^{2}+\dots," display="block"><mrow><mrow><msup><mi>E</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msup><mi>M</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>4</mn></msup></mrow></mrow><mo>−</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo lspace="0.170em">⁢</mo><msup><mi>M</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>4</mn></msup><mo>⁢</mo><msup><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>p</mi><mo lspace="0.170em">⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(18)</span></td>
+</tr></tbody>
+</table></div>
+<p class="ltx_p">a fractional correction of order <math id="S5.p3.m8" class="ltx_Math" alttext="(Mc^{2}/E_{P})^{2}\approx 10^{-39}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>M</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>/</mo><msub><mi>E</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>≈</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>39</mn></mrow></msup></mrow></math> for a proton that does not grow with energy. The register therefore predicts no energy-dependent speed of light at any order and would be falsified by one; the correction for matter is beyond any measurement. The lattice likewise deforms the commutator: with the lattice momentum <math id="S5.p3.m9" class="ltx_Math" alttext="\hat{p}_{\rm lat}=(\hbar/\ell_{P})\sin(\hat{p}\ell_{P}/\hbar)" display="inline"><mrow><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>lat</mi></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>/</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, <math id="S5.p3.m10" class="ltx_Math" alttext="[\hat{x},\hat{p}_{\rm lat}]=i\hbar\cos(\hat{p}\ell_{P}/\hbar)\approx i\hbar\,[%
+1-\tfrac{1}{2}(\hat{p}\ell_{P}/\hbar)^{2}]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>,</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>lat</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≈</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo lspace="0.170em">⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mn>1</mn><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mi>P</mi></msub></mrow><mo>/</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, a generalized uncertainty principle of the maximal-momentum type with coefficient <math id="S5.p3.m11" class="ltx_Math" alttext="-1/2" display="inline"><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></math>, six to eleven orders of magnitude below the present optomechanical bounds on that coefficient <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib19" title="" class="ltx_ref">19</a>]</cite>. Because a two-path superposition of a composite’s center of mass is one qubit whatever the mass, and the register has no collapse mechanism, it predicts no intrinsic, mass-dependent loss of matter-wave contrast, in agreement with experiment to <math id="S5.p3.m12" class="ltx_Math" alttext="2.5\times 10^{4}" display="inline"><mrow><mn>2.5</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>4</mn></msup></mrow></math> atomic mass units <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>]</cite> and unlike collapse models. None of these can distinguish the register from standard quantum mechanics.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">The register’s intrinsic scales are <math id="S5.p4.m1" class="ltx_Math" alttext="m_{P}(2\pi/L)^{1/n}" display="inline"><mrow><msub><mi>m</mi><mi>P</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>L</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow></msup></mrow></math>: <math id="S5.p4.m2" class="ltx_Math" alttext="1.2\times 10^{-33}" display="inline"><mrow><mn>1.2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>33</mn></mrow></msup></mrow></math> eV, <math id="S5.p4.m3" class="ltx_Math" alttext="3.8" display="inline"><mn>3.8</mn></math> meV, <math id="S5.p4.m4" class="ltx_Math" alttext="56" display="inline"><mn>56</mn></math> MeV, and <math id="S5.p4.m5" class="ltx_Math" alttext="6.8" display="inline"><mn>6.8</mn></math> TeV. The second is, to a factor 1.7, the dark-energy scale <math id="S5.p4.m6" class="ltx_Math" alttext="\rho_{\Lambda}^{1/4}" display="inline"><msubsup><mi>ρ</mi><mi mathvariant="normal">Λ</mi><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msubsup></math>, which follows from Eq. (<a href="#S4.E16" title="In IV The Horizon ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">16</span></a>) as <math id="S5.p4.m7" class="ltx_Math" alttext="(3\pi/2)^{1/4}E_{P}/\sqrt{L}=2.2" display="inline"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup><mo>⁢</mo><msub><mi>E</mi><mi>P</mi></msub></mrow><mo>/</mo><msqrt><mi>L</mi></msqrt></mrow><mo>=</mo><mn>2.2</mn></mrow></math> meV, the fourth root of the <math id="S5.p4.m8" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> suppression of the Planck density counted in Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite>; the third is Weinberg’s <math id="S5.p4.m9" class="ltx_Math" alttext="(\hbar^{2}H_{0}/Gc)^{1/3}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>H</mi><mn>0</mn></msub></mrow><mo>/</mo><mi>G</mi></mrow><mo>⁢</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="" class="ltx_ref">15</a>]</cite>. That the neutrino and the pion sit near the second and third rungs is the set of large-number coincidences known since Dirac, in one integer; the register offers no mechanism for them.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">VI </span>What the Placement Costs</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">Placing every register on the horizon can mean two things. The first, that the cells have a definite orientation in space, costs nothing. A cyclic register has no pole and no first cell; both are coordinates on the Bloch sphere, and every quantity in Eq. (<a href="#S1.E2" title="In I Introduction ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) is relational, an overlap of two states or a phase relative to a reference, which Sec. <a href="#S3.SS3" title="III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">III.3</span></a> shows to be a position relative to a reference. Palmer’s Bell conditions are on angles between settings <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>, which are rotation-invariant; he fixes the gauge by placing the pole at his middle setting <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>, and his distinction between a nominal setting and the exact one within it <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite> says the gauge cannot be probed.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">The second, that different observers’ horizons are the same cells, is de Sitter complementarity <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib28" title="" class="ltx_ref">28</a>, <a href="#bib.bib25" title="" class="ltx_ref">25</a>, <a href="#bib.bib39" title="" class="ltx_ref">39</a>, <a href="#bib.bib40" title="" class="ltx_ref">40</a>, <a href="#bib.bib41" title="" class="ltx_ref">41</a>]</cite>: distinct static patches describe one finite set of degrees of freedom, not independent copies. The shared reading follows from unitarity within a patch by the no-cloning argument used for black holes <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib29" title="" class="ltx_ref">29</a>, <a href="#bib.bib38" title="" class="ltx_ref">38</a>]</cite>, taken over without proof; whether that unitarity is consistent with a smooth horizon is the firewall question <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib37" title="" class="ltx_ref">37</a>]</cite>, open in de Sitter and not addressed here. Nothing in Secs. <a href="#S2" title="II The Register ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">II</span></a> to <a href="#S5" title="V Predictions and Falsifiers ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">V</span></a> depends on it. A finite Hilbert space of log-dimension <math id="S6.p2.m1" class="ltx_Math" alttext="L^{2}/4\pi" display="inline"><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow><mo>⁢</mo><mi>π</mi></mrow></math> entails recurrences and a low-entropy past requiring explanation <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib39" title="" class="ltx_ref">39</a>]</cite>, to which Palmer’s nonergodic Invariant Set Postulate <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib35" title="" class="ltx_ref">35</a>]</cite> is RaQM’s response, positive <math id="S6.p2.m2" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="" class="ltx_ref">30</a>]</cite>, and no exact asymptotic observables <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib31" title="" class="ltx_ref">31</a>]</cite>; finite-dimensional Hilbert spaces for quantum gravity have been advocated independently <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib32" title="" class="ltx_ref">32</a>, <a href="#bib.bib33" title="" class="ltx_ref">33</a>, <a href="#bib.bib34" title="" class="ltx_ref">34</a>]</cite>.</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">VII </span>Discussion</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">The two axioms of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> are two descriptions of one rotation. A string of <math id="S7.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> cells turns at the rate its energy sets. Counted, the pattern is a Born probability; for the right- and left-moving components that probability sets the velocity. Shifted, it is a phase; on the ring read as space, one notch is a translation by one Planck length, Palmer’s phase step is what that translation does to the slowest wave, and for light the phase and the translation are the same thing at every tick. Mass is the amplitude per tick to reverse direction, a particle at rest is a standing wave of trapped light, and the Compton clock is the global phase that Palmer hides and that, having no gradient, displaces nothing. The circumference is the longest wavelength a particle can have, and placing it on the horizon is the second axiom with that content attached.</p>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">Nothing is postulated beyond the two axioms of Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>, restated as one. The gains are structural: RaQM’s phase grid is momentum quantization on a closed ring; its qubit is the right–left doublet of a Dirac particle; its hidden global phase is the Compton clock; and its capacity bound, read off Born’s rule as a frequency, is the Hilbert-space dimension of one particle on the ring, so the ceiling of about 200 qubits is <math id="S7.p2.m1" class="ltx_Math" alttext="\lfloor\log_{2}L\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo stretchy="false">⌋</mo></mrow></math> exactly and holds whatever the qubits are made of. What remains open is what was open before: the coefficient in <math id="S7.p2.m2" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>, the three-dimensional bulk, and complementarity. Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> remains the framework’s load-bearing statement, its exact capacity criterion corrected here. Palmer has left the discretization of space and time to a future paper and announced work on vacuum energy <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>; this paper and Ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite> attempt those questions with a universal <math id="S7.p2.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p">We record one coincidence without a mechanism. The heaviest observationally stable nucleus is <sup class="ltx_sup"><span class="ltx_text ltx_font_italic">208</span></sup>Pb; <sup class="ltx_sup"><span class="ltx_text ltx_font_italic">209</span></sup>Bi decays with a half-life of <math id="S7.p3.m3" class="ltx_Math" alttext="2\times 10^{19}" display="inline"><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mn>19</mn></msup></mrow></math> years <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib18" title="" class="ltx_ref">18</a>, <a href="#bib.bib17" title="" class="ltx_ref">17</a>]</cite>; and <math id="S7.p3.m4" class="ltx_Math" alttext="\lfloor\log_{2}L\rfloor=205" display="inline"><mrow><mrow><mo stretchy="false">⌊</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow><mo stretchy="false">⌋</mo></mrow><mo>=</mo><mn>205</mn></mrow></math>. For the capacity bound to bear on where the table ends, four things would be needed, and the framework supplies none: a representation in which a state spanning more than <math id="S7.p3.m5" class="ltx_Math" alttext="\log_{2}L" display="inline"><mrow><msub><mi>log</mi><mn>2</mn></msub><mo lspace="0.167em">⁡</mo><mi>L</mi></mrow></math> two-level systems can be written, which the frequency reading of Born’s rule forbids; a two-level degree of freedom per nucleon that the framework selects, which it does not, a particle’s chirality being fixed by its momentum through Eq. (<a href="#S3.E11" title="In III.3 Matter ‣ III The Ring in Motion ‣ One Register: A Common Origin for the Granularity of Hilbert Space and of Space" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>) and nuclear interactions acting on positions, spins, and isospins; a statement within RaQM’s dynamics about a composite whose spanning states exceed capacity, which the Invariant Set Postulate does not provide, since the dynamics never leaves the permitted set; and a rate, since no nucleus above <math id="S7.p3.m6" class="ltx_Math" alttext="A\approx 150" display="inline"><mrow><mi>A</mi><mo>≈</mo><mn>150</mn></mrow></math> is absolutely stable (<sup class="ltx_sup"><span class="ltx_text ltx_font_italic">208</span></sup>Pb has <math id="S7.p3.m8" class="ltx_Math" alttext="Q_{\alpha}=+0.52" display="inline"><mrow><msub><mi>Q</mi><mi>α</mi></msub><mo>=</mo><mrow><mo>+</mo><mn>0.52</mn></mrow></mrow></math> MeV) and only half-lives are observable.</p>
+</div>
+<div class="ltx_acknowledgements">
+<h6 class="ltx_title ltx_title_acknowledgements">Acknowledgements.</h6>
+The author used an AI assistant (Anthropic’s Claude) for literature checking, numerical verification, and editing of the manuscript. The physical proposal, the postulate, and the claims are the author’s own.
+
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell’s theorem, Proc. R. Soc. A <span class="ltx_text ltx_font_bold">476</span>, 20190350 (2020). <a href="https://doi.org/10.1098/rspa.2019.0350" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1098/rspa.2019.0350</a>
+
+</span>
+</li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA <span class="ltx_text ltx_font_bold">123</span>, e2523350123 (2026). <a href="https://doi.org/10.1073/pnas.2523350123" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1073/pnas.2523350123</a>; arXiv:2510.02877.
+
+</span>
+</li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Impossible counterfactuals, discrete Hilbert space and Bell’s theorem, J. Phys.: Conf. Ser. <span class="ltx_text ltx_font_bold">3189</span>, 012006 (2026). <a href="https://doi.org/10.1088/1742-6596/3189/1/012006" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1742-6596/3189/1/012006</a>; arXiv:2601.14941.
+
+</span>
+</li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Superdeterminism without conspiracy, Universe <span class="ltx_text ltx_font_bold">10</span>, 47 (2024). <a href="https://doi.org/10.3390/universe10010047" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.3390/universe10010047</a>
+
+</span>
+</li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"> T. N. Palmer, Solving the mysteries of quantum mechanics: why nature abhors a continuum, arXiv:2602.16382v1 (2026).
+
+</span>
+</li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"> A. Korytko, Gravitation from Hilbert-space granularity: pinning the parameter <math id="bib.bib6.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> of rational quantum mechanics across scales (2026). <a href="https://doi.org/10.5281/zenodo.22255462" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.5281/zenodo.22255462</a>
+
+</span>
+</li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"> H. Weyl, <em class="ltx_emph ltx_font_italic">The Theory of Groups and Quantum Mechanics</em> (Methuen, London, 1931; Dover reprint, New York, 1950), Ch. IV, Sec. 14.
+
+</span>
+</li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"> J. Schwinger, Unitary operator bases, Proc. Natl. Acad. Sci. USA <span class="ltx_text ltx_font_bold">46</span>, 570 (1960). <a href="https://doi.org/10.1073/pnas.46.4.570" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1073/pnas.46.4.570</a>
+
+</span>
+</li>
+      
+<li id="bib.bib9" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"> A. Vourdas, Quantum systems with finite Hilbert space, Rep. Prog. Phys. <span class="ltx_text ltx_font_bold">67</span>, 267 (2004). <a href="https://doi.org/10.1088/0034-4885/67/3/R03" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/0034-4885/67/3/R03</a>
+
+</span>
+</li>
+      
+<li id="bib.bib10" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"> S. Massar and P. Spindel, Uncertainty relation for the discrete Fourier transform, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">100</span>, 190401 (2008). <a href="https://doi.org/10.1103/PhysRevLett.100.190401" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.100.190401</a>
+
+</span>
+</li>
+      
+<li id="bib.bib11" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"> D. L. Donoho and P. B. Stark, Uncertainty principles and signal recovery, SIAM J. Appl. Math. <span class="ltx_text ltx_font_bold">49</span>, 906 (1989). <a href="https://doi.org/10.1137/0149053" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1137/0149053</a>
+
+</span>
+</li>
+      
+<li id="bib.bib12" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"> R. P. Feynman and A. R. Hibbs, <em class="ltx_emph ltx_font_italic">Quantum Mechanics and Path Integrals</em> (McGraw-Hill, New York, 1965), pp. 34–36, Problem 2-6.
+
+</span>
+</li>
+      
+<li id="bib.bib13" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"> T. Jacobson and L. S. Schulman, Quantum stochastics: the passage from a relativistic to a non-relativistic path integral, J. Phys. A: Math. Gen. <span class="ltx_text ltx_font_bold">17</span>, 375 (1984). <a href="https://doi.org/10.1088/0305-4470/17/2/023" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/0305-4470/17/2/023</a>
+
+</span>
+</li>
+      
+<li id="bib.bib14" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"> I. Bialynicki-Birula, Weyl, Dirac, and Maxwell equations on a lattice as unitary cellular automata, Phys. Rev. D <span class="ltx_text ltx_font_bold">49</span>, 6920 (1994). <a href="https://doi.org/10.1103/PhysRevD.49.6920" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.49.6920</a>
+
+</span>
+</li>
+      
+<li id="bib.bib15" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"> S. Weinberg, <em class="ltx_emph ltx_font_italic">Gravitation and Cosmology</em> (Wiley, New York, 1972), pp. 619–620.
+
+</span>
+</li>
+      
+<li id="bib.bib16" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"> A. Korytko, The vacuum catastrophe and the granularity of Hilbert space (2026). <a href="https://doi.org/10.5281/zenodo.22281711" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.5281/zenodo.22281711</a>
+
+</span>
+</li>
+      
+<li id="bib.bib17" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"> F. G. Kondev, M. Wang, W. J. Huang, S. Naimi, and G. Audi, The NUBASE2020 evaluation of nuclear physics properties, Chin. Phys. C <span class="ltx_text ltx_font_bold">45</span>, 030001 (2021). <a href="https://doi.org/10.1088/1674-1137/abddae" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1674-1137/abddae</a>
+
+</span>
+</li>
+      
+<li id="bib.bib18" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"> P. de Marcillac, N. Coron, G. Dambier, J. Leblanc, and J.-P. Moalic, Experimental detection of <math id="bib.bib18.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>-particles from the radioactive decay of natural bismuth, Nature <span class="ltx_text ltx_font_bold">422</span>, 876 (2003). <a href="https://doi.org/10.1038/nature01541" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1038/nature01541</a>
+
+</span>
+</li>
+      
+<li id="bib.bib19" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"> I. Pikovski, M. R. Vanner, M. Aspelmeyer, M. S. Kim, and Č. Brukner, Probing Planck-scale physics with quantum optics, Nat. Phys. <span class="ltx_text ltx_font_bold">8</span>, 393 (2012). <a href="https://doi.org/10.1038/nphys2262" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1038/nphys2262</a>
+
+</span>
+</li>
+      
+<li id="bib.bib20" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock"> Y. Y. Fein, P. Geyer, P. Zwick, F. Kiałka, S. Pedalino, M. Mayor, S. Gerlich, and M. Arndt, Quantum superposition of molecules beyond 25 kDa, Nat. Phys. <span class="ltx_text ltx_font_bold">15</span>, 1242 (2019). <a href="https://doi.org/10.1038/s41567-019-0663-9" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1038/s41567-019-0663-9</a>
+
+</span>
+</li>
+      
+<li id="bib.bib21" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"> D. Poulin, A. Qarry, R. Somma, and F. Verstraete, Quantum simulation of time-dependent Hamiltonians and the convenient illusion of Hilbert space, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">106</span>, 170501 (2011). <a href="https://doi.org/10.1103/PhysRevLett.106.170501" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.106.170501</a>
+
+</span>
+</li>
+      
+<li id="bib.bib22" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"> I. Niven, <em class="ltx_emph ltx_font_italic">Irrational Numbers</em> (Mathematical Association of America, Washington, DC, 1956).
+
+</span>
+</li>
+      
+<li id="bib.bib23" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"> J. Jahnel, When is the (co)sine of a rational angle equal to a rational number?, arXiv:1006.2938 (2010).
+
+</span>
+</li>
+      
+<li id="bib.bib24" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock"> R. Bousso, Positive vacuum energy and the <math id="bib.bib24.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>-bound, J. High Energy Phys. <span class="ltx_text ltx_font_bold">11</span>, 038 (2000). <a href="https://doi.org/10.1088/1126-6708/2000/11/038" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1126-6708/2000/11/038</a>; hep-th/0010252.
+
+</span>
+</li>
+      
+<li id="bib.bib25" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"> R. Bousso, Quantum global structure of de Sitter space, Phys. Rev. D <span class="ltx_text ltx_font_bold">60</span>, 063503 (1999). <a href="https://doi.org/10.1103/PhysRevD.60.063503" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.60.063503</a>
+
+</span>
+</li>
+      
+<li id="bib.bib26" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[26]</span>
+<span class="ltx_bibblock"> R. Bousso, A covariant entropy conjecture, J. High Energy Phys. <span class="ltx_text ltx_font_bold">07</span>, 004 (1999). <a href="https://doi.org/10.1088/1126-6708/1999/07/004" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1126-6708/1999/07/004</a>
+
+</span>
+</li>
+      
+<li id="bib.bib27" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[27]</span>
+<span class="ltx_bibblock"> T. Jacobson, Thermodynamics of spacetime: the Einstein equation of state, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">75</span>, 1260 (1995). <a href="https://doi.org/10.1103/PhysRevLett.75.1260" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.75.1260</a>
+
+</span>
+</li>
+      
+<li id="bib.bib28" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[28]</span>
+<span class="ltx_bibblock"> L. Susskind, L. Thorlacius, and J. Uglum, The stretched horizon and black hole complementarity, Phys. Rev. D <span class="ltx_text ltx_font_bold">48</span>, 3743 (1993). <a href="https://doi.org/10.1103/PhysRevD.48.3743" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.48.3743</a>
+
+</span>
+</li>
+      
+<li id="bib.bib29" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[29]</span>
+<span class="ltx_bibblock"> L. Susskind and L. Thorlacius, Gedanken experiments involving black holes, Phys. Rev. D <span class="ltx_text ltx_font_bold">49</span>, 966 (1994). <a href="https://doi.org/10.1103/PhysRevD.49.966" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.49.966</a>
+
+</span>
+</li>
+      
+<li id="bib.bib30" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[30]</span>
+<span class="ltx_bibblock"> T. Banks, Cosmological breaking of supersymmetry, or little Lambda goes back to the future II, arXiv:hep-th/0007146 (2000).
+
+</span>
+</li>
+      
+<li id="bib.bib31" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[31]</span>
+<span class="ltx_bibblock"> E. Witten, Quantum gravity in de Sitter space, arXiv:hep-th/0106109 (2001).
+
+</span>
+</li>
+      
+<li id="bib.bib32" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[32]</span>
+<span class="ltx_bibblock"> R. V. Buniy, S. D. H. Hsu, and A. Zee, Is Hilbert space discrete?, Phys. Lett. B <span class="ltx_text ltx_font_bold">630</span>, 68 (2005). <a href="https://doi.org/10.1016/j.physletb.2005.09.084" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1016/j.physletb.2005.09.084</a>; arXiv:hep-th/0508039.
+
+</span>
+</li>
+      
+<li id="bib.bib33" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[33]</span>
+<span class="ltx_bibblock"> N. Bao, S. M. Carroll, and A. Singh, The Hilbert space of quantum gravity is locally finite-dimensional, Int. J. Mod. Phys. D <span class="ltx_text ltx_font_bold">26</span>, 1743013 (2017). <a href="https://doi.org/10.1142/S0218271817430131" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1142/S0218271817430131</a>; arXiv:1704.00066.
+
+</span>
+</li>
+      
+<li id="bib.bib34" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[34]</span>
+<span class="ltx_bibblock"> S. M. Carroll, Completely discretized, finite quantum mechanics, Found. Phys. <span class="ltx_text ltx_font_bold">53</span>, 90 (2023). <a href="https://doi.org/10.1007/s10701-023-00726-6" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1007/s10701-023-00726-6</a>
+
+</span>
+</li>
+      
+<li id="bib.bib35" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[35]</span>
+<span class="ltx_bibblock"> T. N. Palmer, The Invariant Set Postulate: a new geometric framework for the foundations of quantum theory and the role played by gravity, Proc. R. Soc. A <span class="ltx_text ltx_font_bold">465</span>, 3165 (2009). <a href="https://doi.org/10.1098/rspa.2009.0080" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1098/rspa.2009.0080</a>
+
+</span>
+</li>
+      
+<li id="bib.bib36" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[36]</span>
+<span class="ltx_bibblock"> DESI Collaboration, M. Abdul-Karim <em class="ltx_emph ltx_font_italic">et al.</em>, DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints, Phys. Rev. D <span class="ltx_text ltx_font_bold">112</span>, 083515 (2025). <a href="https://doi.org/10.1103/tr6y-kpc6" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/tr6y-kpc6</a>; arXiv:2503.14738.
+
+</span>
+</li>
+      
+<li id="bib.bib37" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[37]</span>
+<span class="ltx_bibblock"> A. Almheiri, D. Marolf, J. Polchinski, and J. Sully, Black holes: complementarity or firewalls?, J. High Energy Phys. <span class="ltx_text ltx_font_bold">02</span>, 062 (2013). <a href="https://doi.org/10.1007/JHEP02(2013)062" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1007/JHEP02(2013)062</a>; arXiv:1207.3123.
+
+</span>
+</li>
+      
+<li id="bib.bib38" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[38]</span>
+<span class="ltx_bibblock"> W. K. Wootters and W. H. Zurek, A single quantum cannot be cloned, Nature <span class="ltx_text ltx_font_bold">299</span>, 802 (1982). <a href="https://doi.org/10.1038/299802a0" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1038/299802a0</a>
+
+</span>
+</li>
+      
+<li id="bib.bib39" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[39]</span>
+<span class="ltx_bibblock"> L. Dyson, M. Kleban, and L. Susskind, Disturbing implications of a cosmological constant, J. High Energy Phys. <span class="ltx_text ltx_font_bold">10</span>, 011 (2002). <a href="https://doi.org/10.1088/1126-6708/2002/10/011" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1088/1126-6708/2002/10/011</a>; hep-th/0208013.
+
+</span>
+</li>
+      
+<li id="bib.bib40" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[40]</span>
+<span class="ltx_bibblock"> T. Banks and W. Fischler, M-theory observables for cosmological space-times, arXiv:hep-th/0102077 (2001).
+
+</span>
+</li>
+      
+<li id="bib.bib41" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[41]</span>
+<span class="ltx_bibblock"> M. K. Parikh, I. Savonije, and E. Verlinde, Elliptic de Sitter space: dS/<math id="bib.bib41.m1" class="ltx_Math" alttext="\mathbb{Z}_{2}" display="inline"><msub><mi>ℤ</mi><mn>2</mn></msub></math>, Phys. Rev. D <span class="ltx_text ltx_font_bold">67</span>, 064005 (2003). <a href="https://doi.org/10.1103/PhysRevD.67.064005" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.67.064005</a>
+
+</span>
+</li>
+      
+<li id="bib.bib42" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[42]</span>
+<span class="ltx_bibblock"> J. D. Bekenstein, Black holes and entropy, Phys. Rev. D <span class="ltx_text ltx_font_bold">7</span>, 2333 (1973). <a href="https://doi.org/10.1103/PhysRevD.7.2333" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.7.2333</a>
+
+</span>
+</li>
+      
+<li id="bib.bib43" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[43]</span>
+<span class="ltx_bibblock"> G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation, Phys. Rev. D <span class="ltx_text ltx_font_bold">15</span>, 2738 (1977). <a href="https://doi.org/10.1103/PhysRevD.15.2738" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevD.15.2738</a>
+
+</span>
+</li>
+      
+<li id="bib.bib44" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[44]</span>
+<span class="ltx_bibblock"> E. Verlinde, On the origin of gravity and the laws of Newton, J. High Energy Phys. <span class="ltx_text ltx_font_bold">04</span>, 029 (2011). <a href="https://doi.org/10.1007/JHEP04(2011)029" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1007/JHEP04(2011)029</a>
+
+</span>
+</li>
+      
+<li id="bib.bib45" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[45]</span>
+<span class="ltx_bibblock"> M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, Astrophys. J. <span class="ltx_text ltx_font_bold">270</span>, 365 (1983). <a href="https://doi.org/10.1086/161130" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1086/161130</a>
+
+</span>
+</li>
+      
+<li id="bib.bib46" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[46]</span>
+<span class="ltx_bibblock"> S. S. McGaugh, F. Lelli, and J. M. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. <span class="ltx_text ltx_font_bold">117</span>, 201101 (2016). <a href="https://doi.org/10.1103/PhysRevLett.117.201101" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1103/PhysRevLett.117.201101</a>
+
+</span>
+</li>
+      
+<li id="bib.bib47" class="ltx_bibitem">
+<span class="ltx_tag ltx_role_refnum ltx_tag_bibitem">[47]</span>
+<span class="ltx_bibblock"> Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. <span class="ltx_text ltx_font_bold">641</span>, A6 (2020). <a href="https://doi.org/10.1051/0004-6361/201833910" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://doi.org/10.1051/0004-6361/201833910</a>
+
+</span>
+</li>
+    
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Sep 12 06:19:26 2026 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<div class="mirror-note mirror-foot">The PDF is authoritative. <a href="register_2026-09-10.pdf">Read the PDF</a> <span class="sep">&middot;</span> <a href="https://doi.org/10.5281/zenodo.22699787">Zenodo record</a> <span class="sep">&middot;</span> <a href="../../">All papers</a> <span class="sep">&middot;</span> <a href="https://alphalatitude.com">AlphaLatitude Inc.</a><br>Copyright &copy; 2026 Andrew Korytko.</div>
+</body>
+</html>

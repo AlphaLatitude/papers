@@ -1,0 +1,325 @@
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{orcidlink}
+
+\begin{document}
+
+\title{The Dimension of Space from the Granularity of Hilbert Space}
+
+\author{Andrew Korytko\,\orcidlink{0009-0005-4569-2228}}
+\email{andrew@alphalatitude.com}
+\affiliation{AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA}
+
+\date{\today; DOI: \href{https://doi.org/10.5281/zenodo.22678537}{10.5281/zenodo.22678537}}
+
+\begin{abstract}
+Why do we live in a three-dimensional world? It has been asked since antiquity. We now know: it follows from two postulates and some counting. The first is that quantum mechanics is granular: every state is a record of $L$ bits on a ring of $L$ Planck cells, $L = 6.4\times10^{61}$ universal, each record's phase hidden. The second is that the momenta an elementary interaction can carry have one address space, the directions of $n$-dimensional space, $n$ unknown. All else is derived: interactions, their legs, one momentum per address, that the address space is the cosmological horizon, and $n$. From the first follow momentum conservation, a gauge field from the hidden phase, and an elementary event with exactly three legs, one mark crossing one link with one quantum; a four-leg event is two crossings, coincident at most once in $L$. Three momenta summing to zero are coplanar for $n \ge 2$, so an event needs a direction on one ring and a magnitude, $L^2$ labels with no $n$; Palmer's rule, every probability a multiple of $1/L$, gives the directions $L^{n-1}$ addresses; finite $L$ and the gauge clause fill them one momentum each, so $n = 3$. Planck pixels from the horizon entropy~\cite{korytko2026} agree to a factor $\pi$; in real $n$ the root is $3.008$; 2 or 4 would need a count wrong by at least $3\times10^{30}$. The horizon is one, so space is one. A four-leg event that is not two crossings, or an energy-dependent light speed, would falsify it.
+\end{abstract}
+
+\keywords{Rational quantum mechanics; discrete Hilbert space; dimension of space; de Sitter horizon; holography}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+The dimension of space is an input to every physical theory. Ehrenfest asked in 1917 what in the laws of physics makes it manifest that space has three dimensions~\cite{ehrenfest1917}, and in the century since, the question has been answered only by consistency: string theory fixes the dimension of its spacetime by requiring the theory to be consistent on an assumed background~\cite{lovelace1971,goddard1972}. This paper gives an answer of the same logical kind within the framework of Refs.~\cite{korytko2026,korytko2026b,korytko2026c}, from two postulates. The first is the register of Ref.~\cite{korytko2026c}: quantum mechanics is granular, with every state a record of $L$ bits on a ring of $L$ Planck cells, $L$ universal, and each record's phase hidden. The second is that the momenta an elementary interaction can carry have one address space, the same for every interaction, whose addresses are the directions of $n$-dimensional space, with $n$ left open. That the address space is a sphere, and that it holds one momentum per address, are derived: the first from the register's momentum doublet being a qubit, with no distinguished pole and a bounded magnitude, the second from finite $L$ and the gauge clause, that what cannot be probed is a choice of coordinates. The number three enters at neither end: the vertex is not given three legs and the space is not given three dimensions; both come out. That interactions exist, that the elementary one is a mark crossing a link with exactly one quantum and so has three legs, that an event with four legs is two crossings, and that momentum is conserved, all follow from the first postulate, and no step uses $n$. Counting the addresses gives $L^{n-1}$; counting the momenta an elementary event can carry gives $L^2$ in any $n \ge 2$, since three momenta with one linear relation lie in a plane; one momentum per address sets the two equal, and $n = 3$. The rest is arithmetic. The sphere then turns out to be the cosmological horizon of Ref.~\cite{korytko2026}. That identification is a conclusion of the argument, not an assumption of it.
+
+Three things are taken from the earlier papers. Palmer's Rational Quantum Mechanics (RaQM)~\cite{palmer2020,palmer2026,palmer2026b,palmer2026c} admits a qubit only at
+\begin{equation}
+\cos^2\tfrac{\theta}{2} = \frac{m}{L},\qquad \frac{\phi}{2\pi} = \frac{n}{L},
+\label{eq:raqm}
+\end{equation}
+and writes it as a string of $L$ bits. Ref.~\cite{korytko2026} made $L$ universal and identified one step of phase with one Planck length on a great circle of the cosmological horizon,
+\begin{equation}
+R_\Lambda = \frac{L\,\ell_P}{2\pi},
+\label{eq:ident}
+\end{equation}
+which gives $L = 6.4\times10^{61}$ from the observed $\Lambda$ and $4.6\times10^{61}$ from Milgrom's $a_0$. Ref.~\cite{korytko2026c} showed these two axioms to be one. A ring of $L$ cells, each a Planck length long, closes on a circle, in Ref.~\cite{korytko2026c} a great circle of the cosmological horizon, a clause this paper sets aside until Sec.~\ref{sec:root} derives it; a qubit is a pattern on the ring; turning the ring one notch is a translation by $\ell_P$; and momentum is what generates the translation. That register is a statement about a circle. It says nothing about how many rings there are or how they fit together, and it leaves the three-dimensional bulk unconstructed. This paper is about the address space the circles make up, the directions of space, and it assumes neither its shape nor its dimension.
+
+The argument is short, and no step in it assumes a dimension. The three momenta of an elementary vertex sum to zero, so they lie in a plane, in any $n \ge 2$. The plane's directions are one ring of $L$ cells, so the event needs a direction, one of those $L$ cells, and a momentum along it, one of $L$ modes: $L^2$ labels, whatever $n$ is. The directions in $n$ dimensions form $S^{n-1}$ by geometry alone, the directions in any plane are one ring of $L$ cells, and by Palmer's rule, one rational probability per angle, the directions have $L^{n-1}$ cells. Setting an $n$-independent demand equal to an $n$-dependent supply, which finite $L$ and the gauge clause require, fixes $n$, and because $L$ is $6.4\times10^{61}$ it fixes $n$ sharply: one dimension either way is sixty-one orders of magnitude.
+
+The paper is arranged as follows. Section~\ref{sec:register} lists what is taken from the register. Section~\ref{sec:postulates} states the two postulates and derives from them conservation, that the elementary event is a crossing with three legs and a four-leg event is two crossings, that the address space of a vertex's momenta is a sphere holding one momentum per address, and the rule that space has as many dimensions as an elementary event has legs. Sections~\ref{sec:demand} and \ref{sec:supply} count the two sides. Section~\ref{sec:root} solves for $n$ and says how robust the result is, and Sec.~\ref{sec:pi} explains the residual factor of $\pi$. Section~\ref{sec:states} separates the alphabet of an interaction from the state of a configuration, which is where a rival count of $L^3$ would otherwise select $n = 4$. Section~\ref{sec:algebra} gives the algebraic reading of the same doublet, which selects three by a different route and is not independent evidence. Section~\ref{sec:consequences} states what the result does to the register's description of a particle, Sec.~\ref{sec:limits} what the argument does not do, and Sec.~\ref{sec:pred} what would falsify it.
+
+\section{What Is Taken from the Register}
+\label{sec:register}
+
+Five statements of Ref.~\cite{korytko2026c} are used, and nothing else from it.
+
+\textit{The ring.} In Ref.~\cite{korytko2026c} a ring of $L$ cells, each one Planck length long, closes on any great circle of the cosmological horizon. This paper reads that circle as the set of directions in one plane, one ring among the directions of space, with the dimension $n$ of that space left open until Sec.~\ref{sec:root}, and takes nothing from the horizon until then. Every qubit is a pattern on the ring. Turning the ring one notch is a translation by $\ell_P$, $X|j\rangle = |j+1\rangle$, and momentum is what generates $X$.
+
+\textit{Momentum along a ring takes $L$ values.} A mode is a wave with a whole number $\kappa$ of wavelengths around the ring, the eigenstate $|\tilde\kappa\rangle$ of $X$, and it has a definite momentum along the ring, $p_\kappa = h\kappa/L\ell_P$ with $-L/2 < \kappa \le L/2$. The longest wavelength is the circumference $L\ell_P$, the shortest is $2\ell_P$, and there are $L$ modes between them. The momentum quantum is $2\pi\hbar/L\ell_P$, which Ref.~\cite{korytko2026c} writes as $\hbar/R_\Lambda$.
+
+\textit{A direction in a plane takes $L$ values.} The directions in a plane are one ring of $L$ cells, and a direction in that plane is the cell the particle heads for. Two directions are distinct only if they land in different cells, so the angular resolution is $2\pi/L$.
+
+\textit{The phase-space cell is $h$.} Position and momentum on the ring each take $L$ values, and the cell is $L\ell_P\cdot(2\pi\hbar/\ell_P)/L = h$ (Ref.~\cite{korytko2026c}, Sec.~III); the pairs of a position cell and a mode form an $L\times L$ grid.
+
+\textit{The orientation of the cells in space is gauge.} A cyclic register has no pole and no first cell, and every quantity in Eq.~(\ref{eq:raqm}) is an overlap of two states or a phase relative to a reference. Palmer fixes the pole at his middle measurement setting~\cite{palmer2026c}, and his distinction between a nominal setting and the exact setting within it~\cite{palmer2024} means the choice cannot be probed (Ref.~\cite{korytko2026c}, Sec.~VI).
+
+Ref.~\cite{korytko2026c} declined one identification, that a laboratory spin's azimuth is a place on the sky. Postulate~2 of Sec.~\ref{sec:postulates} makes it for the momentum doublet, whose azimuth is a direction, a cell of a ring, and not for spin, which Sec.~\ref{sec:consequences} keeps as the qubit transverse to the momentum; the register's sentence stands.
+
+\section{Two Postulates}
+\label{sec:postulates}
+
+\textbf{Postulate 1 (the register).} \emph{Quantum mechanics is granular. Every quantum state is a record of $L$ bits, with $L\in\mathbb{N}$ universal, on a ring of $L$ cells, each one Planck length long, which light crosses in one Planck time. Turning the ring one notch is a translation by one Planck length, under which a wave of $\kappa$ wavelengths gains $\kappa$ steps of phase, and Palmer's step $2\pi/L$ is the step of the slowest wave. The global phase of each record is hidden, fixed at the cell where the record is created, and remains hidden under the dynamics.}
+
+\textbf{Postulate 2 (the address space).} \emph{The momenta an elementary interaction can carry have one address space, the same for every interaction, and its addresses are the directions of $n$-dimensional space, $n$ unknown.}
+
+Postulate~1 is the register of Ref.~\cite{korytko2026c}, restated without its clause that the ring closes on a great circle of the cosmological horizon, and with its hidden phase, Palmer's $\xi$~\cite{palmer2026c}, written in together with the one thing the word hidden implies once time passes: what cannot be known at creation cannot be read out later by the dynamics. Read as computation, the register is an automaton in the sense of 't~Hooft~\cite{thooft2016}, the shift a permutation of cells and the mass term a rotation; the last sentence of Postulate~1 says the automaton is blind to a private key in each record. That blindness is where interactions come from, as this section shows: the only key-relation the automaton may carry is the one between adjacent cells, which is a gauge field, and a vertex is a key exchange.
+
+Postulate~2 supplies the address space of momenta and says what its addresses are, directions; together the two are the register's postulate generalized from a circle to the directions of space, and Sec.~\ref{sec:discussion} shows that restricting Postulate~2 to the directions in one plane returns the register's postulate exactly.
+
+The postulates can be read either as foundations of quantum mechanics, a granular Hilbert space whose records live on rings, or as the architecture of a computation underlying the world, an automaton with a private key in each record; the argument does not care which, and neither reading mentions the horizon or any other visible object. The address space of Postulate~2 is an abstract set until Sec.~\ref{sec:root}, where it turns out to be the cosmological horizon; the horizon is kept out of the postulates because it is a two-sphere, and that the address space is a two-sphere is what this section and Sec.~\ref{sec:root} derive. No premise about interactions is added; what an elementary interaction is, and that one exists, follows from Postulate~1.
+
+The ring is an abstraction and could be replaced by equivalent data. A ring of $L$ Planck cells is a bit string laid in an oriented plane, the string's shift the ring and its count the magnitude along it; every statement below that mentions a ring can be restated so, and the address space of Postulate~2, the directions, is then the union of the direction circles of all oriented planes through a point, which is $S^{n-1}$ by geometry alone.
+
+\textit{Conservation.} The ring has $L$ identical cells and no first cell, which is the gauge clause of Sec.~\ref{sec:register}. Any dynamics that is the same at every cell therefore commutes with the shift $X$. The eigenvalue of $X$ is the mode number $\kappa$, and for several records it is additive, so whatever commutes with $X$ preserves the total $\kappa$. That is Noether's theorem on $\mathbb{Z}_L$: translation invariance of the ring is conservation of momentum, at a vertex as everywhere else. It holds modulo $L$, the lattice's umklapp, which, when it fires, adds a vector along the ring's own direction, in the plane. In a plane the same holds along every direction, one ring per direction, so the momenta at a vertex obey one linear relation, their vector sum.
+
+\textit{Interaction.} A record's phase is hidden, so no law may depend on it: if the outcome of an interaction depended on a comparison of two records' phases, the comparison would be read off the outcome and the phase would not be hidden. It is fixed at the cell where the record is created, so each cell's phase convention is its own, set by events never compared with those at any other cell; and the marks a record has at different cells arrived there from creation events at different cells, so its convention may differ from cell to cell. The dynamics must therefore be unchanged when any record's phase is shifted independently at any cell. The bare shift $X$ is not, since it compares the phase at cell $j$ with the phase at cell $j+1$; to be, it must carry on every link the offset between the two cells' conventions, $X \to e^{iA_j}X$. Those link offsets are a lattice gauge field~\cite{wilson1974}, and their minimal coupling to the current, the Peierls substitution~\cite{peierls1933}, is a vertex with three legs: a record in, a record out, and a quantum of link phase emitted or absorbed as a mark crosses the link. So an elementary interaction with three legs exists, by the principle the register applies globally in its Sec.~VI, extended from ``no first cell'' to ``no shared phase reference.'' In one dimension the link offsets have no field strength, since a ring has no plaquette, so the quantum cannot propagate; a gauge field with dynamics needs at least two dimensions, which the count below supplies. The field strength is the phase around a plaquette, the product of its four link factors~\cite{wilson1974}; its dynamics is not used here, only that a crossing shifts one link's flux by one unit.
+
+\textit{The count fixes the legs.} Let an elementary vertex have $k$ legs. Its momenta obey one linear relation, so they span a subspace of $k-1$ dimensions when $k-1 \le n$. Within that subspace a momentum is a magnitude and a direction on $S^{k-2}$, which under Palmer's rule of Sec.~\ref{sec:supply} is $L\times L^{k-2} = L^{k-1}$ labels; the address space has $L^{n-1}$ addresses; and the address rule below, one momentum per address, sets the two equal. So
+\begin{equation}
+n = k :
+\label{eq:nk}
+\end{equation}
+space has as many dimensions as an elementary vertex has legs. (If $k-1$ exceeds $n$ the span is capped at $n$, the alphabet is $L^n$ against $L^{n-1}$, and there is no solution, the same failure as counting the orientation in Sec.~\ref{sec:demand}.) Two things follow. The crossing of the previous paragraph has three legs, so $n = 3$, which Sec.~\ref{sec:root} writes out. And no elementary vertex can have another number of legs, since Eq.~(\ref{eq:nk}) would then assign space two different dimensions at once; the next paragraph reaches the same conclusion from the flux on a link, and every process with more legs is composite, a chain of crossings in different cells or ticks.
+
+\textit{Four legs are two crossings.} A crossing has three legs and not four: the link factor $e^{iA_j}$ shifts the flux on link $j$ by exactly one unit~\cite{kogut1975}, so one mark crossing one link emits or absorbs one quantum, never two. A four-leg event is therefore two crossings, and it is one event on the grid only if the two fall at one cell in one tick. That is a coincidence, and the register says how rare a coincidence: the ring has no first cell, so no cell is preferred, and two crossings in one tick share a cell at most once in $L$; a four-leg event at one cell is at most a fraction $1/L$ of the same two crossings at two cells, which are a chain. The dimension does not depend on that rate. Coincident or not, the two crossings are two events, each with the $L^2$ alphabet of Sec.~\ref{sec:demand}, and their momenta, spanning three dimensions, are a configuration in the sense of Sec.~\ref{sec:states}, two planes with a physical relative orientation, and not an alphabet. A four-leg event with non-coplanar momenta is thus never one crossing, a coplanar one is two crossings in one plane, and the count of Eq.~(\ref{eq:nk}) is per crossing.
+
+Field theory agrees in the main. Its vertices with one particle emitting or absorbing one quantum are three-point; its four-point contact terms, the scalar quartic, the gauge seagull, and the four-gluon vertex, are single-point events, which here can only be two crossings at one cell, a point taken up in Sec.~\ref{sec:limits}; and contact interactions with five or more legs are non-renormalizable in $3+1$ dimensions. That agreement is the conclusion returning, not a support. What the framework excludes is a four-leg event that is not two crossings, whose momenta span three dimensions in every frame and are labeled by no single ring; that is its falsifier. The count is per vertex, not per process. A $2\to3$ process is not planar, its initial axis and its final-state plane spanning three dimensions; it is a chain of three-leg events whose planes have physical relative orientations, the subject of Sec.~\ref{sec:states}. Below, any elementary event is called a vertex.
+
+\textit{The sphere is derived.} Postulate~2 says only that the addresses are directions. It does not say that the address space is a sphere, and it need not, because the shape of the alphabet follows from Postulate~1. The momentum a vertex carries in its plane is the register's doublet, one qubit per ring, Eq.~(\ref{eq:raqm}): its polar count is the magnitude, $\cos\theta = 2m/L-1$ the velocity $v/c$, bounded by the zone edge; its azimuth is the direction, a cell on the ring, cyclic. A qubit's state space is a two-sphere, Palmer's grid on it $L$ bands of the bounded digit by $L$ sectors of the cyclic one, and no point of it is distinguished, since the pole is gauge (Ref.~\cite{korytko2026c}, Sec.~VI) and any momentum's direction can serve as it. The symmetry says the same without the qubit. Closing a cyclic digit against a bounded one gives a cylinder, a torus or Klein bottle, or a sphere. The cylinder's ends are distinguished cells; the torus's and the Klein bottle's two cycles are distinguished directions at every cell, which no symmetry carries to the others; only the sphere, with any point as pole, has neither. Its antipodal pairs are the two energy branches at one momentum, orthogonal states (Sec.~\ref{sec:demand}). So the alphabet is a two-sphere's grid of $L^2$ cells, from the doublet being a qubit, from a bounded momentum, and from no distinguished cell, and not from the horizon, which stays a conclusion of Sec.~\ref{sec:root}. The addresses are $S^{n-1}$ by geometry, and once the address rule below makes alphabet and addresses one set, space has one dimension more than the alphabet has digits, which Secs.~\ref{sec:demand} to \ref{sec:root} count.
+
+\textit{One momentum per address, in two halves.} At most one momentum per address is what finite $L$ imposes. A cell is the least distinguishable unit, $2\pi/L$ in direction (Sec.~\ref{sec:register}) and $1/L$ in Palmer's count for the magnitude, both from Postulate~1; two momenta in one cell are one momentum; so the alphabet cannot exceed the addresses, $L^2 \le L^{n-1}$, and $n \ge 3$. This is a statement about values, not occupancy: two particles with one momentum share one address, as the photons of a laser do, and an alphabet is reused by every interaction and consumed by none. That half is entropic, the logarithm of the address count bounding the information a momentum carries, and it does not exclude four dimensions: at $n = 4$ the sphere has $L/4\pi$ cells to spare, the row of Table~\ref{tab:count} with room.
+
+No address without a momentum is the other half, and it comes from the gauge clause, not from finiteness. An address that no elementary event can occupy is a distinction nothing can probe, and by the gauge clause of Sec.~\ref{sec:register}, what cannot be probed is a choice of coordinates and not data; since the address of a momentum does not depend on the vertex's plane, the orientation being gauge (Sec.~\ref{sec:demand}), and the address space is the same for every interaction, an address one vertex's alphabet cannot reach, no vertex's can, so the addresses cannot exceed the alphabet, $L^{n-1} \le L^2$, and $n \le 3$. Together the halves say that the alphabet fills the address space, one momentum per address; below this is called the address rule. What remains postulated is one word of Postulate~2: that the address space is one, the same for every interaction, which is the content Sec.~\ref{sec:root} finds in the horizon being one.
+
+\textit{The cells.} The address rule says one momentum per address. It does not say how many momenta there are, and that is where the content of the argument lies. The number is the count of Sec.~\ref{sec:demand}, and it comes from the three legs of the vertex: a direction and a magnitude, $L$ of each. The two in $n-1 = 2$ is therefore a fact about vertices, not about the sphere, and the argument is not the tautology that a two-coordinate object needs a two-dimensional surface. Once the count is done the addresses acquire their reading: with $n = 3$ in hand, a direction $(\theta,\phi)$ of space is the pair (mode~$\kappa$, cell~$j$) of one ring, the alphabet's grid and the directions' grid being one, as a consequence and not as a premise. Postulate~2 identifies an address, an area on the sphere, with a momentum; it does not identify a length on a circle with a momentum step, and the notch remains a translation. Two ways of cutting the sphere into cells are in the framework, Palmer's grid and Ref.~\cite{korytko2026}'s Planck pixels; Sec.~\ref{sec:supply} constructs both and Sec.~\ref{sec:pi} says how they differ.
+
+Postulate~2 is not a saturation of a holographic bound. Bousso's $N$-bound~\cite{bousso2000} limits the entropy of states in a static patch to $L^2/4\pi$ (Ref.~\cite{korytko2026c}, Eq.~17), and that is a bound on how many independent states there are. An alphabet is not a state; every interaction reuses it and none consumes it. The same $L^2$ appears in both, which is worth recording, but the $N$-bound does not license the identification and is not invoked for it. Postulate~2 is an axiom, and the value of the argument is that an axiom of this form has a consequence, the dimension of space, rather than restating it.
+
+\section{Demand: The Momenta of a Vertex}
+\label{sec:demand}
+
+An elementary vertex has three legs (Sec.~\ref{sec:postulates}), and its three momenta, with one linear relation, lie in a plane $P$. The plane meets the sphere in one great circle, $C_P$, with $L$ cells, and a direction in the plane is one of those cells, the one the particle heads for. A momentum in the plane is a cell of $C_P$ together with a mode on $C_P$, so
+\begin{equation}
+N_{\rm mom} = L\times L = L^2 = 4.10\times10^{123},
+\label{eq:demand}
+\end{equation}
+and $n$ does not appear. A vertex takes a mode from one cell of $C_P$ to another, changing its direction and, through the third leg, its magnitude, and its alphabet is the $L^2$ of that one ring, a cell and a mode: the ring's phase space.
+
+\textit{Why the plane's orientation is not counted.} In $n$ dimensions the plane $P$ has an orientation, a point of the Grassmannian $\mathrm{Gr}(2,n)$ of dimension $2(n-2)$, and a reader will ask why it costs no labels. For a single vertex the answer is the gauge clause of Sec.~\ref{sec:register}. Every observable is relational; rotating everything at once changes nothing; and the orientation of the single plane present is a choice of coordinates. The demand is therefore Eq.~(\ref{eq:demand}) and not $L^2\times L^{2(n-2)} = L^{2n-2}$. The clause is load-bearing. Were the orientation counted, the demand $L^{2n-2}$ set against the supply $L^{n-1}$ of Sec.~\ref{sec:supply} would match at $2n-2 = n-1$, whose only solution, $n = 1$, holds no plane, and the argument would say nothing. That is not by itself a proof that orientations are gauge; Sec.~VI of Ref.~\cite{korytko2026c} gives the reason, and it was written on other grounds. But the count adds a reason of its own. A world in which a vertex's plane carried an orientation label would have no consistent dimension at all, since $L^{2n-2} = L^{n-1}$ has no solution with $n \ge 2$, the least dimension that holds a plane. Within the framework, the orientation of a single vertex's plane cannot be data, on pain of there being no space to hold it. For several vertices in several planes only the overall orientation is gauge; Sec.~\ref{sec:states} takes that count up.
+
+\textit{No factor of two.} The direction is oriented and the mode is signed, and a reader might count directions over a half circle, giving $L^2/2$, on the ground that the two signs say the same thing twice. In the register's doublet they do not: $\cos\theta = pc/E$ (Ref.~\cite{korytko2026c}, Sec.~III), so at a given momentum the polar digit takes both signs, one per energy branch, and the $L^2$ labels are the two branches of the Dirac doublet at each of the $L^2/2$ momenta; a half-circle count keeps one branch of two. Both are states a vertex can carry. The count is $L^2$ with no factor of two.
+
+\section{Supply: The Cells of the Sphere}
+\label{sec:supply}
+
+In $n$ spatial dimensions the address space of Postulate~2, the directions, is $S^{n-1}$. Its great circles are rings, since the directions in a plane are the $L$ cells of Sec.~\ref{sec:register}, so each has circumference $L\ell_P$ and the radius is $R = L\ell_P/2\pi$, which is Eq.~(\ref{eq:ident}) read as a definition of $R$. That $R$ equals the de Sitter radius $R_\Lambda$ is not used here; it is earned in Sec.~\ref{sec:root}. Two ways of cutting the sphere into cells are in the framework, Palmer's and Ref.~\cite{korytko2026}'s, and they play different roles.
+
+\textit{Palmer's grid.} Write $S^{n-1}$ in hyperspherical coordinates, $\theta_1,\dots,\theta_{n-2}\in[0,\pi]$ and $\phi\in[0,2\pi)$. The area element is
+\begin{equation}
+dA = R^{\,n-1}\prod_{i=1}^{n-2}\sin^{\,n-1-i}\theta_i\,d\theta_i\;d\phi,
+\label{eq:dA}
+\end{equation}
+a product of factors each depending on one angle. For each polar angle let
+\begin{equation}
+u_i(\theta_i) = \frac{\int_0^{\theta_i}\sin^{n-1-i}\theta\,d\theta}{\int_0^{\pi}\sin^{n-1-i}\theta\,d\theta},\qquad u_{n-1} = \frac{\phi}{2\pi},
+\label{eq:u}
+\end{equation}
+the fraction of the sphere's area within polar angle $\theta_i$ of the pole. Because the measure is a product, in these variables it is uniform: $dA = A_n\,du_1\cdots du_{n-1}$. On $S^2$ the $u$'s are $(1-\cos\theta)/2$ and $\phi/2\pi$, and these are Palmer's coordinates: $\cos^2(\theta/2) = 1 - u_1$ is the Born probability $m/L$ of Eq.~(\ref{eq:raqm}), and $\phi/2\pi = n/L$. Palmer's rule is that every probability is a multiple of $1/L$, and each $u_i$ is a probability, that of a uniformly random direction lying within $\theta_i$ of the pole. Applied to each $u_i$, the rule gives $L$ values per coordinate and hence a product grid of
+\begin{equation}
+N_{\rm cell}(n) = L^{\,n-1}
+\label{eq:cells}
+\end{equation}
+cells, each of area $A_n/L^{n-1}$. At $n=2$ the single $u$ is $\phi/2\pi$ and the $L$ cells are the ring's own. At $n=3$ the cell has area $4\pi R^2/L^2 = \ell_P^2/\pi$, the number that Sec.~\ref{sec:pi} explains. The construction uses an integer number of angles. We have no version of it for non-integer $n$, and do not claim that none exists.
+
+\textit{Planck pixels.} Ref.~\cite{korytko2026} cuts the horizon into pixels of area $\ell_P^2$, the cell of the Bekenstein--Hawking entropy $A/4\ell_P^2$, a cell defined by the entropy and not by the register. Its extension to $n$ dimensions is a pixel of $\ell_P^{\,n-1}$. The sphere's area is $\Omega_{n-1}R^{\,n-1}$, where $\Omega_{n-1}$ is the area of the unit sphere,
+\begin{equation}
+\Omega_{n-1} = \frac{2\pi^{n/2}}{\Gamma(n/2)},
+\label{eq:omega}
+\end{equation}
+equal to $4\pi$ at $n=3$ and $2\pi$ at $n=2$, so
+\begin{equation}
+N_{\rm pix}(n) = \Omega_{n-1}\Big(\frac{R}{\ell_P}\Big)^{n-1} = \Omega_{n-1}\Big(\frac{L}{2\pi}\Big)^{n-1}.
+\label{eq:supply}
+\end{equation}
+At $n=3$ this is $L^2/\pi = 1.30\times10^{123}$, the horizon pixel count of Ref.~\cite{korytko2026c}; at $n=2$ it is $L$.
+
+The two counts share the exponent and differ by $\Omega_{n-1}/(2\pi)^{n-1}$, the area of the unit sphere divided by the circumference of the unit circle raised to the power $n-1$: $1$ on the circle, $1/\pi$ on the two-sphere, $1/4\pi$ on the three-sphere. That number is the difference between how many cells fit around a sphere and how many fit on it. Each dimension multiplies either count by about $10^{61}$.
+
+\begin{table}[t]
+\caption{Cells of the sphere against the momenta of a vertex, at $L = 6.4\times10^{61}$.}
+\label{tab:count}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+$n$ & $N_{\rm cell}(n)$ & $N_{\rm pix}(n)$ & value of $N_{\rm pix}$ & $N_{\rm mom}/N_{\rm pix}$ \\
+\hline
+2 & $L$ & $L$ & $6.4\times10^{61}$ & $6.4\times10^{61}$ \\
+3 & $L^2$ & $L^2/\pi$ & $1.30\times10^{123}$ & $3.14$ \\
+4 & $L^3$ & $L^3/4\pi$ & $2.09\times10^{184}$ & $2.0\times10^{-61}$ \\
+5 & $L^4$ & $L^4/6\pi^2$ & $2.83\times10^{245}$ & $1.4\times10^{-122}$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The counterfactual dimensions are specified geometrically, not dynamically. Equation~(\ref{eq:ident}), the grid of Eq.~(\ref{eq:u}), and the pixel $\ell_P^{\,n-1}$ extend to any integer $n$; the relation $G = \ell_P^2c^3/\hbar$ of Ref.~\cite{korytko2026} belongs to $3+1$ dimensions and is not used. Nothing below requires the dynamics of a world with $n \ne 3$, only the area of its sphere.
+
+\section{The Root}
+\label{sec:root}
+
+The address rule of Sec.~\ref{sec:postulates} sets the supply equal to the demand. In Palmer's grid, Eq.~(\ref{eq:cells}), that is $L^{n-1} = L^2$, and
+\begin{equation}
+n = 3 .
+\label{eq:exact}
+\end{equation}
+There is nothing to evaluate. In one line: a planar momentum is a direction and a magnitude, two labels; the directions of $n$-dimensional space have $n-1$ angles; Postulate~2 makes them the addresses of momenta, and the address rule fills them; so $n-1 = 2$. Palmer's grid on $S^2$, with $\phi$ the direction and $\cos\theta$ the magnitude, is exactly that two-label set, and so the statement that space has three dimensions is the statement that the sphere is a qubit's Bloch sphere. The sphere is then a two-sphere of radius $L\ell_P/2\pi = R_\Lambda$, Eq.~(\ref{eq:ident}): it is the cosmological horizon of Ref.~\cite{korytko2026}, with its $L^2/\pi$ Planck pixels and its entropy $L^2/4\pi$. From here on the paper calls it that. Nothing before this sentence used the identification.
+
+\textit{The check.} The pixel of Ref.~\cite{korytko2026} is defined by the horizon entropy and not by the register, so counting the sphere in Planck pixels sets the same alphabet against an independently defined cell, and the two could have disagreed by a power of $L$. They do not. Table~\ref{tab:count} reads
+\begin{equation}
+\Omega_{n-1}\Big(\frac{L}{2\pi}\Big)^{n-1} = L^2
+\label{eq:match}
+\end{equation}
+for integer $n$: two dimensions fall short by a factor $L$, four have $L/4\pi = 5.1\times10^{60}$ pixels to spare, and three is the only row in which the ratio is an order-one number rather than a power of $L$. Nothing in Eq.~(\ref{eq:match}) requires $n$ to be an integer. The Gamma function is defined for real argument, so $\Omega_{n-1}$ is, and the equation can be read for a real unknown. That reading does two things: it shows that the real line holds no solution other than the one next to the integer, and it measures the residual $\pi$ in units of a dimension. In logarithms,
+\begin{equation}
+n - 1 = \frac{2\ln L - \ln\Omega_{n-1}}{\ln(L/2\pi)} .
+\label{eq:logmatch}
+\end{equation}
+The left side of Eq.~(\ref{eq:match}) increases monotonically from $n = 1$ until the growth of $\Gamma(n/2)$ overtakes $(L/2\pi)^{n}$, near $n \sim 10^{123}$, so below that the root is unique. Evaluating $\Omega$ near the root, where $\Omega_2 = 4\pi$, and writing $2\ln L = 2\ln(L/2\pi) + \ln 4\pi^2$,
+\begin{equation}
+n = 3 + \frac{\ln\pi}{\ln(L/2\pi)} = 3 + \frac{1.145}{140.48} = 3.0081 ,
+\label{eq:root}
+\end{equation}
+where the closed form is the leading term; the numerical root of Eq.~(\ref{eq:logmatch}) is $3.008117$. At $L_{\rm gal} = 4.6\times10^{61}$ the root is $3.0082$; the factor $1.4$ between the two pins of $L$, the open coefficient $\gamma$ of Ref.~\cite{korytko2026}, does not reach this result. The independently defined pixel therefore agrees with Palmer's cell to $0.3\%$ of a dimension, and the real domain contains no other solution. The $0.008$ is the size of the check's residual, not a second value of $n$.
+
+Three properties fix what the check is worth.
+
+\textit{A prefactor cannot move the integer.} To shift the root of Eq.~(\ref{eq:match}) by $\delta$, the demand or the supply would have to be wrong by a factor $(L/2\pi)^{\delta}$; for $\delta = \tfrac12$ that is $3.2\times10^{30}$, of order $\sqrt L$. The $\pi$ is a question of one part in three hundred, which is what a power count with base $10^{61}$ buys, and $0.008$ is the whole of the residual.
+
+\textit{The residual is a finite-size effect with a formula.} It falls as $1/\ln L$: $3.091$ at $L = 10^{6}$, $3.026$ at $10^{20}$, $3.008$ at the physical value, $3.005$ at $10^{100}$. Nothing is fitted.
+
+\textit{The continuation is the standard one.} Equation~(\ref{eq:omega}) continued through $\Gamma$ is the sphere area of dimensional regularization~\cite{thooft1972}, whose configuration this is: external momenta in a fixed integer-dimensional subspace, the vertex plane, with the ambient dimension continued. It is the Planck count that we can continue. A rational grid for non-integer $n$ may exist; we have no construction of it, and the integer result does not need one.
+
+Equation~(\ref{eq:exact}) gives the dimension of space as the solution of a counting equation, with an independently defined cell agreeing to $0.3\%$. It does not construct space. The argument assumes a background of dimension $n$ carrying a sphere $S^{n-1}$ and asks which $n$ is self-consistent, which is the logical shape of the critical dimension of string theory~\cite{lovelace1971,goddard1972}.
+
+\section{The Residual Factor of $\pi$}
+\label{sec:pi}
+
+Palmer's $L^2$ cells and the $L^2/\pi$ Planck pixels are two counts of one sphere at two resolutions. Palmer's grid on $S^2$ is $L$ bands of latitude by $L$ sectors of longitude, momentum by position in the reading of Sec.~\ref{sec:postulates}, the bands equal in area by Archimedes' theorem: an equal-area partition of the sphere into $L^2$ cells. On the horizon each cell has area
+\begin{equation}
+\frac{4\pi R_\Lambda^2}{L^2} = \frac{4\pi}{L^2}\Big(\frac{L\ell_P}{2\pi}\Big)^2 = \frac{\ell_P^2}{\pi},
+\label{eq:cell}
+\end{equation}
+which is $0.318$ of a Planck pixel and $0.564\,\ell_P$ on a side. The register's grid over-resolves the horizon by a factor $\pi$ in area, and that is the whole of the residual. Palmer's count is exact, Eq.~(\ref{eq:exact}), and the $\pi$ is the price of counting in Planck pixels instead, which Sec.~\ref{sec:root} shows to be worth $0.008$ of a dimension. In Palmer's cells the horizon entropy $L^2/4\pi$ reads $N_{\rm cell}/4\pi$, an observation left open. The check also runs the other way: a Planck pixel subtends $\sqrt{4\pi/(L^2/\pi)} = 2\pi/L$ on the horizon, exactly one notch of the register's phase, and only the relation between an area and a squared circumference, $A = C^2/\pi$, brings in the $\pi$.
+
+This is the distinction that separates Davies' cosmological information bound~\cite{davies2007}, the horizon area in Planck units, $\log_2(L^2/\pi) = 409$, from Palmer's $\log_2 L = 205$: area against circumference. The $\pi$ belongs with the coefficient $\gamma$ of Ref.~\cite{korytko2026} among the order-unity numbers the framework has bounded but not derived.
+
+\section{Interactions and States}
+\label{sec:states}
+
+Ref.~\cite{korytko2026c} states that a configuration of several particles in several planes needs of order $L^3$ labels, and $L^3 = 4\pi N_{\rm pix}(4)$ to the same order-unity accuracy that $L^2 = \pi N_{\rm pix}(3)$. A reader who applied the address rule to that number would select $n = 4$, and the argument would then be unstable under a choice of what to count. It is not. The alphabet is the set from which a single momentum is drawn. A state is a function on the alphabet, an amplitude for each element, and functions are not elements: a state never competes with the alphabet for addresses, and it is not what Postulate~2 is about. The two counts differ at exactly the orientation clause of Sec.~\ref{sec:demand}. For one vertex the whole orientation of its plane is gauge, and the alphabet is $L^2$. For two momenta not confined to one vertex, the overall rotation is gauge but the angle between them is not: two magnitudes and one relative angle, $L^3$, which reproduces the register's number. So $L^2$ and $L^3$ count different objects, the momentum alphabet of a vertex and the configuration space of a pair, and the second is not a rival calculation of the first. Postulate~2 is about the alphabet.
+
+How a configuration of many planes is written on the horizon, whose log-dimension is $L^2/4\pi$ while the configuration needs $L^3$, is the problem of de Sitter holography~\cite{bousso1999,banksfischler2001,parikh2003}, open before this paper and open after it. This paper fixes the dimension of the space in which every vertex's plane lies, and that space is one because the sphere is one. How a state of many vertices is written on the horizon is a separate question, about the Hilbert space and not about the dimension of space, and it is not answered here. The dynamics of interactions is constructed in no dimension; only their existence, from Sec.~\ref{sec:postulates}, and their kinematics, three momenta summing to zero, are used.
+
+\section{The Algebraic Reading}
+\label{sec:algebra}
+
+The counting of Secs.~\ref{sec:demand} to \ref{sec:root} has an algebraic shadow that selects three by a different route. The shift $X$ has eigenvalues $e^{2\pi i\kappa/L}$, roots of unity, so for $L > 2$ the amplitudes are complex and the number field is $\mathbb{C}$. The cyclic group $\mathbb{Z}_L$ has one automorphism that inverts every translation, $j \mapsto -j$, and it is the right--left doublet of Ref.~\cite{korytko2026c}: the fundamental object of a free particle on the ring is a two-level system over $\mathbb{C}$. Its observable algebra is $M_2(\mathbb{C})$, and
+\begin{align}
+\mathrm{Cl}(1,0) &= \mathbb{R}\oplus\mathbb{R}, & \mathrm{Cl}(2,0) &= M_2(\mathbb{R}), \nonumber\\
+\mathrm{Cl}(3,0) &= M_2(\mathbb{C}), & \mathrm{Cl}(4,0) &= M_2(\mathbb{H}),
+\label{eq:clifford}
+\end{align}
+so $M_2(\mathbb{C})$ is the Clifford algebra of a three-dimensional space and of no other dimension, $\mathrm{Cl}(3,0)$ in Euclidean signature and $\mathrm{Cl}(1,2)$ in the one other three-dimensional signature that yields it~\cite{lounesto2001}. Real amplitudes would give two dimensions and quaternionic ones four; the number field selects the dimension. The axiom this reading needs is that the Clifford generators are spatial directions, and Ref.~\cite{korytko2026c} has already paid it for one of them: $\cos\theta = v/c$ makes $\sigma_z$ the ring direction. The extension is to $\sigma_x$ and $\sigma_y$. The Hamiltonian $H = c\hat p\sigma_z + Mc^2\sigma_x$ uses two of the three generators of $\mathrm{Cl}(3,0)$, and their product $\sigma_y = -i\sigma_z\sigma_x$ is the third, the normal to the plane the dynamics occupies. That is the vertex plane's normal, obtained from translation and reversal rather than supplied.
+
+This route and the counting are one structure read twice. Both descend from the same $\mathbb{Z}_L$ and the same doublet, and the two factors of $L$ in Eq.~(\ref{eq:demand}) are the direction and the magnitude on one ring. Their agreement on three is a consistency condition the framework had to pass, not two determinations.
+
+The register's finite rotational structure can be named. The grid of Eq.~(\ref{eq:raqm}) is invariant under rotations about the pole by multiples of $2\pi/L$ and under rotations by $\pi$ about equatorial axes at permitted azimuths, which send $(\theta,\phi)$ to $(\pi-\theta,\,2\alpha-\phi)$ (Ref.~\cite{korytko2026c}, Sec.~III). The first is $\mathbb{Z}_L$; the second reverses $\cos\theta = v/c$ and is the chirality flip; together they form the dihedral group of order $2L$, whose double cover of order $4L$ is a finite subgroup of $SU(2)$. The grid is not invariant under $SO(3)$: in three dimensions, three non-coplanar settings cannot all lie on the grid at once, which is Palmer's Impossible Triangle Corollary~\cite{palmer2026b,palmer2026c} in spatial form; whether he has stated it that way is a question for him.
+
+Palmer's grid is rational in two angles because a qubit's state space is a two-sphere, in any dimension of space. His identification of a spin analyzer's direction with a point on that sphere is possible only when the sphere of spatial directions is also a two-sphere, which is $n = 3$, and which he assumes. The register's identification of the momentum alphabet with the directions of space carries the same requirement, and Secs.~\ref{sec:supply} and \ref{sec:root} are where it is counted. Rationality in more angles offers no way out: one rational probability per angle on $S^{n-1}$ is Eq.~(\ref{eq:u}), $L^{n-1}$ cells, the same equation.
+
+One caveat bounds the reading. In $3+1$ dimensions the Dirac algebra is $\mathrm{Cl}(3,1)$, with $4\times4$ matrices, and chirality and spin are separate qubits. In one dimension there is no spin and the register's doublet is chirality. What the third dimension supplies is stated in Sec.~\ref{sec:consequences}; it is named there, not derived.
+
+\section{Consequences for the Register}
+\label{sec:consequences}
+
+With $n = 3$ in hand, five things follow for the description of a particle in Ref.~\cite{korytko2026c}.
+
+\textit{One ring per direction, and the direction circle's own pair.} A momentum along $\hat{\mathbf{k}}$ is a mode on the great circle in that direction, and each direction carries its own Weyl pair $(X,Z)$, so $\Delta x\,\Delta p \ge \hbar/2$ holds along every direction by the Donoho--Stark argument of Ref.~\cite{korytko2026c}~\cite{donoho1989,massar2008}. The direction itself is a cell on a great circle, and that circle carries a Weyl pair too. Its cell is an angle, $2\pi/L$, so the conjugate quantum is $2\pi\hbar/(L\cdot2\pi/L) = \hbar$. The generator of one-notch rotations of the momentum direction, which is the angular momentum about the plane's normal, therefore takes the values $\hbar m$ with $m\in\mathbb{Z}_L$, and $[\hat\phi,\hat L_z] = i\hbar$ is the same finite Weyl relation as $[\hat x,\hat p] = i\hbar$ on the ring. The quantization of orbital angular momentum in units of $\hbar$ is thus not imported. It is the direction circle read the way Sec.~III of Ref.~\cite{korytko2026c} reads the position ring.
+
+Its range provides a check. The values $|m| \le L/2$ give a largest orbital angular momentum $\hbar L/2 = 3.4\times10^{27}$~J\,s. The largest a particle can carry is the zone-edge momentum times the horizon radius, $(\pi\hbar/\ell_P)(L\ell_P/2\pi) = \hbar L/2$, the same number. The canonical pairs the register supplies in three dimensions are therefore the polar ones, magnitude with radial position and direction with angular momentum; the Cartesian $[\hat x_i,\hat p_j] = i\hbar\delta_{ij}$ is their continuum rewriting, consistent with them rather than separately produced.
+
+\textit{Isotropy, and what a rotation is.} A fixed lattice picks out axes. The register is not a fixed lattice. Each mode carries its own great circle and advances $|\kappa|$ phase steps per tick along its own $\hat{\mathbf{k}}$ (Ref.~\cite{korytko2026c}, Sec.~III), so the dispersion is the same in every permitted direction, and the register's prediction of no energy-dependent speed of light extends from one dimension to three. No physical direction is preferred: the pole of the grid is gauge (Ref.~\cite{korytko2026c}, Sec.~VI), and the direction of any momentum can serve as it. What the grid lacks is a continuum of rotation angles. Its symmetry group is the dihedral group of Sec.~\ref{sec:algebra}, not $SO(3)$, and that is not a lattice defect but the discretization the framework is built on, the same fact as the Impossible Triangle Corollary by which Bell's theorem holds without nonlocality~\cite{palmer2020,palmer2026b}. Rotational invariance in the continuum sense is therefore in the same state as Lorentz invariance, asserted by Palmer and deferred~\cite{palmer2026c}.
+
+\textit{Momentum in the plane, position on the ring.} In a plane, momentum has the clean parameterization of Eq.~(\ref{eq:demand}), and position in whole cells does not, because shifts along non-collinear directions are incommensurate apart from Pythagorean pairs~\cite{korytko2026c}. The notch on each ring is a translation, as before. The orientation clause of Sec.~\ref{sec:demand} removes only the overall orientation, which is a symmetry of the state space and not a reduction of it: for one particle the relative angle between two momenta in a superposition is physical, and its orbital state space in three dimensions is a magnitude times a direction on the sphere, of order $L^3/\pi$.
+
+\textit{Spin.} In one dimension the doublet is chirality. In three dimensions the plane transverse to $\hat{\mathbf{k}}$ exists; Wigner's little group of a massive particle is $SU(2)$, and its fundamental representation is one qubit, spin~\cite{weinberg1995}. The four components of the Dirac field are $2\times2$: chirality along $\hat{\mathbf{k}}$ from the register, and spin transverse to it from the third dimension. For a massless mode the little group's rotation is the $U(1)$ of helicity, the two coincide, and the register's doublet is helicity. The transverse qubit's azimuth is a pattern on the great circle perpendicular to $\hat{\mathbf{k}}$, so the register's clause that every qubit is a pattern on a great circle holds. Its parameters are those of Eq.~(\ref{eq:raqm}) on that circle: the probability of spin up along $\hat{\mathbf{k}}$ is $m/L$ and the azimuth of the spin about $\hat{\mathbf{k}}$ is $2\pi n/L$, so the transverse qubit is a Palmer qubit with a great circle of its own. The qubit itself is postulated here, not derived.
+
+\textit{Capacity.} Ref.~\cite{korytko2026c} derives $2^N \le L$, $N_{\max} = \lfloor\log_2L\rfloor = 205$, from Born probabilities read as frequencies over $L$ trials. That is a statement about the string and not about space, so the ceiling is untouched. What does not survive is the register's remark that the orbital dimension of one free particle on the ring, $L$, and $2^{N_{\max}}$ are one number counted two ways. In three dimensions the orbital dimension of one free particle is of order $L^3/\pi$, whose $\log_2$ is $614$, and the two are different quantities that coincide only on the ring.
+
+\section{What the Argument Does Not Do}
+\label{sec:limits}
+
+It does not construct space. A background of dimension $n$, its directions the address space of momenta, is assumed, and the self-consistent $n$ is found.
+
+It does not write a many-particle state on the horizon. The space is one, since the sphere is one, and every vertex's plane lies in it; but how a configuration of several planes, of order $L^3$ labels, is encoded on a surface of log-dimension $L^2/4\pi$ is the de Sitter holography of Sec.~\ref{sec:states}.
+
+It does not derive the four-point contact terms of field theory, the scalar quartic, the gauge seagull, and the four-gluon vertex, with their strengths. Section~\ref{sec:postulates} says only what they must be here, two crossings at one cell.
+
+It does not touch time or signature: nothing here distinguishes the time direction.
+
+It does not specify the counterfactual dimensions beyond geometry: the dynamics of a world with $n \ne 3$, including its Newton's constant, is not constructed and is not needed.
+
+\section{Predictions and Falsifiers}
+\label{sec:pred}
+
+The result is a postdiction: $n = 3$ for an observed $3$, with the independently defined pixel of Ref.~\cite{korytko2026} agreeing to a factor $\pi$. Its content is the sharpness of Sec.~\ref{sec:root}.
+
+\textit{Falsifiers.} A four-leg event that is not two crossings falsifies Eq.~(\ref{eq:nk}) at $n = 3$, since its momenta span three dimensions in every frame and no single ring labels them. An energy-dependent speed of light at any order falsifies the isotropic dispersion of Sec.~\ref{sec:consequences}, now in three dimensions rather than one. The predictions of Refs.~\cite{korytko2026,korytko2026c} are inherited unchanged: a random circuit and its inverse failing to return past $205$ logical qubits, and $\Lambda$ constant with $w = -1$.
+
+\section{Discussion}
+\label{sec:discussion}
+
+The register of Ref.~\cite{korytko2026c} is a statement about a circle: $L$ cells, a translation per notch, a qubit as a pattern. It says nothing about the sphere on which the circles lie. One sentence about the momenta an interaction can carry, that they have one address space and its addresses are the directions of space, turns the register's own counts into an equation for the dimension of space. The equation reads $L^{n-1} = L^2$, and $n = 3$, the address space being a qubit's Bloch sphere; the independently defined pixel of Ref.~\cite{korytko2026} agrees to a factor $\pi$.
+
+What is postulated, what is derived, and what is open are as stated. Postulated: the register with its hidden phase (Postulate~1), and that the momenta of an interaction have one address space, the same for every interaction, whose addresses are the directions of space (Postulate~2). Derived from the first: conservation at a vertex, that the elementary event is a crossing with three legs, that a four-leg event is two crossings, and that the alphabet of a vertex's momenta is a sphere, from the momentum doublet being a qubit and, independently, from no distinguished cell and no distinguished direction. Derived from both: one momentum per address, the lower bound from finite $L$ and the upper from the gauge clause; that every elementary vertex has as many legs as space has dimensions; that the momentum alphabet of a vertex is $L^2$ in any dimension; that the address count is $L^{n-1}$; and the root of their equality. Open: the residual $\pi$, the encoding of many-particle states on the horizon, the four-point contact terms of field theory as coincident crossings, time, and the origin of the transverse qubit. The register paper stands as written.
+
+Postulates~1 and 2 are one postulate about the address space, and the reading of that postulate on a great circle is exact, as follows. Restrict Postulate~2 to the directions in one plane, the equator of the horizon. The equator runs through Palmer's $L$ sectors of longitude, so it carries $L$ cells; a Planck pixel along it is $\ell_P$ long; so a great circle has $L$ Planck cells. That is $R_\Lambda = L\ell_P/2\pi$, the second axiom of Ref.~\cite{korytko2026}, and since the horizon is one object with one pixel count, $L$ is universal, which is the first. The step from one cell to the next is, seen from the center, a rotation by $2\pi/L$, and, seen along the circle, a translation by $R_\Lambda\cdot2\pi/L = \ell_P$; on the horizon these are one act, which is the register's clause that one notch is a translation by one Planck length. Palmer's string is then a pattern on those cells. So the register's postulate is Postulates~1 and 2 restricted to a great circle, and what the sphere adds is Postulate~2. The two readings of the step agree on a number that neither paper arranged. The register's momentum quantum is $\hbar/R_\Lambda$ (Ref.~\cite{korytko2026c}, Sec.~IV); the direction circle's angular momentum quantum is $\hbar$ (Sec.~\ref{sec:consequences}); and $L_z = R_\Lambda p$ on a circle of radius $R_\Lambda$, so $(\hbar/R_\Lambda)R_\Lambda = \hbar$. The identification that the register called one of structure is, under Postulate~2, literal, the cells being the pixels, and that is why the register's postulate can be derived from it rather than only agreed with.
+
+\begin{acknowledgments}
+The author used an AI assistant (Anthropic's Claude) for adversarial review, numerical verification, and editing of the manuscript. The physical proposal, the postulates, and the claims are the author's own.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{korytko2026c} A. Korytko, One register: a common origin for the granularity of Hilbert space and of space (2026). \mbox{\url{https://doi.org/10.5281/zenodo.22669417}}
+\bibitem{korytko2026} A. Korytko, Gravitation from Hilbert-space granularity: pinning the parameter $L$ of rational quantum mechanics across scales (2026). \mbox{\url{https://doi.org/10.5281/zenodo.22255462}}
+\bibitem{korytko2026b} A. Korytko, The vacuum catastrophe and the granularity of Hilbert space (2026). \mbox{\url{https://doi.org/10.5281/zenodo.22683543}}
+\bibitem{palmer2020} T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell's theorem, Proc. R. Soc. A \textbf{476}, 20190350 (2020).
+\bibitem{palmer2026} T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA \textbf{123}, e2523350123 (2026); arXiv:2510.02877.
+\bibitem{palmer2026b} T. N. Palmer, Impossible counterfactuals, discrete Hilbert space and Bell's theorem, J. Phys.: Conf. Ser. \textbf{3189}, 012006 (2026); arXiv:2601.14941.
+\bibitem{palmer2026c} T. N. Palmer, Solving the mysteries of quantum mechanics: why nature abhors a continuum, arXiv:2602.16382v1 (2026).
+\bibitem{palmer2024} T. N. Palmer, Superdeterminism without conspiracy, Universe \textbf{10}, 47 (2024).
+\bibitem{ehrenfest1917} P. Ehrenfest, In what way does it become manifest in the fundamental laws of physics that space has three dimensions?, Proc. Amsterdam Acad. \textbf{20}, 200 (1917).
+\bibitem{lovelace1971} C. Lovelace, Pomeron form factors and dual Regge cuts, Phys. Lett. B \textbf{34}, 500 (1971).
+\bibitem{goddard1972} P. Goddard and C. B. Thorn, Compatibility of the dual Pomeron with unitarity and the absence of ghosts in the dual resonance model, Phys. Lett. B \textbf{40}, 235 (1972).
+\bibitem{bousso2000} R. Bousso, Positive vacuum energy and the $N$-bound, J. High Energy Phys. \textbf{11}, 038 (2000).
+\bibitem{thooft1972} G. 't Hooft and M. Veltman, Regularization and renormalization of gauge fields, Nucl. Phys. B \textbf{44}, 189 (1972).
+\bibitem{thooft2016} G. 't Hooft, \emph{The Cellular Automaton Interpretation of Quantum Mechanics} (Springer, 2016).
+\bibitem{wilson1974} K. G. Wilson, Confinement of quarks, Phys. Rev. D \textbf{10}, 2445 (1974).
+\bibitem{peierls1933} R. Peierls, Zur Theorie des Diamagnetismus von Leitungselektronen, Z. Phys. \textbf{80}, 763 (1933).
+\bibitem{kogut1975} J. Kogut and L. Susskind, Hamiltonian formulation of Wilson's lattice gauge theories, Phys. Rev. D \textbf{11}, 395 (1975).
+\bibitem{davies2007} P. C. W. Davies, The implications of a cosmological information bound for complexity, quantum information and the nature of physical law, Fluct. Noise Lett. \textbf{7}, C37 (2007).
+\bibitem{bousso1999} R. Bousso, Quantum global structure of de Sitter space, Phys. Rev. D \textbf{60}, 063503 (1999).
+\bibitem{banksfischler2001} T. Banks and W. Fischler, M-theory observables for cosmological space-times, arXiv:hep-th/0102077 (2001).
+\bibitem{parikh2003} M. K. Parikh, I. Savonije, and E. Verlinde, Elliptic de Sitter space: dS/$\mathbb{Z}_2$, Phys. Rev. D \textbf{67}, 064005 (2003).
+\bibitem{lounesto2001} P. Lounesto, \emph{Clifford Algebras and Spinors}, 2nd ed. (Cambridge University Press, 2001), Ch.~16.
+\bibitem{donoho1989} D. L. Donoho and P. B. Stark, Uncertainty principles and signal recovery, SIAM J. Appl. Math. \textbf{49}, 906 (1989).
+\bibitem{massar2008} S. Massar and P. Spindel, Uncertainty relation for the discrete Fourier transform, Phys. Rev. Lett. \textbf{100}, 190401 (2008).
+\bibitem{weinberg1995} S. Weinberg, \emph{The Quantum Theory of Fields}, Vol.~1 (Cambridge University Press, 1995), Sec.~2.5.
+\end{thebibliography}
+
+\end{document}
+
