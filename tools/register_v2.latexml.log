@@ -5,11 +5,11 @@ latexml (LaTeXML version 0.8.8) processing /Users/andrewk/Projects/papers/papers
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/pdfTeX.pool.ltxml... 0.00 sec) 0.05 sec)
 (Processing content /Users/andrewk/Projects/papers/papers/3-register/register_v2.tex...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml...
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/textcomp.sty.ltxml... 0.00 sec) 0.09 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/textcomp.sty.ltxml... 0.00 sec) 0.08 sec)
 Info:fallback:revtex4-2.cls Interpreted 4-2 as a versioned package/class name, falling back to generic revtex.cls
 	at register_v2.tex; line 2 col 11 - line 2 col 11
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revtex.cls.ltxml...
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/article.cls.ltxml... 0.01 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/article.cls.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/natbib.sty.ltxml... 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revtex3_support.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revtex4_support.sty.ltxml...
@@ -19,61 +19,61 @@ Warning:missing_file:ltxcmds Can't find package ltxcmds
 	at ltxcmds.sty.ltxml; line 20
 	Anticipate undefined macros or environments
 	search paths are /Users/andrewk/Projects/papers/papers/3-register, /Users/andrewk/Projects/papers/tools
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml...
 Warning:missing_file:keyval Can't find package keyval
 	at keyval.sty.ltxml; line 19
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml...
 Warning:missing_file:kvsetkeys Can't find package kvsetkeys
 	at kvsetkeys.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml...
 Warning:missing_file:kvdefinekeys Can't find package kvdefinekeys
 	at kvdefinekeys.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml...
 Warning:missing_file:kvoptions Can't find package kvoptions
 	at kvoptions.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/nameref.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml...
 Warning:missing_file:refcount Can't find package refcount
 	at refcount.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml...
 Warning:missing_file:gettitlestring Can't find package gettitlestring
 	at gettitlestring.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
  0.00 sec) 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/url.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml...
 Warning:missing_file:bitset Can't find package bitset
 	at bitset.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11515a568] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
+	In Core::Gullet[@0x124318ff0] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
  0.00 sec) 0.04 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revsymb.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/longtable.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/dcolumn.sty.ltxml...
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec) 0.00 sec) 0.07 sec) 0.07 sec) 0.09 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec) 0.00 sec) 0.06 sec) 0.07 sec) 0.08 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsmath.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsbsy.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsgen.sty.ltxml... 0.00 sec) 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amstext.sty.ltxml... 0.00 sec)
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsopn.sty.ltxml... 0.00 sec) 0.03 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsopn.sty.ltxml... 0.00 sec) 0.02 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amssymb.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsfonts.sty.ltxml... 0.00 sec) 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/graphicx.sty.ltxml...
@@ -89,19 +89,19 @@ Error:undefined:\orcidlink The token T_CS[\orcidlink] is not defined.
 	at register_v2.tex; line 12 col 0 - line 12 col 56
 	Defining it now as <ltx:ERROR/>
 	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0009-0005-4569-2228}
-	In Core::Gullet[@0x11515a568] /Users/andrewk/Projects/papers/papers/3-register/register_v2.tex; from line 12 col 0 to line 12 col 56
-	 <= Core::Stomach[@0x115159e18] <= Core::Definition::Constructor[\@perso... <= Core::Stomach[@0x115159e18] <= ...
- 1.20 sec) 1.27 sec)
+	In Core::Gullet[@0x124318ff0] /Users/andrewk/Projects/papers/papers/3-register/register_v2.tex; from line 12 col 0 to line 12 col 56
+	 <= Core::Stomach[@0x123f8b1f8] <= Core::Definition::Constructor[\@perso... <= Core::Stomach[@0x123f8b1f8] <= ...
+ 1.17 sec) 1.24 sec)
 (Building...
-(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.00 sec) 1.09 sec)
+(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.00 sec) 1.08 sec)
 (Rewriting... 0.02 sec)
 (Math Parsing 316 formulae ...... 0.70 sec)
 Math parsing succeeded:
+   ltx:XMWrap: 1/1
    ltx:XMath: 316/316
    ltx:XMArg: 347/347
-   ltx:XMWrap: 1/1
 Symbols assumed as simple identifiers (with # of occurences):
    'A{italic}' (2), 'Delta' (6), 'E{italic}' (17), 'G{italic}' (4), 'H{italic}' (4), 'L' (2), 'Lambda' (3), 'L{italic}' (78), 'M{italic}' (20), 'N{blackboard}' (1), 'N{italic}' (20), 'P{italic}' (2), 'Q{blackboard}' (1), 'Q{italic}' (1), 'R' (2), 'R{italic}' (12), 'U{italic}' (2), 'X{italic}' (5), 'Z{blackboard}' (4), 'Z{italic}' (3), 'alpha' (5), 'a{italic}' (8), 'c{italic}' (44), 'd{italic}' (1), 'ell' (43), 'e{italic}' (8), 'h{italic}' (5), 'i{italic}' (11), 'j{italic}' (11), 'kappa' (10), 'k{bold}' (6), 'k{italic}' (3), 'm{italic}' (11), 'n{italic}' (4), 'omega' (1), 'phi' (4), 'pi' (44), 'psi' (1), 'p{italic}' (12), 'rho' (1), 'sigma' (9), 's{italic}' (2), 'theta' (11), 't{italic}' (13), 'varepsilon' (4), 'v{italic}' (3), 'w{italic}' (1), 'x{bold}' (1), 'x{italic}' (3)
 Set MATHPARSER_SPECULATE to speculate on possible notations.
 (Finalizing... 0.10 sec)
-Conversion complete: 9 warnings; 1 error; 1 undefined macro[\orcidlink]; 9 missing files[keyval.sty, bitset.sty, kvoptions.sty, gettitlestring.sty, orcidlink.sty, refcount.sty, ltxcmds.sty, kvsetkeys.sty, kvdefinekeys.sty] (See /Users/andrewk/Projects/papers/tools/register_v2.latexml.log) (reqd. 3.30s)
+Conversion complete: 9 warnings; 1 error; 1 undefined macro[\orcidlink]; 9 missing files[refcount.sty, orcidlink.sty, ltxcmds.sty, kvdefinekeys.sty, kvsetkeys.sty, bitset.sty, keyval.sty, gettitlestring.sty, kvoptions.sty] (See /Users/andrewk/Projects/papers/tools/register_v2.latexml.log) (reqd. 3.26s)
