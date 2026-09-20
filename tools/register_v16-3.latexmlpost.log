@@ -1,0 +1,13 @@
+latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/register_v16-3.xml
+(post-processing...
+(Scan register_v16-3.html processing...
+Scan: DBStatus: 752/0 objects
+ 0.04 sec)
+(MakeBibliography register_v16-3.html processing... 0.00 sec)
+(CrossRef register_v16-3.html processing... 0.04 sec)
+(MathML::Presentation register_v16-3.html 387 to process...
+converted 387 Maths
+ 0.20 sec)
+(XSLT[using LaTeXML-html5.xsl] register_v16-3.html processing... 0.05 sec)
+(Writer register_v16-3.html processing... 0.00 sec) 0.34 sec)
+Postprocessing complete No obvious problems (reqd. 0.39s)

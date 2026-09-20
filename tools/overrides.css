@@ -1,0 +1,107 @@
+:root { --teal: #3A9797; --teal-dark: #2D7575; --ink: #16201F; --muted: #5C6868;
+        --rule: #E2E8E8; --bg: #FCFDFD; --paper: #FFFFFF; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px; line-height: 1.62; color: var(--ink); background: var(--paper);
+  max-width: 42em; margin: 0 auto; padding: 0 18px 64px;
+}
+.ltx_page_main, .ltx_page_content { padding: 0; }
+h1, h2, h3, h4, .ltx_title { line-height: 1.25; }
+.ltx_title_document { font-size: 1.5rem; margin: 1.2rem 0 .4rem; }
+.ltx_title_section { font-size: 1.15rem; margin-top: 2.2rem; }
+.ltx_title_subsection { font-size: 1rem; }
+.ltx_abstract { font-size: .97rem; }
+.ltx_abstract .ltx_title { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+a, .ltx_ref, .ltx_cite a { color: var(--teal-dark); }
+.ltx_page_footer, .ltx_authors_multiline .ltx_contact { color: var(--muted); font-size: .85rem; }
+/* LaTeXML reproduces LaTeX's print convention: indent every paragraph except
+   the first after a heading. Faithful to the PDF, but on a screen the
+   paragraphs already have a blank line between them, so the indent is
+   redundant - and it makes the first item under a heading look misaligned
+   against the ones below it (Postulate 1 vs Postulate 2). One convention at
+   a time: keep the vertical gap, drop the indent. */
+p.ltx_p { text-indent: 0 !important; }
+div.ltx_para + div.ltx_para { margin-top: .95em; }
+
+.ltx_bibliography { font-size: .9rem; }
+.ltx_bibitem { margin-bottom: .5rem; }
+
+/* Wide equations and tables scroll inside their own box rather than dragging
+   the page sideways. A display:table element is not a scroll container, and
+   forcing display:block onto it breaks the row layout without containing the
+   overflow either - so each one is wrapped in a real div at build time and
+   the div does the scrolling. */
+.scrollbox { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.scrollbox > table { margin-left: 0; margin-right: 0; }
+
+/* LaTeXML centres a display equation with padding cells of width:50%, which
+   forces the equation table to about twice the equation's own width - 452px
+   here, on any screen size. That, not long content, was what made every page
+   scroll sideways on a phone. Collapse the padding cells and let equations
+   sit left, which reads better in one column anyway. */
+td.ltx_eqn_center_padleft, td.ltx_eqn_center_padright,
+td.ltx_eqn_left_padleft, td.ltx_eqn_right_padright,
+td.ltx_eqn_lefteqn_padright { width: 0; min-width: 0; padding: 0; }
+/* Equation left, number hard right against the margin, as in print. The
+   table spans the column so the number is pushed away from the formula
+   rather than sitting on top of it; a formula wider than the column still
+   scrolls inside its box. */
+table.ltx_equation, table.ltx_eqn_table { width: 100%; margin: 1.2em 0; }
+td.ltx_eqn_cell { text-align: left; }
+td.ltx_eqn_eqno {
+  width: 1%; white-space: nowrap; text-align: right;
+  padding-left: 2em; vertical-align: middle; color: var(--muted);
+}
+/* Bibliography DOIs and arXiv links are long unbreakable strings in a
+   monospace face; they were the last thing forcing the page sideways. */
+.ltx_bibblock, a.ltx_url, .ltx_ref.ltx_url, .ltx_font_typewriter {
+  overflow-wrap: anywhere; word-break: break-word;
+}
+
+/* The bibliography's negative-margin numbering can poke off the left edge. */
+.ltx_bibitem .ltx_tag { margin-left: 0; width: auto; margin-right: .4em; }
+.ltx_biblist { padding-left: 0; list-style: none; }
+.ltx_tabular { font-size: .9rem; }
+/* MathML does not line-break inline formulas, so an over-long one pushes the
+   page sideways on the smallest phones. Let such a formula scroll within the
+   text column instead; inline-block is required for overflow to apply at all. */
+math { max-width: 100%; }
+math[display="inline"] {
+  display: inline-block; max-width: 100%; overflow-x: auto; vertical-align: middle;
+}
+
+/* Chrome dropped <menclose> from MathML Core, so \boxed loses its box - and
+   in these papers the boxed line is the result. Draw it in CSS instead;
+   harmless where the browser already draws one. */
+menclose[notation="box"] {
+  border: 1px solid currentColor; border-radius: 2px;
+  padding: .28em .55em; margin: .1em;
+}
+
+/* The banner: this page is a rendering, the PDF is the paper. */
+.mirror-note {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px; line-height: 1.65; color: var(--muted);
+  border-left: 2px solid var(--teal); background: var(--bg);
+  padding: 10px 14px; margin: 20px 0 8px; border-radius: 2px;
+}
+.mirror-note strong { color: var(--ink); font-weight: 600; }
+.mirror-note a { color: var(--teal-dark); }
+.mirror-note .sep { color: var(--rule); }
+.mirror-foot { margin: 34px 0 28px; }
+/* A superseded version is still the document its URL names; the banner says
+   so plainly rather than the page pretending to be current. */
+.mirror-old { border-left-color: #B8860B; }
+.mirror-old strong { color: #8B6508; }
+@media (prefers-color-scheme: dark) {
+  .mirror-old { border-left-color: #D9A441; }
+  .mirror-old strong { color: #E8C37A; }
+}
+
+@media (max-width: 480px) { body { font-size: 17px; padding: 0 14px 48px; } }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #E8EDEC; --muted: #9DAAA9; --rule: #24312F;
+          --bg: #0F1514; --paper: #131A19; --teal-dark: #6FC5C0; }
+  html, body { background: var(--paper); color: var(--ink); }
+}
