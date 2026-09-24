@@ -4,10 +4,10 @@ latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/register_2026
 Scan: DBStatus: 615/0 objects
  0.04 sec)
 (MakeBibliography register_2026-09-10.html processing... 0.00 sec)
-(CrossRef register_2026-09-10.html processing... 0.03 sec)
+(CrossRef register_2026-09-10.html processing... 0.04 sec)
 (MathML::Presentation register_2026-09-10.html 315 to process...
 converted 315 Maths
- 0.16 sec)
+ 0.18 sec)
 (XSLT[using LaTeXML-html5.xsl] register_2026-09-10.html processing... 0.04 sec)
-(Writer register_2026-09-10.html processing... 0.00 sec) 0.28 sec)
-Postprocessing complete No obvious problems (reqd. 0.33s)
+(Writer register_2026-09-10.html processing... 0.00 sec) 0.30 sec)
+Postprocessing complete No obvious problems (reqd. 0.37s)

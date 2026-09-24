@@ -1,0 +1,13 @@
+latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/paper_v11-5.xml
+(post-processing...
+(Scan paper_v11-5.html processing...
+Scan: DBStatus: 1026/0 objects
+ 0.07 sec)
+(MakeBibliography paper_v11-5.html processing... 0.00 sec)
+(CrossRef paper_v11-5.html processing... 0.06 sec)
+(MathML::Presentation paper_v11-5.html 645 to process...
+converted 645 Maths
+ 0.35 sec)
+(XSLT[using LaTeXML-html5.xsl] paper_v11-5.html processing... 0.08 sec)
+(Writer paper_v11-5.html processing... 0.00 sec) 0.57 sec)
+Postprocessing complete No obvious problems (reqd. 0.79s)

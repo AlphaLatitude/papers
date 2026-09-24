@@ -1,0 +1,423 @@
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib,showkeys]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{orcidlink}
+
+\newcommand{\lc}{\ell_c}
+\newcommand{\tc}{t_c}
+\newcommand{\mc}{m_c}
+\newcommand{\Ec}{E_c}
+\newcommand{\ac}{a_c}
+\newcommand{\RL}{R_\Lambda}
+
+\begin{document}
+
+\title{Gravitation from Hilbert-Space Granularity:\\ The Sphere, the String, and the Ring}
+
+\author{Andrew Korytko\,\orcidlink{0009-0005-4569-2228}}
+\email{andrew@alphalatitude.com}
+\affiliation{AlphaLatitude Inc., P.O. Box 64341, Sunnyvale, California 94088, USA}
+
+\date{September 23, 2026}
+
+\begin{abstract}
+Ever since general relativity and quantum mechanics were discovered over a century ago, physics has been on the quest for a theory that unites them. We argue that the answer has been staring us in the face: gravitation is what a granular quantum mechanics looks like at every scale. Tim Palmer's Rational Quantum Mechanics holds that Hilbert space is granular, with a finite parameter $L$, which he attributes to gravity. We reverse the claim. $L$ comes first, one universal integer, and we start from two postulates: every qubit is a string of bits on a ring of cells, no ring longer than $L$, and any two cells not opposite lie on one such ring. The postulates count the cosmological horizon, $L^2/4$ rings, and one string per ring is its entropy. Jacobson's argument then returns Einstein's equations with $G = c^3\lc^2/\pi\hbar$, $\lc$ the cell, so the measured $G$ fixes the cell at $\sqrt\pi$ Planck lengths. Newton's law is a share of energy per string; rotation curves flatten, without dark matter, where the entropy a mass removes falls below what a sphere's strings hold inside it, at $\pi c^2/12\RL = 1.4\times10^{-10}$~m\,s$^{-2}$ against $1.2$ observed; the cosmological constant is the closure of the ring, $G\Lambda = 12\pi c^3/\hbar L^2$. Pinned from $\Lambda$ and from galaxies, $L = 3.6\times10^{61}$ and $4.3\times10^{61}$, agreeing to eighteen percent. The third place where $L$ appears on its own is the quantum computer, which will report within the decade. We predict what it will find: a ceiling of $204$ entangled qubits, the same for every technology.
+\end{abstract}
+
+\keywords{Rational quantum mechanics; discrete Hilbert space; emergent gravity; cosmological constant; galactic rotation curves; quantum computing}
+
+\maketitle
+
+\onecolumngrid
+\begingroup
+\refstepcounter{table}\label{tab:compare}
+\vspace{2pt}\noindent{\footnotesize TABLE~\thetable.\ What the framework says against what is accepted. ``Identical'': with $G$ from experiment, the derivation gives the accepted value; nothing is taken from it. ``By construction'' means $L$ is pinned from the same $\RL$ the row is compared with. Thermodynamics enters every row through a horizon's temperature and the Clausius relation (Sec.~\ref{sec:count}); elasticity enters the galactic row only (Sec.~\ref{sec:galactic}). The tests are the galactic coefficient, $w$, and the ceiling. Units: $\lc$ the cell, $n = r/\lc$, $\alpha = M/\mc$, $\ac = c^2/\lc$, $\Ec = \hbar c/\lc$, $\rho_c = \Ec/\lc^3$.}\par\vspace{2pt}
+\begin{ruledtabular}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{5.2cm}}
+Quantity & Derived from postulates, thermodynamics, and elasticity & Accepted & Status \\
+\colrule
+\arrayrulecolor{black!25}
+Horizon entropy & one string per largest ring, $L^2/4 = 3.3\times10^{122}$ & $A/4\ell_P^2 = 3.3\times10^{122}$ & Same value; counted from Postulate~2, Bekenstein--Hawking not used \\
+\hline
+Cell & $\lc = \sqrt{\pi\hbar G/c^3} = 2.86\times10^{-35}$~m & $\ell_P = \sqrt{\hbar G/c^3} = 1.62\times10^{-35}$~m & $\ell_P = \lc/\sqrt\pi$ derived; $G$ fixes the cell \\
+\hline
+Newton's constant & $4\pi c^3\RL^2/\hbar L^2$; with a ceiling of 204, $3.3\times10^{-11}$ to $1.3\times10^{-10}$ & $6.674\times10^{-11}$~m$^3$\,kg$^{-1}$\,s$^{-2}$ & Measured value at mid-bracket, $\log_2L = 204.5$; a factor-four test to come \\
+\hline
+Horizon temperature & $k_BT = \Ec/L = 3.0\times10^{-53}$~J & Gibbons--Hawking $\hbar c/2\pi\RL = 3.0\times10^{-53}$~J & Identical: $\hbar$ over the lap time \\
+\hline
+Newton's law & $a/\ac = \alpha/\pi n^2$; $5.93\times10^{-3}$~m\,s$^{-2}$ at 1~au & $GM/r^2 = 5.93\times10^{-3}$~m\,s$^{-2}$ & Identical: two quanta per string of the sphere \\
+\hline
+Entropy a mass removes & $L\alpha$; Sun $5.9\times10^{99}$ & $2\pi Mc\RL/\hbar = 5.9\times10^{99}$ & Identical; the horizon shrinks by $\alpha/\pi$ cells \\
+\hline
+Galactic acceleration & $a_M = \pi c^2/12\RL = 1.42\times10^{-10}$~m\,s$^{-2}$, an upper bound & $a_0 = (1.20\pm0.24)\times10^{-10}$; $(1.19\pm0.10)\times10^{-10}$~m\,s$^{-2}$ & 85 percent of the bound saturated, $0.9\sigma$ and $2.3\sigma$; Verlinde's flat ball gives $0.90$ \\
+\hline
+Vacuum energy density & $3\pi^2\rho_c/2L^2 = 5.25\times10^{-10}$~J\,m$^{-3}$ & $\Lambda c^4/8\pi G = 5.25\times10^{-10}$; QFT estimate $10^{113}$ & Identical once $\RL$ is placed; the 123 orders are $L^2$ \\
+\hline
+$G\Lambda$ & $12\pi c^3/\hbar L^2 = 7.28\times10^{-63}$~m\,kg$^{-1}$\,s$^{-2}$ & $7.28\times10^{-63}$ & By construction; the content is $\propto1/L^2$ and $w = -1$ \\
+\hline
+Hubble rate & $2\pi/L\tc = 1.81\times10^{-18}$~s$^{-1}$ & $H_0\sqrt{\Omega_\Lambda} = 1.81\times10^{-18}$~s$^{-1}$ & By construction: $2\pi$ over the lap time of the placed horizon \\
+\hline
+Equation of state & $w = -1$ exactly & DESI DR2: evolving at $3.1\sigma$; Planck alone $-1.03\pm0.03$ & Tension; predicted not to survive \\
+\hline
+$L$ & $3.6\times10^{61}$ from $\Lambda$, $4.3\times10^{61}$ from galaxies & --- & Agree to 18 percent, both giving a ceiling of 204 \\
+\hline
+Qubit ceiling & 204 for every technology & none measured; 83-qubit circuits give $L\gtrsim2^{77}$ & The test of the reversal \\
+\arrayrulecolor{black}
+\end{tabular}
+\end{ruledtabular}
+\endgroup
+\vspace{8pt}
+\twocolumngrid
+
+\section{Introduction}
+
+Rational Quantum Mechanics (RaQM)~\cite{palmer2020,palmer2026,palmer2026b,palmer2026c} leaves the Schr\"odinger equation untouched and instead restricts the bases in which a quantum state is defined: a qubit
+\begin{equation}
+|\psi\rangle = \cos\tfrac{\theta}{2}\,|1\rangle + e^{i\phi}\sin\tfrac{\theta}{2}\,|{-1}\rangle
+\label{eq:qubit}
+\end{equation}
+with $\theta$ and $\phi$ the colatitude and azimuth of the state on the Bloch sphere, exists only in bases with
+\begin{equation}
+\cos^2\tfrac{\theta}{2} = \frac{m}{L},\qquad \frac{\phi}{2\pi} = \frac{n}{L},
+\label{eq:raqm}
+\end{equation}
+with $m\in\{0,\dots,L\}$ and $n\in\{0,\dots,L-1\}$. The state is then a length-$L$ bit string whose fraction of $+1$ entries is $\cos^2(\theta/2)$ and whose cyclic shift by $n$ places is the phase~\cite{palmer2026}. Born's rule becomes a matter of counting. Bell's inequality is evaded because, by Niven's theorem~\cite{niven1956,jahnel2010}, the counterfactual measurement settings its derivation requires are not permitted bases~\cite{palmer2024,palmer2026b}. And because every probability is a frequency over $L$ bits, a state spread across all $2^N$ outcomes of $N$ qubits needs $2^N \le L$, so there is a qubit capacity
+\begin{equation}
+N_{\max} = \lfloor\log_2 L\rfloor ,
+\label{eq:nmax}
+\end{equation}
+beyond which quantum algorithms that spread their state across all of Hilbert space lose their exponential advantage~\cite{palmer2026,korytko2026c}.
+
+Palmer fixes $L$ from gravity. State reduction is a chaotic shift map that lowers $L$ by one each Planck time $t_P$ (in Palmer's ordering, $t_P = \sqrt{\hbar G/c^5}$), so the reduction time is $\tau^* = (L-1)t_P$; equating this to the Di\'osi--Penrose collapse time $\hbar/E_G$~\cite{diosi1989,penrose1996} gives
+\begin{equation}
+L = \left\lceil\frac{E_P}{E_G}\right\rceil ,
+\label{eq:palmerL}
+\end{equation}
+where $E_P = \hbar/t_P$ is the Planck energy, $E_G$ is the gravitational self-energy of the qubit's superposition, and $\lceil x\rceil$ is the smallest integer not less than $x$. Both $E_P$ and $E_G$ contain $G$. Gravity is the input and $L$ the output, and $L$ varies with the qubit, from $10^{64}$ for a quantum-dot electron to $10^{109}$ for a hyperfine ion-trap qubit~\cite{palmer2026}. Palmer closes by noting that his $N_{\max}$ lands beside Davies' cosmological information bound~\cite{davies2007,lloyd2002} and that this is unlikely to be a coincidence.
+
+We take that remark literally and reverse the causality. $L$ does not exist because of gravitation. Gravitation exists thanks to $L$, which is a central universal constant of nature. Table~\ref{tab:compare} shows what the reversal yields, with numbers on both sides; the sections below derive each row. The reversal is made concrete by our companion register paper~\cite{korytko2026c}, which puts Palmer's bit string on a ring of cells and derives the rest of quantum mechanics from two postulates about cells and rings, and by Ref.~\cite{korytko2026d}, which derives from them the three dimensions of space and the sphere the largest rings make about every observer. Here we take those postulates, identify that sphere with the observer's cosmological horizon, which fixes $L$, and derive gravity. The postulates count the horizon, and the count is its entropy. From the count and the thermodynamics of horizons follow Einstein's equations with Newton's constant written in the cell, so that the measured $G$ fixes the cell and the Planck length is derived; Newton's law as a share of energy per string; the acceleration below which rotation curves flatten, with its coefficient; and the cosmological constant. At each scale one structure of the register does the work: a sphere of strings, a string running to the horizon, and the closed ring. Such a claim is tested first of all by consistency, and then by prediction. Known gravitational phenomena on every scale, each used on its own to pin $L$, must return the same number. Section~\ref{sec:postulates} states the postulates, the placement, and the counts. Section~\ref{sec:count} derives $G$ from the count and fixes the cell. Section~\ref{sec:scales} works through the scales in turn, from quantum to cosmological, deriving the familiar phenomena on each and recording the value of $L$ each one pins. Section~\ref{sec:hold} asks whether $L$ holds. Section~\ref{sec:predictions} lists what would falsify the picture.
+
+
+\section{Postulates, Placement, and the Count of the Horizon}
+\label{sec:postulates}
+
+The postulates are those of Ref.~\cite{korytko2026c}, with one change of wording explained below. A \emph{cell} is a place on a ring; a \emph{ring} is a closed line of translation; a \emph{tick} is the time light takes to cross a cell.
+
+\textbf{Postulate 1 (the register).} \emph{Quantum mechanics is granular. Every qubit is a string of bits, one on each cell of a ring, each cell one length $\lc$ long, which light crosses in one tick. No ring has more than $L$ cells, with $L\in\mathbb{N}$. The bits are the possible outcomes of one measurement of the qubit, and the string's cyclic position on its ring is the qubit's phase. Any two qubits of $L$ bits can be read jointly, at one cell. The shift moves a bit to the next cell, a translation by one cell. A bit, and the measurement it answers, are carried from tick to tick. The global phase of a state is hidden: no law depends on it.}
+
+\textbf{Postulate 2 (the rings).} \emph{Every cell has one opposite, the cell halfway around every ring of $L$ cells through it. Any two cells not opposite lie on one ring of $L$ cells.}
+
+Reference~\cite{korytko2026c} states the cell as one Planck length long. We write its length as $\lc$ and do not assume its value, because Sec.~\ref{sec:count} fixes it from Newton's constant: the cell is $\sqrt\pi$ Planck lengths. Everything the register derives from the postulates carries over with $\lc$ for $\ell_P$, and four of its results are used here. Every probability is a frequency over the $L$ bits, so Eq.~(\ref{eq:raqm}) holds and Eq.~(\ref{eq:nmax}) holds as a ceiling. A ring of $L'$ cells has the lap time $L'\tc$, and the least energy a massless mode on it can carry is $h/L'\tc$, the quantum of the ring. The one freedom the tick has is to reverse a bit's sense of motion, and a particle's mass is the rate at which it does so, $\alpha = M/\mc$ per tick, with $\mc = \hbar/c\lc$ the mass of the cell. And space has three dimensions, so that every sphere is a two-sphere, and the directions at a cell number $L$, one for each cell of the ring of its quarter-lap cells, so that angles come in steps of $2\pi/L$. We write $\tc = \lc/c$, $\Ec = \hbar c/\lc$, and $\ac = c^2/\lc$ for the cell's tick, energy, and acceleration.
+
+\textbf{The placement.} \emph{The sphere the largest rings make is the cosmological horizon:}
+\begin{equation}
+\RL = \frac{L\,\lc}{2\pi} .
+\label{eq:ident}
+\end{equation}
+The sphere itself is derived: with three dimensions, the largest rings make a two-sphere about every observer, whose great circles they are, of radius $L\lc/2\pi$~\cite{korytko2026d}. The cosmological horizon of an observer at rest is likewise a sphere about him every great circle of which has the length $2\pi\RL$~\cite{gibbons1977}, and no structure of the register is larger than its sphere of largest rings; the placement identifies the two, and it is what gives $L$ its value. Reference~\cite{korytko2026c} takes it over. Palmer's phase operator $\zeta$ is a cyclic permutation of the $L$-bit string, each application a rotation by exactly $2\pi/L$ about the polar axis~\cite{palmer2026}, so a full turn of phase counts $L$ steps; that those steps are cells on a great circle of the horizon is not in his construction. The placement refers to the cosmological horizon without saying which one. Nothing in it fixes the radius in time; but $L$ is a constant, so $\lc$, and with it $G$ by Sec.~\ref{sec:count}, scale with the radius, and the observed constancy of $G$ requires the radius to be constant too. In an expanding universe the only constant horizon is the de Sitter one, whose radius is set by the cosmological constant; the alternative, a horizon that grows with the Hubble radius, is excluded in Sec.~\ref{sec:cosmo} on observational grounds. Because every observer's de Sitter horizon has the same radius, $L$ is observer-independent, as a constant of nature must be. In the continuum that interpolates the cells, an observer's horizon lies at the proper distance $\pi\RL/2 = L\lc/4$, a quarter lap: along every largest ring through his cell it is $L/4$ cells on, halfway to the opposite cell of Postulate~2, and the sphere of those quarter-lap cells is the horizon the placement counts.
+
+\textbf{The reversal.} Keep Palmer's picture of state reduction as a shift map at one step per tick, so that $\tau^* = L\tc$, but with $L$ universal. With $L$ a constant of nature the map cannot lower it; what the reversal keeps is its clock, $L$ ticks. Then, by Eq.~(\ref{eq:ident}),
+\begin{equation}
+\tau^* = L\,\tc = \frac{2\pi\RL}{c} ,
+\label{eq:clock}
+\end{equation}
+the de Sitter period $2\pi/H_\infty$, where $H_\infty = c/\RL$ is the asymptotic Hubble rate: the time for one lap of the horizon at the speed of light. The universal energy that replaces $E_G$ is then
+\begin{equation}
+\frac{\Ec}{L} = \frac{\hbar}{\tau^*} = \frac{\hbar c}{2\pi\RL} = k_B T_{\rm dS},
+\label{eq:energy}
+\end{equation}
+the Gibbons--Hawking temperature of the horizon~\cite{gibbons1977}. Palmer's Eq.~(\ref{eq:palmerL}), read backwards, says that gravity's characteristic energy in the reduction process is the thermal energy of the cosmological horizon, and that every qubit shares it. Three consequences follow at once. First, $\tau^*\sim10^{11}$~yr, so an isolated qubit never completes reduction; Palmer makes the same observation. Second, $L$ no longer depends on the qubit, so $N_{\max}$ is the same for every technology, which is the sharpest experimental difference between the two causal orderings. Third, the reversal discards mass-dependent gravitational collapse, which Palmer's program takes to be gravity's role in quantum mechanics~\cite{palmer2016,hance2025}. In Palmer's ordering a heavy superposition has small $L$ and reduces in milliseconds; here every system shares the $10^{11}$-yr clock, so the definiteness of macroscopic bodies is not supplied by gravity and must come, as in standard quantum theory, from environmental decoherence. The reversed theory therefore predicts no mass-dependent collapse signal of Di\'osi--Penrose type, consistent with the null result of the underground search of Ref.~\cite{donadi2021}; Palmer's shift map is non-dissipative by construction and equally consistent with it, so the null result does not discriminate between the orderings. $N_{\max}$ does.
+
+\textbf{The count.} Postulate~2 counts the horizon, and the count is the new input to gravity. Every largest ring through a cell $P$ passes through its opposite $P'$, and two rings through $P$ share only $P$ and $P'$, since two cells not opposite fix one ring; so the rings through $P$ cut the remaining cells into disjoint sets of $L-2$. Any two largest rings of the horizon share a cell, since the qubits they carry can be read jointly at one cell (Postulate~1), and with it its opposite. Take a largest ring $E$ not through $P$. Each ring through $P$ meets $E$ in one opposite pair, distinct rings in distinct pairs, and every pair of $E$ lies on a ring through $P$; $E$ has $L/2$ pairs, so $\rho = L/2$ rings pass through every cell. Every cell not opposite $P$ lies on one of them, so the horizon has
+\begin{equation}
+\begin{split}
+C &= 2 + \rho(L-2) = \frac{L^2}{2} - L + 2 \ \text{cells},\\
+R &= \frac{C\rho}{L} = \frac{L^2}{4} - \frac{L}{2} + 1 \ \text{rings},
+\end{split}
+\label{eq:counts}
+\end{equation}
+and $C = 2R$: one ring for every opposite pair of cells. Taking a cell with its opposite as a point and a largest ring as a line, the horizon is a finite projective plane of order $L/2 - 1$, with $R$ points and $R$ lines. That constrains $L$: every known plane has prime-power order, and orders $1$ or $2$ modulo $4$ that are not sums of two squares do not exist~\cite{bruck1949}. A cell's share of the horizon's area is $A_{\rm hor}/C = 2\lc^2/\pi$, and a ring's is $4\lc^2/\pi$.
+
+\textbf{The entropy.} The entropy of a horizon counts the strings its description ranges over~\cite{korytko2026c}, and the description of the horizon ranges over one string for each largest ring: the sense of motion along it, its doublet, which is the one qubit a ring carries by Postulate~1 whatever else is written on it. So the horizon's entropy is its number of largest rings,
+\begin{equation}
+\frac{S_{\rm hor}}{k_B} = R = \frac{L^2}{4}
+\label{eq:S}
+\end{equation}
+to leading order. This is the register's count, and nothing of Bekenstein and Hawking is used in it; Sec.~\ref{sec:count} shows that their quarter per Planck area comes out.
+
+\textbf{Counting in the bulk.} The register counts exactly on the horizon. A sphere of radius $r$ about a body is a sphere of rings of $L' = L\,r/\RL$ cells with the same structure, so it holds the fraction $(r/\RL)^2$ of the horizon's cells and rings, its area in units of a cell's share. With $n = r/\lc$ the distance in cells,
+\begin{equation}
+N_c(r) = \frac{L^2}{2}\Big(\frac{r}{\RL}\Big)^2 = 2\pi^2 n^2, \quad
+N_s(r) = \frac{N_c(r)}{2} = \pi^2 n^2 ,
+\label{eq:N}
+\end{equation}
+cells and strings. $L$ cancels between the count and the unit, so nothing on a sphere at solar radii knows $L$: its counts are $n^2$, and $n^2 \ll L^2$. Between cells, space is the continuum that interpolates them, on which areas, light cones, and the Raychaudhuri equation are written; the register constructs no manifold, and the interpolation supplies the areas whose ratios do the counting.
+
+\section{Newton's Constant from the Count}
+\label{sec:count}
+
+Before testing the hypothesis at widely separated scales, we derive $G$ from the count of Sec.~\ref{sec:postulates} and the thermodynamics of horizons. Three things are taken from outside the postulates, none of them a number. A horizon is thermal, in the state whose period is the lap time of its ring, and a state of period $\tau$ has temperature $\hbar/\tau$: that is what temperature means for such a state, and it is the content of the Gibbons--Hawking and Unruh temperatures~\cite{gibbons1977,unruh1976}. The energy that crosses a horizon is heat, $\delta Q = T\,dS$, which is Jacobson's step~\cite{jacobson1995}. And the interpolation of Sec.~\ref{sec:postulates} carries the geometry of horizons. The entropy is the register's, Eq.~(\ref{eq:S}), and that is what is new against Jacobson's derivation, which takes the entropy density from Bekenstein and Hawking. Verlinde's entropic argument reaches Newton's law at the Newtonian level~\cite{verlinde2011}; we do not use it, since it reads gravity as a force driven by the entropy of the screen, which is where it is contested~\cite{visser2011,kobakhidze2011}, and Jacobson's argument derives no force. The elastic response of his later work~\cite{verlinde2017} is a different argument, and Sec.~\ref{sec:galactic} uses it.
+
+\subsection{The temperature of a horizon in cells}
+A horizon's ring of $L_h$ cells has the lap time $L_h\tc$, and by the thermal assumption its temperature is
+\begin{equation}
+k_B T = \frac{\hbar}{L_h\tc} = \frac{\Ec}{L_h} .
+\label{eq:T}
+\end{equation}
+For the cosmological horizon $L_h = L$, the lap time is $2\pi\RL/c$, and Eq.~(\ref{eq:T}) is Eq.~(\ref{eq:energy}). An observer accelerating at $a$ has a horizon $c^2/a$ behind him, whose thermal period is $2\pi c/a$, the lap time of a ring of $L_a = 2\pi c^2/a\lc$ cells; Eq.~(\ref{eq:T}) then gives $k_BT_a = \hbar a/2\pi c$, Unruh's temperature. The register supplies the quantum of every ring, $h$ over its lap time, and the temperature is that quantum over $2\pi$. Through every point of spacetime, in every null direction, passes the horizon of such an observer, a local Rindler horizon.
+
+\subsection{Clausius relation}
+On every local Rindler horizon the entropy is its count of rings, one string each, so Jacobson's balance of heat and entropy reads
+\begin{equation}
+\delta Q = T_a\,dS = \frac{\hbar a}{2\pi c}\,dR :
+\label{eq:clausius}
+\end{equation}
+energy crossing a horizon adds rings, $2\pi c/\hbar a$ of them per unit of energy, and with a ring's share of area $4\lc^2/\pi$ it adds area $dA = (8\lc^2 c/\hbar a)\,\delta Q$. The Raychaudhuri equation gives the change of area in terms of the Ricci tensor, and the balance can hold in every direction at every point only if
+\begin{equation}
+R_{\mu\nu} - \tfrac12 R\,g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{2\pi k_B}{\hbar c\,\eta}\,T_{\mu\nu},
+\label{eq:einstein}
+\end{equation}
+with $\eta$ the entropy per unit area and $\Lambda$ an integration constant that the argument leaves free: a stress tensor proportional to the metric has no flux through a null surface and never enters Eq.~(\ref{eq:clausius})~\cite{korytko2026b}. This is Einstein's equation, and comparing its coefficient with $8\pi G/c^4$ gives $G = c^3k_B/4\hbar\eta$. Nothing in this is a force. Equation~(\ref{eq:einstein}) is a condition on the geometry, that the count of every local horizon stays in balance with the heat that crosses it; matter then moves on the geodesics of the geometry that satisfies it.
+
+\subsection{The cell from Newton's constant}
+By Eqs.~(\ref{eq:counts}) and (\ref{eq:S}) the entropy per unit area of the horizon is $\eta = k_B R/A_{\rm hor} = k_B(L^2/4)/(L^2\lc^2/\pi)$, so
+\begin{equation}
+\eta = \frac{\pi k_B}{4\lc^2}, \qquad
+G = \frac{c^3\lc^2}{\pi\hbar} = \frac{4\pi c^3\RL^2}{\hbar L^2} .
+\label{eq:G}
+\end{equation}
+This is the result of the section. The $\pi$ is the register's, a ring's share of area, $4\lc^2/\pi$, against the cell squared; Jacobson's $4$, from the $8\pi$ of the field equations and the $2\pi$ of the thermal period, cancels the $4$ of that share. Newton's constant is measured, so Eq.~(\ref{eq:G}) fixes the cell,
+\begin{equation}
+\lc = \sqrt{\frac{\pi\hbar G}{c^3}} = \sqrt\pi\,\ell_P = 2.86\times10^{-35}~{\rm m},
+\label{eq:cell}
+\end{equation}
+with $\ell_P \equiv \sqrt{\hbar G/c^3} = \lc/\sqrt\pi$,
+so the Planck length is a derived quantity, the cell over $\sqrt\pi$. With it the horizon's entropy, Eq.~(\ref{eq:S}), is $L^2/4 = \pi\RL^2/\lc^2 = A_{\rm hor}/4\ell_P^2$: Bekenstein and Hawking's quarter per Planck area~\cite{bekenstein1973} is the register's one string per ring, a ring's share of the horizon being $4\ell_P^2$. Newton's law, $a = GM/r^2$, is the weak-field limit of Eq.~(\ref{eq:einstein}), and its content for a static sphere is Padmanabhan's equipartition~\cite{padmanabhan2010}, which holds in every static solution of Eq.~(\ref{eq:einstein}): the energy inside a sphere on which the acceleration is $a$ is two quanta $k_BT_a$ for each of its strings,
+\begin{equation}
+Mc^2 = 2N_s(r)\,k_BT_a = \pi n^2\,\frac{\hbar a}{c}
+\quad\Longrightarrow\quad
+\frac{a}{\ac} = \frac{\alpha}{\pi n^2} ,
+\label{eq:newton}
+\end{equation}
+with $\alpha = M/\mc$ and $n = r/\lc$. So Newton's law reads: the body's energy is shared equally by the strings of any sphere around it; the share per string is set by the temperature of the horizon that an observer held on the sphere sees; and the share falls as the string count grows, $1/r^2$. A test body $n$ cells from a mass of flip rate $\alpha$ accelerates at $\alpha/\pi n^2$ cell accelerations. Two remarks. First, a continuum does not gravitate: without cells the entropy per area of a horizon diverges with the cutoff, $\eta\to\infty$, and $G\to0$, since no finite energy changes the area of a horizon that holds infinitely many strings per unit of area. Finite cells gravitate because each ring is worth $4\lc^2/\pi$ of area, and Eq.~(\ref{eq:clausius}) is the exchange rate. Second, Eq.~(\ref{eq:G}) scales as $1/L^2$: with $L$ a constant of nature, $G$ is constant exactly when the horizon radius is, which is what singled out the de Sitter horizon in Sec.~\ref{sec:postulates} and what makes the constancy of $G$ and of $\Lambda$ one statement (Sec.~\ref{sec:predictions}). The numerical value of $G$ follows from a measurement of $L$ that does not use $G$, and the quantum computer's count is that measurement (Sec.~\ref{sec:hold}).
+
+\section{Gravitational Phenomena Scale by Scale}
+\label{sec:scales}
+
+On each scale one structure of the register does the work, and we record what each scale pins. At the solar scale it is the sphere of Eq.~(\ref{eq:N}); at the galactic scale the string, $L$ cells long, running from the sphere to the horizon; at the cosmological scale the closed ring.
+
+\subsection{Quantum scale: qubits and quantum computers}
+
+Here $L$ acts directly through Eq.~(\ref{eq:nmax}). The bound bites only for states spread across Hilbert space, so entanglement demonstrations of the Greenberger--Horne--Zeilinger type, which occupy two amplitudes, do not test it. Random-circuit sampling does, and the $53$-, $70$- and $83$-qubit experiments of Refs.~\cite{arute2019,morvan2024,gao2025} imply $L\gtrsim2^{77}$. That is far below $\log_2L\sim200$, so this scale does not yet pin $L$. Physical qubit counts are much larger, more than a thousand superconducting qubits on IBM's Condor processor and $6{,}100$ atoms in a single tweezer array~\cite{manetsch2025}, but a count of physical qubits is not a count of qubits entangled in a state that fills Hilbert space, and the bound says nothing about it. The same holds for logical qubits, of which $48$ have been demonstrated on $280$ atoms~\cite{bluvstein2024}: each is encoded in many physical qubits confined to a small, highly structured subspace, the situation Palmer already exempts when he discusses macroscopic quantum states~\cite{palmer2026}. What this scale will do, on the timescale Palmer gives for factoring tests~\cite{palmer2026,gidney2025}, is measure $L$ directly. The test is a random circuit on $N$ fault-tolerant logical qubits, deep enough to spread its state across the $2^N$ outcomes, followed by its inverse. In quantum mechanics the state returns to the initial one with the gate fidelity; here it does not once $N$ exceeds $\log_2L$, because the intermediate state gives probability to more outcomes than $L$ bits can hold. Error correction does not lift the ceiling, which is a count of outcomes and not a rate of errors. The reversed theory's prediction on this scale is $N_{\max} = 204$, the same for every technology (Sec.~\ref{sec:hold}).
+
+State reduction on this scale runs on the universal clock (\ref{eq:clock}) and never completes; nothing observable changes for laboratory qubits, exactly as in RaQM.
+
+\subsection{Terrestrial and solar scales: the sphere}
+
+Section~\ref{sec:count} gave Einstein's equations with $G = c^3\lc^2/\pi\hbar$, Eq.~(\ref{eq:G}), and Newton's law as their weak-field limit, Eq.~(\ref{eq:newton}). Gravitational redshift~\cite{pound1960}, the perihelion advance of Mercury, light deflection, and gravitational-wave propagation then follow as they do in general relativity. Mercury's anomalous advance $6\pi GM_\odot/(p\,c^2)$, with $p = a_{\rm orb}(1-e^2)$ the semi-latus rectum of the orbit, is $42.98''$ per century and the deflection of starlight at the solar limb $4GM_\odot/(c^2R_\odot)$ is $1.75''$, both as observed. At the Earth's orbit, $\alpha = 1.62\times10^{38}$ and $n = 5.22\times10^{45}$ in Eq.~(\ref{eq:newton}) give $5.93\times10^{-3}$~m\,s$^{-2}$. They depend on $L$ and $\RL$ only through $G$, i.e., only through the cell $\lc = 2\pi\RL/L$.
+
+What this scale pins is therefore $\lc$, the combination $2\pi\RL/L$, and not $L$ on its own. The count of a sphere is $n^2$, with $L$ cancelled against the unit, Eq.~(\ref{eq:N}); and the horizon of an observer held at solar radii is his own, $L_a\ll L$, since $a\gg c^2/\RL$ there. This is as it should be, since solar-system gravity is described by general relativity to exquisite precision, and a theory in which $L$ showed up there separately from $\RL$ would be wrong. The situation is the exact gravitational analogue of Palmer's observation that RaQM and QM are indistinguishable for small numbers of qubits: the granularity shows itself only at the extremes, at large $N$ in the quantum case and at small acceleration in the gravitational case. To forestall a natural misreading: the direct kinematic effect of a $2\pi/L$ phase grid on an orbit is $\sim10^{-61}$~rad per revolution, fifty-four orders of magnitude below Mercury's $5\times10^{-7}$~rad; angular discreteness does nothing to orbits. The only route by which the horizon could enter solar-system dynamics is through the galactic acceleration of Sec.~\ref{sec:galactic}, whose corrections are of order $10^{-10}$~m\,s$^{-2}$, eight orders of magnitude below solar gravity at Earth's orbit; planetary ephemerides are only now reaching that sensitivity~\cite{hees2014}. The push of Sec.~\ref{sec:cosmo} is smaller still, $5\times10^{-25}$~m\,s$^{-2}$ at the Earth's orbit.
+
+\subsection{Galactic scale: the string}\label{sec:galactic}
+
+At the scales above, $L$ and $\RL$ entered gravity only through their ratio, and two facts of the register did no work. A string has $L$ bits, one on each cell of a largest ring, which reaches the horizon: the strings a sphere counts are not confined to it. And no ring has more than $L$ cells, so no horizon is colder than $\Ec/L$: the ring $L_a$ of a held observer cannot exceed $L$, which by Eq.~(\ref{eq:T}) means $a \ge c^2/\RL$. Both enter at accelerations of order the horizon's surface gravity, $c^2/\RL = cH_\infty = 5.4\times10^{-10}$~m\,s$^{-2}$. That the scale at which rotation curves flatten is the horizon's acceleration, up to a coefficient, is not ours: Milgrom reached it from the Unruh temperature of de Sitter space~\cite{milgrom1999}, and Verlinde from its entanglement entropy~\cite{verlinde2017}. What is ours is the count that fixes where $L$ enters and the coefficient, which we now derive, following Verlinde's elastic argument with the register's counts in place of his entropy assignments.
+
+\textit{A mass draws the horizon in.} Einstein's equations hold from Sec.~\ref{sec:count} on. Their solution for a mass $M$ inside the cosmological horizon is Schwarzschild--de Sitter, whose outer horizon lies at $\RL - GM/c^2$ to first order in $M$. By Eq.~(\ref{eq:cell}), $GM/c^2 = \lc\alpha/\pi$: the mass draws the horizon in by $\alpha/\pi$ cells. Its circumference loses $2\alpha$ cells, and since the entropy is the square of the circumference in cells over four, Eq.~(\ref{eq:S}), the loss is $(L/2)\cdot2\alpha$,
+\begin{equation}
+S_M = L\alpha = \frac{Mc^2}{k_BT_{\rm dS}} = \frac{2\pi Mc\RL}{\hbar} ,
+\label{eq:SM}
+\end{equation}
+Verlinde's Eq.~(25) in cells~\cite{verlinde2017}. The entropy a mass takes from the horizon is its flip rate times the length of the ring, its energy over the horizon's temperature, and it does not depend on the cell's size. For the Sun $L\alpha = 5.9\times10^{99}$; for a galaxy of $10^{11}M_\odot$, $5.9\times10^{110}$. Within a sphere of radius $r\ll\RL$ the mass removes $S_M(r) = 2\pi Mcr/\hbar = 2\pi n\alpha$, Verlinde's Eq.~(28): the sphere at geodesic distance $r$ from the mass loses the area $8\pi GMr/c^2$, which at a ring's share $4\lc^2/\pi$ is $2\pi n\alpha$ rings.
+
+\textit{Where the claim is carried.} The sphere at $r$ counts $N_s(r) = \pi^2n^2$ strings, Eq.~(\ref{eq:N}), the horizon's $L^2/4$ scaled by the ratio of areas, but its strings are not confined to it. A string on the sphere runs along a largest ring to the horizon, a quarter lap from the body, $L/4$ cells on along every largest ring through its cell (Sec.~\ref{sec:postulates}). The sense of motion that is the string's entropy is carried by every bit of it alike (Postulate~1), so the string's one unit is spread evenly over its cells, and of the $L/4$ between the body and the horizon, $n$ lie inside the sphere. The entropy the sphere's strings hold inside it is therefore the fraction $n/(L/4) = 4n/L$ of their count,
+\begin{equation}
+S_{\rm in}(r) = \frac{4n}{L}\,N_s(r) = \frac{4\pi^2 n^3}{L} ,
+\label{eq:volume}
+\end{equation}
+a volume law. Verlinde postulates a volume law for the entanglement entropy of de Sitter space, the horizon entropy divided evenly over the bulk, and normalizes it on a flat ball of radius $\RL$, which gives the fraction $2\pi n/L$; his Eq.~(81) says that each cell of the sphere contributes the fraction given by the ratio of the proper distances from the center to that cell and to the horizon, and in the register that ratio is a count, $n$ over $L/4$. While the mass removes more entropy within the sphere than its strings hold there, $S_M(r) > S_{\rm in}(r)$, the sphere is saturated: what fixes the share is the two-dimensional count of Eq.~(\ref{eq:N}), and Newton holds. The crossing is where the two are equal,
+\begin{equation}
+S_M(r) = S_{\rm in}(r): \quad N_s = \frac{\pi}{2}\,L\alpha, \quad g_N = \frac{c^2}{\pi\RL} ,
+\label{eq:criterion}
+\end{equation}
+so rotation curves depart from Newton at an acceleration of order the horizon's, with the coefficient fixed by the count.
+
+\textit{The elastic response.} Below the crossing the entropy inside the sphere exceeds what the mass removes, and the remainder responds as an incompressible elastic medium: the removed entropy occupies the volume $V_M = S_M(r)\,V_0$, with $V_0 = V(r)/S_{\rm in}(r) = L\lc^3/3\pi$ the volume per unit of entropy from Eq.~(\ref{eq:volume}); the strain $\varepsilon$ outside the removed region obeys $\int_0^r \varepsilon^2 A\,dr' \le V_M(r)$, with equality under Verlinde's assumption on the principal strain, his Eqs.~(44)--(46) and (88); and the strain is the apparent surface mass density, $\Sigma_D = (a_\Lambda/8\pi G)\,\varepsilon$ with $a_\Lambda = c^2/\RL$, his Eq.~(43). The energy of a strain is quadratic in it, which is why the apparent mass goes as the square root of the removed entropy rather than in proportion to it. Differentiating with $M$ fixed, $\varepsilon^2 = (1/A)\,dV_M/dr$, and with Gauss's law $\Sigma = g/4\pi G$,
+\begin{equation}
+g_D^2 = a_M\,g_N, \quad a_M = \frac{\pi}{12}\,\frac{c^2}{\RL} = 1.42\times10^{-10}~{\rm m\,s^{-2}} ,
+\label{eq:aM}
+\end{equation}
+which is $(\pi^2/6)\,c^2/L\lc$ in the cell. Equation~(\ref{eq:aM}) is an upper bound, saturated under the assumption above. The apparent dark mass is $M_D = M\,n\sqrt{\pi^3/6L\alpha}$: it grows by a fixed amount per cell of distance, as a string does, and that is the geometry of this scale. Verlinde's own normalization gives $a_M = c^2/6\RL = 0.90\times10^{-10}$~m\,s$^{-2}$, his Eq.~(102); the register's count is $\pi/2$ larger. The total field is $g = g_N + g_D$, and in the deep regime, where $g_D\gg g_N$,
+\begin{equation}
+g = \sqrt{a_M\,g_N},\qquad v_c^4 = a_M\,G\,M ,
+\label{eq:btfr}
+\end{equation}
+flat rotation curves and the baryonic Tully--Fisher relation, with $M$ the baryonic mass alone. This is Milgrom's phenomenology~\cite{milgrom1983}, confirmed as a tight empirical law across galaxy types by the radial acceleration relation~\cite{mcgaugh2016}, with one $a_0$ for galaxies whose stellar masses span five orders of magnitude. The measured scale is $a_0 = (1.20\pm0.02\pm0.24)\times10^{-10}$~m\,s$^{-2}$~\cite{mcgaugh2016}, and $(1.19\pm0.04\pm0.09)\times10^{-10}$ with a tighter mass-to-light calibration~\cite{desmond2023}. Equation~(\ref{eq:aM}) lies $0.9\sigma$ above the first and $2.3\sigma$ above the second: observation saturates $85$ percent of the bound. With Verlinde's normalization the observed $a_0$ exceeds the bound, which is the known underprediction of his estimate~\cite{lelli2017}. For attribution, the coefficients in units of $cH_\infty$ are: $1$, Milgrom's vacuum scale~\cite{milgrom1999}; $2$, the de Sitter temperature in an equipartition~\cite{hominicng2010}; $1/6 = 0.17$, Verlinde~\cite{verlinde2017}; $0.13$ after the correction of Refs.~\cite{yoon2025,yoon2023}; $\pi/12 = 0.26$, this paper; against $0.22$ observed. The Tully--Fisher speed of a $10^{11}M_\odot$ galaxy is $208$~km\,s$^{-1}$ by Eq.~(\ref{eq:btfr}), against $200$ observed. Verlinde's specific interpolation between the Newtonian and deep regimes shows tension with the radial acceleration relation in the transition region~\cite{lelli2017}; what pins $L$ here is the deep-regime scaling (\ref{eq:btfr}), which survives that test, and the transition function remains open.
+
+\textit{Why the temperature cannot lead.} The floor $\Ec/L$ could be taken as the mechanism instead of the bits. In de Sitter space a detector accelerating at $a$ sees the two horizons combined in quadrature, $k_BT = (\hbar/2\pi c)\sqrt{a^2 + a_\Lambda^2}$~\cite{deser1997}, and if gravity followed the excess of that temperature over the floor, as Milgrom proposed~\cite{milgrom1999}, Eq.~(\ref{eq:newton}) would give $a = \sqrt{g_N^2 + 2a_\Lambda g_N}$: the right deep form with $a_M = 2c^2/\RL$, nine times the observed value, and a transition $38$ percent above Newton at $g_N = 10a_0$ where the observed relation is $4$ percent above. The floor marks the scale; the law is in the strings.
+
+To be explicit: in this framework there is no dark-matter halo, nor the smearing of energy-momentum over neighboring space-times by which Invariant Set Theory reaches the same phenomena with $\Lambda = 0$~\cite{palmer2016,hance2025}. Galactic rotation is set by the baryons, $G$, and the horizon radius, which $\Lambda$ fixes. The known difficulties of any such account, galaxy clusters~\cite{clowe2006} and the acoustic peaks of the microwave background~\cite{planck2018}, are not addressed here and remain open.
+
+This scale pins $L$. The deep-regime law is observation, now extended by weak lensing to circular velocities that stay flat out to a megaparsec, on the same baryonic Tully--Fisher relation~\cite{mistele2024}. Setting Eq.~(\ref{eq:aM}) equal to the measured $a_0$,
+\begin{equation}
+L_{\rm gal} = \frac{\pi^2}{6}\,\frac{c^2}{a_0\,\lc} = 4.3\times10^{61}.
+\label{eq:Lgal}
+\end{equation}
+Since Eq.~(\ref{eq:aM}) is a bound, so is this: $L \le 4.3\times10^{61}$, with equality where the bound is saturated, and the cosmological value of Sec.~\ref{sec:cosmo} lies inside it, at 85 percent.
+
+\subsection{Cosmological scale: the ring}
+\label{sec:cosmo}
+
+The placement introduced a horizon radius $\RL$; the universe supplies one. The observed cosmological constant $\Lambda = 1.09\times10^{-52}$~m$^{-2}$~\cite{planck2018} corresponds to a de Sitter radius $\RL = \sqrt{3/\Lambda} = 1.66\times10^{26}$~m~\cite{gibbons1977}, and Eq.~(\ref{eq:ident}) with the cell of Eq.~(\ref{eq:cell}) gives
+\begin{equation}
+L_{\rm cos} = \frac{2\pi\RL}{\lc} = 3.6\times10^{61}.
+\label{eq:Lcos}
+\end{equation}
+Three inputs only: the measured $\Lambda$, de Sitter geometry for $\RL$, and the cell. Read together with Eq.~(\ref{eq:G}), this says that Newton's constant and the cosmological constant are not independent of each other:
+\begin{equation}
+G\,\Lambda = \frac{12\pi c^3}{\hbar\,L^2},
+\label{eq:Lambda}
+\end{equation}
+using $\Lambda = 3/\RL^2$. The strength of gravity and the acceleration of the universe are a single constant, with $L$ as the exchange rate between them.
+
+The structure at this scale is the closed ring: $L$ cells, a fixed number, and no ring of the register is larger. The horizon is $L^2/4$ of them, Eq.~(\ref{eq:S}), one string each at the temperature $\Ec/L$, Eq.~(\ref{eq:energy}), so its energy, entropy times temperature, is
+\begin{equation}
+E_\Lambda = \frac{L^2}{4}\,\frac{\Ec}{L} = \frac{L\,\Ec}{4} = \frac{c^4\RL}{2G} = 1.0\times10^{70}~{\rm J},
+\label{eq:EL}
+\end{equation}
+one cell energy for every four cells of the ring, and the last equality is Eq.~(\ref{eq:G}). Spread over the interior it is $\rho_\Lambda = 3\pi^2\rho_c/2L^2 = 5.3\times10^{-10}$~J\,m$^{-3}$, with $\rho_c = \Ec/\lc^3$: one factor of $L$ because the count is of a sphere and not of a volume, one because a string's energy is $\Ec/L$, which is how Ref.~\cite{korytko2026b} closes the $123$ orders of magnitude of the vacuum energy. In Eq.~(\ref{eq:einstein}) $\Lambda$ is an integration constant, and the largest ring is the boundary condition that fixes it. The energy of Eq.~(\ref{eq:EL}) is that of a constant density with pressure $-\rho_\Lambda$, which is what it means for it to have no flux through null surfaces, and the active gravitational mass of such a density, $\rho + 3p = -2\rho_\Lambda$, is negative. In the weak field about a mass $M$ the solution of Eq.~(\ref{eq:einstein}) is Schwarzschild--de Sitter, and its acceleration toward the mass is
+\begin{equation}
+g(r) = \frac{GM}{r^2} - \frac{c^2 r}{\RL^2}, \qquad \frac{a}{\ac} = \frac{\alpha}{\pi n^2} - \frac{4\pi^2 n}{L^2} .
+\label{eq:push}
+\end{equation}
+The second term is the push: the horizon's surface gravity scaled by $r/\RL$. It grows with $r$ because the ring's content is a constant density, and a larger sphere holds more of it. Every free body recedes from every other, which is de Sitter expansion at $H_\infty = c/\RL = 2\pi/L\tc$, the Hubble rate being $2\pi$ over the lap time of Eq.~(\ref{eq:clock}). The push balances the Newtonian pull at $r_z^3 = GM\RL^2/c^2$, in cells $n_z^3 = \alpha L^2/4\pi^3$: $111$~pc for the Sun, and $1.6$~Mpc for the Local Group at $3\times10^{12}M_\odot$, the scale of its observed zero-velocity surface. In the deep regime the pull of Eq.~(\ref{eq:btfr}) balances the push at $r^2 = \RL^2\sqrt{a_MGM}/c^2$, which is $4$~Mpc for $10^{11}M_\odot$: flat rotation curves end where the ring's push overtakes the string's pull, beyond the megaparsec to which weak lensing now finds them flat~\cite{mistele2024}.
+
+The choice of the de Sitter radius rather than the present Hubble radius $c/H_0$ in the placement was anticipated in Sec.~\ref{sec:postulates}; here is the observation that forces it. Were the horizon in Eq.~(\ref{eq:ident}) the Hubble radius with $L$ fixed, then $G\propto R_H^2$ would drift at $\dot G/G = 2H(1+q)\approx6\times10^{-11}$~yr$^{-1}$, with $H$ the Hubble rate and $q\approx-0.53$ the present deceleration parameter. That is six hundred times the lunar-laser-ranging bound~\cite{hofmann2018}. With $\RL$ constant, $G$, $a_M$ and $\Lambda$ are all constant, as Eq.~(\ref{eq:Lambda}) requires.
+
+\section{Does $L$ Hold?}
+\label{sec:hold}
+
+Table~\ref{tab:pins} collects the results. Two scales fix $L$ independently, one as a value and one as a bound that observation saturates to 85 percent. The galactic scale, through the acceleration at which rotation curves flatten and the coefficient of Eq.~(\ref{eq:aM}), gives $L \le 4.3\times10^{61}$, with equality where the bound is saturated. The cosmological scale, through the size of the de Sitter horizon, gives $3.6\times10^{61}$. They agree to eighteen percent, a quarter of a bit in $\log_2 L$, the scale the quantum prediction lives on: $204.7$ against $204.5$, and both give $N_{\max} = 204$. The two measurements come from scales five orders of magnitude apart and use entirely different methods. Their agreement does not test the exponent, which both take from the cell; $\lc$ cancels in the ratio $L_{\rm gal}/L_{\rm cos} = \pi c^2/12 a_0\RL$. What it tests is the coefficient: that $c^2/a_0$ is $12\RL/\pi$, which is the count of Sec.~\ref{sec:galactic}.
+
+We do not pretend that the scale is new. It is the coincidence $a_0\sim cH_0$ that Milgrom noted in 1983~\cite{milgrom1983} and has since written as $2\pi a_0\approx cH_0\approx c^2\sqrt{\Lambda/3}$, leaving open which of the two $a_0$ is tied to~\cite{milgrom2020}; that the scale is the horizon's acceleration is emergent gravity's explanation, not ours. What the framework adds is fourfold. It counts the coefficient, to within the fifteen percent by which observation falls short of the bound. It ties $a_0$ to $\RL$ rather than to $H(z)$, so the scale does not evolve. It turns the coincidence into a fixed relation, Eq.~(\ref{eq:Lambda}) with Eq.~(\ref{eq:aM}), $\Lambda = 432\,a_M^2/\pi^2c^4$. And it ties the same $L$ to a third quantity that has nothing to do with either galaxies or cosmology: the number of qubits a quantum computer can usefully entangle. That third pin is where the theory is falsifiable.
+
+\begin{table*}[t]
+\caption{What each scale derives from $L$ and $\RL$, what it imports from outside the postulates, and what it pins. Since $\lc = 2\pi\RL/L$, pinning $\lc$ pins only the ratio of $\RL$ to $L$. The chain is run with $G$ as input and $\lc$ as output until $N_{\max}$ is measured.}
+\label{tab:pins}
+\begin{ruledtabular}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lllll}
+Scale & Phenomenon & Relation & Imports & Pins \\
+\colrule
+Quantum & qubit ceiling & $N_{\max}=\lfloor\log_2L\rfloor$ & none & $L$ (to come) \\
+Earth & Newton's law & $G=c^3\lc^2/\pi\hbar$ & thermal horizon; Clausius & $\lc$ \\
+Solar & GR tests & same $G$ & as above & $\lc$ \\
+Galactic & rotation curves & $a_M=\pi c^2/12\RL$ & elastic response; RAR data & $L=4.3\!\times\!10^{61}$ \\
+Cosmic & horizon radius & $\lc=2\pi\RL/L$ & de Sitter geometry & $L=3.6\!\times\!10^{61}$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+The terrestrial and solar scales do not pin $L$, and we have said why. They pin $\lc$, the combination $2\pi\RL/L$. For the reversed theory they establish that gravity exists at all: a horizon whose entropy is its count of rings produces Newton's law and Einstein's equations with the observed strength, once the cell is $\sqrt\pi$ Planck lengths. This fixes the cell (Sec.~\ref{sec:count}); it is not a check on $L$, and we do not count it as evidence for $L$.
+
+The quantum scale will pin $L$ directly. The bound $2^N\le L$ gives $N_{\max}=204$ at both values of $L$ (Appendix~\ref{app:numbers}). The bound is a ceiling that any representation must respect and not a construction that attains it, and Ref.~\cite{korytko2026c} shows it is soft by a unit or two when the deepest conditionals of a state must be told apart to more than two cells; Palmer's bit count $2^{N+1}-2\le NL$, which gives $211$, is the weaker condition, since it counts bits where the constraint is outcomes~\cite{palmer2026c,korytko2026c}. Neither touches the point that matters, which is that the ceiling is universal. A measurement of $N_{\max}$ near $200$ for one technology and near $400$ for another would restore Palmer's causal order; the same value for all would confirm ours.
+
+That measurement also closes the loop in the direction the title promises. With $L$ known, Eq.~(\ref{eq:ident}) gives the cell from the size of the universe, and Eq.~(\ref{eq:G}) gives Newton's constant. Gravity's strength is then a derived quantity: the number of rings on the horizon. Converting a measured $N_{\max}$ into $L$ uses the bound directly, $2^{N_{\max}}\le L<2^{N_{\max}+1}$, a factor of two; hence $\lc$ follows to a factor two and $G$ to a factor four. A ceiling of $204$ brackets $G$ between $3.3\times10^{-11}$ and $1.3\times10^{-10}$~m$^3$\,kg$^{-1}$\,s$^{-2}$, and the measured value lies at the middle of the bracket, $\log_2 L = 204.5$; a ceiling of $205$ would put $G$ at a quarter of the measured value, and $203$ at four times it if the bound is tight. Nothing else in the theory can do this: in Eq.~(\ref{eq:aM}) only the product $L\lc = 2\pi\RL$ appears, so galactic and cosmological data fix each other and leave $\lc$ untouched. Only the quantum computer separates $L$ from $\lc$.
+
+Two further remarks. The universal $L$ found here, $\sim4\times10^{61}$, lies below every per-qubit value Palmer obtains from Eq.~(\ref{eq:palmerL}), so if both mechanisms were at work, the cosmological one would be the binding constraint. And Davies' bound~\cite{davies2007}, which Palmer flagged as suspiciously close to his own numbers, is explained rather than merely matched. The horizon has $L^2/2 = 6.6\times10^{122}$ cells, which is Lloyd's estimate of $10^{122}$ bits for the observable universe~\cite{lloyd2002}, and Davies' $N = \log_2 10^{122}\approx405$ is their logarithm, $2\log_2L - 1 = 408$, to the precision of Lloyd's estimate. Palmer's capacity bound counts the bit-string length $L$, not the cells of the horizon, so $N_{\max} = \log_2 L\approx204$, half Davies' exponent, and the factor of two now has a definite origin.
+
+\section{Predictions and Falsification}
+\label{sec:predictions}
+
+\begin{enumerate}
+\item \textbf{A universal entanglement ceiling of 204 qubits}, the same for photonic, trapped-ion, superconducting and semiconductor qubits, insensitive to isolation and to logical error correction. The test is the random circuit and its inverse of Sec.~\ref{sec:scales}. A return with the gate fidelity at well over $205$ logical qubits falsifies the ceiling; technology dependence of a ceiling falsifies the reversal and restores Eq.~(\ref{eq:palmerL}).
+\item {\boldmath\textbf{Newton's constant from the ceiling.}} $G = 4\pi c^3\RL^2/\hbar L^2$, Eq.~(\ref{eq:G}), with $2^{N_{\max}}\le L<2^{N_{\max}+1}$: a measured ceiling returns $G$ to a factor of four, and $204$ returns the measured value at the middle of its bracket. A ceiling of $205$ falsifies Eq.~(\ref{eq:G}); one of $203$ does so unless the unit or two by which the bound is soft (Sec.~\ref{sec:hold}) accounts for it.
+\item \textbf{Flat rotation curves from baryons alone}, with $v_c^4 = a_M G M_{\rm baryon}$, Eq.~(\ref{eq:btfr}), and $a_M = \pi c^2/12\RL = 1.4\times10^{-10}$~m\,s$^{-2}$, Eq.~(\ref{eq:aM}), an upper bound of which observation saturates $85$ percent. A measured $a_0$ above $1.4\times10^{-10}$~m\,s$^{-2}$, robust detection of a dark-matter particle, or a galaxy whose rotation curve requires one, falsifies the galactic sector. That loses the second pin of $L$; the horizon pin, Eq.~(\ref{eq:Lcos}), the relation~(\ref{eq:Lambda}), and items~1 and~2 do not use it.
+\item {\boldmath\textbf{No redshift evolution of $a_0$.}} The acceleration scale is tied to the constant $\RL$ of the placement, not to $H(z)$; proposals with $a_0\propto cH(z)$ predict a scale $1.8$ times larger at redshift $z=1$, and this framework predicts none.
+\item {\boldmath\textbf{Constancy of $\Lambda$.}} With $L$ fixed, Eq.~(\ref{eq:G}) gives $G\propto\RL^2$, so the lunar-laser-ranging bound on $\dot G/G$~\cite{hofmann2018} requires the horizon radius, and with it $\Lambda$, to be constant to one part in $10^{13}$ per year, and their product $G\Lambda = 12\pi c^3/\hbar L^2$, Eq.~(\ref{eq:Lambda}), is fixed by $L$ alone. Since a dark-energy component with equation of state $w$ evolves as $\dot\rho/\rho = -3H(1+w)$, this is a bound on the present-day equation of state, $|1+w_0| \lesssim 5\times10^{-4}$ (Appendix~\ref{app:numbers}). It applies to the present epoch, the only one lunar laser ranging probes. DESI DR2 prefers evolving dark energy over a constant $\Lambda$ at $3.1\sigma$ with the cosmic microwave background, and at $2.8\sigma$ to $4.2\sigma$ with supernovae added, depending on the sample~\cite{desi2025}; the Lyman-$\alpha$ analysis of the same release gives $2.7\sigma$ with the microwave background and $3.2\sigma$ with supernovae added~\cite{desi2026}. A confirmed evolution is incompatible with the framework as stated. Here $w=-1$ is not assumed, as it is in $\Lambda$CDM, but follows from $L$ and $\lc$ being constant, so the framework predicts that the preference will not survive.
+\end{enumerate}
+
+\section{Conclusion}
+
+Palmer built a discrete quantum mechanics and used gravity to set its granularity. We have argued that the granularity comes first. Two postulates about cells and rings, the sphere they make read as the cosmological horizon, and the thermodynamics of horizons are enough to count the horizon, to make its entropy the count of its rings, to obtain general relativity through Jacobson's argument with Newton's constant written in the cell, to derive the Planck length as the cell over $\sqrt\pi$ and Bekenstein and Hawking's quarter with it, and to bind Newton's constant and the cosmological constant into one. With the elastic response of the medium added, they produce flat galactic rotation curves with no dark matter at an acceleration whose coefficient is counted. At each scale one structure of the register does the work: a sphere of strings, whose count dilutes a share of energy as the inverse square; a string running to the horizon, which carries a mass's claim in proportion to the distance; and the closed ring, whose fixed content pushes. Palmer's collapse formula inverts into a universal reduction clock equal to the de Sitter period, with the horizon temperature as the energy scale, and mass-dependent gravitational collapse drops out of the theory. The check is whether the two scales on which $L$ appears on its own in gravity agree. They do, to eighteen percent, and the coefficient of the galactic scale is now a number the register counts rather than a coincidence it inherits. The test is the third scale on which $L$ appears on its own, the quantum computer, and it will report within the decade.
+
+\begin{acknowledgments}
+The author used an AI assistant (Anthropic's Claude) for literature checking, numerical verification, and editing of the manuscript. The physical proposal, the postulates, and the claims are the author's own.
+\end{acknowledgments}
+
+\section*{Declarations}
+\noindent\textbf{Funding.} No funding was received for this work.\\
+\textbf{Competing interests.} The author declares no competing interests.\\
+\textbf{Data availability.} No new data were generated. All numerical inputs are published values cited in the text and tabulated in Appendix~\ref{app:numbers}.\\
+\textbf{Preprint.} A preprint of this manuscript was first deposited at Zenodo on 2 September 2026, \url{https://doi.org/10.5281/zenodo.22255462}.\\
+\textbf{Use of AI tools.} As stated in the Acknowledgments, an AI assistant was used for literature checking, numerical verification, and editing. It was not used to generate the scientific content, and the author takes full responsibility for the manuscript.
+
+\appendix
+
+\section{Numerical Values}
+\label{app:numbers}
+
+Inputs. $c = 2.998\times10^8$~m\,s$^{-1}$, $\hbar = 1.055\times10^{-34}$~J\,s, $G = 6.674\times10^{-11}$~m$^3$\,kg$^{-1}$\,s$^{-2}$, hence $\ell_P = 1.616\times10^{-35}$~m and, by Eq.~(\ref{eq:cell}), the cell $\lc = \sqrt\pi\,\ell_P = 2.865\times10^{-35}$~m, $\tc = \lc/c = 9.56\times10^{-44}$~s, $\mc = \hbar/c\lc = 1.228\times10^{-8}$~kg, $\Ec = \hbar c/\lc = 1.104\times10^9$~J, $\ac = c^2/\lc = 3.14\times10^{51}$~m\,s$^{-2}$; $a_0 = 1.20\times10^{-10}$~m\,s$^{-2}$~\cite{mcgaugh2016}; present Hubble rate $H_0 = 67.4$~km\,s$^{-1}$\,Mpc$^{-1}$ and dark-energy density parameter $\Omega_\Lambda = 0.685$~\cite{planck2018}, giving $H_\infty = H_0\sqrt{\Omega_\Lambda} = 1.81\times10^{-18}$~s$^{-1}$, $\Lambda = 3H_\infty^2/c^2 = 1.09\times10^{-52}$~m$^{-2}$, $\RL = c/H_\infty = 1.66\times10^{26}$~m; lunar laser ranging $\dot G/G = (7.1\pm7.6)\times10^{-14}$~yr$^{-1}$~\cite{hofmann2018}, taken as $|\dot G/G|\lesssim10^{-13}$~yr$^{-1}$.
+
+Derived. $L_{\rm cos} = 2\pi\RL/\lc = 3.64\times10^{61}$, $\log_2 = 204.50$. $a_M = \pi c^2/12\RL = 1.42\times10^{-10}$~m\,s$^{-2}$, and $L_{\rm gal} = (\pi^2/6)c^2/(a_0\lc) = 4.30\times10^{61}$, $\log_2 = 204.74$. Ratio $1.18$. Capacity condition $2^N\le L$: $2^{204} = 2.57\times10^{61}\le L_{\rm cos} < 2^{205} = 5.14\times10^{61}$, so $N_{\max}=204$, and the same for $L_{\rm gal}$. Palmer's bit count: $N=211$ gives $2^{212} = 6.58\times10^{63}\le 211L_{\rm cos} = 7.67\times10^{63}$ while $N=212$ gives $2^{213} = 1.32\times10^{64} > 212L_{\rm cos} = 7.71\times10^{63}$. Reduction clock $\tau^* = L_{\rm cos}\tc = 3.5\times10^{18}$~s $= 1.1\times10^{11}$~yr. Energy $\Ec/L_{\rm cos} = 3.03\times10^{-53}$~J $= \hbar H_\infty/2\pi$. Horizon: $L^2/2 = 6.6\times10^{122}$ cells, $L^2/4 = 3.3\times10^{122}$ rings, equal to $\pi\RL^2/\ell_P^2$. Equation~(\ref{eq:G}) with $L = 2^{204}$ and $2^{205}$ brackets $G$ between $1.34\times10^{-10}$ and $3.34\times10^{-11}$~m$^3$\,kg$^{-1}$\,s$^{-2}$; with $L_{\rm cos}$ it returns the input, $6.67\times10^{-11}$. Sun: $\alpha = M_\odot/\mc = 1.62\times10^{38}$, $GM_\odot/c^2\lc = \alpha/\pi = 5.16\times10^{37}$ cells, $L\alpha = 5.9\times10^{99}$; Earth's orbit $n = 5.22\times10^{45}$, $\ac\alpha/\pi n^2 = 5.93\times10^{-3}$~m\,s$^{-2}$. $E_\Lambda = L\Ec/4 = c^4\RL/2G = 1.00\times10^{70}$~J; $\rho_\Lambda = 3\pi^2\Ec/2L^2\lc^3 = 5.25\times10^{-10}$~J\,m$^{-3}$, against $\Lambda c^4/8\pi G = 5.25\times10^{-10}$. $G\Lambda = 7.28\times10^{-63}$~m\,kg$^{-1}$\,s$^{-2}$, against $12\pi c^3/(\hbar L_{\rm cos}^2) = 7.28\times10^{-63}$. Coefficient: $\gamma = a_0/(c^2/2\pi\RL) = 1.39\pm0.28$ measured~\cite{mcgaugh2016}, $1.38\pm0.11$~\cite{desmond2023}; $\pi^2/6 = 1.64$ here, $\pi/3 = 1.05$ Verlinde. Equation of state: $G\propto\RL^2$ and $\Lambda\propto\RL^{-2}$ give $|\dot\Lambda/\Lambda| = |\dot G/G|\lesssim10^{-13}$~yr$^{-1}$; with $H_0 = 6.89\times10^{-11}$~yr$^{-1}$, $|1+w_0| \lesssim 10^{-13}/3H_0 = 4.8\times10^{-4}$.
+
+\begin{thebibliography}{99}
+\bibitem{palmer2020} T. N. Palmer, Discretization of the Bloch sphere, fractal invariant sets and Bell's theorem, Proc. R. Soc. A \textbf{476}, 20190350 (2020). \url{https://doi.org/10.1098/rspa.2019.0350}
+\bibitem{korytko2026c} A. Korytko, One register: A common origin for the granularity of Hilbert space and of space (2026). \url{https://doi.org/10.5281/zenodo.22669416}
+\bibitem{korytko2026d} A. Korytko, The dimension of space from the granularity of Hilbert space (2026). \url{https://doi.org/10.5281/zenodo.22678537}
+\bibitem{palmer2026} T. N. Palmer, Rational quantum mechanics: Testing quantum theory with quantum computers, Proc. Natl. Acad. Sci. USA \textbf{123}, e2523350123 (2026). \url{https://doi.org/10.1073/pnas.2523350123}; arXiv:2510.02877.
+\bibitem{palmer2026b} T. N. Palmer, Impossible counterfactuals, discrete Hilbert space and Bell's theorem, J. Phys.: Conf. Ser. \textbf{3189}, 012006 (2026). \url{https://doi.org/10.1088/1742-6596/3189/1/012006}; arXiv:2601.14941.
+\bibitem{palmer2026c} T. N. Palmer, Solving the mysteries of quantum mechanics: why nature abhors a continuum, arXiv:2602.16382 (2026).
+\bibitem{palmer2024} T. N. Palmer, Superdeterminism without conspiracy, Universe \textbf{10}, 47 (2024). \url{https://doi.org/10.3390/universe10010047}
+\bibitem{niven1956} I. Niven, \emph{Irrational Numbers} (Mathematical Association of America, Washington, DC, 1956).
+\bibitem{jahnel2010} J. Jahnel, When is the (co)sine of a rational angle equal to a rational number?, arXiv:1006.2938 (2010).
+\bibitem{diosi1989} L. Di\'osi, Models for universal reduction of macroscopic quantum fluctuations, Phys. Rev. A \textbf{40}, 1165 (1989). \url{https://doi.org/10.1103/PhysRevA.40.1165}
+\bibitem{penrose1996} R. Penrose, On gravity's role in quantum state reduction, Gen. Relativ. Gravit. \textbf{28}, 581 (1996). \url{https://doi.org/10.1007/BF02105068}
+\bibitem{davies2007} P. C. W. Davies, The implications of a cosmological information bound for complexity, quantum information and the nature of physical law, Fluct. Noise Lett. \textbf{7}, C37 (2007). \url{https://doi.org/10.1142/S0219477507004021}
+\bibitem{lloyd2002} S. Lloyd, Computational capacity of the universe, Phys. Rev. Lett. \textbf{88}, 237901 (2002). \url{https://doi.org/10.1103/PhysRevLett.88.237901}
+\bibitem{palmer2016} T. N. Palmer, Invariant set theory, arXiv:1605.01051 (2016).
+\bibitem{hance2025} J. R. Hance, T. N. Palmer, and J. Rarity, Experimental tests of invariant set theory, Phys. Scr. \textbf{100}, 065123 (2025). \url{https://doi.org/10.1088/1402-4896/add9d7}
+\bibitem{donadi2021} S. Donadi \emph{et al.}, Underground test of gravity-related wave function collapse, Nat. Phys. \textbf{17}, 74 (2021). \url{https://doi.org/10.1038/s41567-020-1008-4}
+\bibitem{verlinde2011} E. Verlinde, On the origin of gravity and the laws of Newton, J. High Energy Phys. \textbf{04}, 029 (2011). \url{https://doi.org/10.1007/JHEP04(2011)029}
+\bibitem{visser2011} M. Visser, Conservative entropic forces, J. High Energy Phys. \textbf{10}, 140 (2011). \url{https://doi.org/10.1007/JHEP10(2011)140}
+\bibitem{kobakhidze2011} A. Kobakhidze, Gravity is not an entropic force, Phys. Rev. D \textbf{83}, 021502 (2011). \url{https://doi.org/10.1103/PhysRevD.83.021502}
+\bibitem{jacobson1995} T. Jacobson, Thermodynamics of spacetime: The Einstein equation of state, Phys. Rev. Lett. \textbf{75}, 1260 (1995). \url{https://doi.org/10.1103/PhysRevLett.75.1260}
+\bibitem{verlinde2017} E. Verlinde, Emergent gravity and the dark universe, SciPost Phys. \textbf{2}, 016 (2017). \url{https://doi.org/10.21468/SciPostPhys.2.3.016}
+\bibitem{yoon2023} Y. Yoon, J. C. Park, and H. S. Hwang, Understanding galaxy rotation curves with Verlinde's emergent gravity, Class. Quantum Grav. \textbf{40}, 02LT01 (2023). \url{https://doi.org/10.1088/1361-6382/acaae6}
+\bibitem{yoon2025} Y. Yoon and H. S. Hwang, Comment on ``Emergent Gravity and the Dark Universe'' by Erik Verlinde, arXiv:1909.01734v4 (2019; revised 2025).
+\bibitem{arute2019} F. Arute \emph{et al.}, Quantum supremacy using a programmable superconducting processor, Nature \textbf{574}, 505 (2019). \url{https://doi.org/10.1038/s41586-019-1666-5}
+\bibitem{morvan2024} A. Morvan \emph{et al.}, Phase transitions in random circuit sampling, Nature \textbf{634}, 328 (2024). \url{https://doi.org/10.1038/s41586-024-07998-6}
+\bibitem{gao2025} D. Gao \emph{et al.}, Establishing a new benchmark in quantum computational advantage with 105-qubit Zuchongzhi 3.0 processor, Phys. Rev. Lett. \textbf{134}, 090601 (2025). \url{https://doi.org/10.1103/PhysRevLett.134.090601}
+\bibitem{manetsch2025} H. J. Manetsch, G. Nomura, E. Bataille, X. Lv, K. H. Leung, and M. Endres, A tweezer array with 6,100 highly coherent atomic qubits, Nature \textbf{647}, 60 (2025). \url{https://doi.org/10.1038/s41586-025-09641-4}
+\bibitem{bluvstein2024} D. Bluvstein \emph{et al.}, Logical quantum processor based on reconfigurable atom arrays, Nature \textbf{626}, 58 (2024). \url{https://doi.org/10.1038/s41586-023-06927-3}
+\bibitem{lelli2017} F. Lelli, S. S. McGaugh, and J. M. Schombert, Testing Verlinde's emergent gravity with the radial acceleration relation, Mon. Not. R. Astron. Soc. \textbf{468}, L68 (2017). \url{https://doi.org/10.1093/mnrasl/slx031}
+\bibitem{gidney2025} C. Gidney, How to factor 2048 bit RSA integers with less than a million noisy qubits, arXiv:2505.15917 (2025).
+\bibitem{unruh1976} W. G. Unruh, Notes on black-hole evaporation, Phys. Rev. D \textbf{14}, 870 (1976). \url{https://doi.org/10.1103/PhysRevD.14.870}
+\bibitem{gibbons1977} G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation, Phys. Rev. D \textbf{15}, 2738 (1977). \url{https://doi.org/10.1103/PhysRevD.15.2738}
+\bibitem{bekenstein1973} J. D. Bekenstein, Black holes and entropy, Phys. Rev. D \textbf{7}, 2333 (1973). \url{https://doi.org/10.1103/PhysRevD.7.2333}
+\bibitem{pound1960} R. V. Pound and G. A. Rebka, Apparent weight of photons, Phys. Rev. Lett. \textbf{4}, 337 (1960). \url{https://doi.org/10.1103/PhysRevLett.4.337}
+\bibitem{milgrom1983} M. Milgrom, A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis, Astrophys. J. \textbf{270}, 365 (1983). \url{https://doi.org/10.1086/161130}
+\bibitem{hominicng2010} C. M. Ho, D. Minic, and Y. J. Ng, Cold dark matter with MOND scaling, Phys. Lett. B \textbf{693}, 567 (2010). \url{https://doi.org/10.1016/j.physletb.2010.09.008}
+\bibitem{milgrom1999} M. Milgrom, The modified dynamics as a vacuum effect, Phys. Lett. A \textbf{253}, 273 (1999). \url{https://doi.org/10.1016/S0375-9601(99)00077-8}; arXiv:astro-ph/9805346.
+\bibitem{milgrom2020} M. Milgrom, The $a_0$--cosmology connection in MOND, arXiv:2001.09729 (2020).
+\bibitem{mistele2024} T. Mistele, S. McGaugh, F. Lelli, J. Schombert, and P. Li, Indefinitely flat circular velocities and the baryonic Tully--Fisher relation from weak lensing, Astrophys. J. Lett. \textbf{969}, L3 (2024). \url{https://doi.org/10.3847/2041-8213/ad54b0}
+\bibitem{mcgaugh2016} S. S. McGaugh, F. Lelli, and J. M. Schombert, Radial acceleration relation in rotationally supported galaxies, Phys. Rev. Lett. \textbf{117}, 201101 (2016). \url{https://doi.org/10.1103/PhysRevLett.117.201101}
+\bibitem{clowe2006} D. Clowe \emph{et al.}, A direct empirical proof of the existence of dark matter, Astrophys. J. \textbf{648}, L109 (2006). \url{https://doi.org/10.1086/508162}
+\bibitem{desi2025} DESI Collaboration, M. Abdul Karim \emph{et al.}, DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints, Phys. Rev. D \textbf{112}, 083515 (2025). \url{https://doi.org/10.1103/tr6y-kpc6}; arXiv:2503.14738.
+\bibitem{desi2026} DESI Collaboration, A. G. Adame \emph{et al.}, DESI DR2 results. IV. Alcock--Paczy\'nski measurements from the Lyman alpha forest and cosmological constraints, arXiv:2607.27410 (2026).
+\bibitem{planck2018} Planck Collaboration, N. Aghanim \emph{et al.}, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. \textbf{641}, A6 (2020). \url{https://doi.org/10.1051/0004-6361/201833910}
+\bibitem{hees2014} A. Hees, W. M. Folkner, R. A. Jacobson, and R. S. Park, Constraints on modified Newtonian dynamics theories from radio tracking data of the Cassini spacecraft, Phys. Rev. D \textbf{89}, 102002 (2014). \url{https://doi.org/10.1103/PhysRevD.89.102002}
+\bibitem{hofmann2018} F. Hofmann and J. M\"uller, Relativistic tests with lunar laser ranging, Class. Quantum Grav. \textbf{35}, 035015 (2018). \url{https://doi.org/10.1088/1361-6382/aa8f7a}
+
+\bibitem{bruck1949} R. H. Bruck and H. J. Ryser, The nonexistence of certain finite projective planes, Can. J. Math. \textbf{1}, 88 (1949). \url{https://doi.org/10.4153/CJM-1949-009-2}
+\bibitem{padmanabhan2010} T. Padmanabhan, Equipartition of energy in the horizon degrees of freedom and the emergence of gravity, Mod. Phys. Lett. A \textbf{25}, 1129 (2010). \url{https://doi.org/10.1142/S021773231003313X}; arXiv:0912.3165.
+\bibitem{korytko2026b} A. Korytko, The vacuum catastrophe and the granularity of Hilbert space (2026). \url{https://doi.org/10.5281/zenodo.22683543}
+\bibitem{desmond2023} H. Desmond, The underlying radial acceleration relation, Mon. Not. R. Astron. Soc. \textbf{526}, 3342 (2023). \url{https://doi.org/10.1093/mnras/stad2762}; arXiv:2303.11314.
+\bibitem{deser1997} S. Deser and O. Levin, Accelerated detectors and temperature in (anti-) de Sitter spaces, Class. Quantum Grav. \textbf{14}, L163 (1997). \url{https://doi.org/10.1088/0264-9381/14/9/003}
+\end{thebibliography}
+
+\end{document}

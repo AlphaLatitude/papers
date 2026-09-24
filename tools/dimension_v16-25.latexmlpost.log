@@ -9,5 +9,5 @@ Scan: DBStatus: 877/0 objects
 converted 527 Maths
  0.21 sec)
 (XSLT[using LaTeXML-html5.xsl] dimension_v16-25.html processing... 0.05 sec)
-(Writer dimension_v16-25.html processing... 0.00 sec) 0.35 sec)
+(Writer dimension_v16-25.html processing... 0.00 sec) 0.36 sec)
 Postprocessing complete No obvious problems (reqd. 0.41s)
