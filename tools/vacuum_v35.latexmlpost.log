@@ -7,7 +7,7 @@ Scan: DBStatus: 591/0 objects
 (CrossRef vacuum_v35.html processing... 0.03 sec)
 (MathML::Presentation vacuum_v35.html 355 to process...
 converted 355 Maths
- 0.18 sec)
+ 0.17 sec)
 (XSLT[using LaTeXML-html5.xsl] vacuum_v35.html processing... 0.04 sec)
 (Writer vacuum_v35.html processing... 0.00 sec) 0.29 sec)
-Postprocessing complete No obvious problems (reqd. 0.34s)
+Postprocessing complete No obvious problems (reqd. 0.35s)

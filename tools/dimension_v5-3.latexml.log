@@ -19,56 +19,56 @@ Warning:missing_file:ltxcmds Can't find package ltxcmds
 	at ltxcmds.sty.ltxml; line 20
 	Anticipate undefined macros or environments
 	search paths are /Users/andrewk/Projects/papers/papers/4-dimension, /Users/andrewk/Projects/papers/tools
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml...
 Warning:missing_file:keyval Can't find package keyval
 	at keyval.sty.ltxml; line 19
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml...
 Warning:missing_file:kvsetkeys Can't find package kvsetkeys
 	at kvsetkeys.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml...
 Warning:missing_file:kvdefinekeys Can't find package kvdefinekeys
 	at kvdefinekeys.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml...
 Warning:missing_file:kvoptions Can't find package kvoptions
 	at kvoptions.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/nameref.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml...
 Warning:missing_file:refcount Can't find package refcount
 	at refcount.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml...
 Warning:missing_file:gettitlestring Can't find package gettitlestring
 	at gettitlestring.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
  0.00 sec) 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/url.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml...
 Warning:missing_file:bitset Can't find package bitset
 	at bitset.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x129501b60] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
+	In Core::Gullet[@0x133d6c298] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
  0.00 sec) 0.04 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revsymb.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/longtable.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/dcolumn.sty.ltxml...
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec) 0.00 sec) 0.06 sec) 0.07 sec) 0.08 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec) 0.00 sec) 0.07 sec) 0.07 sec) 0.09 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsmath.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsbsy.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsgen.sty.ltxml... 0.00 sec) 0.00 sec)
@@ -89,18 +89,18 @@ Error:undefined:\orcidlink The token T_CS[\orcidlink] is not defined.
 	at dimension_v5-3.tex; line 12 col 0 - line 12 col 56
 	Defining it now as <ltx:ERROR/>
 	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0009-0005-4569-2228}
-	In Core::Gullet[@0x129501b60] /Users/andrewk/Projects/papers/papers/4-dimension/dimension_v5-3.tex; from line 12 col 0 to line 12 col 56
-	 <= Core::Stomach[@0x1295018d8] <= Core::Definition::Constructor[\@perso... <= Core::Stomach[@0x1295018d8] <= ...
- 1.12 sec) 1.19 sec)
+	In Core::Gullet[@0x133d6c298] /Users/andrewk/Projects/papers/papers/4-dimension/dimension_v5-3.tex; from line 12 col 0 to line 12 col 56
+	 <= Core::Stomach[@0x133d6c208] <= Core::Definition::Constructor[\@perso... <= Core::Stomach[@0x133d6c208] <= ...
+ 1.14 sec) 1.20 sec)
 (Building...
-(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.00 sec) 1.25 sec)
+(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.00 sec) 1.24 sec)
 (Rewriting... 0.02 sec)
-(Math Parsing 429 formulae ...... 0.76 sec)
+(Math Parsing 429 formulae ...... 0.77 sec)
 Math parsing succeeded:
-   ltx:XMArg: 314/314
    ltx:XMath: 429/429
+   ltx:XMArg: 314/314
 Symbols assumed as simple identifiers (with # of occurences):
    'A{italic}' (6), 'Cl' (12), 'C{blackboard}' (4), 'C{italic}' (5), 'Delta' (2), 'Gamma' (2), 'Gr' (1), 'G{italic}' (1), 'H{blackboard}' (2), 'H{italic}' (2), 'L{italic}' (121), 'M{italic}' (9), 'N{blackboard}' (1), 'N{italic}' (13), 'Omega' (10), 'O{italic}' (2), 'R{blackboard}' (6), 'R{italic}' (16), 'S{italic}' (13), 'U{italic}' (3), 'X{italic}' (2), 'Z{blackboard}' (5), 'Z{italic}' (3), 'alpha' (1), 'a{italic}' (1), 'c{italic}' (6), 'delta' (2), 'd{italic}' (8), 'ell' (29), 'e{italic}' (1), 'h{italic}' (2), 'i{italic}' (10), 'j{italic}' (5), 'kappa' (4), 'm{italic}' (5), 'n{italic}' (81), 'phi' (8), 'pi' (72), 'p{bold}' (7), 'p{italic}' (3), 'sigma' (8), 'theta' (21), 'u{italic}' (7), 'v{italic}' (3), 'w{italic}' (1), 'x{italic}' (1)
 Set MATHPARSER_SPECULATE to speculate on possible notations.
 (Finalizing... 0.11 sec)
-Conversion complete: 9 warnings; 1 error; 1 undefined macro[\orcidlink]; 9 missing files[kvsetkeys.sty, keyval.sty, ltxcmds.sty, orcidlink.sty, kvoptions.sty, bitset.sty, kvdefinekeys.sty, gettitlestring.sty, refcount.sty] (See /Users/andrewk/Projects/papers/tools/dimension_v5-3.latexml.log) (reqd. 3.45s)
+Conversion complete: 9 warnings; 1 error; 1 undefined macro[\orcidlink]; 9 missing files[kvdefinekeys.sty, refcount.sty, keyval.sty, kvsetkeys.sty, kvoptions.sty, orcidlink.sty, ltxcmds.sty, bitset.sty, gettitlestring.sty] (See /Users/andrewk/Projects/papers/tools/dimension_v5-3.latexml.log) (reqd. 3.47s)

@@ -7,7 +7,7 @@ Scan: DBStatus: 752/0 objects
 (CrossRef register_v16-3.html processing... 0.05 sec)
 (MathML::Presentation register_v16-3.html 387 to process...
 converted 387 Maths
- 0.20 sec)
+ 0.19 sec)
 (XSLT[using LaTeXML-html5.xsl] register_v16-3.html processing... 0.05 sec)
-(Writer register_v16-3.html processing... 0.00 sec) 0.35 sec)
-Postprocessing complete No obvious problems (reqd. 0.41s)
+(Writer register_v16-3.html processing... 0.00 sec) 0.34 sec)
+Postprocessing complete No obvious problems (reqd. 0.40s)

@@ -39,6 +39,31 @@ API_VERSIONS = 'https://zenodo.org/api/records/{}/versions'  # size= is rejected
 
 FOLDERS = {1: '1-gravitation', 2: '2-vacuum', 3: '3-register', 4: '4-dimension'}
 
+# Shared with the index builder rather than duplicated: one definition of
+# "the date this paper states".
+sys.path.insert(0, HERE)
+from build_mirror import paper_date, DATE_ON_PAGE, pretty_date  # noqa: E402
+
+
+def fix_date(doc, pdf_path):
+    """Most sources write \\date{\\today}, which LaTeXML resolves to the day
+    the conversion runs - so every rendering claimed the date it was built on,
+    not the paper's. Substitute the date printed on the PDF's title page,
+    keeping anything else in the date line (several carry '; DOI: ...')."""
+    iso = paper_date(pdf_path)
+    if not iso:
+        return doc, None
+    y, m, d = iso.split('-')
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+              'August', 'September', 'October', 'November', 'December']
+    stated = f'{months[int(m) - 1]} {int(d)}, {y}'
+
+    def repl(block):
+        return DATE_ON_PAGE.sub(stated, block.group(0), count=1)
+
+    fixed = re.sub(r'<div class="ltx_date[^"]*"[^>]*>.*?</div>', repl, doc, count=1, flags=re.S)
+    return fixed, stated
+
 
 def get(url):
     req = urllib.request.Request(url, headers={'User-Agent': 'papers-mirror/1.0'})
@@ -84,13 +109,14 @@ def footer_bar(pdf, doi):
     reader who reaches the bibliography should not have to scroll back up."""
     return (
         '<div class="mirror-note mirror-foot">'
-        'The PDF is authoritative. '
-        f'<a href="{pdf}">Read the PDF</a> <span class="sep">&middot;</span> '
+        + ('The PDF is authoritative. ' if pdf else '')
+        + (f'<a href="{pdf}">Read the PDF</a> <span class="sep">&middot;</span> ' if pdf else '')
+        + (
         f'<a href="https://doi.org/{doi}">Zenodo record</a> <span class="sep">&middot;</span> '
         '<a href="../../">All papers</a> <span class="sep">&middot;</span> '
         f'<a href="{CORP}">AlphaLatitude Inc.</a>'
         '<br>Copyright &copy; 2026 Andrew Korytko.'
-        '</div>'
+        '</div>')
     )
 
 
@@ -121,10 +147,11 @@ def banner(pdf, version, doi, current=None, withdrawn=False):
             'rendered from its LaTeX source; the PDF of this version is authoritative for it. '
         )
     links = (
-        f'<a href="{pdf}">Read the PDF</a> <span class="sep">&middot;</span> '
+        (f'<a href="{pdf}">Read the PDF</a> <span class="sep">&middot;</span> ' if pdf else '')
+        + (
         f'<a href="https://doi.org/{doi}">Zenodo record</a> <span class="sep">&middot;</span> '
         '<a href="../../">All papers</a> <span class="sep">&middot;</span> '
-        f'<a href="{CORP}">AlphaLatitude Inc.</a>'
+        f'<a href="{CORP}">AlphaLatitude Inc.</a>')
     )
     cls = 'mirror-note' + (' mirror-old' if (current or withdrawn) else '')
     return f'<div class="{cls}">{head}{links}</div>'
@@ -148,17 +175,40 @@ def convert(tex_path, stem):
 
 
 def versions_for(record_id, n):
-    """{filename: (version, date, doi)} across every published version."""
+    """Two maps across every published version: {filename: (version, date,
+    doi)} and {filename: the PDF published in the SAME record}.
+
+    The second exists because a version's .tex and .pdf are not required to
+    share a stem - paper_v8-4.tex ships with paper_v8-5.pdf, register_v2.tex
+    with register_v2-5.pdf. Pairing them by filename silently fell back to the
+    current PDF, so a superseded page offered a different version's paper
+    under 'Read the PDF'. The record says which files belong together."""
     j = json.loads(get(API_VERSIONS.format(record_id)))
     with open(f'{CACHE}/paper{n}_versions.json', 'w') as f:
         json.dump(j, f)
-    by_file = {}
+    by_file, pdf_for = {}, {}
     for rec in j.get('hits', {}).get('hits', []):
         v = str(rec['metadata'].get('version') or '?')
         d = rec['metadata']['publication_date']
-        for fl in rec.get('files', []):
-            by_file[fl['key']] = (v, d, rec['doi'])
-    return by_file
+        names = [fl['key'] for fl in rec.get('files', [])]
+        pdf = next((x for x in names if x.endswith('.pdf')), None)
+        for name in names:
+            by_file[name] = (v, d, rec['doi'])
+            pdf_for[name] = pdf
+    return by_file, pdf_for
+
+
+def local_pdf_for(dirpath, stem):
+    """For files no longer in any record, pair within the folder: exact stem
+    first, then the same name with a different trailing build number. Returns
+    None rather than guessing at another version's paper."""
+    exact = stem + '.pdf'
+    if os.path.exists(os.path.join(dirpath, exact)):
+        return exact
+    base = re.sub(r'-\d+$', '', stem)
+    cands = sorted(x for x in os.listdir(dirpath)
+                   if x.endswith('.pdf') and re.sub(r'-\d+$', '', x[:-4]) == base)
+    return cands[0] if cands else None
 
 
 def main():
@@ -173,7 +223,7 @@ def main():
         cur_pdf = next((x for x in cur_names if x.endswith('.pdf')), None)
         cur_version = str(j['metadata'].get('version') or '')
         cur_date = pretty(j['metadata']['publication_date'])
-        by_file = versions_for(j['id'], n)
+        by_file, pdf_for = versions_for(j['id'], n)
 
         dirpath = os.path.join(REPO, 'papers', folder)
         texes = sorted(x for x in os.listdir(dirpath) if x.endswith('.tex'))
@@ -188,8 +238,9 @@ def main():
                 withdrawn = False
             else:
                 version, doi, withdrawn = stem, j['doi'], True
-            pdf = next((x for x in os.listdir(dirpath)
-                        if x.endswith('.pdf') and x[:-4] == stem), cur_pdf)
+            pdf = pdf_for.get(tex) or local_pdf_for(dirpath, stem)
+            if not pdf:
+                print(f'    {stem}: no PDF of its own; omitting the PDF link')
 
             doc = open(convert(os.path.join(dirpath, tex), stem), encoding='utf-8').read()
             # \orcidlink has no LaTeXML binding and leaves a red error marker
@@ -197,6 +248,7 @@ def main():
             doc = doc.replace('<span class="ltx_ERROR undefined">\\orcidlink</span>', '')
             doc = re.sub(r'(Andrew Korytko\s*)(0009-0005-4569-2228)',
                          r'\1<a href="https://orcid.org/\2">\2</a>', doc, count=1)
+            doc, stated = fix_date(doc, os.path.join(dirpath, pdf) if pdf else '')
             doc = wrap_wide_blocks(doc)
             doc = re.sub(r'<link rel="stylesheet"[^>]*>', '', doc)
             doc = doc.replace('</head>', f'<style>{css}</style>\n</head>')
@@ -212,7 +264,8 @@ def main():
             with open(dest, 'w', encoding='utf-8') as f:
                 f.write(doc)
             state = 'CURRENT' if is_current else ('withdrawn from Zenodo' if withdrawn else 'superseded')
-            print(f'  {stem + ".html":34} {os.path.getsize(dest)//1024:>4}kb  {state}')
+            print(f'  {stem + ".html":34} {os.path.getsize(dest)//1024:>4}kb  {state}'
+                  + (f'  dated {stated}' if stated else '  (no date on page 1)'))
 
             if is_current:
                 with open(os.path.join(dirpath, 'latest.html'), 'w', encoding='utf-8') as f:

@@ -102,6 +102,36 @@ def mathify(escaped):
     return UNDER_PLAIN.sub(r'<sub>\1</sub>', s)
 
 
+DATE_ON_PAGE = re.compile(
+    r'\b(January|February|March|April|May|June|July|August|September|October|'
+    r'November|December)\s+(\d{1,2}),\s+(20\d\d)\b')
+
+
+def paper_date(pdf_path):
+    """The date the paper states on its own title page.
+
+    Zenodo's publication_date is the moment of deposit in CERN's timezone, so
+    an evening upload from California is stamped the next day - the record
+    says 24 September for a paper whose title page says 23. The page should
+    show what the paper says. Read from the PDF because the source usually
+    writes \\date{\\today}, which resolves when the document is compiled and
+    tells us nothing afterwards. Returns None if no date is found, and the
+    caller falls back to the record."""
+    if not os.path.exists(pdf_path):
+        return None
+    try:
+        txt = subprocess.run(['pdftotext', '-f', '1', '-l', '1', pdf_path, '-'],
+                             capture_output=True, text=True, timeout=60).stdout
+    except Exception:
+        return None
+    m = DATE_ON_PAGE.search(txt)
+    if not m:
+        return None
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+              'August', 'September', 'October', 'November', 'December']
+    return f'{m.group(3)}-{months.index(m.group(1)) + 1:02d}-{int(m.group(2)):02d}'
+
+
 def pretty_date(iso):
     y, mo, d = iso.split('-')
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
@@ -181,7 +211,8 @@ def load(p):
         'title': m['title'],
         'abstract': abstract_text(m.get('description', '')),
         'version': str(m.get('version') or '').lstrip('vV'),
-        'date': m['publication_date'],
+        'date': m['publication_date'],          # Zenodo deposit, CET
+        'paper_date': None,                     # filled in by build()
         'doi': j['doi'],
         'concept': j.get('conceptdoi'),
         'files': sorted(f['key'] for f in j.get('files', [])),
@@ -191,6 +222,18 @@ def load(p):
 
 def build():
     data = {p['n']: load(p) for p in PAPERS if p['concept']}
+    # Prefer the date printed on the paper over the deposit date.
+    for p in PAPERS:
+        d = data.get(p['n'])
+        if not d:
+            continue
+        pdf = next((f for f in d['files'] if f.endswith('.pdf')), None)
+        if pdf:
+            d['paper_date'] = paper_date(os.path.join(REPO, 'papers', p['folder'], pdf))
+        shown = d['paper_date'] or d['date']
+        src = 'title page' if d['paper_date'] else 'Zenodo deposit (no date found on page 1)'
+        print(f"  paper {p['n']}: showing {shown} from {src}"
+              + (f" (record says {d['date']})" if d['paper_date'] and d['paper_date'] != d['date'] else ''))
     licenses = {d['license'] for d in data.values() if d['license']}
     if len(licenses) > 1:
         sys.exit(f'Records carry different licenses: {licenses} - ask Andrew.')
@@ -267,7 +310,8 @@ def build():
                      '<p class="prep">In preparation.</p>', '</section>']
             continue
         body.append(f'<h2 class="display">{html.escape(d["title"])}</h2>')
-        body.append(f'<p class="status mono">Version v{d["version"]} &middot; {pretty_date(d["date"])}</p>')
+        body.append(f'<p class="status mono">Version v{d["version"]} &middot; '
+                    f'{pretty_date(d["paper_date"] or d["date"])}</p>')
         for para in d['abstract'].split('\n\n'):
             body.append(f'<p>{mathify(html.escape(para))}</p>')
 

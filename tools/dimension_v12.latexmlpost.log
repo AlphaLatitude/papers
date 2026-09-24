@@ -7,7 +7,7 @@ Scan: DBStatus: 788/0 objects
 (CrossRef dimension_v12.html processing... 0.04 sec)
 (MathML::Presentation dimension_v12.html 480 to process...
 converted 480 Maths
- 0.20 sec)
+ 0.19 sec)
 (XSLT[using LaTeXML-html5.xsl] dimension_v12.html processing... 0.05 sec)
-(Writer dimension_v12.html processing... 0.00 sec) 0.34 sec)
-Postprocessing complete No obvious problems (reqd. 0.39s)
+(Writer dimension_v12.html processing... 0.00 sec) 0.33 sec)
+Postprocessing complete No obvious problems (reqd. 0.38s)
