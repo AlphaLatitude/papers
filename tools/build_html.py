@@ -166,11 +166,13 @@ def convert(tex_path, stem):
     r = subprocess.run(['latexml', '--dest=' + xml, tex_path], capture_output=True, text=True)
     errs = [l for l in r.stderr.splitlines() if l.startswith('Error') and 'orcidlink' not in l]
     if errs:
-        sys.exit('latexml errors in %s:\n  %s' % (stem, '\n  '.join(errs[:5])))
+        print(f'  {stem}: CANNOT RENDER\n      ' + '\n      '.join(errs[:4]))
+        return None
     subprocess.run(['latexmlpost', '--dest=' + out, '--format=html5', '--pmml',
                     '--nomathtex', '--novalidate', xml], capture_output=True, text=True)
     if not os.path.exists(out):
-        sys.exit('latexmlpost produced nothing for ' + stem)
+        print(f'  {stem}: latexmlpost produced nothing')
+        return None
     return out
 
 
@@ -242,7 +244,18 @@ def main():
             if not pdf:
                 print(f'    {stem}: no PDF of its own; omitting the PDF link')
 
-            doc = open(convert(os.path.join(dirpath, tex), stem), encoding='utf-8').read()
+            src = convert(os.path.join(dirpath, tex), stem)
+            if src is None:
+                # No rendering for this version. If it is the current one, any
+                # existing latest.html describes an OLDER paper, so it goes:
+                # the index only links a reading copy that exists.
+                if is_current:
+                    stale = os.path.join(dirpath, 'latest.html')
+                    if os.path.exists(stale):
+                        os.remove(stale)
+                        print('      removed latest.html; it held a superseded version')
+                continue
+            doc = open(src, encoding='utf-8').read()
             # \orcidlink has no LaTeXML binding and leaves a red error marker
             # in the byline; the ORCID number itself is in the text.
             doc = doc.replace('<span class="ltx_ERROR undefined">\\orcidlink</span>', '')
