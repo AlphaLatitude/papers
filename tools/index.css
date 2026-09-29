@@ -83,6 +83,10 @@ h1 .lat { color: var(--teal-dark); }
   font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--muted);
 }
+/* A linked title should read as the heading it is, not as a link in a
+   sentence; the teal arrives on hover. */
+h2 a { color: inherit; text-decoration: none; }
+h2 a:hover { color: var(--teal-dark); }
 h2 {
   font-weight: 600; font-size: 1.3rem; letter-spacing: -0.01em; margin: 0 0 6px; color: var(--ink);
 }

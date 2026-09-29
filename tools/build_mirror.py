@@ -63,10 +63,14 @@ def md5(path):
     return subprocess.run(['md5sum', path], capture_output=True, text=True).stdout.split()[0]
 
 
-# A trailing paragraph opening "v8:" or "Version 7 (5 Sep 2026):" is a
-# changelog entry, not part of the abstract. Never applied to the first
-# paragraph, which is the abstract itself.
-VERSION_NOTE = re.compile(r'^(v\d+|Version\s+\d+)\s*[:(]', re.I)
+# Records end with a changelog: "v12, changes since v4:", "v8: ...",
+# "Version 7 (5 Sep 2026): ...", often followed by several more paragraphs of
+# itemised changes and a closing "v4 (2 Sep 2026) remains the priority
+# record." Matching each line individually let the continuation paragraphs
+# through. A changelog always TRAILS the abstract, so the whole tail goes
+# from the first version-marked paragraph onwards. The opening paragraph is
+# never dropped: it is the abstract itself.
+VERSION_NOTE = re.compile(r'^\s*(v\d+\b|Version\s+\d+\b)', re.I)
 
 
 def abstract_text(desc_html):
@@ -80,9 +84,11 @@ def abstract_text(desc_html):
     s = re.sub(r'[ \t]+', ' ', s)
     s = re.sub(r'\n{3,}', '\n\n', s)
     paras = [x for x in s.strip().split('\n\n') if x.strip()]
-    kept = [paras[0]] if paras else []
-    kept += [x for x in paras[1:] if not VERSION_NOTE.match(x)]
-    return '\n\n'.join(kept)
+    for i, para in enumerate(paras):
+        if i and VERSION_NOTE.match(para):
+            paras = paras[:i]
+            break
+    return '\n\n'.join(paras)
 
 
 # Exponents and subscripts are written with ^ and _ in the plain text; set
@@ -309,7 +315,14 @@ def build():
             body += [f'<h2 class="display">{html.escape(p["title"])}</h2>',
                      '<p class="prep">In preparation.</p>', '</section>']
             continue
-        body.append(f'<h2 class="display">{html.escape(d["title"])}</h2>')
+        # The title links to the reading copy when one exists. When it does
+        # not - a version LaTeXML cannot convert - the title stays plain text
+        # rather than becoming a link to nothing or to a different version.
+        reading = os.path.join(REPO, 'papers', p['folder'], 'latest.html')
+        title_html = html.escape(d['title'])
+        if os.path.exists(reading):
+            title_html = f'<a href="papers/{p["folder"]}/latest.html">{title_html}</a>'
+        body.append(f'<h2 class="display">{title_html}</h2>')
         body.append(f'<p class="status mono">Version v{d["version"]} &middot; '
                     f'{pretty_date(d["paper_date"] or d["date"])}</p>')
         for para in d['abstract'].split('\n\n'):
