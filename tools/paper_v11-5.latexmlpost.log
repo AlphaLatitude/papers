@@ -2,12 +2,12 @@ latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/paper_v11-5.x
 (post-processing...
 (Scan paper_v11-5.html processing...
 Scan: DBStatus: 1026/0 objects
- 0.09 sec)
+ 0.12 sec)
 (MakeBibliography paper_v11-5.html processing... 0.00 sec)
-(CrossRef paper_v11-5.html processing... 0.14 sec)
+(CrossRef paper_v11-5.html processing... 0.11 sec)
 (MathML::Presentation paper_v11-5.html 645 to process...
 converted 645 Maths
- 0.46 sec)
-(XSLT[using LaTeXML-html5.xsl] paper_v11-5.html processing... 0.10 sec)
-(Writer paper_v11-5.html processing... 0.00 sec) 0.80 sec)
-Postprocessing complete No obvious problems (reqd. 0.91s)
+ 0.60 sec)
+(XSLT[using LaTeXML-html5.xsl] paper_v11-5.html processing... 0.14 sec)
+(Writer paper_v11-5.html processing... 0.01 sec) 0.98 sec)
+Postprocessing complete No obvious problems (reqd. 1.30s)

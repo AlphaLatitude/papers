@@ -2,12 +2,12 @@ latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/vacuum_v35.xm
 (post-processing...
 (Scan vacuum_v35.html processing...
 Scan: DBStatus: 591/0 objects
- 0.05 sec)
+ 0.06 sec)
 (MakeBibliography vacuum_v35.html processing... 0.00 sec)
-(CrossRef vacuum_v35.html processing... 0.04 sec)
+(CrossRef vacuum_v35.html processing... 0.05 sec)
 (MathML::Presentation vacuum_v35.html 355 to process...
 converted 355 Maths
- 0.21 sec)
-(XSLT[using LaTeXML-html5.xsl] vacuum_v35.html processing... 0.05 sec)
-(Writer vacuum_v35.html processing... 0.00 sec) 0.35 sec)
-Postprocessing complete No obvious problems (reqd. 0.42s)
+ 0.31 sec)
+(XSLT[using LaTeXML-html5.xsl] vacuum_v35.html processing... 0.07 sec)
+(Writer vacuum_v35.html processing... 0.00 sec) 0.50 sec)
+Postprocessing complete No obvious problems (reqd. 0.59s)

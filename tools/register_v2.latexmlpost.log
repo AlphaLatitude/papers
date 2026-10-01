@@ -2,12 +2,12 @@ latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/register_v2.x
 (post-processing...
 (Scan register_v2.html processing...
 Scan: DBStatus: 623/0 objects
- 0.05 sec)
+ 0.06 sec)
 (MakeBibliography register_v2.html processing... 0.00 sec)
-(CrossRef register_v2.html processing... 0.04 sec)
+(CrossRef register_v2.html processing... 0.06 sec)
 (MathML::Presentation register_v2.html 316 to process...
 converted 316 Maths
- 0.19 sec)
-(XSLT[using LaTeXML-html5.xsl] register_v2.html processing... 0.04 sec)
-(Writer register_v2.html processing... 0.00 sec) 0.32 sec)
-Postprocessing complete No obvious problems (reqd. 0.38s)
+ 0.28 sec)
+(XSLT[using LaTeXML-html5.xsl] register_v2.html processing... 0.06 sec)
+(Writer register_v2.html processing... 0.00 sec) 0.47 sec)
+Postprocessing complete No obvious problems (reqd. 0.57s)

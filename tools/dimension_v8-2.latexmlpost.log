@@ -2,12 +2,12 @@ latexmlpost (LaTeXML version 0.8.8) paginating /tmp/papers-latexml/dimension_v8-
 (post-processing...
 (Scan dimension_v8-2.html processing...
 Scan: DBStatus: 745/0 objects
- 0.05 sec)
+ 0.07 sec)
 (MakeBibliography dimension_v8-2.html processing... 0.00 sec)
-(CrossRef dimension_v8-2.html processing... 0.05 sec)
+(CrossRef dimension_v8-2.html processing... 0.07 sec)
 (MathML::Presentation dimension_v8-2.html 442 to process...
 converted 442 Maths
- 0.31 sec)
-(XSLT[using LaTeXML-html5.xsl] dimension_v8-2.html processing... 0.05 sec)
-(Writer dimension_v8-2.html processing... 0.00 sec) 0.45 sec)
-Postprocessing complete No obvious problems (reqd. 0.52s)
+ 0.34 sec)
+(XSLT[using LaTeXML-html5.xsl] dimension_v8-2.html processing... 0.07 sec)
+(Writer dimension_v8-2.html processing... 0.00 sec) 0.56 sec)
+Postprocessing complete No obvious problems (reqd. 0.66s)

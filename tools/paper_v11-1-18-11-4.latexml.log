@@ -1,13 +1,13 @@
-latexml (LaTeXML version 0.8.8) processing /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-15.tex
-(Digesting TeX paper_v11-1-15...
+latexml (LaTeXML version 0.8.8) processing /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-18-11-4.tex
+(Digesting TeX paper_v11-1-18-11-4...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/TeX.pool.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/eTeX.pool.ltxml... 0.00 sec)
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/pdfTeX.pool.ltxml... 0.00 sec) 0.14 sec)
-(Processing content /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-15.tex...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/pdfTeX.pool.ltxml... 0.00 sec) 0.09 sec)
+(Processing content /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-18-11-4.tex...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml...
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/textcomp.sty.ltxml... 0.01 sec) 0.16 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/textcomp.sty.ltxml... 0.01 sec) 0.15 sec)
 Info:fallback:revtex4-2.cls Interpreted 4-2 as a versioned package/class name, falling back to generic revtex.cls
-	at paper_v11-1-15.tex; line 2 col 11 - line 2 col 11
+	at paper_v11-1-18-11-4.tex; line 2 col 11 - line 2 col 11
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revtex.cls.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/article.cls.ltxml... 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/natbib.sty.ltxml... 0.01 sec)
@@ -19,56 +19,56 @@ Warning:missing_file:ltxcmds Can't find package ltxcmds
 	at ltxcmds.sty.ltxml; line 20
 	Anticipate undefined macros or environments
 	search paths are /Users/andrewk/Projects/papers/papers/1-gravitation, /Users/andrewk/Projects/papers/tools
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml...
 Warning:missing_file:keyval Can't find package keyval
 	at keyval.sty.ltxml; line 19
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml...
 Warning:missing_file:kvsetkeys Can't find package kvsetkeys
 	at kvsetkeys.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml...
 Warning:missing_file:kvdefinekeys Can't find package kvdefinekeys
 	at kvdefinekeys.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml...
 Warning:missing_file:kvoptions Can't find package kvoptions
 	at kvoptions.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/nameref.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml...
 Warning:missing_file:refcount Can't find package refcount
 	at refcount.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
  0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml...
 Warning:missing_file:gettitlestring Can't find package gettitlestring
 	at gettitlestring.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
  0.00 sec) 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/url.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml...
 Warning:missing_file:bitset Can't find package bitset
 	at bitset.sty.ltxml; line 20
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
  0.00 sec) 0.07 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/revsymb.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/longtable.sty.ltxml... 0.00 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/dcolumn.sty.ltxml...
-(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec) 0.01 sec) 0.12 sec) 0.12 sec) 0.15 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec) 0.01 sec) 0.11 sec) 0.12 sec) 0.15 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsmath.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsbsy.sty.ltxml...
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/amsgen.sty.ltxml... 0.00 sec) 0.01 sec)
@@ -83,72 +83,72 @@ Warning:missing_file:bitset Can't find package bitset
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/color.sty.ltxml... 0.01 sec)
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/colortbl.sty.ltxml... 0.01 sec) 0.05 sec)
 Warning:missing_file:orcidlink Can't find binding for package orcidlink
-	at paper_v11-1-15.tex; line 10 col 11 - line 10 col 11
+	at paper_v11-1-18-11-4.tex; line 10 col 11 - line 10 col 11
 	Anticipate undefined macros or environments
 	In Core::Definition::Constructor[\usepac... /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 879
 (Loading /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/tikz.sty.ltxml...
 Warning:missing_file:tikz Can't find package tikz
 	at tikz.sty.ltxml; line 24
 	Anticipate undefined macros or environments
-	In Core::Gullet[@0x11b5d3250] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/tikz.sty.ltxml; line 24
+	In Core::Gullet[@0x142ec84e8] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/tikz.sty.ltxml; line 24
  0.00 sec)
 Error:undefined:\usetikzlibrary The token T_CS[\usetikzlibrary] is not defined.
-	at paper_v11-1-15.tex; line 11 col 15 - line 11 col 15
+	at paper_v11-1-18-11-4.tex; line 11 col 15 - line 11 col 15
 	Defining it now as <ltx:ERROR/>
 	Next token is T_BEGIN[{] ( == T_BEGIN[{])
-	In Core::Gullet[@0x11b5d3250] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-15.tex; from line 11 col 16 to line 11 col 16
-	 <= Core::Stomach[@0x11b50d8a0] <= ...
+	In Core::Gullet[@0x142ec84e8] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-18-11-4.tex; from line 11 col 16 to line 11 col 16
+	 <= Core::Stomach[@0x142c70f50] <= ...
 Warning:unexpected:\normalsize \normalsize is not an expandable control sequence
-	at paper_v11-1-15.tex; line 24 col 0 - line 24 col 239
+	at paper_v11-1-18-11-4.tex; line 24 col 0 - line 24 col 239
 	Ignoring addition
 	In Core::Definition::Expandable[\g@addto... /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 1041
 Info:ignore:\section Ignoring redefinition of \section
-	at paper_v11-1-15.tex; line 26 col 0 - line 26 col 111
+	at paper_v11-1-18-11-4.tex; line 26 col 0 - line 26 col 111
 Info:ignore:\subsection Ignoring redefinition of \subsection
-	at paper_v11-1-15.tex; line 27 col 0 - line 27 col 117
+	at paper_v11-1-18-11-4.tex; line 27 col 0 - line 27 col 117
 Info:unexpected:options Unused global options: superscriptaddress,nofootinbib,showkeys
-	at paper_v11-1-15.tex; line 29 col 0 - line 29 col 16
+	at paper_v11-1-18-11-4.tex; line 29 col 0 - line 29 col 16
 Error:undefined:\orcidlink The token T_CS[\orcidlink] is not defined.
-	at paper_v11-1-15.tex; line 33 col 0 - line 33 col 56
+	at paper_v11-1-18-11-4.tex; line 33 col 0 - line 33 col 56
 	Defining it now as <ltx:ERROR/>
 	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0009-0005-4569-2228}
-	In Core::Gullet[@0x11b5d3250] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-15.tex; from line 33 col 0 to line 33 col 56
-	 <= Core::Stomach[@0x11b50d8a0] <= Core::Definition::Constructor[\@perso... <= Core::Stomach[@0x11b50d8a0] <= ...
+	In Core::Gullet[@0x142ec84e8] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-18-11-4.tex; from line 33 col 0 to line 33 col 56
+	 <= Core::Stomach[@0x142c70f50] <= Core::Definition::Constructor[\@perso... <= Core::Stomach[@0x142c70f50] <= ...
 Error:undefined:{tikzpicture} The environment {tikzpicture} is not defined.
-	at paper_v11-1-15.tex; line 123 col 19 - line 123 col 19
+	at paper_v11-1-18-11-4.tex; line 123 col 19 - line 123 col 19
 	Next token is T_OTHER[[] ( == T_OTHER[[])
 	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
-	 <= Core::Gullet[@0x11b5d3250] <= Core::Stomach[@0x11b50d8a0] <= Core::Definition::Constructor[\begin{... <= ...
+	 <= Core::Gullet[@0x142ec84e8] <= Core::Stomach[@0x142c70f50] <= Core::Definition::Constructor[\begin{... <= ...
 Error:undefined:\node The token T_CS[\node] is not defined.
-	at paper_v11-1-15.tex; line 128 col 5 - line 128 col 5
+	at paper_v11-1-18-11-4.tex; line 128 col 5 - line 128 col 5
 	Defining it now as <ltx:ERROR/>
 	Next token is T_OTHER[[] ( == T_OTHER[[])
-	In Core::Gullet[@0x11b5d3250] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-15.tex; from line 128 col 6 to line 128 col 6
-	 <= Core::Stomach[@0x11b50d8a0] <= Core::Definition::Constructor[\begin{... <= Core::Stomach[@0x11b50d8a0] <= ...
+	In Core::Gullet[@0x142ec84e8] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-18-11-4.tex; from line 128 col 6 to line 128 col 6
+	 <= Core::Stomach[@0x142c70f50] <= Core::Definition::Constructor[\begin{... <= Core::Stomach[@0x142c70f50] <= ...
 Error:undefined:\draw The token T_CS[\draw] is not defined.
-	at paper_v11-1-15.tex; line 143 col 5 - line 143 col 5
+	at paper_v11-1-18-11-4.tex; line 143 col 5 - line 143 col 5
 	Defining it now as <ltx:ERROR/>
 	Next token is T_OTHER[[] ( == T_OTHER[[])
-	In Core::Gullet[@0x11b5d3250] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-15.tex; from line 143 col 6 to line 143 col 6
-	 <= Core::Stomach[@0x11b50d8a0] <= Core::Definition::Constructor[\begin{... <= Core::Stomach[@0x11b50d8a0] <= ...
- 3.41 sec) 3.59 sec)
+	In Core::Gullet[@0x142ec84e8] /Users/andrewk/Projects/papers/papers/1-gravitation/paper_v11-1-18-11-4.tex; from line 143 col 6 to line 143 col 6
+	 <= Core::Stomach[@0x142c70f50] <= Core::Definition::Constructor[\begin{... <= Core::Stomach[@0x142c70f50] <= ...
+ 3.57 sec) 3.69 sec)
 (Building...
-(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.01 sec) 4.14 sec)
-(Rewriting... 0.10 sec)
-(Math Parsing 793 formulae ......
+(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_5/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.01 sec) 4.74 sec)
+(Rewriting... 0.11 sec)
+(Math Parsing 893 formulae ......
 Warning:not_parsed:OPEN.UNKNOWN.CLOSE>METARELOP MathParser failed to match rule 'Anything'
-	at paper_v11-1-15.tex; line 301 col 0 - line 304 col 14
+	at paper_v11-1-18-11-4.tex; line 303 col 0 - line 306 col 14
 	In "\begin{equation}S_{M}(r)=S_{\rm in}(r):\quad N_{s}=\frac{\pi L\alpha}{2\ln 2},%
 	\quad g_{N}=\frac{c^{2}}{\pi R_{\Lambda}},\end{equation}"
 	S[[UNKNOWN]] _{M}[[POSTSUBSCRIPT]] ([[OPEN]] r[[UNKNOWN]] )[[CLOSE]] =[[RELOP]] S[[UNKNOWN]] _{\rmin}[[POSTSUBSCRIPT]] ([[OPEN]] r[[UNKNOWN]] )[[CLOSE]]
 	        > :[[METARELOP]] \begin{equation}S_{M}(r)=S_{\rmin}(r):\quadN_{s}=\frac{\piL\alpha}{2\ln2},\quadg_{N}=\frac{c^{2}}{\piR_{\Lambda}},\end{equation}[[PUNCT]] N[[UNKNOWN]] _{s}[[POSTSUBSCRIPT]] =[[RELOP]] \frac{\piL\alpha}{2\ln2}[[UNKNOWN]] ,[[PUNCT]] g[[UNKNOWN]] _{N}[[POSTSUBSCRIPT]] =[[RELOP]] \frac{c^{2}}{\piR_{\Lambda}}[[UNKNOWN]]
- 2.96 sec)
+ 3.16 sec)
 Math parsing succeeded:
-   ltx:XMath: 792/793
-   ltx:XMArg: 991/991
    ltx:XMWrap: 1/2
+   ltx:XMArg: 1066/1066
+   ltx:XMath: 892/893
 Symbols assumed as simple identifiers (with # of occurences):
-   'A{italic}' (10), 'C{italic}' (2), 'E{italic}' (29), 'G{italic}' (54), 'H{italic}' (26), 'J' (1), 'Lambda' (27), 'L{italic}' (159), 'M{italic}' (35), 'N{blackboard}' (1), 'N{italic}' (33), 'Omega' (4), 'P{italic}' (3), 'Q{italic}' (4), 'R{italic}' (99), 'Sigma' (2), 'S{italic}' (16), 'T{italic}' (15), 'V{italic}' (9), 'alpha' (22), 'a{bold italic}' (1), 'a{italic}' (64), 'c{italic}' (107), 'delta' (3), 'd{italic}' (13), 'ell' (91), 'eta' (6), 'e{italic}' (2), 'g{italic}' (18), 'h{italic}' (1), 'i{italic}' (1), 'k{italic}' (21), 'm' (2), 'mu' (4), 'm{italic}' (7), 'nu' (4), 'n{italic}' (28), 'phi' (1), 'pi' (138), 'psi' (1), 'p{italic}' (4), 'q{italic}' (2), 'rho' (13), 'r{italic}' (48), 's' (1), 'sigma' (10), 'tau' (7), 'theta' (1), 't{italic}' (15), 'varepsilon' (5), 'v{italic}' (5), 'w{italic}' (6), 'x{italic}' (1), 'z{italic}' (4)
+   'A{italic}' (13), 'C{italic}' (2), 'E{italic}' (31), 'G{italic}' (56), 'H{italic}' (30), 'J' (1), 'Lambda' (29), 'L{italic}' (190), 'M{italic}' (37), 'N{blackboard}' (1), 'N{italic}' (39), 'Omega' (12), 'P{italic}' (3), 'Q{italic}' (4), 'R{italic}' (116), 'Sigma' (2), 'S{italic}' (16), 'T{italic}' (15), 'V{italic}' (9), 'alpha' (22), 'a{bold italic}' (1), 'a{italic}' (62), 'c{italic}' (109), 'delta' (3), 'd{italic}' (14), 'ell' (95), 'eta' (5), 'e{italic}' (3), 'f{italic}' (1), 'g{italic}' (19), 'h{italic}' (2), 'i{italic}' (2), 'kappa' (2), 'k{italic}' (22), 'm' (2), 'mu' (4), 'm{italic}' (12), 'nu' (4), 'n{italic}' (27), 'phi' (1), 'pi' (141), 'psi' (1), 'p{italic}' (3), 'q{italic}' (2), 'rho' (13), 'r{italic}' (52), 's' (1), 'sigma' (7), 'tau' (9), 'theta' (1), 't{italic}' (15), 'varepsilon' (5), 'v{italic}' (5), 'w{italic}' (7), 'x{italic}' (2), 'y{italic}' (1), 'z{italic}' (5)
 Set MATHPARSER_SPECULATE to speculate on possible notations.
-(Finalizing... 0.45 sec)
-Conversion complete: 12 warnings; 5 errors; 5 undefined macros[\draw, \node, {tikzpicture}, \orcidlink, \usetikzlibrary]; 10 missing files[ltxcmds.sty, gettitlestring.sty, keyval.sty, orcidlink.sty, bitset.sty, tikz.sty, kvsetkeys.sty, kvoptions.sty, refcount.sty, kvdefinekeys.sty] (See /Users/andrewk/Projects/papers/tools/paper_v11-1-15.latexml.log) (reqd. 11.59s)
+(Finalizing... 0.49 sec)
+Conversion complete: 12 warnings; 5 errors; 5 undefined macros[\orcidlink, \usetikzlibrary, \node, {tikzpicture}, \draw]; 10 missing files[ltxcmds.sty, gettitlestring.sty, kvdefinekeys.sty, refcount.sty, bitset.sty, orcidlink.sty, tikz.sty, kvoptions.sty, kvsetkeys.sty, keyval.sty] (See /Users/andrewk/Projects/papers/tools/paper_v11-1-18-11-4.latexml.log) (reqd. 12.57s)
