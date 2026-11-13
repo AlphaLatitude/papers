@@ -39,7 +39,8 @@ API = 'https://zenodo.org/api/records/{}'
 API_VERSIONS = 'https://zenodo.org/api/records/{}/versions'  # size= is rejected (400)
 
 PAPERS = [
-    {'n': 1, 'concept': '22255461', 'folder': '1-gravitation', 'leg': 'Gravitation'},
+    {'n': 1, 'concept': '22255461', 'folder': '1-gravitation', 'leg': 'Gravitation',
+     'site': 'sphere-string-ring'},
     {'n': 2, 'concept': '22683543', 'folder': '2-vacuum', 'leg': 'Vacuum'},
     {'n': 3, 'concept': '22669416', 'folder': '3-register', 'leg': 'Register'},
     {'n': 4, 'concept': '22678537', 'folder': '4-dimension', 'leg': 'Dimension'},
@@ -226,6 +227,23 @@ def load(p):
     }
 
 
+def latest_site(p):
+    """Newest build of a paper's derivation site, or None.
+
+    Each build sits in its own directory named after its revision
+    (site/v18-67/), so a paper can cite that address and a newer build never
+    replaces what an older paper points to. Revisions compare by their numbers.
+    """
+    root = os.path.join(REPO, p.get('site') or '')
+    if not p.get('site') or not os.path.isdir(root):
+        return None
+    revs = [r for r in os.listdir(root)
+            if os.path.isfile(os.path.join(root, r, 'index.html'))]
+    if not revs:
+        return None
+    return max(revs, key=lambda r: [int(n) for n in re.findall(r'\d+', r)])
+
+
 def build():
     data = {p['n']: load(p) for p in PAPERS if p['concept']}
     # Prefer the date printed on the paper over the deposit date.
@@ -337,6 +355,9 @@ def build():
         # version inside, so the URL claims nothing the page does not repeat.
         if os.path.exists(os.path.join(REPO, 'papers', p['folder'], 'latest.html')):
             links.append(f'<a href="papers/{p["folder"]}/latest.html">HTML rendering</a>')
+        rev = latest_site(p)
+        if rev:
+            links.append(f'<a href="{p["site"]}/{rev}/">Derivation, paper and Lean ({rev})</a>')
         if tex:
             links.append(f'<a href="papers/{p["folder"]}/{tex}">LaTeX source</a>')
         else:
