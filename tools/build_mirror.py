@@ -244,6 +244,43 @@ def latest_site(p):
     return max(revs, key=lambda r: [int(n) for n in re.findall(r'\d+', r)])
 
 
+SITE_PAGES = ('index.html', 'paper.html', 'lean.html')
+SITE_META_CSS = (
+    '<style>.bar .stamp{display:none}'
+    '.site-meta{margin:0 auto;padding-top:.6rem;padding-bottom:.6rem;'
+    'border-bottom:1px solid var(--rule);font:400 .8125rem/1.4 var(--mono);color:var(--ink-3)}'
+    '.site-meta a{color:inherit}</style>')
+
+
+def publish_latest_site(p, rev):
+    """Copy the newest build to the paper's version-less address (site/).
+
+    The versioned folders stay as the author built them. The copy shows,
+    under the header bar, the build's own version stamp and a link to the
+    paper's Zenodo concept DOI (which always resolves to the latest version).
+    The pages link to each other by relative name, so they work unchanged
+    one folder up.
+    """
+    root = os.path.join(REPO, p['site'])
+    url = f'{SITE}/{p["site"]}/'
+    doi = f'10.5281/zenodo.{p["concept"]}'
+    for name in SITE_PAGES:
+        with open(os.path.join(root, rev, name), encoding='utf-8') as f:
+            page = f.read()
+        stamp = re.search(r'<span class="stamp"(?: title="([^"]*)")?>([^<]+)</span>', page)
+        if not stamp or page.count('</header>') < 1:
+            sys.exit(f'{p["site"]}/{rev}/{name}: no version stamp or header bar to place the line under')
+        line = (f'<div class="site-meta wrap"{f" title=\"{stamp[1]}\"" if stamp[1] else ""}>'
+                f'{stamp[2]} · <a href="https://doi.org/{doi}" rel="noopener">Zenodo: doi.org/{doi}</a></div>')
+        page = page.replace('</head>', SITE_META_CSS + '\n</head>', 1)
+        page = page.replace('</header>', '</header>\n' + line, 1)
+        page = re.sub(r'(<meta property="og:url" content=")[^"]*(")',
+                      lambda m: m[1] + url + ('' if name == 'index.html' else name) + m[2], page, count=1)
+        with open(os.path.join(root, name), 'w', encoding='utf-8') as f:
+            f.write(page)
+    print(f'  {p["site"]}/: copy of {rev} with version line and Zenodo link')
+
+
 def build():
     data = {p['n']: load(p) for p in PAPERS if p['concept']}
     # Prefer the date printed on the paper over the deposit date.
@@ -357,6 +394,7 @@ def build():
             links.append(f'<a href="papers/{p["folder"]}/latest.html">HTML rendering</a>')
         rev = latest_site(p)
         if rev:
+            publish_latest_site(p, rev)
             links.append(f'<a href="{p["site"]}/{rev}/">Derivation, paper and Lean ({rev})</a>')
         if tex:
             links.append(f'<a href="papers/{p["folder"]}/{tex}">LaTeX source</a>')
